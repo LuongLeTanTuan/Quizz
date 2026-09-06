@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Ôn Thi Trắc Nghiệm Tin Học Cơ Bản – 288 Câu Đề Cương & Mindmap</title>
+  <meta name="description" content="Hệ thống ôn luyện trắc nghiệm CNTT cơ bản: Giao diện Quizizz chuẩn mực, xáo trộn câu/đáp án, theo thứ tự đề cương, 6 Mindmaps tương tác, hỗ trợ chế độ sáng/tối.">
+  
+  <!-- GOOGLE FONT: BE VIETNAM PRO (Full Vietnamese Subsets & Glyphs) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================================
+       DESIGN SYSTEM (LIGHT / DARK THEMES)
+    ========================================================== */
+    :root, [data-theme="dark"] {
+      --font-base: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      /* Dark Palette */
+      --bg-canvas: #0d1117;
+      --bg-surface: #161b22;
+      --bg-card: #21262d;
+      --bg-card-hover: #30363d;
+      --border-line: rgba(240, 246, 252, 0.1);
+      --border-accent: rgba(56, 139, 253, 0.4);
+
+      /* Typography */
+      --text-heading: #f0f6fc;
+      --text-body: #c9d1d9;
+      --text-muted: #8b949e;
+      --text-dim: #6e7681;
+
+      /* Brand Accents */
+      --color-brand: #388bfd;
+      --color-brand-hover: #1f6feb;
+      --color-success: #238636;
+      --color-success-light: #2ea043;
+      --color-danger: #da3633;
+      --color-danger-light: #f85149;
+      --color-warning: #d29922;
+
+      /* Quizizz Distinct Functional Colors */
+      --opt-a: #f85149;
+      --opt-b: #388bfd;
+      --opt-c: #d29922;
+      --opt-d: #2ea043;
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-pill: 9999px;
+
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.4);
+
+      --safe-bottom: env(safe-area-inset-bottom, 16px);
+      --safe-top: env(safe-area-inset-top, 0px);
+    }
+
+    [data-theme="light"] {
+      /* Light Palette (Publisher Ivory Slate) */
+      --bg-canvas: #f6f8fa;
+      --bg-surface: #ffffff;
+      --bg-card: #f0f3f6;
+      --bg-card-hover: #e6ebf1;
+      --border-line: #d0d7de;
+      --border-accent: rgba(9, 105, 218, 0.4);
+
+      --text-heading: #1f2328;
+      --text-body: #24292f;
+      --text-muted: #57606a;
+      --text-dim: #6e7781;
+
+      --color-brand: #0969da;
+      --color-brand-hover: #0550ae;
+      --color-success: #1a7f37;
+      --color-success-light: #2da44e;
+      --color-danger: #cf222e;
+      --color-danger-light: #fa4549;
+      --color-warning: #9a6700;
+
+      --opt-a: #cf222e;
+      --opt-b: #0969da;
+      --opt-c: #9a6700;
+      --opt-d: #1a7f37;
+
+      --shadow-sm: 0 1px 3px rgba(31, 35, 40, 0.12);
+      --shadow-md: 0 3px 10px rgba(31, 35, 40, 0.15);
+    }
+
+    * {
+      box-sizing: border-box; margin: 0; padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: var(--font-base);
+      background-color: var(--bg-canvas);
+      color: var(--text-body);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.6;
+      padding-bottom: calc(76px + var(--safe-bottom));
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .svg-ico {
+      width: 18px; height: 18px; display: inline-block; vertical-align: middle; flex-shrink: 0;
+    }
+
+    .site-container {
+      max-width: 980px; margin: 0 auto;
+      padding: clamp(14px, 3vw, 24px) clamp(12px, 3vw, 20px);
+    }
+
+    /* Header Bar */
+    .site-header {
+      text-align: center;
+      padding: clamp(10px, 2.5vw, 20px) 0 clamp(16px, 3vw, 26px);
+      border-bottom: 1px solid var(--border-line);
+      margin-bottom: clamp(16px, 3vw, 28px);
+      position: relative;
+    }
+    .site-header-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(56, 139, 253, 0.12); border: 1px solid rgba(56, 139, 253, 0.3);
+      padding: 4px 12px; border-radius: var(--radius-pill);
+      font-size: 12px; font-weight: 700; color: var(--color-brand);
+      letter-spacing: 0.3px; margin-bottom: 10px;
+    }
+    .status-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--color-success);
+    }
+    .site-header h1 {
+      font-size: clamp(22px, 4.8vw, 32px);
+      font-weight: 800;
+      color: var(--text-heading);
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+    .site-header p {
+      color: var(--text-muted);
+      font-size: clamp(13px, 2.6vw, 15px);
+      max-width: 640px; margin: 0 auto;
+    }
+
+    /* Theme Toggle Button */
+    .theme-toggle-btn {
+      position: absolute; right: 0; top: 12px;
+      background: var(--bg-surface); border: 1px solid var(--border-line);
+      color: var(--text-heading); padding: 8px 14px; border-radius: var(--radius-pill);
+      font-family: var(--font-base); font-size: 13px; font-weight: 600;
+      cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+      box-shadow: var(--shadow-sm); transition: all 0.15s ease;
+    }
+    .theme-toggle-btn:hover {
+      background: var(--bg-card);
+    }
+    @media (max-width: 650px) {
+      .theme-toggle-btn { position: static; margin-top: 10px; display: inline-flex; }
+    }
+
+    /* Navigation Bar (Desktop) */
+    .desk-nav {
+      display: flex; justify-content: center; gap: 8px;
+      background: var(--bg-surface); border: 1px solid var(--border-line);
+      padding: 6px; border-radius: var(--radius-md); margin-bottom: 24px;
+      position: sticky; top: 12px; z-index: 90;
+      box-shadow: var(--shadow-sm);
+    }
+    .desk-nav-btn {
+      background: transparent; border: none; color: var(--text-muted);
+      padding: 10px 18px; border-radius: var(--radius-sm);
+      font-family: var(--font-base); font-size: 14px; font-weight: 600;
+      cursor: pointer; display: flex; align-items: center; gap: 8px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .desk-nav-btn:hover { color: var(--text-heading); background: rgba(0, 0, 0, 0.05); }
+    .desk-nav-btn.active {
+      background: var(--bg-card); color: var(--text-heading); border: 1px solid var(--border-line);
+      box-shadow: var(--shadow-sm); font-weight: 700;
+    }
+    .desk-nav-badge {
+      background: rgba(125, 133, 144, 0.2); padding: 2px 7px;
+      border-radius: var(--radius-pill); font-size: 11px; font-weight: 700;
+    }
+
+    /* Mobile Bottom Navigation (Mobile View) */
+    .mobile-bottom-bar {
+      display: none;
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
+      background: var(--bg-surface); backdrop-filter: blur(16px);
+      border-top: 1px solid var(--border-line);
+      padding: 8px 12px calc(8px + var(--safe-bottom));
+      justify-content: space-around; align-items: center;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
+    }
+    .mob-nav-item {
+      background: transparent; border: none; color: var(--text-dim);
+      display: flex; flex-direction: column; align-items: center; gap: 4px;
+      font-size: 11px; font-weight: 600; padding: 6px 14px; border-radius: var(--radius-sm);
+      cursor: pointer; transition: color 0.15s;
+    }
+    .mob-nav-item .svg-ico { width: 20px; height: 20px; }
+    .mob-nav-item.active { color: var(--color-brand); font-weight: 700; }
+
+    @media (max-width: 768px) {
+      .desk-nav { display: none; }
+      .mobile-bottom-bar { display: flex; }
+    }
+
+    /* Content Panels */
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; animation: contentFadeIn 0.25s ease-out; }
+    @keyframes contentFadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Card Panels */
+    .panel-card {
+      background: var(--bg-surface); border: 1px solid var(--border-line);
+      border-radius: var(--radius-lg); padding: clamp(16px, 3.5vw, 28px);
+      box-shadow: var(--shadow-sm); margin-bottom: 20px;
+    }
+
+    /* ==========================================================
+       QUIZ CONFIGURATION VIEW
+    ========================================================== */
+    .config-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;
+      margin-bottom: 18px;
+    }
+    .config-cell {
+      background: var(--bg-card); border: 1px solid var(--border-line);
+      border-radius: var(--radius-md); padding: 14px;
+    }
+    .config-cell-label {
+      font-size: 12px; font-weight: 700; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 8px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .form-control {
+      width: 100%; background: var(--bg-surface); border: 1px solid var(--border-line);
+      color: var(--text-heading); padding: 10px 12px; border-radius: var(--radius-sm);
+      font-size: 14px; font-family: var(--font-base); font-weight: 500; outline: none;
+      transition: border-color 0.15s;
+    }
+    .form-control:focus { border-color: var(--color-brand); }
+
+    /* Settings Switch Rows */
+    .settings-group {
+      background: var(--bg-card); border: 1px solid var(--border-line);
+      border-radius: var(--radius-md); padding: 4px 16px; margin-bottom: 22px;
+    }
+    .settings-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 0; border-bottom: 1px solid var(--border-line); gap: 12px;
+    }
+    .settings-row:last-child { border-bottom: none; }
+    .settings-text strong {
+      font-size: 14px; color: var(--text-heading); display: block; font-weight: 600;
+    }
+    .settings-text span {
+      font-size: 12px; color: var(--text-muted); display: block; margin-top: 1px;
+    }
+
+    .toggle-switch {
+      position: relative; width: 44px; height: 24px; flex-shrink: 0;
+    }
+    .toggle-switch input { opacity: 0; width: 0; height: 0; }
+    .toggle-slider {
+      position: absolute; inset: 0; cursor: pointer; background-color: #8c959f;
+      transition: 0.2s; border-radius: 24px;
+    }
+    .toggle-slider:before {
+      position: absolute; content: ""; height: 18px; width: 18px; left: 3px; bottom: 3px;
+      background-color: white; transition: 0.2s; border-radius: 50%;
+    }
+    input:checked + .toggle-slider { background-color: var(--color-brand); }
+    input:checked + .toggle-slider:before { transform: translateX(20px); }
+
+    /* Action Buttons */
+    .actions-row {
+      display: flex; gap: 12px; flex-wrap: wrap;
+    }
+    .btn-action-primary {
+      flex: 2; min-width: 200px; min-height: 48px;
+      background: var(--color-brand); border: none; color: #fff;
+      padding: 12px 24px; border-radius: var(--radius-md);
+      font-family: var(--font-base); font-size: 15px; font-weight: 700;
+      cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .btn-action-primary:hover { background: var(--color-brand-hover); }
+    .btn-action-primary:active { transform: scale(0.98); }
+
+    .btn-action-secondary {
+      flex: 1; min-width: 160px; min-height: 48px;
+      background: var(--bg-card); border: 1px solid var(--border-line);
+      color: var(--text-heading); padding: 12px 18px; border-radius: var(--radius-md);
+      font-family: var(--font-base); font-size: 14px; font-weight: 600;
+      cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
+      transition: background 0.15s;
+    }
+    .btn-action-secondary:hover { background: var(--bg-card-hover); }
+    .btn-action-secondary:active { transform: scale(0.98); }
+
+    /* ==========================================================
+       QUIZ IN-GAME HUD & CARDS
+    ========================================================== */
+    .quiz-hud {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; margin-bottom: 14px; flex-wrap: wrap;
+    }
+    .hud-track-wrap { flex: 1; min-width: 150px; }
+    .hud-meta-text {
+      display: flex; justify-content: space-between; font-size: 12px; font-weight: 700;
+      color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.3px;
+    }
+    .hud-bar {
+      height: 6px; background: rgba(125, 133, 144, 0.2); border-radius: var(--radius-pill);
+      overflow: hidden;
+    }
+    .hud-bar-inner {
+      height: 100%; width: 0%; background: var(--color-brand);
+      border-radius: var(--radius-pill); transition: width 0.3s ease;
+    }
+
+    .hud-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--bg-card); border: 1px solid var(--border-line);
+      padding: 5px 12px; border-radius: var(--radius-pill);
+      font-size: 13px; font-weight: 700; font-family: var(--font-base);
+    }
+    .pill-timer {
+      font-family: var(--font-mono); color: var(--color-brand);
+    }
+    .pill-timer.urgent {
+      color: var(--color-danger); border-color: rgba(248, 81, 73, 0.4); background: rgba(248, 81, 73, 0.1);
+    }
+
+    /* Question Box */
+    .question-surface {
+      background: var(--bg-surface); border: 1px solid var(--border-line);
+      border-radius: var(--radius-lg); padding: clamp(18px, 3.5vw, 30px);
+      margin-bottom: 16px;
+    }
+    .q-meta-line {
+      display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;
+    }
+    .q-badge-cat {
+      background: rgba(56, 139, 253, 0.15); border: 1px solid rgba(56, 139, 253, 0.3);
+      color: var(--color-brand); padding: 3px 10px; border-radius: var(--radius-pill);
+      font-size: 12px; font-weight: 700;
+    }
+    .q-text-body {
+      font-size: clamp(16px, 3vw, 21px); font-weight: 700;
+      color: var(--text-heading); line-height: 1.5;
+    }
+
+    /* 4 Answer Options */
+    .quiz-options-list {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 768px) {
+      .quiz-options-list { grid-template-columns: 1fr; gap: 10px; }
+    }
+
+    .opt-card {
+      background: var(--bg-surface); border: 1px solid var(--border-line);
+      border-radius: var(--radius-md); padding: clamp(14px, 2.2vw, 18px);
+      display: flex; align-items: center; gap: 14px; cursor: pointer; text-align: left;
+      transition: background 0.15s, border-color 0.15s, transform 0.1s;
+      min-height: 60px;
+    }
+    .opt-card:hover:not(.disabled) {
+      background: var(--bg-card); border-color: rgba(125, 133, 144, 0.4);
+    }
+    .opt-card:active:not(.disabled) {
+      transform: scale(0.98);
+    }
+
+    .opt-indicator {
+      width: 34px; height: 34px; border-radius: 8px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 800; font-family: var(--font-base);
+      color: #fff;
+    }
+    .opt-card.opt-0 .opt-indicator { background: var(--opt-a); }
+    .opt-card.opt-1 .opt-indicator { background: var(--opt-b); }
+    .opt-card.opt-2 .opt-indicator { background: var(--opt-c); }
+    .opt-card.opt-3 .opt-indicator { background: var(--opt-d); }
+
+    .opt-content { flex: 1; min-width: 0; }
+    .opt-hint {
+      font-size: 11px; font-weight: 700; color: var(--text-dim); text-transform: uppercase; margin-bottom: 2px;
+    }
+    .opt-title {
+      font-size: clamp(14px, 2.6vw, 15px); font-weight: 600; color: var(--text-heading);
+      line-height: 1.4; word-break: break-word;
+    }
+
+    /* Answer States */
+    .opt-card.is-correct {
+      background: rgba(35, 134, 54, 0.25) !important;
+      border-color: var(--color-success) !important;
+    }
+    .opt-card.is-wrong {
+      background: rgba(218, 54, 51, 0.25) !important;
+      border-color: var(--color-danger) !important;
+      animation: optShake 0.35s ease;
+    }
+    @keyframes optShake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-6px); }
+      75% { transform: translateX(6px); }
+    }
+
+    /* Feedback Sheet */
+    .feedback-panel {
+      display: none; padding: 18px 20px; border-radius: var(--radius-md);
+      margin-top: 14px; animation: fbSlideUp 0.2s ease-out;
+    }
+    @keyframes fbSlideUp {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .feedback-panel.is-correct {
+      background: rgba(35, 134, 54, 0.15); border: 1px solid rgba(46, 160, 67, 0.4);
+    }
+    .feedback-panel.is-wrong {
+      background: rgba(218, 54, 51, 0.15); border: 1px solid rgba(248, 81, 73, 0.4);
+    }
+    .fb-title-row {
+      font-size: 16px; font-weight: 800; display: flex; align-items: center; gap: 8px; margin-bottom: 4px;
+    }
+    .feedback-panel.is-correct .fb-title-row { color: var(--color-success); }
+    .feedback-panel.is-wrong .fb-title-row { color: var(--color-danger); }
+    .fb-body-text { font-size: 14px; color: var(--text-heading); margin-bottom: 14px; line-height: 1.5; }
+    
+    .btn-next-action {
+      width: 100%; min-height: 46px;
+      background: var(--color-brand); border: none; color: #fff;
+      padding: 10px 20px; border-radius: var(--radius-sm);
+      font-family: var(--font-base); font-size: 14px; font-weight: 700;
+      cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;
+      transition: background 0.15s;
+    }
+    .btn-next-action:hover { background: var(--color-brand-hover); }
+    .btn-next-action:active { transform: scale(0.98); }
+
+    /* ==========================================================
+       SCORE & REVIEW SUMMARY
+    ========================================================== */
+    .score-view { text-align: center; }
+    .score-circle {
+      width: 140px; height: 140px; margin: 0 auto 16px; position: relative;
+    }
+    .score-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+    .score-bg-ring { fill: none; stroke: rgba(125, 133, 144, 0.2); stroke-width: 9; }
+    .score-fg-ring {
+      fill: none; stroke: var(--color-brand); stroke-width: 9; stroke-linecap: round;
+      stroke-dasharray: 380; stroke-dashoffset: 380; transition: stroke-dashoffset 1s ease-out;
+    }
+    .score-center-info {
+      position: absolute; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+    }
+    .score-num { font-size: 32px; font-weight: 800; color: var(--text-heading); }
+    .score-label { font-size: 12px; color: var(--text-muted); font-weight: 600; }
+
+    .score-stats-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 18px 0;
+    }
+    @media (max-width: 600px) {
+      .score-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .score-box {
+      background: var(--bg-card); border: 1px solid var(--border-line);
+      border-radius: var(--radius-sm); padding: 12px;
+    }
+    .score-box-val { font-size: 20px; font-weight: 800; color: var(--text-heading); }
+    .score-box-lbl { font-size: 11px; color: var(--text-muted); text-transform: uppercase; font-weight: 700; }
+
+    .review-items-container {
+      max-height: 480px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px;
+      text-align: left; padding-right: 4px;
+    }
+    .review-card {
+      background: var(--bg-card); border: 1px solid var(--border-line);
+      border-radius: var(--radius-sm); padding: 14px; font-size: 13px;
+    }
+    .review-card.correct { border-left: 3px solid var(--color-success); }
+    .review-card.wrong { border-left: 3px solid var(--color-danger); }
+
+    /* ==========================================================
+       MINDMAPS (EDITORIAL TREE VIEW)
+    ========================================================== */
+    .mm-carousel {
+      display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px;
+      margin-bottom: 16px; scroll-snap-type: x mandatory;
+    }
+    .mm-carousel::-webkit-scrollbar { height: 4px; }
+    .mm-carousel::-webkit-scrollbar-thumb { background: rgba(125, 133, 144, 0.3); border-radius: 4px; }
+
+    .mm-tab-item {
+      flex-shrink: 0; scroll-snap-align: start;
+      background: var(--bg-card); border: 1px solid var(--border-line);
+      color: var(--text-muted); padding: 8px 14px; border-radius: var(--radius-pill);
+      font-size: 13px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .mm-tab-item.active {
+      background: rgba(56, 139, 253, 0.15); border-color: var(--color-brand); color: var(--color-brand); font-weight: 700;
+    }
+
+    .search-row {
+      display: flex; gap: 10px; margin-bottom: 16px;
+    }
+    .search-input {
+      flex: 1; background: var(--bg-card); border: 1px solid var(--border-line);
+      color: var(--text-heading); padding: 10px 14px; border-radius: var(--radius-sm);
+      font-size: 14px; outline: none; font-family: var(--font-base);
+    }
+    .search-input:focus { border-color: var(--color-brand); }
+
+    .tree-stack {
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .branch-card {
+      background: var(--bg-card); border: 1px solid var(--border-line);
+      border-radius: var(--radius-md); overflow: hidden;
+    }
+    .branch-head {
+      padding: 14px 16px; background: rgba(0, 0, 0, 0.03);
+      display: flex; align-items: center; justify-content: space-between; cursor: pointer;
+    }
+    .branch-title {
+      font-size: 15px; font-weight: 700; color: var(--text-heading);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .branch-toggle {
+      color: var(--text-muted); transition: transform 0.2s;
+    }
+    .branch-card.collapsed .branch-toggle { transform: rotate(-90deg); }
+    
+    .branch-body {
+      display: grid; grid-template-rows: 1fr; transition: grid-template-rows 0.25s ease-out;
+    }
+    .branch-card.collapsed .branch-body { grid-template-rows: 0fr; }
+    .branch-inner {
+      overflow: hidden; padding: 0 14px 14px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px;
+    }
+    .leaf-item {
+      background: var(--bg-surface); border: 1px solid var(--border-line);
+      border-radius: var(--radius-sm); padding: 12px; font-size: 13px;
+    }
+    .leaf-label {
+      font-size: 12px; font-weight: 700; color: var(--color-brand); margin-bottom: 4px;
+      text-transform: uppercase; letter-spacing: 0.3px;
+    }
+    .leaf-desc { color: var(--text-body); line-height: 1.5; }
+
+    /* ==========================================================
+       DIRECTORY & CHEATSHEET
+    ========================================================== */
+    .q-scroll-box {
+      max-height: 580px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px;
+      padding-right: 4px;
+    }
+    .q-row-card {
+      background: var(--bg-card); border: 1px solid var(--border-line);
+      border-radius: var(--radius-md); padding: 14px; font-size: 13px;
+    }
+    .q-row-tag {
+      background: rgba(56, 139, 253, 0.12); color: var(--color-brand); padding: 2px 7px;
+      border-radius: var(--radius-pill); font-size: 11px; font-weight: 700;
+    }
+    .q-opts-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 6px; margin-top: 8px;
+    }
+    .q-opt-item {
+      padding: 7px 10px; border-radius: var(--radius-sm);
+      background: rgba(0, 0, 0, 0.03); color: var(--text-muted); font-size: 12px;
+    }
+    .q-opt-item.is-correct {
+      background: rgba(35, 134, 54, 0.2); border: 1px solid rgba(46, 160, 67, 0.4);
+      color: var(--color-success); font-weight: 700;
+    }
+
+    /* Table */
+    .table-container {
+      overflow-x: auto; margin-top: 10px; -webkit-overflow-scrolling: touch;
+    }
+    .clean-table {
+      width: 100%; border-collapse: collapse; font-size: 13px; min-width: 480px;
+    }
+    .clean-table th, .clean-table td {
+      padding: 9px 12px; border-bottom: 1px solid var(--border-line);
+    }
+    .clean-table th {
+      background: rgba(0, 0, 0, 0.03); color: var(--text-heading); font-weight: 700; text-align: left;
+    }
+    .kbd-tag {
+      background: rgba(110, 118, 129, 0.2); border: 1px solid var(--border-line);
+      padding: 2px 6px; border-radius: 4px; font-family: var(--font-mono); font-size: 11px; color: var(--text-heading);
+    }
+
+    /* Canvas Confetti */
+    #confettiCanvas {
+      position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="confettiCanvas"></canvas>
+
+  <div class="site-container">
+    <!-- Main Header -->
+    <header class="site-header">
+      <div class="site-header-badge">
+        <span class="status-dot"></span>
+        <span>Ôn Thi Cấp Tốc • Đề Cương Chuẩn 288 Câu</span>
+      </div>
+      
+      <!-- Theme Switcher -->
+      <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="Chuyển chế độ Sáng / Tối">
+        <span id="themeToggleIcon"><svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        <span id="themeToggleText">Chế độ Sáng</span>
+      </button>
+
+      <h1>Trắc Nghiệm CNTT Cơ Bản</h1>
+      <p>Luyện tập trắc nghiệm tương tác theo phong cách Quizizz, xáo trộn câu/đáp án hoặc thứ tự đề cương, cùng 6 Sơ đồ tư duy Mindmaps bao quát kiến thức.</p>
+    </header>
+
+    <!-- Top Desktop Nav Bar -->
+    <nav class="desk-nav">
+      <button class="desk-nav-btn active" onclick="switchMainTab('quiz')">
+        <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+        <span>Luyện Thi Quizizz</span>
+        <span class="desk-nav-badge" id="deskCountBadge">288 câu</span>
+      </button>
+      <button class="desk-nav-btn" onclick="switchMainTab('mindmap')">
+        <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"></rect><rect x="14" y="3" width="7" height="7" rx="2"></rect><rect x="14" y="14" width="7" height="7" rx="2"></rect><rect x="3" y="14" width="7" height="7" rx="2"></rect><path d="M10 6.5h4M6.5 10v4M14 17.5H10M17.5 10v4"></path></svg>
+        <span>Sơ Đồ Tư Duy (Mindmaps)</span>
+        <span class="desk-nav-badge">6 Module</span>
+      </button>
+      <button class="desk-nav-btn" onclick="switchMainTab('cheatsheet')">
+        <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+        <span>Đề Cương & Kíp Cứu Sinh</span>
+        <span class="desk-nav-badge">Lướt nhanh</span>
+      </button>
+    </nav>
+
+    <!-- ==========================================================
+         PANEL 1: QUIZIZZ ENGINE
+    ========================================================== -->
+    <main id="panel-quiz" class="tab-panel active">
+      <!-- 1.1 SETUP SCREEN -->
+      <section id="quizHome" class="panel-card">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; flex-wrap: wrap; gap: 8px;">
+          <h2 style="font-size: 18px; font-weight: 800; color: var(--text-heading); display: flex; align-items: center; gap: 8px;">
+            <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg> Thiết Lập Bài Luyện Thi
+          </h2>
+          <span style="font-size: 13px; color: var(--text-muted);">Tùy chỉnh trước khi thi</span>
+        </div>
+
+        <div class="config-grid">
+          <div class="config-cell">
+            <div class="config-cell-label"><svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg> Chọn Module / Môn Học</div>
+            <select id="selModule" class="form-control" onchange="updateQuestionCountLimit()">
+              <option value="ALL">Toàn bộ 6 Module (288 câu)</option>
+              <option value="Kiến thức chung">Module 1: Kiến thức chung (47 câu)</option>
+              <option value="Windows 10">Module 2: Windows 10 (30 câu)</option>
+              <option value="MS Word 2013">Module 3: MS Word 2013 (60 câu)</option>
+              <option value="MS Excel 2013">Module 4: MS Excel 2013 (96 câu)</option>
+              <option value="MS PowerPoint 2013">Module 5: MS PowerPoint 2013 (30 câu)</option>
+              <option value="LAN & Internet">Module 6: LAN & Internet (25 câu)</option>
+            </select>
+          </div>
+
+          <div class="config-cell">
+            <div class="config-cell-label"><svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg> Số Lượng Câu Hỏi</div>
+            <select id="selLimit" class="form-control">
+              <option value="10">Luyện nhanh 10 câu</option>
+              <option value="20" selected>Luyện chuẩn 20 câu</option>
+              <option value="50">Luyện sâu 50 câu</option>
+              <option value="100">Cày cuốc 100 câu</option>
+              <option value="ALL">Làm toàn bộ câu của môn này</option>
+            </select>
+          </div>
+
+          <div class="config-cell">
+            <div class="config-cell-label"><svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Thời Gian / Câu</div>
+            <select id="selTimer" class="form-control">
+              <option value="0" selected>Không giới hạn (Ôn kỹ)</option>
+              <option value="15">15 giây / câu (Phản xạ tốc độ)</option>
+              <option value="30">30 giây / câu (Chuẩn thi)</option>
+              <option value="60">60 giây / câu (Thư thả)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Toggles -->
+        <div class="settings-group">
+          <div class="settings-row">
+            <div class="settings-text">
+              <strong>Xáo trộn câu hỏi ngẫu nhiên</strong>
+              <span>Đổi vị trí xuất hiện các câu hỏi khi bắt đầu bài thi</span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="chkShuffleQ" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="settings-row">
+            <div class="settings-text">
+              <strong>Xáo trộn thứ tự các đáp án (A, B, C, D)</strong>
+              <span>Đổi vị trí các đáp án để tránh học vẹt, rèn bản chất</span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="chkShuffleOpts" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="settings-row">
+            <div class="settings-text">
+              <strong>Theo đúng thứ tự đề cương gốc</strong>
+              <span>Tắt xáo trộn, ôn tuần tự từ câu 1 đến câu cuối trong file PDF</span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="chkSequential" onchange="handleSequentialToggle(this)">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="settings-row">
+            <div class="settings-text">
+              <strong>Âm thanh Quizizz phản hồi</strong>
+              <span>Âm thanh vui nhộn khi trả lời đúng / sai (Web Audio)</span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="chkSound" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="actions-row">
+          <button class="btn-action-primary" onclick="startQuiz('standard')">
+            <svg class="svg-ico" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg> <span>BẮT ĐẦU THI NGAY</span>
+          </button>
+          <button class="btn-action-secondary" id="btnRetryWrong" onclick="startQuiz('retry')" style="display: none;">
+            <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg> <span>Luyện lại câu sai (<span id="wrongCountSaved">0</span>)</span>
+          </button>
+          <button class="btn-action-secondary" onclick="startQuiz('all-sequential')">
+            <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg> <span>Ôn 288 câu theo thứ tự PDF</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- 1.2 IN-GAME VIEW -->
+      <section id="quizPlay" style="display: none;">
+        <div class="quiz-hud">
+          <div class="hud-track-wrap">
+            <div class="hud-meta-text">
+              <span id="txtProgressLabel">Câu 1/20</span>
+              <span id="txtCurrentModule">MS Excel 2013</span>
+            </div>
+            <div class="hud-bar">
+              <div id="progressBarFill" class="hud-bar-inner"></div>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <div id="pillTimer" class="hud-pill pill-timer" style="display: none;">
+              <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <span id="timerVal">30s</span>
+            </div>
+            <div class="hud-pill" style="color: var(--color-warning);">
+              <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg> <span id="txtStreak">0</span>
+            </div>
+            <div class="hud-pill">
+              <span style="color: var(--color-success); display: inline-flex; align-items: center; gap: 2px;"><svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span id="txtCorrect">0</span></span>
+              <span style="color: var(--color-danger); display: inline-flex; align-items: center; gap: 2px; margin-left: 6px;"><svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> <span id="txtWrong">0</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="question-surface">
+          <div class="q-meta-line">
+            <span class="q-badge-cat" id="qModuleTag">MS Excel 2013</span>
+            <span style="font-size: 12px; color: var(--text-dim); font-weight: 600;" id="qOriginalNum">Câu gốc: #1</span>
+          </div>
+          <div class="q-text-body" id="qText">Nội dung câu hỏi ở đây?</div>
+        </div>
+
+        <!-- 4 Answer Cards -->
+        <div class="quiz-options-list" id="answersGrid">
+          <button class="opt-card opt-0" onclick="handleSelectAnswer(0)">
+            <div class="opt-indicator">A</div>
+            <div class="opt-content">
+              <div class="opt-hint">Phím 1</div>
+              <div class="opt-title" id="optText0">Phương án A</div>
+            </div>
+          </button>
+          <button class="opt-card opt-1" onclick="handleSelectAnswer(1)">
+            <div class="opt-indicator">B</div>
+            <div class="opt-content">
+              <div class="opt-hint">Phím 2</div>
+              <div class="opt-title" id="optText1">Phương án B</div>
+            </div>
+          </button>
+          <button class="opt-card opt-2" onclick="handleSelectAnswer(2)">
+            <div class="opt-indicator">C</div>
+            <div class="opt-content">
+              <div class="opt-hint">Phím 3</div>
+              <div class="opt-title" id="optText2">Phương án C</div>
+            </div>
+          </button>
+          <button class="opt-card opt-3" onclick="handleSelectAnswer(3)">
+            <div class="opt-indicator">D</div>
+            <div class="opt-content">
+              <div class="opt-hint">Phím 4</div>
+              <div class="opt-title" id="optText3">Phương án D</div>
+            </div>
+          </button>
+        </div>
+
+        <!-- Feedback & Next Step -->
+        <div id="feedbackBanner" class="feedback-panel">
+          <div class="fb-title-row" id="fbTitle">Chính xác</div>
+          <div class="fb-body-text" id="fbDetail">Đáp án đúng là: ...</div>
+          <button class="btn-next-action" onclick="handleNextQuestion()">
+            <span>CÂU KẾ TIẾP</span> <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- 1.3 SCORE RESULT VIEW -->
+      <section id="quizResult" class="panel-card score-view" style="display: none;">
+        <h2 id="resTitle" style="font-size: 24px; font-weight: 800; color: var(--text-heading); margin-bottom: 4px;">
+          HOÀN THÀNH BÀI THI!
+        </h2>
+        <p id="resSubtitle" style="color: var(--text-muted); font-size: 14px; margin-bottom: 18px;">
+          Kết quả rèn luyện của bạn
+        </p>
+
+        <div class="score-circle">
+          <svg class="score-svg" viewBox="0 0 140 140">
+            <circle class="score-bg-ring" cx="70" cy="70" r="60" />
+            <circle id="scoreRingVal" class="score-fg-ring" cx="70" cy="70" r="60" />
+          </svg>
+          <div class="score-center-info">
+            <span id="resPercent" class="score-num">85%</span>
+            <span id="resFraction" class="score-label">17/20 đúng</span>
+          </div>
+        </div>
+
+        <div class="score-stats-grid">
+          <div class="score-box">
+            <div id="resCorrectCount" class="score-box-val" style="color: var(--color-success);">17</div>
+            <div class="score-box-lbl">Câu đúng</div>
+          </div>
+          <div class="score-box">
+            <div id="resWrongCount" class="score-box-val" style="color: var(--color-danger);">3</div>
+            <div class="score-box-lbl">Câu sai</div>
+          </div>
+          <div class="score-box">
+            <div id="resMaxStreak" class="score-box-val" style="color: var(--color-warning);">7</div>
+            <div class="score-box-lbl">Chuỗi dài nhất</div>
+          </div>
+          <div class="score-box">
+            <div id="resTimeSpent" class="score-box-val" style="color: var(--color-brand);">2:45</div>
+            <div class="score-box-lbl">Thời gian</div>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 24px; flex-wrap: wrap;">
+          <button class="btn-action-primary" onclick="backToQuizConfig()" style="flex: 1; min-width: 160px;">
+            <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg> <span>Làm Đề Khác</span>
+          </button>
+          <button class="btn-action-secondary" id="btnRetryWrongFromResult" onclick="startQuiz('retry')" style="display: none;">
+            <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg> <span>Luyện Lại Câu Vừa Sai</span>
+          </button>
+          <button class="btn-action-secondary" onclick="switchMainTab('mindmap')">
+            <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"></rect><rect x="14" y="3" width="7" height="7" rx="2"></rect><rect x="14" y="14" width="7" height="7" rx="2"></rect><rect x="3" y="14" width="7" height="7" rx="2"></rect><path d="M10 6.5h4M6.5 10v4M14 17.5H10M17.5 10v4"></path></svg> <span>Xem Mindmap Ôn Lại</span>
+          </button>
+        </div>
+
+        <div style="border-top: 1px solid var(--border-line); padding-top: 18px;">
+          <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 12px; color: var(--text-heading);">
+            Chi Tiết Các Câu Đã Làm
+          </h3>
+          <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: 14px; flex-wrap: wrap;">
+            <button class="mm-tab-item active" onclick="filterReviewList('ALL', this)">Tất cả (<span id="rfTotal">20</span>)</button>
+            <button class="mm-tab-item" onclick="filterReviewList('WRONG', this)">Chỉ câu sai (<span id="rfWrong">3</span>)</button>
+            <button class="mm-tab-item" onclick="filterReviewList('CORRECT', this)">Chỉ câu đúng (<span id="rfCorrect">17</span>)</button>
+          </div>
+          <div id="reviewList" class="review-items-container"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================================
+         PANEL 2: MINDMAPS
+    ========================================================== -->
+    <main id="panel-mindmap" class="tab-panel">
+      <div class="panel-card">
+        <div class="mm-carousel" id="mmNav">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="search-row">
+          <input type="text" id="mmSearchInput" class="search-input" placeholder="Tìm kiếm công thức, phím tắt, khái niệm (vlookup, word, ram...)" oninput="handleMindmapSearch(this.value)">
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-line); padding-bottom: 12px; margin-bottom: 16px; flex-wrap: wrap; gap: 8px;">
+          <div>
+            <h2 id="mmHeaderTitle" style="font-size: 17px; font-weight: 800; color: var(--text-heading);">Module 1: Hiểu Biết CNTT Cơ Bản</h2>
+            <div id="mmHeaderSub" style="font-size: 12px; color: var(--text-muted);">Bao quát 47 câu trắc nghiệm đề thi</div>
+          </div>
+          <div style="display: flex; gap: 6px;">
+            <button class="mm-tab-item" onclick="expandAllMindmap(true)" style="padding: 5px 10px; font-size: 12px;">Mở tất cả</button>
+            <button class="mm-tab-item" onclick="expandAllMindmap(false)" style="padding: 5px 10px; font-size: 12px;">Thu gọn</button>
+          </div>
+        </div>
+
+        <div class="tree-stack" id="mmTreeContainer">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </main>
+
+    <!-- ==========================================================
+         PANEL 3: DIRECTORY & CHEATSHEET
+    ========================================================== -->
+    <main id="panel-cheatsheet" class="tab-panel">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <!-- Emergency Box -->
+        <section class="panel-card" style="border-left: 3px solid var(--color-warning);">
+          <h2 style="font-size: 17px; font-weight: 800; color: var(--color-warning); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+            <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5.76.76 1.23 1.52 1.41 2.5h6.18z"></path></svg> 10 BẪY ĐỀ THI HAY GẶP NHẤT (ĐỌC 2 PHÚT TRƯỚC GIỜ THI)
+          </h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px;">
+            <div style="background: var(--bg-card); border: 1px solid var(--border-line); border-radius: var(--radius-sm); padding: 12px; font-size: 13px;">
+              <strong style="color: var(--text-heading); display: block; margin-bottom: 2px;">1. Bẫy Bội số dung lượng</strong>
+              1 Byte = 8 Bit. Bội số chuẩn là <strong>1024</strong> (2^10), KHÔNG phải 1000! 1 KB = 1024 Bytes, 1 MB = 1024 KB.
+            </div>
+            <div style="background: var(--bg-card); border: 1px solid var(--border-line); border-radius: var(--radius-sm); padding: 12px; font-size: 13px;">
+              <strong style="color: var(--text-heading); display: block; margin-bottom: 2px;">2. Bẫy Căn lề trong Excel</strong>
+              Dữ liệu Số & Ngày tháng mặc định căn <strong>PHẢI</strong>. Chuỗi chữ căn <strong>TRÁI</strong>. Giá trị Logic (TRUE/FALSE) căn <strong>GIỮA</strong>.
+            </div>
+            <div style="background: var(--bg-card); border: 1px solid var(--border-line); border-radius: var(--radius-sm); padding: 12px; font-size: 13px;">
+              <strong style="color: var(--text-heading); display: block; margin-bottom: 2px;">3. Bẫy INT vs MOD</strong>
+              INT(-7.2) = <strong>-8</strong> (phần nguyên nhỏ hơn hoặc bằng). MOD(7, 3) = <strong>1</strong> (phần DƯ của phép chia).
+            </div>
+            <div style="background: var(--bg-card); border: 1px solid var(--border-line); border-radius: var(--radius-sm); padding: 12px; font-size: 13px;">
+              <strong style="color: var(--text-heading); display: block; margin-bottom: 2px;">4. Bẫy COUNT vs COUNTA</strong>
+              COUNT(range) chỉ đếm ô chứa SỐ. COUNTA(range) đếm TẤT CẢ các ô không rỗng (chứa bất kỳ chữ hoặc số).
+            </div>
+            <div style="background: var(--bg-card); border: 1px solid var(--border-line); border-radius: var(--radius-sm); padding: 12px; font-size: 13px;">
+              <strong style="color: var(--text-heading); display: block; margin-bottom: 2px;">5. Bẫy Trình chiếu PowerPoint</strong>
+              F5: Trình chiếu từ SLIDE 1 (Đầu tiên). Shift + F5: Chiếu từ SLIDE ĐANG CHỌN. Phím B: Màn hình đen. Phím W: Màn hình trắng.
+            </div>
+            <div style="background: var(--bg-card); border: 1px solid var(--border-line); border-radius: var(--radius-sm); padding: 12px; font-size: 13px;">
+              <strong style="color: var(--text-heading); display: block; margin-bottom: 2px;">6. Bẫy Email Cc vs Bcc</strong>
+              Bcc (Blind Carbon Copy): Người nhận bản sao ẨN DANH, những người nhận khác KHÔNG nhìn thấy địa chỉ người này.
+            </div>
+          </div>
+        </section>
+
+        <!-- Shortcuts Table -->
+        <section class="panel-card">
+          <h2 style="font-size: 17px; font-weight: 800; color: var(--text-heading); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+            <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><line x1="6" y1="8" x2="6.01" y2="8"></line><line x1="10" y1="8" x2="10.01" y2="8"></line><line x1="14" y1="8" x2="14.01" y2="8"></line><line x1="18" y1="8" x2="18.01" y2="8"></line><line x1="6" y1="12" x2="6.01" y2="12"></line><line x1="18" y1="12" x2="18.01" y2="12"></line><line x1="8" y1="16" x2="16" y2="16"></line></svg> Bảng Phím Tắt Vàng Đề Thi Thường Hỏi
+          </h2>
+          <div class="table-container">
+            <table class="clean-table">
+              <thead>
+                <tr>
+                  <th>Phím tắt</th>
+                  <th>Chức năng</th>
+                  <th>Môn học</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><span class="kbd-tag">Ctrl + D</span></td><td>Mở hộp thoại Font trong Word / Nhân đôi slide trong PPT</td><td>Word / PPT</td></tr>
+                <tr><td><span class="kbd-tag">Ctrl + E</span></td><td>Căn giữa đoạn văn bản (Center)</td><td>Word</td></tr>
+                <tr><td><span class="kbd-tag">Ctrl + J</span></td><td>Căn đều hai bên lề (Justify)</td><td>Word</td></tr>
+                <tr><td><span class="kbd-tag">Ctrl + 1 / 2 / 5</span></td><td>Giãn dòng đơn (1.0) / đôi (2.0) / dòng rưỡi (1.5)</td><td>Word</td></tr>
+                <tr><td><span class="kbd-tag">Ctrl + Enter</span></td><td>Ngắt trang cứng sang trang mới (Page Break)</td><td>Word</td></tr>
+                <tr><td><span class="kbd-tag">F4</span></td><td>Chuyển đổi kiểu địa chỉ ô ($A$1 -> A$1 -> $A1 -> A1)</td><td>Excel</td></tr>
+                <tr><td><span class="kbd-tag">F2</span></td><td>Sửa trực tiếp nội dung ô trong Excel / Đổi tên tệp (Rename)</td><td>Excel / Windows</td></tr>
+                <tr><td><span class="kbd-tag">F5 / Shift + F5</span></td><td>Chiếu từ Slide 1 / Chiếu từ Slide hiện tại</td><td>PowerPoint</td></tr>
+                <tr><td><span class="kbd-tag">Windows + E</span></td><td>Mở nhanh trình quản lý tệp File Explorer</td><td>Windows 10</td></tr>
+                <tr><td><span class="kbd-tag">Windows + D</span></td><td>Ẩn tất cả các cửa sổ để về Desktop ngay</td><td>Windows 10</td></tr>
+                <tr><td><span class="kbd-tag">Shift + Delete</span></td><td>Xóa vĩnh viễn tệp không lưu vào Recycle Bin</td><td>Windows 10</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- All Questions Directory -->
+        <section class="panel-card">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
+            <div>
+              <h2 style="font-size: 17px; font-weight: 800; color: var(--text-heading);">Tra Cứu Toàn Bộ 288 Câu Đề Cương</h2>
+              <div style="font-size: 12px; color: var(--text-muted);">Tất cả câu hỏi kèm đáp án chuẩn highlight xanh lá</div>
+            </div>
+            <input type="text" id="txtSearchDir" class="form-control" style="max-width: 300px;" placeholder="Tìm kiếm câu hỏi (vlookup, tab, virus...)" oninput="filterQuestionsDirectory(this.value)">
+          </div>
+
+          <div style="display: flex; gap: 6px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 12px;">
+            <button class="mm-tab-item active" onclick="filterDirModule('ALL', this)">Tất cả (288)</button>
+            <button class="mm-tab-item" onclick="filterDirModule('Kiến thức chung', this)">Kiến thức chung (47)</button>
+            <button class="mm-tab-item" onclick="filterDirModule('Windows 10', this)">Windows 10 (30)</button>
+            <button class="mm-tab-item" onclick="filterDirModule('MS Word 2013', this)">MS Word 2013 (60)</button>
+            <button class="mm-tab-item" onclick="filterDirModule('MS Excel 2013', this)">MS Excel 2013 (96)</button>
+            <button class="mm-tab-item" onclick="filterDirModule('MS PowerPoint 2013', this)">PowerPoint (30)</button>
+            <button class="mm-tab-item" onclick="filterDirModule('LAN & Internet', this)">LAN & Internet (25)</button>
+          </div>
+
+          <div id="questionsDirectoryList" class="q-scroll-box">
+            <!-- Populated by JS -->
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <nav class="mobile-bottom-bar">
+    <button class="mob-nav-item active" onclick="switchMainTab('quiz')">
+      <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+      <span>Luyện Thi</span>
+    </button>
+    <button class="mob-nav-item" onclick="switchMainTab('mindmap')">
+      <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"></rect><rect x="14" y="3" width="7" height="7" rx="2"></rect><rect x="14" y="14" width="7" height="7" rx="2"></rect><rect x="3" y="14" width="7" height="7" rx="2"></rect><path d="M10 6.5h4M6.5 10v4M14 17.5H10M17.5 10v4"></path></svg>
+      <span>Mindmap</span>
+    </button>
+    <button class="mob-nav-item" onclick="switchMainTab('cheatsheet')">
+      <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+      <span>Cứu Sinh</span>
+    </button>
+  </nav>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    const rawQuestions = [{"id": 1, "original_num": 1, "module": "Kiến thức chung", "question": "Để tắt máy tính đúng cách ta chọn", "options": ["Tắt nguồn điện", "Bấm nút Power trên hộp máy", "Bấm nút Reset trên hộp máy", "Nhấn nút Start ở góc dưới bên trái màn hình nền và chọn mục Shutdown."], "answer": "D", "ans_idx": 3}, {"id": 2, "original_num": 2, "module": "Kiến thức chung", "question": "Để phòng chống Virus cách tốt nhất là?", "options": ["Thường xuyên kiểm tra đĩa, đặc biệt thận trọng khi sao chép dữ liệu", "Sử dụng các chương trình cập nhật thường xuyên", "Thường xuyên lưu dữ liệu", "Sử dụng ứng dụng bảo vệổ đĩa"], "answer": "A", "ans_idx": 0}, {"id": 3, "original_num": 3, "module": "Kiến thức chung", "question": "Khi đặt tên tệp hoặc thư mục trong DOS không được sử dụng các ký tự nào sau đây?", "options": [". , ? \\ / ; : = < > [ ]", "Các chữ số từ 1 đến 5", "Các chữ cái từ A đến G", "Các chữ và số đi cùng nhau"], "answer": "A", "ans_idx": 0}, {"id": 4, "original_num": 4, "module": "Kiến thức chung", "question": "Chọn câu trả lời thích hợp nhất: “Tại sao phải định kì sử dụng công cụ chống phân mảnh đĩa cứng:", "options": ["Đểổ đĩa cứng máy tính lâu hỏng", "Để tốc độ truy xuất dữ liệu từ đĩa cứng nhanh hơn", "Để tạo ra nhiều không gian trống hơn trong đĩa cứng", "Để nén dữ liệu trong đĩa cứng tốt hơn"], "answer": "B", "ans_idx": 1}, {"id": 5, "original_num": 5, "module": "Kiến thức chung", "question": "Virus tin học thực chất là?", "options": ["Một loại vi sinh vật sống ký sinh trên các thiết bị vật lý của máy tính", "Một kháng thể không tồn tại", "Một đoạn chương trình có kích thước lớn", "Tồn tại bên ngoài không khí"], "answer": "A", "ans_idx": 0}, {"id": 6, "original_num": 6, "module": "Kiến thức chung", "question": "Bạn đã cài đặt một đĩa hoàn toàn mới và bạn muốn định dạng nó. Mục đích của công việc định dạng là gì?", "options": ["Phục hồi dữ liệu bị mất trong đĩa", "Tạo một đĩa chỉ đọc", "Tạo một đĩa để đọc và chấp nhận dữ liệu", "Làm cho nhiều người sử dụng có thể truy nhập được đĩa"], "answer": "C", "ans_idx": 2}, {"id": 7, "original_num": 7, "module": "Kiến thức chung", "question": "Các phát biểu sau, phát biểu nào đúng:", "options": ["Tên File không được chứa khoảng trắng", "Tên File không nên có dấu tiếng Việt", "Tên File được dài trên 255 kí tự", "Tên File được chấp nhận kí tự #"], "answer": "B", "ans_idx": 1}, {"id": 8, "original_num": 8, "module": "Kiến thức chung", "question": "Bạn nhận được một bức thư điện tử chứa tệp tin đính kèm mà bạn không nhận biết ra, bạn sẽ xử lý thế nào trong tình huống này để đảm bảo an toàn?", "options": ["Mở tệp tin này ra để kiểm tra loại tệp tin", "Chuyển thư này cho ai đó mà bạn nghĩ rằng bạn có thể nhận biết được", "Quét tập tin này bằng chương trình chống virus", "Lưu bản sao tập tin này vào đĩa cứng và mở bản sao này"], "answer": "C", "ans_idx": 2}, {"id": 9, "original_num": 9, "module": "Kiến thức chung", "question": "Câu nào dưới đây không đúng?", "options": ["Vi rút máy tính lây nhiễm qua khi dùng chung máy tính", "Vi rút máy tính lây nhiễm khi sao chép qua đĩa mềm, đĩa CD", "Vi rút máy tính lây nhiễm khi sao chép qua mạng", "Vi rút máy tính lây nhiễm qua Internet"], "answer": "A", "ans_idx": 0}, {"id": 10, "original_num": 10, "module": "Kiến thức chung", "question": "Ở tình huống nào dưới đây, máy tính thực thi công việc tốt hơn con người?", "options": ["Khi dịch một cuốn sách", "Khi chẩn đoán bệnh", "Khi phân tích tâm lý một con người", "Khi thực hiện một phép toán phức tạp"], "answer": "D", "ans_idx": 3}, {"id": 11, "original_num": 11, "module": "Kiến thức chung", "question": "Virus máy tính lây lan qua những con đường nào ?", "options": ["Qua thiết bị nhớ USB.", "Từ các file", "Từ cácứng dụng", "Từ Ram."], "answer": "A", "ans_idx": 0}, {"id": 12, "original_num": 12, "module": "Kiến thức chung", "question": "Phát biểu nào về hệ điều hành sau đây là không đúng ?", "options": ["Hệ điều hành đảm bảo giao tiếp giữa người dùng và máy tính.", "Chức năng chính của hệ điều hành là thực hiện tìm kiếm thông tin trên Internet.", "Hệ điều hành cung cấp các phương tiện và dịch vụ để người sử dụng dễ dàng thực hiện chương trình, quản lí chặt chẽ, khai thác các tài nguyên của máy tính một cách tốiưu.", "Hệ điều hành Windows là một hệ điều hành dùng cho máy tính cá nhân của hãng Microsoft."], "answer": "B", "ans_idx": 1}, {"id": 13, "original_num": 13, "module": "Kiến thức chung", "question": "Trong hệ điều hành Windows, để mở chương trình quản lý tác vụ (Task Manager) bạn dùng tổ hợp phím:", "options": ["Ctrl + S", "Alt + F4", "Ctrl + Alt + F4", "Ctrl + Alt + Delete"], "answer": "D", "ans_idx": 3}, {"id": 14, "original_num": 14, "module": "Kiến thức chung", "question": "Trong máy tính, thông tin tồn tại dưới các dạng tập tin nào ?", "options": ["Tập tin chương trình", "Tập tin dữ liệu", "Cả hai đều đúng", "Cả hai đều sai"], "answer": "C", "ans_idx": 2}, {"id": 15, "original_num": 15, "module": "Kiến thức chung", "question": "Khi khởi động máy tính, phần mềm nào được thực hiện trước ?", "options": ["Hệ điều hành", "Phần mềm gõ tiếng Việt", "Phần mềm diệt Virus máy tính", "Phần mềm Word, Excel"], "answer": "A", "ans_idx": 0}, {"id": 16, "original_num": 16, "module": "Kiến thức chung", "question": "Theo bạn phần mềm Windows, Linux có đặc điểm nào chung ?", "options": ["Cả hai đều là phần mềmứng dụng", "Cả hai đều là thiết bị phần cứng", "Cả hai đều là hệ điều hành", "Cả hai đều là phần mềm hệ thống"], "answer": "C", "ans_idx": 2}, {"id": 17, "original_num": 17, "module": "Kiến thức chung", "question": "Khi đang dùng máy tính, để khởi động lại hệ thống thì bạn dùng cách nào sau đây:", "options": ["Tại giao diện desktop => Alt + F4 => Restart", "Kích Start menu => Shutdown", "Bấm nút Restart trên hộp máy", "Bấm Alt + F4."], "answer": "A", "ans_idx": 0}, {"id": 18, "original_num": 18, "module": "Kiến thức chung", "question": "Khi đang dùng máy tính, để tắt hệ thống đúng cách thì bạn dùng cách nào sau đây:", "options": ["Rút dây nguồn điện máy tính", "Kích Start menu => Shutdown", "Bấm nút Power trên hộp máy", "Bấm nút Reset trên hộp máy"], "answer": "B", "ans_idx": 1}, {"id": 19, "original_num": 19, "module": "Kiến thức chung", "question": "Trong hệ điều hành Windows, muốn khởi chạy một chương trình nào đó thì:", "options": ["Mở My Computer và kích đôi chuột trái vào tên chương trình", "Mở và kích vào chương trình => bấm Enter", "Mở và kích chuột phải vào chương trình => Open", "Mở và kích đôi chuột trái vào tên chương trình"], "answer": "A", "ans_idx": 0}, {"id": 20, "original_num": 20, "module": "Kiến thức chung", "question": "Trong hệ điều hành Windows, khi đang mở cửa sổ thư mục hiện hành bạn muốn trở về màn hình nền desktop thì:", "options": ["Bấm tổ hợp phím Windows + D", "Kích chuột phải lên thanh Taskbar => Show the desktop", "Cả hai cách trên đều đúng", "Cả hai cách trên đều sai."], "answer": "C", "ans_idx": 2}, {"id": 21, "original_num": 21, "module": "Kiến thức chung", "question": "Trong hệ điều hành Windows, các tập tin được chọn và xoá bằng tổ hợp phím Shift + Delete thì:", "options": ["Có thể khôi phục bằng cách mở trong My Computer", "Có thể khôi phục bằng cách mở trong My Documents", "Có thể khôi phục bằng cách mở trong Recycle Bin", "Không thể khôi phục lại được."], "answer": "D", "ans_idx": 3}, {"id": 22, "original_num": 22, "module": "Kiến thức chung", "question": "Trong hệ điều hành Windows, biểu tượng của thư mục thường có màu?", "options": ["Xanh", "Đỏ", "Tím", "Vàng"], "answer": "D", "ans_idx": 3}, {"id": 23, "original_num": 23, "module": "Kiến thức chung", "question": "Trong hệ điều hành Windows, thư mục thường được tổ chức dưới dạng:", "options": ["Chuỗi", "Dây", "Cây", "Đồ thị"], "answer": "C", "ans_idx": 2}, {"id": 24, "original_num": 24, "module": "Kiến thức chung", "question": "Trong hệ điều hành Windows, để mở chương trình quản lý tác vụ (Task Manager) thì bạn dùng tổ hợp phím nào:", "options": ["Ctrl + F1", "Alt + F4", "Ctrl + Alt + Delete", "Ctrl + Shift + Delete"], "answer": "C", "ans_idx": 2}, {"id": 25, "original_num": 25, "module": "Kiến thức chung", "question": "Trong My Computer của hệ điều hành Windows, để xoá một đối tượng tập tin hay thư mục thì bạn:", "options": ["Kích vào đối tượng đó và nhấn phím Delete", "Kích chuột phải và chọn Delete", "Kích và nhấn tổ hợp phím Ctrl + D", "Kích chọn Delete"], "answer": "A", "ans_idx": 0}, {"id": 26, "original_num": 26, "module": "Kiến thức chung", "question": "Định dạng tập tin có đuôi *.exe là:", "options": ["Tập tin chương trình", "Tập tin dữ liệu", "Cả hai đều đúng", "Cả hai đều sai"], "answer": "A", "ans_idx": 0}, {"id": 27, "original_num": 27, "module": "Kiến thức chung", "question": "Trong My Computer của hệ điều hành Windows, bạn phải nhấn giữ phím nào để chọn lần lượt từng đối tượng thư mục hoặc tập tin riêng lẻ ?", "options": ["Ctrl", "Shift", "Alt", "Insert"], "answer": "A", "ans_idx": 0}, {"id": 28, "original_num": 28, "module": "Kiến thức chung", "question": "Trong hệ điều hành Windows, chuỗi ký tự nào sau đây không phù hợp để đặt tên cho tập tin của bạn ?", "options": ["Thuchanhword.doc", "Baibạnpnhom.docx", "http://tttinhoc.duytan.edu.vn", "Hinhanh.bmp"], "answer": "C", "ans_idx": 2}, {"id": 29, "original_num": 29, "module": "Kiến thức chung", "question": "Theo bạn, virus máy tính gây ra tác hại nào đối với người dùng ?", "options": ["Tiêu tốn tài nguyên hệ thống.", "Phá hủy thiết bị", "Đánh cắp thiết bị", "Phá hủy bộ nhớ"], "answer": "A", "ans_idx": 0}, {"id": 30, "original_num": 30, "module": "Kiến thức chung", "question": "Chương trình nào sau đây không phải là chương trình diệt virus ?", "options": ["Kaspersky", "Winrar", "Avast Free Antivirus", "BKA V"], "answer": "B", "ans_idx": 1}, {"id": 31, "original_num": 31, "module": "Kiến thức chung", "question": "Hãy cho biết thiết bị nào sau đây là thiết bị nhập?", "options": ["Bàn phím, chuột, máy scan", "Màn hình, bàn phím, chuột", "Máy in", "Máy scan"], "answer": "A", "ans_idx": 0}, {"id": 32, "original_num": 32, "module": "Kiến thức chung", "question": "Máy tính là gì?", "options": ["Là công cụ phát hiện nói dối", "Là công cụ cho phép xử lý thông tin một cách thủ công", "Là công cụ không dùng để tính toán", "Là công cụ cho phép xử lý thông tin một cách tự động"], "answer": "D", "ans_idx": 3}, {"id": 33, "original_num": 33, "module": "Kiến thức chung", "question": "Đĩa CDRW có chức năng gì sau đây?", "options": ["Đọc/ghi", "Đọc", "Ghi", "Lưu"], "answer": "A", "ans_idx": 0}, {"id": 34, "original_num": 34, "module": "Kiến thức chung", "question": "RAM là viết tắt của", "options": ["Reliable Access Memory", "Recordable Access Memory", "Random Access Memory", "Readable Access Memony"], "answer": "C", "ans_idx": 2}, {"id": 35, "original_num": 35, "module": "Kiến thức chung", "question": "Cổng giao tiếp nào sau đây không sử dụng cho máy in?", "options": ["USB", "Parallel", "Network", "PS/2"], "answer": "D", "ans_idx": 3}, {"id": 36, "original_num": 36, "module": "Kiến thức chung", "question": "Ổ đĩa cứng là thiết bị thuộc loại", "options": ["Bộ nhớ trong", "Bộ nhớ ngoài", "Bộ nhớ cố định", "Bộ nhớ truy cập ngẫu nhiên"], "answer": "B", "ans_idx": 1}, {"id": 37, "original_num": 37, "module": "Kiến thức chung", "question": "Cách nào sau đây không thể mở Task Manager?", "options": ["Nhấn tổ hợp phím: Ctrl, Alt, Del", "Nhấn tổ hợp phím: Ctrl, Shift, Esc", "Click chuột phải vào thanh Taskbar chọn TaskManager", "Chạy lệnh \"taskmanager\" trong hộp thoại Run"], "answer": "D", "ans_idx": 3}, {"id": 38, "original_num": 38, "module": "Kiến thức chung", "question": "Tổ hợp phím nào sau đây có tác dụng đóng chương trình hiện hành", "options": ["Alt+F4", "Alt+F5", "Alt+F6", "Alt+F7"], "answer": "A", "ans_idx": 0}, {"id": 39, "original_num": 39, "module": "Kiến thức chung", "question": "Tổ hợp phím nào sau đây có tác dụng khởi động chươ ng trình Explorer", "options": ["Win+E", "Win+R", "Win+T", "Win+Y"], "answer": "A", "ans_idx": 0}, {"id": 40, "original_num": 40, "module": "Kiến thức chung", "question": "Để xem thuộc tính của file hay thư mục ta thực hiện thao tác nào", "options": ["Chọn file hoặc thư mục cần xem sau đó nhấn tổ hợp phím Alt+Enter", "Click chuột phải chọn Properties", "Nhấn tổ hợp phím Alt+Enter", "Nhấn tổ hợp phím Ctrl+Enter"], "answer": "A", "ans_idx": 0}, {"id": 41, "original_num": 41, "module": "Kiến thức chung", "question": "Muốn xem các chương trình đã cài đặt trong máy tính ta dùng chương trình nào sau đây trong Control Panel", "options": ["Programs and Features", "Mouse", "Personalization", "Keyboard"], "answer": "A", "ans_idx": 0}, {"id": 42, "original_num": 42, "module": "Kiến thức chung", "question": "Khi thao tác bảo trì máy tính người kỹ thuật viên cần phải mặc gì?", "options": ["Đồng phục bảo hộ lao động", "Đồng phục thể thao", "Đồng phục học thể dục", "Không cần đồng phục"], "answer": "A", "ans_idx": 0}, {"id": 43, "original_num": 43, "module": "Kiến thức chung", "question": "Người kỹ thuật viên cần tuân thủ nguyên tắc gì khi thao tác sửa chữa trực tiếp với máy tính", "options": ["Không đi chân trần khi tiếp xúc", "Không mặcáo quá nóng", "Không mặc quần dài", "Không đội nón bảo hiểm"], "answer": "A", "ans_idx": 0}, {"id": 44, "original_num": 44, "module": "Kiến thức chung", "question": "Trước khi thao tác trực tiếp với thiết bị người kỹ thuật viên cần làm gì đầu tiên?", "options": ["Dùng bút thử điện để kiểm tra trước khi thao tác", "Mở thiết bị ra sửa ngay", "Gọi điện cho khách hàng", "Vào internet xem quy trình sửa chữa"], "answer": "A", "ans_idx": 0}, {"id": 45, "original_num": 45, "module": "Kiến thức chung", "question": "Nguyên tắc nào sau đây có thể cải thiện tình trạng an toàn cho người kỹ thuật viên", "options": ["5S", "4S", "3S", "2S"], "answer": "A", "ans_idx": 0}, {"id": 46, "original_num": 46, "module": "Kiến thức chung", "question": "Khi thao tác sửa chữa thiết bị với độ cao trên 2m người kỹ thuật viên tuyệt đối phải làm gì?", "options": ["Đeo dây an toàn", "Quan sát kỹ trước khi leo lên cao", "Mang máy xuống thấp để thao tác", "Không cần làm gì"], "answer": "A", "ans_idx": 0}, {"id": 47, "original_num": 47, "module": "Kiến thức chung", "question": "Cần phải làm gì trước khi thao tác bảo trì dữ liệu", "options": ["Sao lưu dữ liệu", "Xóa dữ liệu", "Cắt dữ liệu", "Không cần phải làm gì"], "answer": "A", "ans_idx": 0}, {"id": 48, "original_num": 1, "module": "Windows 10", "question": "Muốn di chuyển một cửa sổ thì thao tác nào dưới đây là đúng:", "options": ["Nhắp chuột phải, chọn lệnh Move", "Nhấn tổ hợp phím Ctrl + M", "Chọn Menu Windows; Move", "Trỏ chuột vào thanh tiêu đề (Title bar) và kéo đến vị trí mới"], "answer": "B", "ans_idx": 1}, {"id": 49, "original_num": 2, "module": "Windows 10", "question": "Thiết lập hiển thị các folder có thuộc tính ẩnở đâu?", "options": ["Control Panel / Folder Option / General tab", "Folder Properties / General tab", "Control Panel / Folder Option / View tab", "Folder Properties / Security tab"], "answer": "C", "ans_idx": 2}, {"id": 50, "original_num": 3, "module": "Windows 10", "question": "Biểu tượng của các lối tắt (Shortcut) giúp bạn truy cập nhanh đến đối tượng nào dưới đây :", "options": ["Chương trình", "Ổ đĩa", "Tập tin tư liệu", "Nhấn tổ hợp phím Ctrl +S"], "answer": "D", "ans_idx": 3}, {"id": 51, "original_num": 4, "module": "Windows 10", "question": "Thiết bị vừa là thiết bị xuất vừa là thiết bị nhập của máy tính", "options": ["Máy in", "Bàn phím", "Màn hình", "Đĩa cd-rw/dvd-rw"], "answer": "D", "ans_idx": 3}, {"id": 52, "original_num": 5, "module": "Windows 10", "question": "Muốn khôi phục lại đối tượng đã xóa trong Recycle Bin, ta chọn đối tượng rồi thực hiện:", "options": ["File - Copy", "File - Open", "File - Restore", "File - Move To Folder…"], "answer": "C", "ans_idx": 2}, {"id": 53, "original_num": 6, "module": "Windows 10", "question": "Để thiết đặt lại hệ thống, ta chọn chức năng", "options": ["Control Panel", "Control Windows", "Control System", "Control Desktop"], "answer": "A", "ans_idx": 0}, {"id": 54, "original_num": 7, "module": "Windows 10", "question": "Chương trình dùng để quản lí các tệp và thư mục là", "options": ["Accessories", "Windows Explorer", "Internet Explorer", "Control Panel"], "answer": "B", "ans_idx": 1}, {"id": 55, "original_num": 8, "module": "Windows 10", "question": "Chương trình nào như một máy tính bỏ túi tích hợp trong Windows", "options": ["Notepad", "Calculator", "MS Word", "MS Excel"], "answer": "B", "ans_idx": 1}, {"id": 56, "original_num": 9, "module": "Windows 10", "question": "Muốn cài đặt máy in, ta thực hiện", "options": ["File - Printer and Faxes, rồi chọn mục Add a printer", "Window - Printer and Faxes, rồi chọn mục Add a printer", "Start - Printer and Faxes, rồi chọn mục Add a printer", "Tools - Printer and Faxes, rồi chọn mục Add a printer"], "answer": "C", "ans_idx": 2}, {"id": 57, "original_num": 10, "module": "Windows 10", "question": "Trong cửa sổ Explore, để chọn một lúc các file hoặc folder nằm không kề nhau trong một danh sách", "options": ["Giữ phím Ctrl và nháy chuột vào từng mục muốn chọn trong danh sách", "Nháy chuột ở mục đầu, ấn và giữ Shift nháy chuột ở mục cuối", "Giữ phím Alt và nháy chuột vào từng mục muốn chọn trong danh sách", "Giữ phím Tab và nháy chuột vào từng mục muốn chọn trong danh sách"], "answer": "A", "ans_idx": 0}, {"id": 58, "original_num": 11, "module": "Windows 10", "question": "Để thoát khỏi một chương trình trong ứng dụng của Windows, ta dùng tổ hợp phím", "options": ["Alt – F4", "Ctrl – F5", "Shift – F4", "Alt – F5"], "answer": "A", "ans_idx": 0}, {"id": 59, "original_num": 12, "module": "Windows 10", "question": "Kiến thức chung: Bộ nhớ RAM và ROM là bộ nhớ gì?", "options": ["Secondary memory", "Receive memory", "Primary memory", "Random access memory"], "answer": "C", "ans_idx": 2}, {"id": 60, "original_num": 13, "module": "Windows 10", "question": "Windows Explorer có các thành phần: Explorer bar, Explorer view, Tool bar, menu bar. Còn lại là gì?", "options": ["Status bar", "Menu bar", "Task bar", "Control panel"], "answer": "C", "ans_idx": 2}, {"id": 61, "original_num": 14, "module": "Windows 10", "question": "Chương trình cho phép định lại cấu hình hệ thống thay đổi môi trường làm việc cho phù hợp", "options": ["Display", "Control panel", "Sreen Saver", "Task bar"], "answer": "C", "ans_idx": 2}, {"id": 62, "original_num": 15, "module": "Windows 10", "question": "Trong Windows, khi xoá file hoặc folder thì nó được lưu trong Recycle Bin, muốn xoá hẳn file hoặc folder ta bấm tổ hợp phím nào:", "options": ["Shift_Del", "Alt_Del", "Ctrl_Del", "Task bar"], "answer": "A", "ans_idx": 0}, {"id": 63, "original_num": 16, "module": "Windows 10", "question": "Trong hệ điều hành Windows, thuộc tính nào dưới đây dùng đề hiển thị thanh công việc (Taskbar) trên các cửa sổ chương trình?", "options": ["Lock the Taskbar", "Auto-Hide the Taskbar", "Keep the Taskbar on top of other Windows", "Show the clock"], "answer": "B", "ans_idx": 1}, {"id": 64, "original_num": 17, "module": "Windows 10", "question": "Trong hệ điều hành Windows, để phục hồi tất cả các đối tượng trong Recycle Bin (thùng rác) ta nháy phải chuột tại Recycle Bin và chọn lệnh:", "options": ["Delete", "Restore", "Redo", "Undo Delete"], "answer": "B", "ans_idx": 1}, {"id": 65, "original_num": 18, "module": "Windows 10", "question": "Nhấn giữ phím nào khi muốn chọn nhiều đối tượng liên tiếp nhau?", "options": ["Ctrl", "Alt", "Tab", "Shift"], "answer": "D", "ans_idx": 3}, {"id": 66, "original_num": 19, "module": "Windows 10", "question": "Trong hệ điều hành Windows, để dán các tệp/thư mục sau khi đã thực hiện lệnh copy, ta mởổ đĩa, thư mục muốn chứa bản sao và:", "options": ["Vào bảng chọn Edit à chọn Paste.", "Nhấn tổ hợp phím Ctrl + V .", "Nháy phải chuột tại vùng trống bên trong ổ đĩa, thư mục chaà chọn Paste.", "Cácý trên đều đúng"], "answer": "D", "ans_idx": 3}, {"id": 67, "original_num": 20, "module": "Windows 10", "question": "Các thành phần: bộ nhớ chính, bộ xử lý trung ương, bộ phận nhập xuất, các loại hệ điều hành là:", "options": ["Control Panel", "Phần mềm", "Thiết bị lưu trữ", "Ứng dụng"], "answer": "A", "ans_idx": 0}, {"id": 68, "original_num": 21, "module": "Windows 10", "question": "Trên hệ điều hành Windows, để chuyển đổi cửa sổ chương trình cần làm việc ta:", "options": ["Nháy chọn biểu tượng chương trình tương ứng trên thanh công việc (Taskbar).", "Nhấn giữ phím Alt + C.", "Nháy vào một vị trí muốn kích hoạt.", "Nháy vào một vị trí bất kỳ."], "answer": "A", "ans_idx": 0}, {"id": 69, "original_num": 22, "module": "Windows 10", "question": "Trong các phần mềm sau, phần mềm nào là phần mềmứng dụng?", "options": ["Windows XP", "Microsoft Word", "Linux", "Unix"], "answer": "B", "ans_idx": 1}, {"id": 70, "original_num": 23, "module": "Windows 10", "question": "muốn khôi phục đối tượng đã xóa, ta mở cửa sổ Recycle Bin, chọn đối tượng muốn khôi phục và", "options": ["Nhấp chọn Edit và Restore.", "Nhấp chọn Edit và Delete.", "Nhấp chọn File và Restore.", "Nhấp chọn File và Delete."], "answer": "A", "ans_idx": 0}, {"id": 71, "original_num": 24, "module": "Windows 10", "question": "Muốn đổi tên cho thư mục/tệp tin trong hệ điều hành Windows, ta chọn thư mục/tệp tin cần đổi tên và thực hiện thao tác nào sau đây?", "options": ["Nhấp chọn File và chọn Rename và nhập tên mới và nhấn phím Enter.", "Nhấn phím F2 và nhập tên mới và nhấn phím Enter.", "Nhấp chọn chuột phải tại thư mục/tệp tin và nhập tên mới và nhấn phím Enter.", "Cácý trên đều đúng."], "answer": "D", "ans_idx": 3}, {"id": 72, "original_num": 25, "module": "Windows 10", "question": "Để xoá các tệp/thư mục đang chọn ta thực hiện cách nào?", "options": ["Vào bảng chọn Edit và UnDelete và Yes.", "Nhấn tổ hợp phím Ctrl + Delete và Yes.", "Nhấn phím Delete và Yes.", "Cácý trên đều đúng."], "answer": "D", "ans_idx": 3}, {"id": 73, "original_num": 26, "module": "Windows 10", "question": "Để dán các tệp/thư mục sau khi đã thực hiện lệnh copy, ta mởổ đĩa, thư mục muốn chứa bản sao và:", "options": ["Chọn Edit và chọn Paste.", "Nhấn tổ hợp phím Ctrl + V .", "Nháy phải chuột tại vùng trống bên trong ổ đĩa và chọn Paste.", "Nháy phải chuột tại thư mục cha và chọn Paste."], "answer": "B", "ans_idx": 1}, {"id": 74, "original_num": 27, "module": "Windows 10", "question": "Trong hệ điều hành Windows, muốn đóng (thoát) cửa sổ chương trình ứng dụng đang làm việc ta:", "options": ["Nhấn tổ hợp phím Ctrl + F3", "Nhấn phím F11", "Nhấn tổ hợp phím Alt + F4.", "Nhấn tổ hợp phím Alt + Q"], "answer": "C", "ans_idx": 2}, {"id": 75, "original_num": 28, "module": "Windows 10", "question": "Để quản lý tệp, thư mục ta thường dùng chương trình nào sau đây:", "options": ["Internet Explorer", "Windows Explorer.", "Microsoft Word.", "Microsoft Excel."], "answer": "B", "ans_idx": 1}, {"id": 76, "original_num": 29, "module": "Windows 10", "question": "Muốn thay đổi các thông số khu vực trong hệ điều hành Windows như múi giờ, đơn vị tiền tệ, cách viết số, ... ta sử dụng chương trình nào trong các chương trình sau", "options": ["Microsoft Paint", "System Tools", "Control Panel", "Caculator"], "answer": "C", "ans_idx": 2}, {"id": 77, "original_num": 30, "module": "Windows 10", "question": "Muốn chọn tất cả các đối tượng trong cửa sổ thư mục hiện tại, ta dùng phím (tổ hợp phím) nào sau đây", "options": ["Shift + F4", "Ctrl +A", "Alt + H", "F11"], "answer": "B", "ans_idx": 1}, {"id": 78, "original_num": 1, "module": "MS Word 2013", "question": "Tổ hợp phím Ctrl + O dùng để", "options": ["Mở một Document mới", "Mở một Document đã có", "Đóng Document đang mở", "Đóng và lưu Document đang mở"], "answer": "B", "ans_idx": 1}, {"id": 79, "original_num": 2, "module": "MS Word 2013", "question": "Tổ hợp phím nào cho phép chọn tất cả văn bản đang soạn thảo", "options": ["Ctrl + A", "Ctrl + End", "Alt + A", "Alt + End"], "answer": "A", "ans_idx": 0}, {"id": 80, "original_num": 3, "module": "MS Word 2013", "question": "Trong Bảng (Table), để tách mộtô thành nhiều ô, ta thực hiện:", "options": ["LayOut - Cells", "Design - Cells", "LayOut - Split Cells", "Design - Split Cells"], "answer": "C", "ans_idx": 2}, {"id": 81, "original_num": 4, "module": "MS Word 2013", "question": "Muốn định dạng các đoạn văn bản theo kiểu danh sách, ta thực hiện:", "options": ["Home - Bullets and Numbering", "View - Bullets and Numbering", "Insert - Bullets and Numbering", "Review - Bullets and Numbering"], "answer": "A", "ans_idx": 0}, {"id": 82, "original_num": 5, "module": "MS Word 2013", "question": "Để chèn tiêu đề trang (đầu trang và chân trang), ta thực hiện", "options": ["Insert - Header and Footer", "View - Header and Footer", "Home - Header and Footer", "Review - Header and Footer"], "answer": "A", "ans_idx": 0}, {"id": 83, "original_num": 6, "module": "MS Word 2013", "question": "Để soạn thảo một công thức toán học, ta thường dùng", "options": ["Insert - Word Art", "Insert - Equation", "Insert - Chart", "Insert - Shapes"], "answer": "B", "ans_idx": 1}, {"id": 84, "original_num": 7, "module": "MS Word 2013", "question": "Một đối tượng sử dụng loại Wraps text nào để văn bản lấp đầy các khoảng trong xung quanh nó.", "options": ["Spuare", "Tight", "Through", "Top and Bottom"], "answer": "C", "ans_idx": 2}, {"id": 85, "original_num": 8, "module": "MS Word 2013", "question": "Để định dạng lại trang giấy in, ta thực hiện", "options": ["File - Print", "Page Layout - Page Setup", "File - Page Setup", "Page Layout - Print"], "answer": "B", "ans_idx": 1}, {"id": 86, "original_num": 9, "module": "MS Word 2013", "question": "Để chuyển đổi giữa hai chế độ gõ : chế độ gõ chèn và chế độ gõ đè; ta bấm", "options": ["Tab", "Shift + Del", "Insert", "Shift + Insert"], "answer": "C", "ans_idx": 2}, {"id": 87, "original_num": 10, "module": "MS Word 2013", "question": "Trong Word, để tạo chỉ số trên (m2), bạn thực hiện gõ m2, bôi đen chỉ số 2 rồi thực hiện tiếp tổ hợp phím nào sau đây?", "options": ["Ctrl , Shift, =", "Ctrl , =", "Shift, =", "Ctrl , Shift"], "answer": "A", "ans_idx": 0}, {"id": 88, "original_num": 11, "module": "MS Word 2013", "question": "Trong Word, để tạo chỉ số dưới (H2), bạn thực hiện gõ H2, bôi đen chỉ số 2 rồi thực hiện tiếp tổ hợp phím nào sau đây?", "options": ["Ctrl , Shift, =", "Ctrl , =", "Shift, =", "Ctrl , Shift"], "answer": "B", "ans_idx": 1}, {"id": 89, "original_num": 12, "module": "MS Word 2013", "question": "Trong Word, khi đã bôi đen một đoạn văn bản in nhạt, muốn đoạn văn bản này đậm lên, bạn dùng tổ hợp phím nào sau đây?", "options": ["Ctrl + P", "Ctrl + X", "Ctrl + C", "Ctrl + B"], "answer": "D", "ans_idx": 3}, {"id": 90, "original_num": 13, "module": "MS Word 2013", "question": "Trong Word, bạn có một Bảng (Table) gồm 3 cột, 5 dòng. Con trỏ đang ởô cuối cùng trên dòng số 5, muốn thêm một dòng mớiở cuối bảng, bạn thực hiện cách nào sau đây?", "options": ["Tab", "Kích chuột phải -> Insert", "Kích chuột phải -> Insert Cells", "Chọn Insert Rows Below"], "answer": "A", "ans_idx": 0}, {"id": 91, "original_num": 14, "module": "MS Word 2013", "question": "Trong Word để dãn khoản cách giữa các dòng là 1,5 line, sau khi bôi đen các dòng văn bản ta thực hiện cách nào sau đây?", "options": ["Ctrl + Shift + 5", "Paragraph/Line Spacing -> chọn 1,5 lines", "Ctrl + Shift + F5", "Ctrl + Shift + F6"], "answer": "B", "ans_idx": 1}, {"id": 92, "original_num": 15, "module": "MS Word 2013", "question": "Trong Word để ngắt trang trong Word ta dùng tổ hợp phím nào sau đây?", "options": ["Alt + Enter", "Alt + Shift", "Shift + Enter", "Ctrl + Enter"], "answer": "D", "ans_idx": 3}, {"id": 93, "original_num": 16, "module": "MS Word 2013", "question": "Trong Word để chọn toàn bộ mộtô bất kỳ trong bảng, ta thực hiện theo cách nào sau đây?", "options": ["Bôi đen phần văn bản trên ô đó", "Nhấn đúp chuột vàoô đó", "Nhấn chuột vào phía trên ô đó", "Nhấn chuột vào góc dưới bên trái ô đó."], "answer": "D", "ans_idx": 3}, {"id": 94, "original_num": 17, "module": "MS Word 2013", "question": "Trong Word, ta có thể tạo chữ in hoa bằng công cụ Drop Cap cho trường hợp nào sau đây?", "options": ["Chữ cái đầu của mỗi đoạn trong văn bản", "Một số chữ cái đầu của đoạn đầu tiên trong văn bản", "Chữ cái đầu dòng trên Table", "Chữ cái đầu đoạn văn bảng trong Text box"], "answer": "A", "ans_idx": 0}, {"id": 95, "original_num": 18, "module": "MS Word 2013", "question": "Trong Word, File BangdiemSV dùng làm dữ liệu để trộn thư in bảng điểm cá nhân cho sinh viên, File BangdiemSV không thể dùng được ở dạng nào sau đây?", "options": ["BangdiemSV .xls", "BangdiemSV .txt", "BangdiemSV .doc", "BangdiemSV .pdf"], "answer": "D", "ans_idx": 3}, {"id": 96, "original_num": 19, "module": "MS Word 2013", "question": "Trong Word, khi đã bôi đen một đoạn văn bản, muốn tăng kích cỡ của chữ bạn dùng tổ hợp phím nào sau đây?", "options": ["Ctrl + ]", "Ctrl + }", "Ctrl + {", "Ctrl + ["], "answer": "A", "ans_idx": 0}, {"id": 97, "original_num": 20, "module": "MS Word 2013", "question": "Trong Word, khi đã bôi đen một đoạn văn bản, muốn giảm kích cỡ của chữ bạn dùng tổ hợp phím nào sau đây?", "options": ["Ctrl + ]", "Ctrl + }", "Ctrl + {", "Ctrl + ["], "answer": "D", "ans_idx": 3}, {"id": 98, "original_num": 21, "module": "MS Word 2013", "question": "Trong Word, một đoạn văn bản có chỉ mục nếu bạn muốn xuống dòng mà không muốn dòng đó có chỉ mục thì bạn dùng tổ hợp phím nào sau đây?", "options": ["Alt + Enter", "Shift + Enter", "Ctrl + Enter", "Alt + F4"], "answer": "B", "ans_idx": 1}, {"id": 99, "original_num": 22, "module": "MS Word 2013", "question": "Trong Word, khi đã bôi đen một đoạn văn bản gõ chữ thường, muốn địnhk dạng thành chữ IN HOA bạn dùng tổ hợp phím nào sau đây?", "options": ["Shift + F1", "Shift + F2", "Shift + F3", "Shift + F4"], "answer": "C", "ans_idx": 2}, {"id": 100, "original_num": 23, "module": "MS Word 2013", "question": "Trong Word, khi đã bôi đen một đoạn văn bản gõ chữ IN HOA, muốn địnhk dạng thành chữ thường bạn dùng tổ hợp phím nào sau đây?", "options": ["Shift + F1", "Shift + F2", "Shift + F3", "Shift + F4"], "answer": "C", "ans_idx": 2}, {"id": 101, "original_num": 24, "module": "MS Word 2013", "question": "Trong Word, bôi đen một đoạn văn bản rồi lần lượt thực hiện thao tác : Nhấn tổ hợp phím Ctrl + B tiếp đến là Ctrl + I, cụm từ được bôi đen sẽ :", "options": ["In nghiêng", "In đậm", "Có gạch chân", "In đậm và nghiêng"], "answer": "D", "ans_idx": 3}, {"id": 102, "original_num": 25, "module": "MS Word 2013", "question": "Trong Word, để định dạng chữ cái lớn đầu đoạn văn bản ta thực hiện:", "options": ["Home/Drop Cap", "Insert/Drop Cap", "View/Drop Cap", "Tool/Drop Cap"], "answer": "B", "ans_idx": 1}, {"id": 103, "original_num": 26, "module": "MS Word 2013", "question": "Trong Word, để định dạng canh biên trái, biên phải, định dạng trang in ngang, dọc… ta thực hiện theo cách nào sau đây?:", "options": ["Page Layout/Page Setup", "File/Print", "View/Print Layout", "File/Options"], "answer": "A", "ans_idx": 0}, {"id": 104, "original_num": 27, "module": "MS Word 2013", "question": "Trong Word, để sửa lại nội dung một văn bản đã có và lưu nó với tên mới đồng thời tập tin cũ vẫn giữ nguyên, ta thực hiện cách nào sau đây?:", "options": ["File/Save As", "File/Save", "File/Page Setup", "File/Save & Send"], "answer": "A", "ans_idx": 0}, {"id": 105, "original_num": 28, "module": "MS Word 2013", "question": "Trong Word, để di chuyển đoạn văn bản đã được chọn, ta thực hiện cặp thao tác nào sau đây?", "options": ["Copy và Paste", "Cut và Paste", "Copy và Cut", "Alt + M"], "answer": "B", "ans_idx": 1}, {"id": 106, "original_num": 29, "module": "MS Word 2013", "question": "Trong Word, để sao chep đoạn văn bản đã được chọn, ta thực hiện cặp thao tác nào sau đây?", "options": ["Copy và Paste", "Cut và Paste", "Copy và Cut", "Edit\\Options"], "answer": "A", "ans_idx": 0}, {"id": 107, "original_num": 30, "module": "MS Word 2013", "question": "Trong Word, công cụ Format Painter có chức năng gì?", "options": ["Vẽ hình", "Tô màu", "Sao chép định dạng", "Cắt văn bản"], "answer": "C", "ans_idx": 2}, {"id": 108, "original_num": 1, "module": "MS Word 2013", "question": "Tổ hợp phím Ctrl + O dùng để", "options": ["Mở một Document mới", "Mở một Document đã có", "Đóng Document đang mở", "Đóng và lưu Document đang mở"], "answer": "B", "ans_idx": 1}, {"id": 109, "original_num": 2, "module": "MS Word 2013", "question": "Tổ hợp phím nào cho phép chọn tất cả văn bản đang soạn thảo", "options": ["Ctrl + A", "Ctrl + End", "Alt + A", "Alt + End"], "answer": "A", "ans_idx": 0}, {"id": 110, "original_num": 3, "module": "MS Word 2013", "question": "Trong Bảng (Table), để tách mộtô thành nhiều ô, ta thực hiện:", "options": ["LayOut - Cells", "Design - Cells", "LayOut - Split Cells", "Design - Split Cells"], "answer": "C", "ans_idx": 2}, {"id": 111, "original_num": 4, "module": "MS Word 2013", "question": "Muốn định dạng các đoạn văn bản theo kiểu danh sách, ta thực hiện:", "options": ["Home - Bullets and Numbering", "View - Bullets and Numbering", "Insert - Bullets and Numbering", "Review - Bullets and Numbering"], "answer": "A", "ans_idx": 0}, {"id": 112, "original_num": 5, "module": "MS Word 2013", "question": "Để chèn tiêu đề trang (đầu trang và chân trang), ta thực hiện", "options": ["Insert - Header and Footer", "View - Header and Footer", "Home - Header and Footer", "Review - Header and Footer"], "answer": "A", "ans_idx": 0}, {"id": 113, "original_num": 6, "module": "MS Word 2013", "question": "Để soạn thảo một công thức toán học, ta thường dùng", "options": ["Insert - Word Art", "Insert - Equation", "Insert - Chart", "Insert - Shapes"], "answer": "B", "ans_idx": 1}, {"id": 114, "original_num": 7, "module": "MS Word 2013", "question": "Một đối tượng sử dụng loại Wraps text nào để văn bản lấp đầy các khoảng trong xung quanh nó.", "options": ["Spuare", "Tight", "Through", "Top and Bottom"], "answer": "C", "ans_idx": 2}, {"id": 115, "original_num": 8, "module": "MS Word 2013", "question": "Để định dạng lại trang giấy in, ta thực hiện", "options": ["File - Print", "Page Layout - Page Setup", "File - Page Setup", "Page Layout - Print"], "answer": "B", "ans_idx": 1}, {"id": 116, "original_num": 9, "module": "MS Word 2013", "question": "Để chuyển đổi giữa hai chế độ gõ : chế độ gõ chèn và chế độ gõ đè; ta bấm", "options": ["Tab", "Shift + Del", "Insert", "Shift + Insert"], "answer": "C", "ans_idx": 2}, {"id": 117, "original_num": 10, "module": "MS Word 2013", "question": "Trong Word, để tạo chỉ số trên (m2), bạn thực hiện gõ m2, bôi đen chỉ số 2 rồi thực hiện tiếp tổ hợp phím nào sau đây?", "options": ["Ctrl , Shift, =", "Ctrl , =", "Shift, =", "Ctrl , Shift"], "answer": "A", "ans_idx": 0}, {"id": 118, "original_num": 11, "module": "MS Word 2013", "question": "Trong Word, để tạo chỉ số dưới (H2), bạn thực hiện gõ H2, bôi đen chỉ số 2 rồi thực hiện tiếp tổ hợp phím nào sau đây?", "options": ["Ctrl , Shift, =", "Ctrl , =", "Shift, =", "Ctrl , Shift"], "answer": "B", "ans_idx": 1}, {"id": 119, "original_num": 12, "module": "MS Word 2013", "question": "Trong Word, khi đã bôi đen một đoạn văn bản in nhạt, muốn đoạn văn bản này đậm lên, bạn dùng tổ hợp phím nào sau đây?", "options": ["Ctrl + P", "Ctrl + X", "Ctrl + C", "Ctrl + B"], "answer": "D", "ans_idx": 3}, {"id": 120, "original_num": 13, "module": "MS Word 2013", "question": "Trong Word, bạn có một Bảng (Table) gồm 3 cột, 5 dòng. Con trỏ đang ởô cuối cùng trên dòng số 5, muốn thêm một dòng mớiở cuối bảng, bạn thực hiện cách nào sau đây?", "options": ["Tab", "Kích chuột phải -> Insert", "Kích chuột phải -> Insert Cells", "Chọn Insert Rows Below"], "answer": "A", "ans_idx": 0}, {"id": 121, "original_num": 14, "module": "MS Word 2013", "question": "Trong Word để dãn khoản cách giữa các dòng là 1,5 line, sau khi bôi đen các dòng văn bản ta thực hiện cách nào sau đây?", "options": ["Ctrl + Shift + 5", "Paragraph/Line Spacing -> chọn 1,5 lines", "Ctrl + Shift + F5", "Ctrl + Shift + F6"], "answer": "B", "ans_idx": 1}, {"id": 122, "original_num": 15, "module": "MS Word 2013", "question": "Trong Word để ngắt trang trong Word ta dùng tổ hợp phím nào sau đây?", "options": ["Alt + Enter", "Alt + Shift", "Shift + Enter", "Ctrl + Enter"], "answer": "D", "ans_idx": 3}, {"id": 123, "original_num": 16, "module": "MS Word 2013", "question": "Trong Word để chọn toàn bộ mộtô bất kỳ trong bảng, ta thực hiện theo cách nào sau đây?", "options": ["Bôi đen phần văn bản trên ô đó", "Nhấn đúp chuột vàoô đó", "Nhấn chuột vào phía trên ô đó", "Nhấn chuột vào góc dưới bên trái ô đó."], "answer": "D", "ans_idx": 3}, {"id": 124, "original_num": 17, "module": "MS Word 2013", "question": "Trong Word, ta có thể tạo chữ in hoa bằng công cụ Drop Cap cho trường hợp nào sau đây?", "options": ["Chữ cái đầu của mỗi đoạn trong văn bản", "Một số chữ cái đầu của đoạn đầu tiên trong văn bản", "Chữ cái đầu dòng trên Table", "Chữ cái đầu đoạn văn bảng trong Text box"], "answer": "A", "ans_idx": 0}, {"id": 125, "original_num": 18, "module": "MS Word 2013", "question": "Trong Word, File BangdiemSV dùng làm dữ liệu để trộn thư in bảng điểm cá nhân cho sinh viên, File BangdiemSV không thể dùng được ở dạng nào sau đây?", "options": ["BangdiemSV .xls", "BangdiemSV .txt", "BangdiemSV .doc", "BangdiemSV .pdf"], "answer": "D", "ans_idx": 3}, {"id": 126, "original_num": 19, "module": "MS Word 2013", "question": "Trong Word, khi đã bôi đen một đoạn văn bản, muốn tăng kích cỡ của chữ bạn dùng tổ hợp phím nào sau đây?", "options": ["Ctrl + ]", "Ctrl + }", "Ctrl + {", "Ctrl + ["], "answer": "A", "ans_idx": 0}, {"id": 127, "original_num": 20, "module": "MS Word 2013", "question": "Trong Word, khi đã bôi đen một đoạn văn bản, muốn giảm kích cỡ của chữ bạn dùng tổ hợp phím nào sau đây?", "options": ["Ctrl + ]", "Ctrl + }", "Ctrl + {", "Ctrl + ["], "answer": "D", "ans_idx": 3}, {"id": 128, "original_num": 21, "module": "MS Word 2013", "question": "Trong Word, một đoạn văn bản có chỉ mục nếu bạn muốn xuống dòng mà không muốn dòng đó có chỉ mục thì bạn dùng tổ hợp phím nào sau đây?", "options": ["Alt + Enter", "Shift + Enter", "Ctrl + Enter", "Alt + F4"], "answer": "B", "ans_idx": 1}, {"id": 129, "original_num": 22, "module": "MS Word 2013", "question": "Trong Word, khi đã bôi đen một đoạn văn bản gõ chữ thường, muốn địnhk dạng thành chữ IN HOA bạn dùng tổ hợp phím nào sau đây?", "options": ["Shift + F1", "Shift + F2", "Shift + F3", "Shift + F4"], "answer": "C", "ans_idx": 2}, {"id": 130, "original_num": 23, "module": "MS Word 2013", "question": "Trong Word, khi đã bôi đen một đoạn văn bản gõ chữ IN HOA, muốn địnhk dạng thành chữ thường bạn dùng tổ hợp phím nào sau đây?", "options": ["Shift + F1", "Shift + F2", "Shift + F3", "Shift + F4"], "answer": "C", "ans_idx": 2}, {"id": 131, "original_num": 24, "module": "MS Word 2013", "question": "Trong Word, bôi đen một đoạn văn bản rồi lần lượt thực hiện thao tác : Nhấn tổ hợp phím Ctrl + B tiếp đến là Ctrl + I, cụm từ được bôi đen sẽ :", "options": ["In nghiêng", "In đậm", "Có gạch chân", "In đậm và nghiêng"], "answer": "D", "ans_idx": 3}, {"id": 132, "original_num": 25, "module": "MS Word 2013", "question": "Trong Word, để định dạng chữ cái lớn đầu đoạn văn bản ta thực hiện:", "options": ["Home/Drop Cap", "Insert/Drop Cap", "View/Drop Cap", "Tool/Drop Cap"], "answer": "B", "ans_idx": 1}, {"id": 133, "original_num": 26, "module": "MS Word 2013", "question": "Trong Word, để định dạng canh biên trái, biên phải, định dạng trang in ngang, dọc… ta thực hiện theo cách nào sau đây?:", "options": ["Page Layout/Page Setup", "File/Print", "View/Print Layout", "File/Options"], "answer": "A", "ans_idx": 0}, {"id": 134, "original_num": 27, "module": "MS Word 2013", "question": "Trong Word, để sửa lại nội dung một văn bản đã có và lưu nó với tên mới đồng thời tập tin cũ vẫn giữ nguyên, ta thực hiện cách nào sau đây?:", "options": ["File/Save As", "File/Save", "File/Page Setup", "File/Save & Send"], "answer": "A", "ans_idx": 0}, {"id": 135, "original_num": 28, "module": "MS Word 2013", "question": "Trong Word, để di chuyển đoạn văn bản đã được chọn, ta thực hiện cặp thao tác nào sau đây?", "options": ["Copy và Paste", "Cut và Paste", "Copy và Cut", "Alt + M"], "answer": "B", "ans_idx": 1}, {"id": 136, "original_num": 29, "module": "MS Word 2013", "question": "Trong Word, để sao chep đoạn văn bản đã được chọn, ta thực hiện cặp thao tác nào sau đây?", "options": ["Copy và Paste", "Cut và Paste", "Copy và Cut", "Edit\\Options"], "answer": "A", "ans_idx": 0}, {"id": 137, "original_num": 30, "module": "MS Word 2013", "question": "Trong Word, công cụ Format Painter có chức năng gì?", "options": ["Vẽ hình", "Tô màu", "Sao chép định dạng", "Cắt văn bản"], "answer": "C", "ans_idx": 2}, {"id": 138, "original_num": 1, "module": "MS Excel 2013", "question": "Tổ hợp phím nào cho phép ngay lập tức đưa con trỏ vềô đầu tiên (ô A1) của bảng tính", "options": ["Ctrl+Home", "Shift+Ctrl+Home", "Alt + Home", "Shift + Alt + Home"], "answer": "A", "ans_idx": 0}, {"id": 139, "original_num": 3, "module": "MS Excel 2013", "question": "Tạiô A2 có sẵn giá trị số không (0); Tạiô B2 gõ vào công thức =5/A2 thì nhận được kết quả", "options": ["#N/A", "#NAME?", "#V ALUE!", "#DIV/0!"], "answer": "D", "ans_idx": 3}, {"id": 140, "original_num": 4, "module": "MS Excel 2013", "question": "Điều kiện logic trong hàm IF được phát biểu dưới dạng một phép so sánh. Khi cần so sánh khác nhau thì sử dụng kí hiệu nào?", "options": ["#", "><", "<>", "~"], "answer": "C", "ans_idx": 2}, {"id": 141, "original_num": 6, "module": "MS Excel 2013", "question": "Khi viết sai tên hàm trong tính toán, chương trình thông báo lỗi?", "options": ["#N/A", "#NAME?", "#V ALUE!", "#DIV/0!"], "answer": "B", "ans_idx": 1}, {"id": 142, "original_num": 7, "module": "MS Excel 2013", "question": "Để tham chiếu dữ liệu từ bảng khác ta dùng hàm", "options": ["Vlookup", "Hlookup", "Index", "Cả 3 đều đúng"], "answer": "D", "ans_idx": 3}, {"id": 143, "original_num": 8, "module": "MS Excel 2013", "question": "Khi dữ liệu cần tham chiếu nằm trên 1 hàng ở bảng tham chiếu, ta dùng hàm", "options": ["Vlookup", "Hlookup", "Index", "Cả 3 đều đúng"], "answer": "A", "ans_idx": 0}, {"id": 144, "original_num": 9, "module": "MS Excel 2013", "question": "Khi dữ liệu cần tham chiếu nằm trên 1 cộtở bảng tham chiếu, ta dùng hàm", "options": ["Vlookup", "Hlookup", "Index", "Cả 3 đều đúng"], "answer": "B", "ans_idx": 1}, {"id": 145, "original_num": 11, "module": "MS Excel 2013", "question": "Khi đang làm việc với Excel, tổ hợp phím nào cho phép ngay lập tức đưa con trỏ vềô đầu tiên (ô A1) của bảng tính ?", "options": ["Shift+Home", "Alt+Home", "Ctrl+Home", "Shift+Ctrl+Home"], "answer": "C", "ans_idx": 2}, {"id": 146, "original_num": 12, "module": "MS Excel 2013", "question": "Trong khi làm việc với Excel, để nhập vào công thức tính toán cho mộtô, trước hết ta phải gõ:", "options": ["Dấu chấm hỏi (?)", "Dấu bằng (= )", "Dấu hai chấm (: )", "Dấu đô la ($)"], "answer": "B", "ans_idx": 1}, {"id": 147, "original_num": 13, "module": "MS Excel 2013", "question": "Trong bảng tính Exce, nếu trong mộtô tính có các kí hiệu #####, điều đó có nghĩa là gì?", "options": ["Chương trình bảng tính bị nhiễm virus", "Công thức nhập sai và Excel thông báo lỗi", "Hàng chứa ô đó có độ cao quá thấp nên không hiển thị hết chữ số", "Cột chứa ô đó có độ rộng quá hẹp nên không hiển thị hết chữ số"], "answer": "D", "ans_idx": 3}, {"id": 148, "original_num": 15, "module": "MS Excel 2013", "question": "Câu nào sau đây sai? Khi nhập dữ liệu vào bảng tính Excel thì:", "options": ["Dữ liệu kiểu số sẽ mặc nhiên căn thẳng lề trái", "Dữ liệu kiểu kí tự sẽ mặc nhiên căn thẳng lề trái", "Dữ liệu kiểu thời gian sẽ mặc nhiên căn thẳng lề phải", "Dữ liệu kiểu ngày tháng sẽ mặc nhiên căn thẳng lề phải"], "answer": "A", "ans_idx": 0}, {"id": 149, "original_num": 23, "module": "MS Excel 2013", "question": "Trong bảng tính Excel, để sửa dữ liệu trong mộtô tính mà không cần nhập lại, ta thực hiện:", "options": ["Nháy chuột chọn ô tính cần sửa, rồi bấm phím F2", "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F4", "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F10", "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F12"], "answer": "A", "ans_idx": 0}, {"id": 150, "original_num": 27, "module": "MS Excel 2013", "question": "Trong bảng tính Excel, để lọc dữ liệu tự động, sau khi chọn khối cần lọc, ta thực hiện:", "options": ["Format - Filter - AutoFilter", "Insert - Filter - AutoFilter", "Data - Filter - AutoFilter", "View - Filter - AutoFilter"], "answer": "C", "ans_idx": 2}, {"id": 151, "original_num": 28, "module": "MS Excel 2013", "question": "Khi đang làm việc với Excel, có thể di chuy ển từ sheet này sang sheet khác bằng cách sử dụng các phím hoặc các tổ hợp phím:", "options": ["Page Up ; Page Down", "Ctrl - Page Up ; Ctrl - Page Down", "Ctrl - Page - A", "Shift - Page - F"], "answer": "B", "ans_idx": 1}, {"id": 152, "original_num": 29, "module": "MS Excel 2013", "question": "Trong Excel, để xuống dòng trong mộtô, ta sử dụng tổ hợp phím:", "options": ["Alt + Enter", "Spacebar + Enter", "Shift + Enter", "Ctrl + Enter"], "answer": "A", "ans_idx": 0}, {"id": 153, "original_num": 30, "module": "MS Excel 2013", "question": "Các địa chỉ sau đây là địa chỉ gì: $A1, B$5, C6, $L9, $DS7", "options": ["Địa chỉ tương đối", "Địa chỉ tuyệt đối", "Địa chỉ hỗn hợp", "Địa chỉ mặt định"], "answer": "A", "ans_idx": 0}, {"id": 154, "original_num": 31, "module": "MS Excel 2013", "question": "Khi gõ công thức xong, rồi Enter, máy hiện ra #N/A có nghĩa là :", "options": ["Không tìm thấy tên hàm", "Giá trị tham chiếu không tồn tại", "Không tham chiếu đến được", "Tập hợp rỗng"], "answer": "D", "ans_idx": 3}, {"id": 155, "original_num": 32, "module": "MS Excel 2013", "question": "Khi gõ công thức xong, rồi Enter, máy hiện ra #REF! có nghĩa là :", "options": ["Không tìm thấy tên hàm", "Giá trị tham chiếu không tồn tại", "Không tham chiếu đến được", "Tập hợp rỗng."], "answer": "B", "ans_idx": 1}, {"id": 156, "original_num": 36, "module": "MS Excel 2013", "question": "Trong MS Excel, hàm nào dùng để đếm cácô rỗng trong 1 danh sách:", "options": ["COUNTIF", "COUNT", "COUNTBLANK", "COUNTA"], "answer": "C", "ans_idx": 2}, {"id": 157, "original_num": 38, "module": "MS Excel 2013", "question": "Trong MS Excel, hàm tính tổng có nhiều điều kiện là hàm:", "options": ["SUMIFS", "SUMIF", "DSUM", "SUM"], "answer": "A", "ans_idx": 0}, {"id": 158, "original_num": 39, "module": "MS Excel 2013", "question": "Trong MS Excel, hàm đếm có nhiều điều kiện là hàm:", "options": ["COUNTIF", "COUNTIFS", "DCOUNT", "COUNTA"], "answer": "B", "ans_idx": 1}, {"id": 159, "original_num": 56, "module": "MS Excel 2013", "question": "Trong bảng tính Excel, hàm nào sau đây cho phép tính tổng các giá trị kiểu số thỏa mãn một điều kiện cho trước?", "options": ["SUM", "COUNTIF", "COUNT", "SUMIF"], "answer": "D", "ans_idx": 3}, {"id": 160, "original_num": 57, "module": "MS Excel 2013", "question": "Trong bảng tính Excel, để chèn thêm một cột vào trang tí nh, ta thực hiện:", "options": ["Table - Insert Columns.", "Format - Cells - Insert Columns.", "Table - Insert Cells.", "Insert - Columns."], "answer": "A", "ans_idx": 0}, {"id": 161, "original_num": 58, "module": "MS Excel 2013", "question": "Khi đang làm việc với Excel, có thể di chuy ển từ sheet này sang sheet khác bằng cách sử dụng các phím hoặc các tổ hợp phím:", "options": ["Page Up;", "Ctrl-Page Up ; Ctrl- Page Down.", "Page Down.", "Print Page Down."], "answer": "B", "ans_idx": 1}, {"id": 162, "original_num": 59, "module": "MS Excel 2013", "question": "Để thiết lập chế độ lưu tự động trên Excel dự phòng khi có sự cố xảy ra, ta cần?", "options": ["Vào Tool/Options, chọn thẻ Save, tích vàoô Save AutoRecover info every, sau đó điền số phút tự động lưu.", "Vào File/Save để lưu.", "Vào File/Save để lưu.", "Nhấn tổ hợp phím Ctrl + S."], "answer": "A", "ans_idx": 0}, {"id": 163, "original_num": 60, "module": "MS Excel 2013", "question": "Để khởi động Excel ta chọn", "options": ["Nhấp đúp trỏ chuột lên biểu tượng lối tắt của Excel", "Nhấp chọn Program", "Từ màn hình Dos, gõ Excel", "Nhấn chọn Start"], "answer": "A", "ans_idx": 0}, {"id": 164, "original_num": 61, "module": "MS Excel 2013", "question": "Để thoát khỏi Excel ta chọn", "options": ["Nhấn tổ hợp phím Ctrl + F4.", "Chọn Edit\\Close", "Nhấn tổ hợp phím Alt + F4", "Nhấn tổ hợp phím Alt + F5"], "answer": "C", "ans_idx": 2}, {"id": 165, "original_num": 62, "module": "MS Excel 2013", "question": "Trong Excel muốn bật tắt thanh công cụ ta chọn", "options": ["Chọn Tool, Option, General", "Chọn View, Formular Bar", "Chọn View, Toolbars, đánh dấu chọn hoặc không chọn các thanh công cụ", "Nhấn tổ hợp phím Ctrl + T."], "answer": "C", "ans_idx": 2}, {"id": 166, "original_num": 63, "module": "MS Excel 2013", "question": "Muốn xóa sheet, ta chọn sheet đó rồi", "options": ["Chọn Edit, Delete sheet", "Nhấn tổ hợp phím Alt + E, L", "Nhấp chuột phải trên tên sheet để mở menu tắt rồi chọn Delete", "Nhấn tổ hợp phím Ctrl + D."], "answer": "D", "ans_idx": 3}, {"id": 167, "original_num": 64, "module": "MS Excel 2013", "question": "Trong Excel để mở tập tin có trong đĩa ta dùng", "options": ["Chọn File", "Tổ hợp phím Ctrl + N", "Tổ hợp phím Ctrl + O", "Chọn Open"], "answer": "C", "ans_idx": 2}, {"id": 168, "original_num": 65, "module": "MS Excel 2013", "question": "Trong Excel để lưu một tập tin vào đĩa ta dùng", "options": ["Tổ hợp phím Ctrl + S", "Tổ hợp phím Alt + S", "Tổ hợp phím Alt + Shift + S", "Cả ba câu trên đều sai."], "answer": "A", "ans_idx": 0}, {"id": 169, "original_num": 66, "module": "MS Excel 2013", "question": "Nhấn phím F12 là để", "options": ["Thực hiện lệnh Open", "Thực hiện lệnh Save As", "Thực hiện lệnh Close", "Thực hiện lệnh Print"], "answer": "B", "ans_idx": 1}, {"id": 170, "original_num": 67, "module": "MS Excel 2013", "question": "Trong Excel để đóng một tập tin ta dùng", "options": ["Tổ hộp phím Alt + F", "Chọn Tab Close", "Tổ hợp phím Ctrl + W", "Nhấn Alt + F7"], "answer": "C", "ans_idx": 2}, {"id": 171, "original_num": 68, "module": "MS Excel 2013", "question": "Theo 7 định ký tự dạng chuỗi được", "options": ["Canh phải trong ô", "Canh trái trong ô", "Canh đều hai bên", "Canh giữa trong ô"], "answer": "B", "ans_idx": 1}, {"id": 172, "original_num": 69, "module": "MS Excel 2013", "question": "Theo mặt định ký tự dạng số được", "options": ["Canh phải trong ô", "Canh trái trong ô", "Canh đều hai bên", "Canh giữa trong ô"], "answer": "A", "ans_idx": 0}, {"id": 173, "original_num": 70, "module": "MS Excel 2013", "question": "Chèn dấu (‘) trước khi nhập liệu vàoô là để", "options": ["Canh chỉnh dữ liệu trong ô bên trái", "Canh chỉnh dữ liệu trong ô bên phải", "Canh giữa dữ liệu trong ô", "Canh đều hai bên dữ liệu trong ô"], "answer": "A", "ans_idx": 0}, {"id": 174, "original_num": 73, "module": "MS Excel 2013", "question": "Để chọn toàn bộ bảng tính ta", "options": ["Nhấn tổ hợp phím Ctrl + A", "Nhấn tổ hợp phím Ctrl + Shift + A", "Nhấn tổ hợp phím Shift + A", "Nhấn tổ hợp phím Shift + F2"], "answer": "A", "ans_idx": 0}, {"id": 175, "original_num": 74, "module": "MS Excel 2013", "question": "Trong Excel, để chèn hàng vào một bảng tính ta di chuy ển đếnô hiện hành đến vị trí hàng cần thêm rồi", "options": ["Chọn Format, Cells", "Chọn Format, Column", "Chọn Insert, Row", "Chọn Insert, Columns"], "answer": "C", "ans_idx": 2}, {"id": 176, "original_num": 75, "module": "MS Excel 2013", "question": "Để xóa dữ liệu trong mộtô hoặc khối ô trong bảng tính Excel ta chọn", "options": ["Chọn ô (hoặc khối ô) cần xóa, rồi nhấn phím Delete", "Không cần chọn ô (hoặc khối ô), chỉ cần nhấn phím Delete", "Chọn ô (hoặc khối ô) cần xóa, rồi nhấn phím Insert", "Chọn ô (hoặc khối ô) cần xóa, rồi nhấn phím bất kỳ"], "answer": "A", "ans_idx": 0}, {"id": 177, "original_num": 76, "module": "MS Excel 2013", "question": "Trong Excel để sắp xếp cơ sở dữ liệu ta chọn", "options": ["Tool, Sort.", "Format, Sort", "Table, Sort.", "Data, Sort."], "answer": "D", "ans_idx": 3}, {"id": 178, "original_num": 77, "module": "MS Excel 2013", "question": "Các hàm sau đây hàm nào dùng để điếm giá trị", "options": ["Sum", "Rank", "Count", "Int"], "answer": "C", "ans_idx": 2}, {"id": 179, "original_num": 84, "module": "MS Excel 2013", "question": "Khi đang làm việc với Excel, tổ hợp phím nào cho phép ngay lập tức đưa con trỏ vềô đầu tiên (ô A1) của bảng tính ?", "options": ["Shift+Home", "Alt+Home", "Ctrl+Home", "Ctrl + Shift + S."], "answer": "C", "ans_idx": 2}, {"id": 180, "original_num": 85, "module": "MS Excel 2013", "question": "Để sửa dữ liệu trong mộtô tính mà không cần nhập lại, ta thực hiện", "options": ["Nháy chuột chọn ô tính cần sửa, rồi bấm phím F2", "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F3", "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F4", "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F5"], "answer": "A", "ans_idx": 0}, {"id": 181, "original_num": 105, "module": "MS Excel 2013", "question": "Để xuống dòng trên cùng một Ô trong Excel, ta nhấn tổ hợp phím nào?", "options": ["Alt + Enter", "Shift + Enter", "Ctrl + Enter", "Alt + Shift"], "answer": "A", "ans_idx": 0}, {"id": 182, "original_num": 144, "module": "MS Excel 2013", "question": "Nếu chưa định dạng, số 5 sẽ nằm bên nào củaô", "options": ["Phải", "Trái", "Giữa", "Phụ thuộc vào định dạng"], "answer": "A", "ans_idx": 0}, {"id": 183, "original_num": 145, "module": "MS Excel 2013", "question": "Nếu chưa định dạng, số 5.5 sẽ nằm bên nào củaô", "options": ["Phải", "Trái", "Giữa", "Phụ thuộc vào định dạng"], "answer": "A", "ans_idx": 0}, {"id": 184, "original_num": 146, "module": "MS Excel 2013", "question": "Nếu chưa định dạng chữ \"hello\" sẽ nằm bên nào củaô", "options": ["Trái", "Phải", "Giữa", "Phụ thuộc vào định dạng"], "answer": "A", "ans_idx": 0}, {"id": 185, "original_num": 147, "module": "MS Excel 2013", "question": "Nếu chưa định dạng, chữ \"2017 hello\" sẽ nằm bên nào củaô", "options": ["Trái", "Phải", "Giữa", "Phụ thuộc vào định dạng"], "answer": "A", "ans_idx": 0}, {"id": 186, "original_num": 1, "module": "MS Excel 2013", "question": "Tổ hợp phím nào cho phép ngay lập tức đưa con trỏ vềô đầu tiên (ô A1) của bảng tính", "options": ["Ctrl+Home", "Shift+Ctrl+Home", "Alt + Home", "Shift + Alt + Home"], "answer": "A", "ans_idx": 0}, {"id": 187, "original_num": 3, "module": "MS Excel 2013", "question": "Tạiô A2 có sẵn giá trị số không (0); Tạiô B2 gõ vào công thức =5/A2 thì nhận được kết quả", "options": ["#N/A", "#NAME?", "#V ALUE!", "#DIV/0!"], "answer": "D", "ans_idx": 3}, {"id": 188, "original_num": 4, "module": "MS Excel 2013", "question": "Điều kiện logic trong hàm IF được phát biểu dưới dạng một phép so sánh. Khi cần so sánh khác nhau thì sử dụng kí hiệu nào?", "options": ["#", "><", "<>", "~"], "answer": "C", "ans_idx": 2}, {"id": 189, "original_num": 6, "module": "MS Excel 2013", "question": "Khi viết sai tên hàm trong tính toán, chương trình thông báo lỗi?", "options": ["#N/A", "#NAME?", "#V ALUE!", "#DIV/0!"], "answer": "B", "ans_idx": 1}, {"id": 190, "original_num": 7, "module": "MS Excel 2013", "question": "Để tham chiếu dữ liệu từ bảng khác ta dùng hàm", "options": ["Vlookup", "Hlookup", "Index", "Cả 3 đều đúng"], "answer": "D", "ans_idx": 3}, {"id": 191, "original_num": 8, "module": "MS Excel 2013", "question": "Khi dữ liệu cần tham chiếu nằm trên 1 hàng ở bảng tham chiếu, ta dùng hàm", "options": ["Vlookup", "Hlookup", "Index", "Cả 3 đều đúng"], "answer": "A", "ans_idx": 0}, {"id": 192, "original_num": 9, "module": "MS Excel 2013", "question": "Khi dữ liệu cần tham chiếu nằm trên 1 cộtở bảng tham chiếu, ta dùng hàm", "options": ["Vlookup", "Hlookup", "Index", "Cả 3 đều đúng"], "answer": "B", "ans_idx": 1}, {"id": 193, "original_num": 11, "module": "MS Excel 2013", "question": "Khi đang làm việc với Excel, tổ hợp phím nào cho phép ngay lập tức đưa con trỏ vềô đầu tiên (ô A1) của bảng tính ?", "options": ["Shift+Home", "Alt+Home", "Ctrl+Home", "Shift+Ctrl+Home"], "answer": "C", "ans_idx": 2}, {"id": 194, "original_num": 12, "module": "MS Excel 2013", "question": "Trong khi làm việc với Excel, để nhập vào công thức tính toán cho mộtô, trước hết ta phải gõ:", "options": ["Dấu chấm hỏi (?)", "Dấu bằng (= )", "Dấu hai chấm (: )", "Dấu đô la ($)"], "answer": "B", "ans_idx": 1}, {"id": 195, "original_num": 13, "module": "MS Excel 2013", "question": "Trong bảng tính Exce, nếu trong mộtô tính có các kí hiệu #####, điều đó có nghĩa là gì?", "options": ["Chương trình bảng tính bị nhiễm virus", "Công thức nhập sai và Excel thông báo lỗi", "Hàng chứa ô đó có độ cao quá thấp nên không hiển thị hết chữ số", "Cột chứa ô đó có độ rộng quá hẹp nên không hiển thị hết chữ số"], "answer": "D", "ans_idx": 3}, {"id": 196, "original_num": 15, "module": "MS Excel 2013", "question": "Câu nào sau đây sai? Khi nhập dữ liệu vào bảng tính Excel thì:", "options": ["Dữ liệu kiểu số sẽ mặc nhiên căn thẳng lề trái", "Dữ liệu kiểu kí tự sẽ mặc nhiên căn thẳng lề trái", "Dữ liệu kiểu thời gian sẽ mặc nhiên căn thẳng lề phải", "Dữ liệu kiểu ngày tháng sẽ mặc nhiên căn thẳng lề phải"], "answer": "A", "ans_idx": 0}, {"id": 197, "original_num": 23, "module": "MS Excel 2013", "question": "Trong bảng tính Excel, để sửa dữ liệu trong mộtô tính mà không cần nhập lại, ta thực hiện:", "options": ["Nháy chuột chọn ô tính cần sửa, rồi bấm phím F2", "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F4", "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F10", "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F12"], "answer": "A", "ans_idx": 0}, {"id": 198, "original_num": 27, "module": "MS Excel 2013", "question": "Trong bảng tính Excel, để lọc dữ liệu tự động, sau khi chọn khối cần lọc, ta thực hiện:", "options": ["Format - Filter - AutoFilter", "Insert - Filter - AutoFilter", "Data - Filter - AutoFilter", "View - Filter - AutoFilter"], "answer": "C", "ans_idx": 2}, {"id": 199, "original_num": 28, "module": "MS Excel 2013", "question": "Khi đang làm việc với Excel, có thể di chuy ển từ sheet này sang sheet khác bằng cách sử dụng các phím hoặc các tổ hợp phím:", "options": ["Page Up ; Page Down", "Ctrl - Page Up ; Ctrl - Page Down", "Ctrl - Page - A", "Shift - Page - F"], "answer": "B", "ans_idx": 1}, {"id": 200, "original_num": 29, "module": "MS Excel 2013", "question": "Trong Excel, để xuống dòng trong mộtô, ta sử dụng tổ hợp phím:", "options": ["Alt + Enter", "Spacebar + Enter", "Shift + Enter", "Ctrl + Enter"], "answer": "A", "ans_idx": 0}, {"id": 201, "original_num": 30, "module": "MS Excel 2013", "question": "Các địa chỉ sau đây là địa chỉ gì: $A1, B$5, C6, $L9, $DS7", "options": ["Địa chỉ tương đối", "Địa chỉ tuyệt đối", "Địa chỉ hỗn hợp", "Địa chỉ mặt định"], "answer": "A", "ans_idx": 0}, {"id": 202, "original_num": 31, "module": "MS Excel 2013", "question": "Khi gõ công thức xong, rồi Enter, máy hiện ra #N/A có nghĩa là :", "options": ["Không tìm thấy tên hàm", "Giá trị tham chiếu không tồn tại", "Không tham chiếu đến được", "Tập hợp rỗng"], "answer": "D", "ans_idx": 3}, {"id": 203, "original_num": 32, "module": "MS Excel 2013", "question": "Khi gõ công thức xong, rồi Enter, máy hiện ra #REF! có nghĩa là :", "options": ["Không tìm thấy tên hàm", "Giá trị tham chiếu không tồn tại", "Không tham chiếu đến được", "Tập hợp rỗng."], "answer": "B", "ans_idx": 1}, {"id": 204, "original_num": 36, "module": "MS Excel 2013", "question": "Trong MS Excel, hàm nào dùng để đếm cácô rỗng trong 1 danh sách:", "options": ["COUNTIF", "COUNT", "COUNTBLANK", "COUNTA"], "answer": "C", "ans_idx": 2}, {"id": 205, "original_num": 38, "module": "MS Excel 2013", "question": "Trong MS Excel, hàm tính tổng có nhiều điều kiện là hàm:", "options": ["SUMIFS", "SUMIF", "DSUM", "SUM"], "answer": "A", "ans_idx": 0}, {"id": 206, "original_num": 39, "module": "MS Excel 2013", "question": "Trong MS Excel, hàm đếm có nhiều điều kiện là hàm:", "options": ["COUNTIF", "COUNTIFS", "DCOUNT", "COUNTA"], "answer": "B", "ans_idx": 1}, {"id": 207, "original_num": 56, "module": "MS Excel 2013", "question": "Trong bảng tính Excel, hàm nào sau đây cho phép tính tổng các giá trị kiểu số thỏa mãn một điều kiện cho trước?", "options": ["SUM", "COUNTIF", "COUNT", "SUMIF"], "answer": "D", "ans_idx": 3}, {"id": 208, "original_num": 57, "module": "MS Excel 2013", "question": "Trong bảng tính Excel, để chèn thêm một cột vào trang tính, ta thực hiện:", "options": ["Table - Insert Columns.", "Format - Cells - Insert Columns.", "Table - Insert Cells.", "Insert - Columns."], "answer": "A", "ans_idx": 0}, {"id": 209, "original_num": 58, "module": "MS Excel 2013", "question": "Khi đang làm việc với Excel, có thể di chuy ển từ sheet này sang sheet khác bằng cách sử dụng các phím hoặc các tổ hợp phím:", "options": ["Page Up;", "Ctrl-Page Up ; Ctrl- Page Down.", "Page Down.", "Print Page Down."], "answer": "B", "ans_idx": 1}, {"id": 210, "original_num": 59, "module": "MS Excel 2013", "question": "Để thiết lập chế độ lưu tự động trên Excel dự phòng khi có sự cố xảy ra, ta cần?", "options": ["Vào Tool/Options, chọn thẻ Save, tích vàoô Save AutoRecover info every, sau đó điền số phút tự động lưu.", "Vào File/Save để lưu.", "Vào File/Save để lưu.", "Nhấn tổ hợp phím Ctrl + S."], "answer": "A", "ans_idx": 0}, {"id": 211, "original_num": 60, "module": "MS Excel 2013", "question": "Để khởi động Excel ta chọn", "options": ["Nhấp đúp trỏ chuột lên biểu tượng lối tắt của Excel", "Nhấp chọn Program", "Từ màn hình Dos, gõ Excel", "Nhấn chọn Start"], "answer": "A", "ans_idx": 0}, {"id": 212, "original_num": 61, "module": "MS Excel 2013", "question": "Để thoát khỏi Excel ta chọn", "options": ["Nhấn tổ hợp phím Ctrl + F4.", "Chọn Edit\\Close", "Nhấn tổ hợp phím Alt + F4", "Nhấn tổ hợp phím Alt + F5"], "answer": "C", "ans_idx": 2}, {"id": 213, "original_num": 62, "module": "MS Excel 2013", "question": "Trong Excel muốn bật tắt thanh công cụ ta chọn", "options": ["Chọn Tool, Option, General", "Chọn View, Formular Bar", "Chọn View, Toolbars, đánh dấu chọn hoặc không chọn các thanh công cụ", "Nhấn tổ hợp phím Ctrl + T."], "answer": "C", "ans_idx": 2}, {"id": 214, "original_num": 63, "module": "MS Excel 2013", "question": "Muốn xóa sheet, ta chọn sheet đó rồi", "options": ["Chọn Edit, Delete sheet", "Nhấn tổ hợp phím Alt + E, L", "Nhấp chuột phải trên tên sheet để mở menu tắt rồi chọn Delete", "Nhấn tổ hợp phím Ctrl + D."], "answer": "D", "ans_idx": 3}, {"id": 215, "original_num": 64, "module": "MS Excel 2013", "question": "Trong Excel để mở tập tin có trong đĩa ta dùng", "options": ["Chọn File", "Tổ hợp phím Ctrl + N", "Tổ hợp phím Ctrl + O", "Chọn Open"], "answer": "C", "ans_idx": 2}, {"id": 216, "original_num": 65, "module": "MS Excel 2013", "question": "Trong Excel để lưu một tập tin vào đĩa ta dùng", "options": ["Tổ hợp phím Ctrl + S", "Tổ hợp phím Alt + S", "Tổ hợp phím Alt + Shift + S", "Cả ba câu trên đều sai."], "answer": "A", "ans_idx": 0}, {"id": 217, "original_num": 66, "module": "MS Excel 2013", "question": "Nhấn phím F12 là để", "options": ["Thực hiện lệnh Open", "Thực hiện lệnh Save As", "Thực hiện lệnh Close", "Thực hiện lệnh Print"], "answer": "B", "ans_idx": 1}, {"id": 218, "original_num": 67, "module": "MS Excel 2013", "question": "Trong Excel để đóng một tập tin ta dùng", "options": ["Tổ hộp phím Alt + F", "Chọn Tab Close", "Tổ hợp phím Ctrl + W", "Nhấn Alt + F7"], "answer": "C", "ans_idx": 2}, {"id": 219, "original_num": 68, "module": "MS Excel 2013", "question": "Theo 7 định ký tự dạng chuỗi được", "options": ["Canh phải trong ô", "Canh trái trong ô", "Canh đều hai bên", "Canh giữa trong ô"], "answer": "B", "ans_idx": 1}, {"id": 220, "original_num": 69, "module": "MS Excel 2013", "question": "Theo mặt định ký tự dạng số được", "options": ["Canh phải trong ô", "Canh trái trong ô", "Canh đều hai bên", "Canh giữa trong ô"], "answer": "A", "ans_idx": 0}, {"id": 221, "original_num": 70, "module": "MS Excel 2013", "question": "Chèn dấu (‘) trước khi nhập liệu vàoô là để", "options": ["Canh chỉnh dữ liệu trong ô bên trái", "Canh chỉnh dữ liệu trong ô bên phải", "Canh giữa dữ liệu trong ô", "Canh đều hai bên dữ liệu trong ô"], "answer": "A", "ans_idx": 0}, {"id": 222, "original_num": 73, "module": "MS Excel 2013", "question": "Để chọn toàn bộ bảng tính ta", "options": ["Nhấn tổ hợp phím Ctrl + A", "Nhấn tổ hợp phím Ctrl + Shift + A", "Nhấn tổ hợp phím Shift + A", "Nhấn tổ hợp phím Shift + F2"], "answer": "A", "ans_idx": 0}, {"id": 223, "original_num": 74, "module": "MS Excel 2013", "question": "Trong Excel, để chèn hàng vào một bảng tính ta di chuy ển đếnô hiện hành đến vị trí hàng cần thêm rồi", "options": ["Chọn Format, Cells", "Chọn Format, Column", "Chọn Insert, Row", "Chọn Insert, Columns"], "answer": "C", "ans_idx": 2}, {"id": 224, "original_num": 75, "module": "MS Excel 2013", "question": "Để xóa dữ liệu trong mộtô hoặc khối ô trong bảng tính Excel ta chọn", "options": ["Chọn ô (hoặc khối ô) cần xóa, rồi nhấn phím Delete", "Không cần chọn ô (hoặc khối ô), chỉ cần nhấn phím Delete", "Chọn ô (hoặc khối ô) cần xóa, rồi nhấn phím Insert", "Chọn ô (hoặc khối ô) cần xóa, rồi nhấn phím bất kỳ"], "answer": "A", "ans_idx": 0}, {"id": 225, "original_num": 76, "module": "MS Excel 2013", "question": "Trong Excel để sắp xếp cơ sở dữ liệu ta chọn", "options": ["Tool, Sort.", "Format, Sort", "Table, Sort.", "Data, Sort."], "answer": "D", "ans_idx": 3}, {"id": 226, "original_num": 77, "module": "MS Excel 2013", "question": "Các hàm sau đây hàm nào dùng để điếm giá trị", "options": ["Sum", "Rank", "Count", "Int"], "answer": "C", "ans_idx": 2}, {"id": 227, "original_num": 84, "module": "MS Excel 2013", "question": "Khi đang làm việc với Excel, tổ hợp phím nào cho phép ngay lập tức đưa con trỏ vềô đầu tiên (ô A1) của bảng tính ?", "options": ["Shift+Home", "Alt+Home", "Ctrl+Home", "Ctrl + Shift + S."], "answer": "C", "ans_idx": 2}, {"id": 228, "original_num": 85, "module": "MS Excel 2013", "question": "Để sửa dữ liệu trong mộtô tính mà không cần nhập lại, ta thực hiện", "options": ["Nháy chuột chọn ô tính cần sửa, rồi bấm phím F2", "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F3", "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F4", "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F5"], "answer": "A", "ans_idx": 0}, {"id": 229, "original_num": 105, "module": "MS Excel 2013", "question": "Để xuống dòng trên cùng một Ô trong Excel, ta nhấn tổ hợp phím nào?", "options": ["Alt + Enter", "Shift + Enter", "Ctrl + Enter", "Alt + Shift"], "answer": "A", "ans_idx": 0}, {"id": 230, "original_num": 144, "module": "MS Excel 2013", "question": "Nếu chưa định dạng, số 5 sẽ nằm bên nào củaô", "options": ["Phải", "Trái", "Giữa", "Phụ thuộc vào định dạng"], "answer": "A", "ans_idx": 0}, {"id": 231, "original_num": 145, "module": "MS Excel 2013", "question": "Nếu chưa định dạng, số 5.5 sẽ nằm bên nào củaô", "options": ["Phải", "Trái", "Giữa", "Phụ thuộc vào định dạng"], "answer": "A", "ans_idx": 0}, {"id": 232, "original_num": 146, "module": "MS Excel 2013", "question": "Nếu chưa định dạng chữ \"hello\" sẽ nằm bên nào củaô", "options": ["Trái", "Phải", "Giữa", "Phụ thuộc vào định dạng"], "answer": "A", "ans_idx": 0}, {"id": 233, "original_num": 147, "module": "MS Excel 2013", "question": "Nếu chưa định dạng, chữ \"2017 hello\" sẽ nằm bên nào củaô", "options": ["Trái", "Phải", "Giữa", "Phụ thuộc vào định dạng"], "answer": "A", "ans_idx": 0}, {"id": 234, "original_num": 1, "module": "MS PowerPoint 2013", "question": "Muốn trình diễn tài liệu được soạn thảo, ta thực hiện", "options": ["File - View Show", "Window - View Show", "Slide Show - View Show", "Tools - View Show"], "answer": "C", "ans_idx": 2}, {"id": 235, "original_num": 2, "module": "MS PowerPoint 2013", "question": "Để thêm một Slide mới vào, ta thực hiện:", "options": ["Home - New Slide", "Design - New Slide", "Slide Show - New Slide", "Insert - New Slide"], "answer": "D", "ans_idx": 3}, {"id": 236, "original_num": 3, "module": "MS PowerPoint 2013", "question": "Để thay đổi thiết kế của Slide, ta thực hiện", "options": ["Home - Themes", "Design - Themes", "Slide Show - Themes", "Insert - Themes"], "answer": "B", "ans_idx": 1}, {"id": 237, "original_num": 4, "module": "MS PowerPoint 2013", "question": "Để thiết lập hiệu ứng cho đối tượng trong 1 slide, ta thực hiện:", "options": ["Transition - chọn hiệu ứng", "Design - chọn hiệu ứng", "Slide Show - chọn hiệu ứng", "Animations - chọn hiệu ứng"], "answer": "D", "ans_idx": 3}, {"id": 238, "original_num": 5, "module": "MS PowerPoint 2013", "question": "Một đối tượng trong 1 slide có thể thiết lập bao nhiêu hiệu ứng", "options": ["1", "Nhiều", "3", "2"], "answer": "B", "ans_idx": 1}, {"id": 239, "original_num": 6, "module": "MS PowerPoint 2013", "question": "Muốn xóa bỏ hiệu ứng trình diễn, ta chọn đối tượng cần xóa bỏ hiệu ứng và thực hiện", "options": ["Animations, rồi chọn delete", "Animations - Animation Pane, rồi chọn Remove", "Animation Pane, rồi chọn delete", "Animation Pane, rồi chọn Remove"], "answer": "B", "ans_idx": 1}, {"id": 240, "original_num": 7, "module": "MS PowerPoint 2013", "question": "Để chạy Slide ta cần chọn", "options": ["Bấm F5", "view/ slide show", "cả hai đều đúng", "Cả hai đều sai"], "answer": "C", "ans_idx": 2}, {"id": 241, "original_num": 8, "module": "MS PowerPoint 2013", "question": "Để tạo hiệu ứng chuyển tiếp giữa các slide ta vào slide show chọn", "options": ["Slide transition", "View show", "Custom animation", "Slide Master"], "answer": "A", "ans_idx": 0}, {"id": 242, "original_num": 9, "module": "MS PowerPoint 2013", "question": "Để tạo slide mới", "options": ["Nhấn Ctrl + N", "Nhấn F5", "Slide Master", "Nhấn Ctrl + S"], "answer": "A", "ans_idx": 0}, {"id": 243, "original_num": 10, "module": "MS PowerPoint 2013", "question": "Để lưu các slide ta phải", "options": ["Nhấn Ctrl + S", "file / save", "cả hai đúng", "cả hai sai"], "answer": "C", "ans_idx": 2}, {"id": 244, "original_num": 11, "module": "MS PowerPoint 2013", "question": "Số lượng các slide của 1 bài", "options": ["Tùyý", "Từ 1 đến 3 Slide", "Từ 3 Slide trở lên", "Số Slide không được vượt quá 100"], "answer": "A", "ans_idx": 0}, {"id": 245, "original_num": 12, "module": "MS PowerPoint 2013", "question": "Tạo hiệu ứng hoạt hình cho slide ta vào slide show chọn", "options": ["custom animation", "preset animation", "custom show", "cả 3 đều sai"], "answer": "A", "ans_idx": 0}, {"id": 246, "original_num": 13, "module": "MS PowerPoint 2013", "question": "chọn kiểu slide", "options": ["format / slide layout", "common tasks/ slide layout", "cả hai đúng", "cả hai sai"], "answer": "C", "ans_idx": 2}, {"id": 247, "original_num": 14, "module": "MS PowerPoint 2013", "question": "Để sử dụng màu nền có sẵn từ các mẫu cho các slide ta vào format chọn", "options": ["apply design template", "background", "cả hai đúng", "cả hai sai"], "answer": "A", "ans_idx": 0}, {"id": 248, "original_num": 15, "module": "MS PowerPoint 2013", "question": "Để thực thi các slide :", "options": ["F5", "Slide show", "Ctrl + F5", "Alt + F5"], "answer": "A", "ans_idx": 0}, {"id": 249, "original_num": 16, "module": "MS PowerPoint 2013", "question": "Để tạo màu nền cho slide", "options": ["Format / background", "Format / font", "Font/Colors", "Edit/Colors"], "answer": "A", "ans_idx": 0}, {"id": 250, "original_num": 17, "module": "MS PowerPoint 2013", "question": "Trong trình soạn thảo trình chiếu MS Powerpoint, mục Design cho phép bạn:", "options": ["Chèn và định dạng Picture cho trang trình chiếu.", "Chèn và định dạng Shape cho trang trình chiếu.", "Thiết kế và định dạng Theme, Background, Style cho trang trình chiếu.", "Thêm và định dạng Hiệu ứng của đối tượng trang trình chiếu."], "answer": "C", "ans_idx": 2}, {"id": 251, "original_num": 18, "module": "MS PowerPoint 2013", "question": "Trong trình soạn thảo trình chiếu MS Powerpoint, mục Transitions cho phép bạn:", "options": ["Thêm và định dạng Hiệu ứng lật trang cho trang trình chiếu.", "Chèn và định dạng Shape cho trang trình chiếu.", "Thiết kế và định dạng Theme, Background, Style cho trang trình chiếu", "Thêm và định dạng Hiệu ứng các đối tượng trang trình chiếu"], "answer": "A", "ans_idx": 0}, {"id": 252, "original_num": 19, "module": "MS PowerPoint 2013", "question": "Thêm và định dạng Hiệu ứng các đối tượng trang trình chiếu", "options": ["Chèn và định dạng Picture cho trang trình chiếu.", "Thiết kế và định dạng Theme, Background, Style cho trang trình chiếu.", "Thêm và định dạng Hiệu ứng lật trang cho trang trình chiếu.", "Thêm và định dạng Hiệu ứng các đối tượng trang trình chiếu."], "answer": "D", "ans_idx": 3}, {"id": 253, "original_num": 20, "module": "MS PowerPoint 2013", "question": "Trong trình soạn thảo trình chiếu MS Powerpoint, với mỗi đối tượng bạn có thể thêm bao nhiêu Hiệu ứng cho đối tượng đó ?", "options": ["Một", "Hai", "Ba", "Rất nhiều."], "answer": "D", "ans_idx": 3}, {"id": 254, "original_num": 21, "module": "MS PowerPoint 2013", "question": "Trong bảng quản lý các Hiệu ứng (Animation Pane), bạn có thể:", "options": ["Thay đổi thứ tự xuất hiện cho các hiệu ứng.", "Thiết lập hiệu ứng.", "Copy hiệu ứng.", "Copy hiệu ứng cho Slide."], "answer": "A", "ans_idx": 0}, {"id": 255, "original_num": 22, "module": "MS PowerPoint 2013", "question": "Chuyên mục nào sau đây không nằm trong phần hiệu ứng Animations của soạn thảo trình chiếu MS Powerpoint ?", "options": ["Xuất hiện (Entrance)", "Nội dung động (Dynamic Content)", "Làm nổi bật (Emphasis)", "Biến mất (Exit)"], "answer": "B", "ans_idx": 1}, {"id": 256, "original_num": 23, "module": "MS PowerPoint 2013", "question": "Trong trình soạn thảo trình chiếu MS Powerpoint, để bắt đầu chạy trình chiếu thì bạn bấm:", "options": ["F5", "Shift + F5", "F12", "F7"], "answer": "A", "ans_idx": 0}, {"id": 257, "original_num": 24, "module": "MS PowerPoint 2013", "question": "Trong trình soạn thảo trình chiếu MS Powerpoint, để bắt đầu chạy trình chiếu từ Slide đang chọn thì bạn bấm:", "options": ["F5", "Shift + F5", "Ctrl + N", "Ctrl + M"], "answer": "B", "ans_idx": 1}, {"id": 258, "original_num": 25, "module": "MS PowerPoint 2013", "question": "Trong trình soạn thảo trình chiếu MS Powerpoint, để Copy Slide đang chọn xuống ngay phía dưới slide đó thì bạn bấm:", "options": ["Ctrl + W", "Ctrl + M", "Ctrl + D", "Ctrl + S"], "answer": "C", "ans_idx": 2}, {"id": 259, "original_num": 26, "module": "MS PowerPoint 2013", "question": "Trong trình soạn thảo trình chiếu MS Powerpoint, để thoát khỏi chế độ trình chiếu slide thì bạn bấm:", "options": ["F5", "Shift + F5", "Esc", "F12"], "answer": "C", "ans_idx": 2}, {"id": 260, "original_num": 27, "module": "MS PowerPoint 2013", "question": "Sau khi đã thiết kế xong bài trình diễn, cách làm nào sau đây không phải để trình chiếu ngay bài trình diễn đó?", "options": ["Chọn Slide Show -> Custom Show", "Chọn Slide Show -> View Show", "Chọn View -> Slide Show", "Nhấn phím F5"], "answer": "A", "ans_idx": 0}, {"id": 261, "original_num": 28, "module": "MS PowerPoint 2013", "question": "Thao tác chọn File -> Close dùng để", "options": ["lưu tập tin hiện tại", "mở một tập tin nào đó", "đóng tập tin hiện tại", "Thoát khỏi Powerpoint"], "answer": "C", "ans_idx": 2}, {"id": 262, "original_num": 29, "module": "MS PowerPoint 2013", "question": "Sau khi đã chọn một đoạn văn bản, cách nào sau đây không phải để làm mất đi đoạn văn bản đó?", "options": ["Chọn Edit -> Cut.", "Nhấn tổ hợp phím Alt + X", "Nhắp chuột trái vào nút lệnh Cut (biểu tượng là cái kéo) trên thanh công cụ.", "Nhấn phím Delete."], "answer": "B", "ans_idx": 1}, {"id": 263, "original_num": 30, "module": "MS PowerPoint 2013", "question": "Đang trình chiếu một bài trình diễn, muốn dừng trình diễn ta nhấn phím", "options": ["Tab", "Esc", "Home", "End"], "answer": "B", "ans_idx": 1}, {"id": 264, "original_num": 1, "module": "LAN & Internet", "question": "Dạng mạng nào dưới đây là kết nối point to point?", "options": ["Star", "Ring", "Bus", "Router"], "answer": "A", "ans_idx": 0}, {"id": 265, "original_num": 3, "module": "LAN & Internet", "question": "Dạng mạng nào dưới đây các trạm phân chia chung một đường truyền chung?", "options": ["Star", "Ring", "Bus", "Router"], "answer": "C", "ans_idx": 2}, {"id": 266, "original_num": 4, "module": "LAN & Internet", "question": "Dạng mạng nào dưới đây tín hiệu được truy ền đi trên vòng theo một chiều duy nhất?", "options": ["Star", "Ring", "Bus", "Router"], "answer": "B", "ans_idx": 1}, {"id": 267, "original_num": 5, "module": "LAN & Internet", "question": "Dạng cáp nào dưới đây có tốc độ truyền tín hiệu cao nhất?", "options": ["Cáp đồng trục", "Cáp xoắn đôi", "Cáp quang", "Cáp Router"], "answer": "C", "ans_idx": 2}, {"id": 268, "original_num": 8, "module": "LAN & Internet", "question": "Khi sử dụng mạng máy tính ta sẽ được các lợiích gì?", "options": ["Chia sẻ tài nguyên ( ổ cứng, cơ sở dữ liệu, máy in… )", "Quản lý không tập trung", "Xử lý thông tin không chính xác", "Quản lý hóa dữ liệu"], "answer": "A", "ans_idx": 0}, {"id": 269, "original_num": 9, "module": "LAN & Internet", "question": "Mạng nối nhiều máy tính với nhau trong phạm vi một tòa nhà gọi là?", "options": ["LAN", "WAN", "MAN", "INTERNET"], "answer": "A", "ans_idx": 0}, {"id": 270, "original_num": 10, "module": "LAN & Internet", "question": "Mạng diện rộng, dùng để kết nối máy tính trong nội bộ các quốc gia hay giữa các quốc gia trong cùng một châu lục gọi là?", "options": ["LAN", "WAN", "MAN", "INTERNET"], "answer": "B", "ans_idx": 1}, {"id": 271, "original_num": 11, "module": "LAN & Internet", "question": "Đặc điểm mạng LAN?", "options": ["Mạng nối các máy tính trong phạm vi 1 tòa nhà", "Tốc độ liệu cao", "Tỷ lệ dữ liệu", "Máy tính trong phạm vi cho phép"], "answer": "A", "ans_idx": 0}, {"id": 272, "original_num": 12, "module": "LAN & Internet", "question": "Hệ điều hành nào dưới đây dành cho máy chủ?", "options": ["Windows XP", "Windows 7", "Windows Server 2008", "Windows 8"], "answer": "C", "ans_idx": 2}, {"id": 273, "original_num": 16, "module": "LAN & Internet", "question": "Đặc điểm của mạng hình sao?", "options": ["Tất cả các trạm chưa được kết nối thiết bị trung tâm", "Dễ dàng bổ sung hay loại bỏ bớt máy tính", "Dễ dàng giải quyết đường truyền", "Tất cả các trạm chưa được kết"], "answer": "B", "ans_idx": 1}, {"id": 274, "original_num": 25, "module": "LAN & Internet", "question": "Đặc điểm của mạng dạng đường thẳng", "options": ["Tất cả các nút mạng kết nối vào nút mạng trung tâm", "Tất cả kết nối trên cùng một đường truyền vật lý", "Tất cả các nút mạng đều kết nối trực tiếp với nhau", "Mỗi nút mạng kết nối với 2 nút mạng còn lại"], "answer": "C", "ans_idx": 2}, {"id": 275, "original_num": 28, "module": "LAN & Internet", "question": "Dịch vụ DHCP dùng để?", "options": ["Cấp địa chỉ IP cho máy trạm", "Phân giải tên miền và địa chỉ IP", "Truyền file qua mạng", "Gửi thư điện tử"], "answer": "A", "ans_idx": 0}, {"id": 276, "original_num": 29, "module": "LAN & Internet", "question": "Dịch vụ DNS dùng để?", "options": ["Cấp địa chỉ IP cho máy trạm", "Phân giải tên miền và địa chỉ IP", "Truyền file qua mạng", "Gửi thư điện tử"], "answer": "B", "ans_idx": 1}, {"id": 277, "original_num": 30, "module": "LAN & Internet", "question": "Khi soạn thảo Email muốn đính kèm tập tin chúng ta chọn?", "options": ["Send", "Copy", "Attachment", "File/save"], "answer": "C", "ans_idx": 2}, {"id": 278, "original_num": 37, "module": "LAN & Internet", "question": "Phần mềm nào dưới đây không phải là trình duyệt?", "options": ["Cốc Cốc", "Firefox", "Safari", "VLC Player"], "answer": "D", "ans_idx": 3}, {"id": 279, "original_num": 38, "module": "LAN & Internet", "question": "Nút BACK trên trình duyệt dùng để?", "options": ["Trở lại trang trước", "Đi đến trang kế tiếp", "Truy cập lịch sử duyệt web", "Về trang chủ"], "answer": "A", "ans_idx": 0}, {"id": 280, "original_num": 46, "module": "LAN & Internet", "question": "Để điều khiển máy tính từ xa trong mạng LAN, ta thường sử dụng phần mềm nào?", "options": ["Remote Desktop Connection", "Team Viewer", "Chrome", "VLC Player"], "answer": "A", "ans_idx": 0}, {"id": 281, "original_num": 60, "module": "LAN & Internet", "question": "WWW viết tắt của?", "options": ["Word Wide Web", "World Wide Wed", "Wed wide world", "Win Word Wed"], "answer": "B", "ans_idx": 1}, {"id": 282, "original_num": 61, "module": "LAN & Internet", "question": "Những phần mềm nào dùng để duyệt web?", "options": ["Chrome", "Hệ điều hành", "Ứng dụng văn phòng", "Hệ thống mạng"], "answer": "A", "ans_idx": 0}, {"id": 283, "original_num": 62, "module": "LAN & Internet", "question": "HTTP là gì?", "options": ["Giao thức truyền siêu văn bản", "Ngôn ngữ soạn thảo web", "Tên của trang web", "Địa chỉ của trang web"], "answer": "A", "ans_idx": 0}, {"id": 284, "original_num": 68, "module": "LAN & Internet", "question": "Đèn Link của Router ADSL không sáng. Lỗi này có thể là lỗi nào sau đây", "options": ["Hỏng dây điện thoại", "Hỏng dây Cable", "Hỏng đầu RJ45", "Hỏng Switch"], "answer": "A", "ans_idx": 0}, {"id": 285, "original_num": 69, "module": "LAN & Internet", "question": "Đèn Data của Router ADSL không sáng. Lỗi này có thể là lỗi nào sau đây", "options": ["Kết nối về ISP bị lỗi", "Hỏng dây điện thoại", "Hỏng đầu RJ45", "Hỏng dây Cable"], "answer": "A", "ans_idx": 0}, {"id": 286, "original_num": 70, "module": "LAN & Internet", "question": "Icon Lan (nằm dưới system bar) bị dấu chéo đỏ. Lỗi này có thể là lỗi nào sau đây", "options": ["Hỏng cable", "Hỏng dây điện thoại", "Kết nối về ISP bị lỗi", "Hỏng Switch"], "answer": "A", "ans_idx": 0}, {"id": 287, "original_num": 71, "module": "LAN & Internet", "question": "Icon Lan (nằm dưới system bar) bị dấu chấm thang vàng. Lỗi này có thể là lỗi nào sau đây", "options": ["Lỗi thiết lập địa chỉ IP", "Hỏng cable", "Hỏng dây điện thoại", "Kết nối về ISP bị lỗi"], "answer": "A", "ans_idx": 0}, {"id": 288, "original_num": 98, "module": "LAN & Internet", "question": "Laptop có thể vừa sử dụng card mạng có dây và không dây được hay không", "options": ["Được", "Không", "Được, nhưng phải của hãng LinkSys", "Được, nhưng thiết bị phải do ISP cấp"], "answer": "A", "ans_idx": 0}];
+    const mindmapsData = [{"id": "module-1", "title": "Module 1: Hiểu Biết CNTT Cơ Bản", "shortTitle": "M1: Kiến Thức Chung", "category": "Kiến thức chung", "count": 47, "nodes": [{"title": "1. Phần Cứng Máy Tính (Hardware)", "items": [{"label": "Thiết bị nhập (Input)", "detail": "Bàn phím (Keyboard), Chuột (Mouse), Máy quét (Scanner), Webcam, Microphone. Tiếp nhận dữ liệu vào máy tính."}, {"label": "Thiết bị xuất (Output)", "detail": "Màn hình (Monitor), Máy in (Printer), Loa (Speaker), Máy chiếu (Projector). Xuất dữ liệu ra bên ngoài."}, {"label": "Bộ xử lý trung tâm (CPU)", "detail": "Gồm 3 khối chính: Khối điều khiển (CU), Khối tính toán số học & logic (ALU), Thanh ghi (Register). Tốc độ đo bằng Hz, MHz, GHz."}, {"label": "Bộ nhớ trong: RAM vs ROM", "detail": "RAM (Random Access Memory): Bộ nhớ tạm thời, MẤT dữ liệu khi mất nguồn điện. ROM (Read Only Memory): Chứa chương trình BIOS/POST, KHÔNG mất dữ liệu khi tắt máy."}, {"label": "Bộ nhớ ngoài", "detail": "Ổ đĩa cứng (HDD, SSD), USB flash, thẻ nhớ, đĩa quang CD/DVD. Dùng để lưu trữ dữ liệu lâu dài."}, {"label": "Đơn vị đo lường dung lượng", "detail": "Bit (nhỏ nhất) -> 1 Byte = 8 Bit -> 1 KB = 1024 Bytes -> 1 MB = 1024 KB -> 1 GB = 1024 MB -> 1 TB = 1024 GB. Bội số chuẩn là 1024 (2^10), không phải 1000."}]}, {"title": "2. Phần Mềm Máy Tính (Software)", "items": [{"label": "Hệ điều hành (Hệ thống)", "detail": "Chạy đầu tiên khi khởi động máy. Quản lý tài nguyên, phần cứng và tạo môi trường chạy ứng dụng (Windows, Linux, macOS, Android)."}, {"label": "Phần mềm ứng dụng", "detail": "Phục vụ công việc cụ thể: Soạn thảo văn bản (Word), Bảng tính (Excel), Trình chiếu (PowerPoint), Trình duyệt Web (Chrome, Edge)."}, {"label": "Phân loại bản quyền", "detail": "Thương mại (Commercial): Phải trả phí mua bản quyền. Dùng thử (Shareware): Giới hạn tính năng/thời gian. Miễn phí (Freeware). Mã nguồn mở (Open Source): Được xem và tùy biến mã nguồn (Linux)."}]}, {"title": "3. Virus Tin Học & An Toàn Dữ Liệu", "items": [{"label": "Bản chất Virus tin học", "detail": "Là một đoạn chương trình máy tính có khả năng tự nhân bản và lây lan. (Lưu ý: câu 5 trong đề cương gốc chọn đáp án A; hãy ghi nhớ đáp án đề cương của trường)."}, {"label": "Con đường lây nhiễm", "detail": "Qua USB, thẻ nhớ ngoài, sao chép file qua mạng nội bộ, tải tệp từ Internet, mở email đính kèm lạ. Virus không lây qua tiếp xúc không khí."}, {"label": "Biện pháp phòng chống", "detail": "Cài phần mềm diệt virus có bản quyền, cập nhật thường xuyên; quét kiểm tra thiết bị ngoài trước khi sao chép; sao lưu (Backup) dữ liệu định kỳ."}, {"label": "Xử lý tệp đính kèm lạ", "detail": "Khi nhận thư điện tử có tệp đính kèm lạ: Dùng phần mềm quét virus kiểm tra trước, không mở trực tiếp."}]}, {"title": "4. Thao Tác Hệ Thống & Lưu Trữ", "items": [{"label": "Tắt máy tính đúng cách", "detail": "Nhấn nút Start ở góc màn hình -> Chọn Shutdown. Tuyệt đối không rút nguồn điện hoặc bấm nút Reset/Power đột ngột."}, {"label": "Chống phân mảnh đĩa (Defragment)", "detail": "Sắp xếp lại các khối dữ liệu rời rạc nằm liền kề nhau trên đĩa cứng, giúp tốc độ truy xuất dữ liệu từ đĩa cứng nhanh hơn."}, {"label": "Định dạng đĩa (Format)", "detail": "Khởi tạo hệ thống tập tin trên đĩa mới để đĩa có thể đọc và ghi nhận dữ liệu."}, {"label": "Ký tự cấm đặt tên tệp", "detail": "Không được dùng các ký tự đặc biệt: . , ? \\ / ; : = < > [ ] * \" |"}]}]}, {"id": "module-2", "title": "Module 2: Hệ Điều Hành Windows 10", "shortTitle": "M2: Windows 10", "category": "Windows 10", "count": 30, "nodes": [{"title": "1. Giao Diện & Thành Phần Hệ Thống", "items": [{"label": "Desktop & Taskbar", "detail": "Desktop: Màn hình chính sau khi khởi động. Taskbar: Thanh tác vụ dưới cùng chứa nút Start, các ứng dụng đang chạy và System Tray (khay hệ thống góc phải)."}, {"label": "File Explorer", "detail": "Trình quản lý tệp và thư mục. Phím tắt mở nhanh: Windows + E."}, {"label": "Task Manager", "detail": "Quản lý tiến trình, theo dõi hiệu năng CPU, RAM và đóng ứng dụng bị treo (Not Responding). Phím tắt: Ctrl + Shift + Esc hoặc Ctrl + Alt + Delete."}, {"label": "Control Panel / Settings", "detail": "Trung tâm cấu hình hệ thống: Gỡ ứng dụng (Programs and Features), cài máy in, chỉnh ngày giờ, mạng."}]}, {"title": "2. Thao Tác Với Tệp & Thư Mục", "items": [{"label": "Đổi tên (Rename)", "detail": "Phím tắt F2. Tên tệp tối đa 255 ký tự, không nên có dấu tiếng Việt, không chứa ký tự cấm \\ / : * ? \" < > |."}, {"label": "Sao chép, Cắt, Dán", "detail": "Sao chép (Copy): Ctrl + C | Cắt (Cut): Ctrl + X | Dán (Paste): Ctrl + V."}, {"label": "Chọn nhiều đối tượng", "detail": "Chọn tất cả: Ctrl + A | Chọn các tệp LIÊN TIẾP: Giữ Shift | Chọn các tệp RỜI RẠC: Giữ Ctrl."}, {"label": "Xóa tệp & Thùng rác", "detail": "Xóa vào Recycle Bin: Phím Delete. Xóa VĨNH VIỄN không qua Recycle Bin: Shift + Delete."}, {"label": "Tạo thư mục mới (New Folder)", "detail": "Tổ hợp phím nhanh: Ctrl + Shift + N."}]}, {"title": "3. Phím Tắt Hệ Thống Thường Gặp", "items": [{"label": "Windows + D", "detail": "Ẩn tất cả các cửa sổ để quay về màn hình Desktop ngay lập tức."}, {"label": "Windows + L", "detail": "Khóa máy tính ngay lập tức (Lock screen) để bảo mật khi rời bàn."}, {"label": "Windows + R", "detail": "Mở hộp thoại Run để gõ lệnh thực thi nhanh (cmd, regedit, calc...)."}, {"label": "Alt + Tab / Alt + F4", "detail": "Alt + Tab: Chuyển đổi qua lại giữa các cửa sổ. Alt + F4: Đóng cửa sổ hiện hành hoặc tắt máy."}]}]}, {"id": "module-3", "title": "Module 3: Soạn Thảo Văn Bản MS Word 2013", "shortTitle": "M3: MS Word 2013", "category": "MS Word 2013", "count": 60, "nodes": [{"title": "1. Định Dạng Ký Tự (Font)", "items": [{"label": "Hộp thoại Font", "detail": "Phím tắt: Ctrl + D (hoặc Ctrl + Shift + F). Chỉnh font chữ, kiểu chữ, cỡ chữ, màu sắc, hiệu ứng."}, {"label": "In đậm, nghiêng, gạch chân", "detail": "In đậm: Ctrl + B | In nghiêng: Ctrl + I | Gạch chân: Ctrl + U | Gạch đôi: Ctrl + Shift + D."}, {"label": "Chỉ số trên / Chỉ số dưới", "detail": "Chỉ số dưới (H2O): Ctrl + = | Chỉ số trên (X^2): Ctrl + Shift + =."}, {"label": "Tăng / Giảm cỡ chữ", "detail": "Tăng cỡ chữ: Ctrl + ] | Giảm cỡ chữ: Ctrl + [ (hoặc Ctrl + Shift + > / <)."}, {"label": "Đổi chữ hoa / thường", "detail": "Shift + F3: Luân phiên chuyển đổi giữa chữ thường, CHỮ HOA và Viết Hoa Đầu Từ."}]}, {"title": "2. Định Dạng Đoạn Văn (Paragraph)", "items": [{"label": "4 kiểu căn lề đoạn văn", "detail": "Căn trái: Ctrl + L | Căn giữa: Ctrl + E | Căn phải: Ctrl + R | Căn đều 2 bên: Ctrl + J."}, {"label": "Khoảng cách dòng (Line Spacing)", "detail": "Dòng đơn (1.0): Ctrl + 1 | Dòng đôi (2.0): Ctrl + 2 | Dòng rưỡi (1.5): Ctrl + 5."}, {"label": "Ngắt trang & Ngắt dòng", "detail": "Ngắt trang cứng sang trang mới: Ctrl + Enter | Xuống dòng trong cùng đoạn: Shift + Enter."}, {"label": "Drop Cap (Chữ lớn đầu đoạn)", "detail": "Thẻ Insert -> Drop Cap: Tạo chữ cái to thụt đầu đoạn văn (Dropped / In margin)."}]}, {"title": "3. Thao Tác Văn Bản & Nâng Cao", "items": [{"label": "Quản lý tệp", "detail": "Tạo mới: Ctrl + N | Mở tệp: Ctrl + O | Lưu: Ctrl + S | Lưu tên mới: F12 (Save As) | In ấn: Ctrl + P."}, {"label": "Tìm kiếm & Thay thế", "detail": "Tìm kiếm: Ctrl + F | Tìm kiếm và Thay thế: Ctrl + H | Nhảy đến trang: Ctrl + G."}, {"label": "Header & Footer", "detail": "Tiêu đề đầu và chân trang, tự động xuất hiện trên mọi trang tài liệu (đánh số trang Page Number)."}, {"label": "Bảng biểu (Table)", "detail": "Gộp ô: Merge Cells | Tách ô: Split Cells. Phím Tab: Sang ô kế tiếp hoặc thêm dòng mới ở ô cuối. Shift + Tab: Lùi về ô trước."}, {"label": "Trộn thư (Mail Merge)", "detail": "Thẻ Mailings: Tạo thư mời, phiếu lương hàng loạt tự động từ danh sách dữ liệu Excel."}]}]}, {"id": "module-4", "title": "Module 4: Bảng Tính MS Excel 2013", "shortTitle": "M4: MS Excel 2013", "category": "MS Excel 2013", "count": 96, "nodes": [{"title": "1. Cấu Trúc Bảng Tính & Địa Chỉ Ô", "items": [{"label": "Cấu trúc cột & dòng", "detail": "Cột (Column) ký hiệu bằng chữ A, B, C... tối đa 16,384 cột (đến XFD). Dòng (Row) ký hiệu bằng số 1, 2, 3... tối đa 1,048,576 dòng. Giao nhau là Ô (Cell)."}, {"label": "Căn lề mặc định", "detail": "Dữ liệu KIỂU SỐ (Number, Date): Căn PHẢI | Dữ liệu KIỂU CHUỖI (Text): Căn TRÁI | Dữ liệu LOGIC (TRUE/FALSE): Căn GIỮA."}, {"label": "Địa chỉ tương đối vs tuyệt đối", "detail": "Tương đối (A1): Tự đổi tọa độ khi sao chép công thức. Tuyệt đối ($A$1): Cố định cả cột và dòng khi sao chép. Hỗn hợp ($A1 cố định cột, A$1 cố định dòng)."}, {"label": "Phím F4 & F2", "detail": "Phím F4: Chuyển đổi kiểu địa chỉ ($A$1 -> A$1 -> $A1 -> A1). Phím F2: Sửa nội dung ô tính."}]}, {"title": "2. Nhóm Hàm Chuỗi (Text Functions)", "items": [{"label": "LEFT(text, n)", "detail": "Lấy n ký tự bên TRÁI chuỗi. Ví dụ: LEFT(\"TINHOC\", 3) -> \"TIN\". Mặc định n = 1."}, {"label": "RIGHT(text, n)", "detail": "Lấy n ký tự bên PHẢI chuỗi. Ví dụ: RIGHT(\"TINHOC\", 3) -> \"HOC\"."}, {"label": "MID(text, start, n)", "detail": "Lấy n ký tự từ vị trí start. Ví dụ: MID(\"ABCDEF\", 2, 3) -> \"BCD\"."}, {"label": "LEN(text)", "detail": "Đếm tổng số ký tự của chuỗi (kể cả khoảng trắng). Ví dụ: LEN(\"Tin Học\") = 7."}, {"label": "VALUE(text)", "detail": "Đổi chuỗi số thành giá trị số thực sự để tính toán. Ví dụ: VALUE(\"123\") -> 123."}, {"label": "LOWER / UPPER / PROPER", "detail": "LOWER: chữ thường | UPPER: CHỮ HOA | PROPER: Viết Hoa Đầu Từ."}]}, {"title": "3. Nhóm Hàm Toán Học & Thống Kê", "items": [{"label": "ROUND(num, n)", "detail": "Làm tròn số num tới n chữ số. n > 0: thập phân (ROUND(8.456, 2) = 8.46). n = 0: hàng đơn vị (ROUND(8.5, 0) = 9). n < 0: hàng chục/trăm (ROUND(145, -1) = 150)."}, {"label": "INT(num)", "detail": "Lấy phần nguyên lớn nhất <= num. Ví dụ: INT(7.9) = 7, nhưng INT(-7.2) = -8!"}, {"label": "MOD(n, d)", "detail": "Lấy phần DƯ của phép chia n cho d. Ví dụ: MOD(7, 3) = 1; MOD(10, 4) = 2."}, {"label": "SUM & SUMIF", "detail": "SUM(range): Tính tổng các số. SUMIF(range, criteria, [sum_range]): Tính tổng theo một điều kiện."}, {"label": "COUNT vs COUNTA", "detail": "COUNT(range): Chỉ đếm các ô chứa DỮ LIỆU SỐ. COUNTA(range): Đếm TẤT CẢ các ô có dữ liệu (kể cả chữ). COUNTBLANK: Đếm ô trống."}, {"label": "COUNTIF(range, criteria)", "detail": "Đếm số lượng ô thỏa điều kiện criteria. Ví dụ: COUNTIF(C2:C10, \">=5\")."}, {"label": "AVERAGE, MAX, MIN", "detail": "AVERAGE: Trung bình cộng. MAX / MIN: Giá trị lớn nhất / nhỏ nhất."}, {"label": "RANK(num, ref, [order])", "detail": "Xếp hạng. order = 0 (mặc định): Giảm dần (số lớn nhất hạng 1). order = 1: Tăng dần (số nhỏ nhất hạng 1)."}]}, {"title": "4. Nhóm Hàm Logic & Tra Cứu", "items": [{"label": "IF(cond, val_true, val_false)", "detail": "Kiểm tra điều kiện cond. Nếu đúng trả về val_true, nếu sai trả về val_false. Có thể lồng nhau."}, {"label": "AND(...) & OR(...)", "detail": "AND: Đúng (TRUE) khi TẤT CẢ đều đúng. OR: Đúng (TRUE) khi có ÍT NHẤT 1 điều kiện đúng."}, {"label": "VLOOKUP(val, table, col, [type])", "detail": "Dò tìm theo CỘT đầu tiên của bảng table. table nhớ bấm F4 để cố định. col: Thứ tự cột lấy kết quả. type: 0 (FALSE) = Dò tìm chính xác tuyệt đối; 1 (TRUE) = Dò tìm tương đối."}, {"label": "HLOOKUP(val, table, row, [type])", "detail": "Dò tìm theo DÒNG đầu tiên của bảng table. row: Thứ tự dòng cần lấy kết quả."}]}, {"title": "5. Bảng Mã Lỗi Kinh Điển Trong Excel", "items": [{"label": "###", "detail": "Độ rộng cột quá hẹp không đủ hiển thị số/ngày, hoặc dữ liệu thời gian/ngày tháng mang giá trị âm. Kéo rộng cột ra là hết."}, {"label": "#DIV/0!", "detail": "Lỗi chia cho số 0 hoặc chia cho ô rỗng."}, {"label": "#VALUE!", "detail": "Sai kiểu dữ liệu trong phép toán hoặc đối số (ví dụ: lấy chữ + số: = \"A\" + 5)."}, {"label": "#NAME?", "detail": "Excel không nhận ra tên hàm (viết sai tên hàm) hoặc chuỗi văn bản không đặt trong cặp nháy kép \"\"."}, {"label": "#N/A", "detail": "Không có giá trị tìm thấy (No value Available) - thường xảy ra khi VLOOKUP/HLOOKUP không tìm thấy giá trị tra cứu tương ứng."}, {"label": "#REF!", "detail": "Tham chiếu ô không hợp lệ (do ô hoặc vùng dữ liệu bị xóa mất)."}]}]}, {"id": "module-5", "title": "Module 5: Trình Chiếu MS PowerPoint 2013", "shortTitle": "M5: PowerPoint 2013", "category": "MS PowerPoint 2013", "count": 30, "nodes": [{"title": "1. Cấu Trúc Slide & Slide Master", "items": [{"label": "Presentation & Slide", "detail": "Đuôi tệp mặc định là .pptx. Thêm Slide mới: Ctrl + M. Nhân đôi Slide: Ctrl + D."}, {"label": "Slide Layout", "detail": "Bố cục định sẵn của một Slide (Title Slide, Title and Content, Two Content...)."}, {"label": "Slide Master", "detail": "Thẻ View -> Slide Master: Slide chủ mẹ thiết lập nền, font, logo đồng bộ cho TOÀN BỘ slide trong bài."}]}, {"title": "2. Hiệu Ứng (Transitions vs Animations)", "items": [{"label": "Transition (Chuyển trang)", "detail": "Thẻ Transitions: Hiệu ứng chuyển động GIỮA CÁC SLIDE (khi chuyển từ slide cũ sang slide mới)."}, {"label": "Animation (Hiệu ứng đối tượng)", "detail": "Thẻ Animations: Hiệu ứng chuyển động cho TỪNG ĐỐI TƯỢNG (chữ, hình ảnh, bảng) TRÊN CÙNG MỘT SLIDE."}, {"label": "4 nhóm Animation", "detail": "Entrance (Xuất hiện - xanh lá) | Emphasis (Nhấn mạnh - vàng) | Exit (Biến mất - đỏ) | Motion Paths (Chuyển động theo đường vẽ)."}]}, {"title": "3. Phím Tắt Trình Chiếu Trọng Tâm", "items": [{"label": "F5", "detail": "Bắt đầu trình chiếu từ SLIDE ĐẦU TIÊN (Slide 1)."}, {"label": "Shift + F5", "detail": "Bắt đầu trình chiếu từ SLIDE HIỆN TẠI (Current slide)."}, {"label": "Esc", "detail": "Dừng và thoát khỏi chế độ trình chiếu."}, {"label": "Phím B & Phím W", "detail": "Phím B (Black): Tạm làm ĐEN màn hình. Phím W (White): Tạm làm TRẮNG màn hình khi đang chiếu."}]}]}, {"id": "module-6", "title": "Module 6: Mạng Máy Tính & Internet", "shortTitle": "M6: LAN & Internet", "category": "LAN & Internet", "count": 25, "nodes": [{"title": "1. Phân Loại Mạng & Thiết Bị", "items": [{"label": "Phân loại theo quy mô", "detail": "LAN (Local Area Network): Mạng cục bộ phạm vi hẹp. MAN: Mạng đô thị. WAN (Wide Area Network): Mạng diện rộng (toàn cầu, Internet)."}, {"label": "Router & Modem", "detail": "Router: Định tuyến và chuyển tiếp các gói tin. Modem: Điều chế giải điều chế tín hiệu từ nhà mạng ISP. Đèn Link không sáng = Mất đường truyền vật lý; Đèn Data không sáng = Không có dữ liệu lưu chuyển."}, {"label": "Biểu tượng mạng khay hệ thống", "detail": "Dấu chéo đỏ (❌): Chưa cắm cáp mạng hoặc Card mạng bị Disabled. Dấu chấm than vàng (⚠️): Đã kết nối vật lý nhưng lỗi IP / No Internet Access."}]}, {"title": "2. Địa Chỉ IP & Giao Thức Mạng", "items": [{"label": "Địa chỉ IPv4", "detail": "Độ dài 32 bit, gồm 4 cụm số thập phân từ 0 đến 255 cách nhau bởi dấu chấm (ví dụ: 192.168.1.1). IPv6: Độ dài 128 bit."}, {"label": "DNS (Domain Name System)", "detail": "Hệ thống phân giải tên miền: Chuyển đổi tên miền dễ nhớ (google.com) thành địa chỉ IP máy chủ."}, {"label": "Giao thức Web & Mail", "detail": "HTTP/HTTPS: Truyền tải siêu văn bản web. FTP: Truyền file. SMTP: Gửi email. POP3/IMAP: Nhận email."}]}, {"title": "3. Trình Duyệt & Thư Điện Tử (Email)", "items": [{"label": "Trình duyệt Web", "detail": "Google Chrome, Firefox, Edge, Safari, Cốc Cốc. Phím F5 / Ctrl + R: Tải lại trang."}, {"label": "Thành phần người nhận Email", "detail": "To: Người nhận chính. Cc (Carbon Copy): Nhận bản sao công khai. Bcc (Blind Carbon Copy): Nhận bản sao ẨN DANH (những người khác không thấy địa chỉ người này)."}]}]}];
+
+    // JS Icon helper (no dependency on python variables)
+    const JS_ICONS = {
+      chevronDown: '<svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>',
+      sun: '<svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>',
+      moon: '<svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>'
+    };
+
+    // --- THEME SWITCHER (LIGHT / DARK) ---
+    function initTheme() {
+      const savedTheme = localStorage.getItem('quiz_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      updateThemeBtnUI(savedTheme);
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('quiz_theme', next);
+      updateThemeBtnUI(next);
+      playSound('click');
+      triggerHaptic(15);
+    }
+
+    function updateThemeBtnUI(theme) {
+      const iconEl = document.getElementById('themeToggleIcon');
+      const textEl = document.getElementById('themeToggleText');
+      if (theme === 'light') {
+        iconEl.innerHTML = JS_ICONS.moon;
+        textEl.innerText = 'Chế độ Tối';
+      } else {
+        iconEl.innerHTML = JS_ICONS.sun;
+        textEl.innerText = 'Chế độ Sáng';
+      }
+    }
+
+    // --- AUDIO SYNTHESIZER ---
+    let audioCtx = null;
+    function getAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    function isSoundEnabled() {
+      const el = document.getElementById('chkSound');
+      return el ? el.checked : true;
+    }
+
+    function playSound(type) {
+      if (!isSoundEnabled()) return;
+      try {
+        const ctx = getAudioContext();
+        const now = ctx.currentTime;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        if (type === 'correct') {
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(440, now);
+          osc.frequency.exponentialRampToValueAtTime(880, now + 0.12);
+          gain.gain.setValueAtTime(0.2, now);
+          gain.gain.exponentialRampToValueAtTime(0.01, now + 0.2);
+          osc.start(now);
+          osc.stop(now + 0.2);
+        } else if (type === 'wrong') {
+          osc.type = 'sawtooth';
+          osc.frequency.setValueAtTime(200, now);
+          osc.frequency.exponentialRampToValueAtTime(120, now + 0.18);
+          gain.gain.setValueAtTime(0.18, now);
+          gain.gain.exponentialRampToValueAtTime(0.01, now + 0.2);
+          osc.start(now);
+          osc.stop(now + 0.2);
+        } else if (type === 'streak') {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(587.33, now);
+          osc.frequency.setValueAtTime(880, now + 0.08);
+          osc.frequency.setValueAtTime(1174.66, now + 0.15);
+          gain.gain.setValueAtTime(0.25, now);
+          gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+          osc.start(now);
+          osc.stop(now + 0.3);
+        } else if (type === 'click') {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(500, now);
+          gain.gain.setValueAtTime(0.05, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.04);
+          osc.start(now);
+          osc.stop(now + 0.04);
+        }
+      } catch(e) {}
+    }
+
+    function triggerHaptic(duration) {
+      if (navigator.vibrate) {
+        try { navigator.vibrate(duration || 25); } catch(e) {}
+      }
+    }
+
+    // --- CONFETTI EFFECT ---
+    function launchConfetti() {
+      const canvas = document.getElementById('confettiCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const particles = [];
+      const colors = ['#388bfd', '#2ea043', '#d29922', '#a371f7', '#58a6ff'];
+      for (let i = 0; i < 80; i++) {
+        particles.push({
+          x: canvas.width / 2,
+          y: canvas.height / 2,
+          vx: (Math.random() - 0.5) * 14,
+          vy: (Math.random() - 0.7) * 16,
+          size: Math.random() * 7 + 4,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          rotation: Math.random() * 360,
+          rotSpeed: (Math.random() - 0.5) * 10,
+          opacity: 1
+        });
+      }
+
+      let frames = 0;
+      function render() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        frames++;
+        let alive = false;
+        particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += 0.35;
+          p.rotation += p.rotSpeed;
+          if (frames > 40) p.opacity -= 0.015;
+
+          if (p.opacity > 0) {
+            alive = true;
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate((p.rotation * Math.PI) / 180);
+            ctx.fillStyle = p.color;
+            ctx.globalAlpha = Math.max(0, p.opacity);
+            ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.7);
+            ctx.restore();
+          }
+        });
+
+        if (alive && frames < 130) {
+          requestAnimationFrame(render);
+        } else {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+      }
+      requestAnimationFrame(render);
+    }
+
+    // --- TAB SWITCHING ---
+    function switchMainTab(tabId) {
+      playSound('click');
+      triggerHaptic(20);
+
+      document.querySelectorAll('.desk-nav-btn').forEach(b => b.classList.remove('active'));
+      const deskBtn = Array.from(document.querySelectorAll('.desk-nav-btn')).find(b =>
+        (tabId === 'quiz' && b.innerText.includes('Luyện Thi')) ||
+        (tabId === 'mindmap' && b.innerText.includes('Sơ Đồ')) ||
+        (tabId === 'cheatsheet' && b.innerText.includes('Đề Cương'))
+      );
+      if (deskBtn) deskBtn.classList.add('active');
+
+      document.querySelectorAll('.mob-nav-item').forEach(b => b.classList.remove('active'));
+      const mobBtn = Array.from(document.querySelectorAll('.mob-nav-item')).find(b =>
+        (tabId === 'quiz' && b.innerText.includes('Luyện Thi')) ||
+        (tabId === 'mindmap' && b.innerText.includes('Mindmap')) ||
+        (tabId === 'cheatsheet' && b.innerText.includes('Cứu Sinh'))
+      );
+      if (mobBtn) mobBtn.classList.add('active');
+
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      const target = document.getElementById('panel-' + tabId);
+      if (target) target.classList.add('active');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      if (tabId === 'mindmap') renderMindmaps();
+      else if (tabId === 'cheatsheet') renderQuestionsDirectory();
+    }
+
+    // --- QUIZ ENGINE LOGIC ---
+    let currentQuizQueue = [];
+    let currentQIndex = 0;
+    let quizScore = { correct: 0, wrong: 0, streak: 0, maxStreak: 0, startTime: 0, history: [] };
+    let timerInterval = null;
+    let timeLeft = 0;
+    let isAnswered = false;
+
+    const STORAGE_WRONG_KEY = 'quiz_tin_hoc_wrong_ids';
+    function getStoredWrongIds() {
+      try {
+        const raw = localStorage.getItem(STORAGE_WRONG_KEY);
+        return raw ? JSON.parse(raw) : [];
+      } catch(e) { return []; }
+    }
+    function saveStoredWrongIds(ids) {
+      try { localStorage.setItem(STORAGE_WRONG_KEY, JSON.stringify(ids)); } catch(e) {}
+    }
+    function updateWrongBadgeUI() {
+      const wrongs = getStoredWrongIds();
+      const countEl = document.getElementById('wrongCountSaved');
+      const btn = document.getElementById('btnRetryWrong');
+      if (countEl) countEl.innerText = wrongs.length;
+      if (btn) btn.style.display = wrongs.length > 0 ? 'inline-flex' : 'none';
+    }
+
+    function handleSequentialToggle(cb) {
+      if (cb.checked) {
+        document.getElementById('chkShuffleQ').checked = false;
+        document.getElementById('chkShuffleOpts').checked = false;
+      }
+    }
+
+    function updateQuestionCountLimit() {
+      const mod = document.getElementById('selModule').value;
+      const count = mod === 'ALL' ? rawQuestions.length : rawQuestions.filter(q => q.module === mod).length;
+      const badge = document.getElementById('deskCountBadge');
+      if (badge) badge.innerText = count + ' câu';
+    }
+
+    function startQuiz(mode) {
+      playSound('click');
+      triggerHaptic(30);
+      let questionsPool = [];
+
+      if (mode === 'retry') {
+        const wrongIds = getStoredWrongIds();
+        questionsPool = rawQuestions.filter(q => wrongIds.includes(q.id));
+        if (questionsPool.length === 0) {
+          alert('Bạn chưa có câu nào làm sai được ghi nhớ!');
+          return;
+        }
+      } else if (mode === 'all-sequential') {
+        questionsPool = [...rawQuestions];
+        document.getElementById('chkSequential').checked = true;
+        document.getElementById('chkShuffleQ').checked = false;
+        document.getElementById('chkShuffleOpts').checked = false;
+      } else {
+        const mod = document.getElementById('selModule').value;
+        questionsPool = mod === 'ALL' ? [...rawQuestions] : rawQuestions.filter(q => q.module === mod);
+
+        const isSequential = document.getElementById('chkSequential').checked;
+        const shouldShuffleQ = document.getElementById('chkShuffleQ').checked;
+
+        if (!isSequential && shouldShuffleQ) {
+          questionsPool.sort(() => Math.random() - 0.5);
+        }
+
+        const limitVal = document.getElementById('selLimit').value;
+        if (limitVal !== 'ALL') {
+          const lim = parseInt(limitVal);
+          if (questionsPool.length > lim) questionsPool = questionsPool.slice(0, lim);
+        }
+      }
+
+      const shouldShuffleOpts = document.getElementById('chkShuffleOpts').checked;
+      currentQuizQueue = questionsPool.map(q => {
+        let opts = q.options.map((text, idx) => ({ text, isCorrect: idx === q.ans_idx, originalIdx: idx }));
+        if (shouldShuffleOpts) {
+          opts.sort(() => Math.random() - 0.5);
+        }
+        return {
+          ...q,
+          displayOptions: opts,
+          correctDisplayIdx: opts.findIndex(o => o.isCorrect)
+        };
+      });
+
+      currentQIndex = 0;
+      quizScore = { correct: 0, wrong: 0, streak: 0, maxStreak: 0, startTime: Date.now(), history: [] };
+
+      document.getElementById('quizHome').style.display = 'none';
+      document.getElementById('quizResult').style.display = 'none';
+      document.getElementById('quizPlay').style.display = 'block';
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      loadQuestion(0);
+    }
+
+    function loadQuestion(index) {
+      if (index >= currentQuizQueue.length) {
+        finishQuiz();
+        return;
+      }
+
+      isAnswered = false;
+      currentQIndex = index;
+      const q = currentQuizQueue[index];
+
+      document.getElementById('txtProgressLabel').innerText = `Câu ${index + 1}/${currentQuizQueue.length}`;
+      document.getElementById('txtCurrentModule').innerText = q.module;
+      document.getElementById('qModuleTag').innerText = q.module;
+      document.getElementById('qOriginalNum').innerText = `Câu gốc: #${q.original_num}`;
+      document.getElementById('qText').innerText = q.question;
+
+      const progressPercent = ((index) / currentQuizQueue.length) * 100;
+      document.getElementById('progressBarFill').style.width = progressPercent + '%';
+
+      document.getElementById('feedbackBanner').style.display = 'none';
+
+      for (let i = 0; i < 4; i++) {
+        const btn = document.querySelectorAll('.opt-card')[i];
+        const optObj = q.displayOptions[i];
+        const textEl = document.getElementById('optText' + i);
+        
+        btn.classList.remove('is-correct', 'is-wrong', 'disabled');
+        btn.disabled = false;
+
+        if (optObj && optObj.text) {
+          btn.style.display = 'flex';
+          textEl.innerText = optObj.text;
+        } else {
+          btn.style.display = 'none';
+        }
+      }
+
+      clearInterval(timerInterval);
+      const timerSec = parseInt(document.getElementById('selTimer').value) || 0;
+      const timerPill = document.getElementById('pillTimer');
+      if (timerSec > 0) {
+        timeLeft = timerSec;
+        timerPill.style.display = 'inline-flex';
+        updateTimerDisplay();
+        timerInterval = setInterval(() => {
+          timeLeft--;
+          updateTimerDisplay();
+          if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            handleTimeOut();
+          }
+        }, 1000);
+      } else {
+        timerPill.style.display = 'none';
+      }
+    }
+
+    function updateTimerDisplay() {
+      const timerPill = document.getElementById('pillTimer');
+      const valEl = document.getElementById('timerVal');
+      valEl.innerText = timeLeft + 's';
+      timerPill.classList.toggle('urgent', timeLeft <= 5);
+    }
+
+    function handleTimeOut() {
+      if (isAnswered) return;
+      handleSelectAnswer(-1);
+    }
+
+    function handleSelectAnswer(selectedIdx) {
+      if (isAnswered) return;
+      isAnswered = true;
+      clearInterval(timerInterval);
+
+      const q = currentQuizQueue[currentQIndex];
+      const correctIdx = q.correctDisplayIdx;
+      const isCorrect = selectedIdx === correctIdx;
+
+      const cards = document.querySelectorAll('.opt-card');
+      cards.forEach(c => {
+        c.classList.add('disabled');
+        c.disabled = true;
+      });
+
+      if (isCorrect) {
+        quizScore.correct++;
+        quizScore.streak++;
+        if (quizScore.streak > quizScore.maxStreak) quizScore.maxStreak = quizScore.streak;
+        triggerHaptic(25);
+
+        if (quizScore.streak >= 3) playSound('streak');
+        else playSound('correct');
+
+        cards[correctIdx].classList.add('is-correct');
+      } else {
+        quizScore.wrong++;
+        quizScore.streak = 0;
+        playSound('wrong');
+        triggerHaptic([40, 30, 40]);
+
+        if (selectedIdx >= 0 && cards[selectedIdx]) {
+          cards[selectedIdx].classList.add('is-wrong');
+        }
+        cards[correctIdx].classList.add('is-correct');
+
+        const stored = getStoredWrongIds();
+        if (!stored.includes(q.id)) {
+          stored.push(q.id);
+          saveStoredWrongIds(stored);
+          updateWrongBadgeUI();
+        }
+      }
+
+      quizScore.history.push({
+        question: q,
+        selectedIdx: selectedIdx,
+        isCorrect: isCorrect
+      });
+
+      document.getElementById('txtCorrect').innerText = quizScore.correct;
+      document.getElementById('txtWrong').innerText = quizScore.wrong;
+      document.getElementById('txtStreak').innerText = quizScore.streak;
+
+      const banner = document.getElementById('feedbackBanner');
+      const title = document.getElementById('fbTitle');
+      const detail = document.getElementById('fbDetail');
+      
+      banner.style.display = 'block';
+      banner.className = 'feedback-panel ' + (isCorrect ? 'is-correct' : 'is-wrong');
+
+      const correctText = q.displayOptions[correctIdx].text;
+      const letters = ['A', 'B', 'C', 'D'];
+      const correctLetter = letters[correctIdx];
+
+      if (isCorrect) {
+        title.innerHTML = `✓ Chính xác! ${quizScore.streak >= 3 ? '(Chuỗi ' + quizScore.streak + ')' : ''}`;
+        detail.innerHTML = `Đáp án chuẩn: <strong>${correctLetter}. ${correctText}</strong>`;
+      } else {
+        title.innerHTML = selectedIdx === -1 ? 'Hết giờ!' : 'Chưa đúng!';
+        detail.innerHTML = `Đáp án đúng là: <strong>${correctLetter}. ${correctText}</strong>`;
+      }
+
+      setTimeout(() => {
+        banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
+    }
+
+    function handleNextQuestion() {
+      playSound('click');
+      triggerHaptic(15);
+      loadQuestion(currentQIndex + 1);
+    }
+
+    function finishQuiz() {
+      clearInterval(timerInterval);
+      document.getElementById('progressBarFill').style.width = '100%';
+
+      document.getElementById('quizPlay').style.display = 'none';
+      document.getElementById('quizResult').style.display = 'block';
+
+      const total = currentQuizQueue.length;
+      const percent = Math.round((quizScore.correct / total) * 100);
+
+      document.getElementById('resPercent').innerText = percent + '%';
+      document.getElementById('resFraction').innerText = `${quizScore.correct}/${total} câu đúng`;
+      document.getElementById('resCorrectCount').innerText = quizScore.correct;
+      document.getElementById('resWrongCount').innerText = quizScore.wrong;
+      document.getElementById('resMaxStreak').innerText = quizScore.maxStreak;
+
+      const elapsedSec = Math.floor((Date.now() - quizScore.startTime) / 1000);
+      const mins = Math.floor(elapsedSec / 60);
+      const secs = elapsedSec % 60;
+      document.getElementById('resTimeSpent').innerText = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+
+      const ring = document.getElementById('scoreRingVal');
+      const circumference = 380;
+      const offset = circumference - (percent / 100) * circumference;
+      setTimeout(() => {
+        ring.style.strokeDashoffset = offset;
+      }, 100);
+
+      const resTitle = document.getElementById('resTitle');
+      const resSub = document.getElementById('resSubtitle');
+      if (percent >= 80) {
+        resTitle.innerText = 'XUẤT SẮC! TỰ TIN ĐI THI!';
+        resSub.innerText = 'Kiến thức rất vững vàng, ngày mai tự tin làm bài điểm cao!';
+        launchConfetti();
+      } else if (percent >= 50) {
+        resTitle.innerText = 'KẾT QUẢ KHÁ TỐT!';
+        resSub.innerText = 'Bạn đã nắm được phần lớn nội dung, hãy xem lại các câu sai nhé.';
+      } else {
+        resTitle.innerText = 'CẦN ÔN TẬP THÊM!';
+        resSub.innerText = 'Đọc lại Sơ đồ tư duy Mindmap và luyện lại các câu sai để ghi nhớ.';
+      }
+
+      const retryBtn = document.getElementById('btnRetryWrongFromResult');
+      retryBtn.style.display = quizScore.wrong > 0 ? 'inline-flex' : 'none';
+
+      renderReviewList('ALL');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderReviewList(filter) {
+      const container = document.getElementById('reviewList');
+      container.innerHTML = '';
+
+      const total = quizScore.history.length;
+      const wrongs = quizScore.history.filter(h => !h.isCorrect).length;
+      const corrects = total - wrongs;
+
+      document.getElementById('rfTotal').innerText = total;
+      document.getElementById('rfWrong').innerText = wrongs;
+      document.getElementById('rfCorrect').innerText = corrects;
+
+      let items = quizScore.history;
+      if (filter === 'WRONG') items = items.filter(h => !h.isCorrect);
+      else if (filter === 'CORRECT') items = items.filter(h => h.isCorrect);
+
+      if (items.length === 0) {
+        container.innerHTML = '<div style="color: var(--text-dim); text-align: center; padding: 16px;">Không có câu hỏi trong danh mục này.</div>';
+        return;
+      }
+
+      items.forEach((item, idx) => {
+        const q = item.question;
+        const isCor = item.isCorrect;
+        const correctOpt = q.displayOptions[q.correctDisplayIdx];
+        const selectedOpt = item.selectedIdx >= 0 ? q.displayOptions[item.selectedIdx] : null;
+
+        const div = document.createElement('div');
+        div.className = 'review-card ' + (isCor ? 'correct' : 'wrong');
+        div.innerHTML = `
+          <div style="font-weight: 700; margin-bottom: 4px; color: var(--text-heading);">
+            <span style="color: var(--color-brand);">#${idx + 1} (${q.module} - Câu ${q.original_num}):</span> ${q.question}
+          </div>
+          ${!isCor ? `
+            <div style="color: var(--color-danger); margin-bottom: 2px;">
+              ✗ Bạn đã chọn: ${selectedOpt ? selectedOpt.text : 'Hết giờ (chưa chọn)'}
+            </div>
+          ` : ''}
+          <div style="color: var(--color-success); font-weight: 600;">
+            ✓ Đáp án đúng: ${correctOpt.text}
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function filterReviewList(filter, btn) {
+      document.querySelectorAll('.score-view .mm-tab-item').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderReviewList(filter);
+    }
+
+    function backToQuizConfig() {
+      playSound('click');
+      triggerHaptic(15);
+      document.getElementById('quizResult').style.display = 'none';
+      document.getElementById('quizPlay').style.display = 'none';
+      document.getElementById('quizHome').style.display = 'block';
+      updateWrongBadgeUI();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Keyboard Shortcuts (1-4, Enter)
+    window.addEventListener('keydown', e => {
+      if (document.getElementById('panel-quiz').classList.contains('active') && 
+          document.getElementById('quizPlay').style.display === 'block') {
+        if (!isAnswered) {
+          if (e.key === '1') handleSelectAnswer(0);
+          else if (e.key === '2') handleSelectAnswer(1);
+          else if (e.key === '3') handleSelectAnswer(2);
+          else if (e.key === '4') handleSelectAnswer(3);
+        } else {
+          if (e.key === 'Enter') handleNextQuestion();
+        }
+      }
+    });
+
+    // --- MINDMAPS ENGINE (ROBUST & FIXED) ---
+    let currentMindmapIdx = 0;
+
+    function renderMindmaps() {
+      const nav = document.getElementById('mmNav');
+      nav.innerHTML = '';
+
+      mindmapsData.forEach((mm, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'mm-tab-item' + (idx === currentMindmapIdx ? ' active' : '');
+        btn.innerHTML = `<span>${mm.shortTitle}</span>`;
+        btn.onclick = () => selectMindmap(idx);
+        nav.appendChild(btn);
+      });
+
+      selectMindmap(currentMindmapIdx);
+    }
+
+    function selectMindmap(idx) {
+      currentMindmapIdx = idx;
+      const mm = mindmapsData[idx];
+
+      document.querySelectorAll('#mmNav .mm-tab-item').forEach((b, i) => {
+        b.classList.toggle('active', i === idx);
+      });
+
+      document.getElementById('mmHeaderTitle').innerText = mm.title;
+      document.getElementById('mmHeaderSub').innerText = `Bao quát toàn bộ ${mm.count} câu trắc nghiệm đề thi`;
+
+      const tree = document.getElementById('mmTreeContainer');
+      tree.innerHTML = '';
+
+      mm.nodes.forEach((node, nIdx) => {
+        const branch = document.createElement('div');
+        branch.className = 'branch-card';
+        branch.innerHTML = `
+          <div class="branch-head" onclick="toggleBranch(this.parentElement)">
+            <div class="branch-title">${node.title}</div>
+            <span class="branch-toggle">${JS_ICONS.chevronDown}</span>
+          </div>
+          <div class="branch-body">
+            <div class="branch-inner">
+              ${node.items.map(item => `
+                <div class="leaf-item">
+                  <div class="leaf-label">${item.label}</div>
+                  <div class="leaf-desc">${item.detail}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+        tree.appendChild(branch);
+      });
+    }
+
+    function toggleBranch(branch) {
+      branch.classList.toggle('collapsed');
+      playSound('click');
+      triggerHaptic(15);
+    }
+
+    function expandAllMindmap(expand) {
+      playSound('click');
+      triggerHaptic(15);
+      document.querySelectorAll('.branch-card').forEach(b => {
+        if (expand) b.classList.remove('collapsed');
+        else b.classList.add('collapsed');
+      });
+    }
+
+    function handleMindmapSearch(keyword) {
+      const term = keyword.trim().toLowerCase();
+      const leaves = document.querySelectorAll('.leaf-item');
+
+      leaves.forEach(leaf => {
+        const text = leaf.innerText.toLowerCase();
+        if (!term || text.includes(term)) {
+          leaf.style.display = 'block';
+          if (term) {
+            leaf.closest('.branch-card').classList.remove('collapsed');
+          }
+        } else {
+          leaf.style.display = 'none';
+        }
+      });
+    }
+
+    // --- QUESTION DIRECTORY ---
+    let currentDirModuleFilter = 'ALL';
+    let currentDirSearchTerm = '';
+
+    function renderQuestionsDirectory() {
+      const container = document.getElementById('questionsDirectoryList');
+      container.innerHTML = '';
+
+      const filtered = rawQuestions.filter(q => {
+        const matchMod = currentDirModuleFilter === 'ALL' || q.module === currentDirModuleFilter;
+        const text = (q.question + ' ' + q.options.join(' ')).toLowerCase();
+        const matchSearch = !currentDirSearchTerm || text.includes(currentDirSearchTerm);
+        return matchMod && matchSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<div style="color: var(--text-dim); padding: 18px; text-align: center;">Không tìm thấy câu hỏi phù hợp.</div>';
+        return;
+      }
+
+      const letters = ['A', 'B', 'C', 'D'];
+      filtered.forEach((q, idx) => {
+        const item = document.createElement('div');
+        item.className = 'q-row-card';
+        item.innerHTML = `
+          <div style="display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 11px; color: var(--text-dim);">
+            <span class="q-row-tag">${q.module}</span>
+            <span>Câu gốc #${q.original_num}</span>
+          </div>
+          <div style="font-size: 14px; font-weight: 700; color: var(--text-heading); margin-bottom: 8px;">
+            <strong>${idx + 1}.</strong> ${q.question}
+          </div>
+          <div class="q-opts-grid">
+            ${q.options.map((opt, oIdx) => `
+              <div class="q-opt-item ${oIdx === q.ans_idx ? 'is-correct' : ''}">
+                <strong>${letters[oIdx]}.</strong> ${opt}
+              </div>
+            `).join('')}
+          </div>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    function filterDirModule(mod, btn) {
+      currentDirModuleFilter = mod;
+      document.querySelectorAll('#panel-cheatsheet .mm-tab-item').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderQuestionsDirectory();
+    }
+
+    function filterQuestionsDirectory(val) {
+      currentDirSearchTerm = val.trim().toLowerCase();
+      renderQuestionsDirectory();
+    }
+
+    // Initialize
+    window.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      updateWrongBadgeUI();
+      updateQuestionCountLimit();
+      renderMindmaps();
+    });
+  </script>
+</body>
+</html>
