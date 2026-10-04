@@ -1,0 +1,521 @@
+[
+  {
+    "id": "module-1",
+    "title": "Module 1: Hiểu Biết CNTT Cơ Bản",
+    "shortTitle": "M1: Kiến Thức Chung",
+    "category": "Kiến thức chung",
+    "count": 47,
+    "nodes": [
+      {
+        "title": "1. Phần Cứng Máy Tính (Hardware)",
+        "items": [
+          {
+            "label": "Thiết bị nhập (Input)",
+            "detail": "Bàn phím (Keyboard), Chuột (Mouse), Máy quét (Scanner), Webcam, Microphone. Tiếp nhận dữ liệu vào máy tính."
+          },
+          {
+            "label": "Thiết bị xuất (Output)",
+            "detail": "Màn hình (Monitor), Máy in (Printer), Loa (Speaker), Máy chiếu (Projector). Xuất dữ liệu ra bên ngoài."
+          },
+          {
+            "label": "Bộ xử lý trung tâm (CPU)",
+            "detail": "Gồm 3 khối chính: Khối điều khiển (CU), Khối tính toán số học & logic (ALU), Thanh ghi (Register). Tốc độ đo bằng Hz, MHz, GHz."
+          },
+          {
+            "label": "Bộ nhớ trong: RAM vs ROM",
+            "detail": "RAM (Random Access Memory): Bộ nhớ tạm thời, MẤT dữ liệu khi mất nguồn điện. ROM (Read Only Memory): Chứa chương trình BIOS/POST, KHÔNG mất dữ liệu khi tắt máy."
+          },
+          {
+            "label": "Bộ nhớ ngoài",
+            "detail": "Ổ đĩa cứng (HDD, SSD), USB flash, thẻ nhớ, đĩa quang CD/DVD. Dùng để lưu trữ dữ liệu lâu dài."
+          },
+          {
+            "label": "Đơn vị đo lường dung lượng",
+            "detail": "Bit (nhỏ nhất) -> 1 Byte = 8 Bit -> 1 KB = 1024 Bytes -> 1 MB = 1024 KB -> 1 GB = 1024 MB -> 1 TB = 1024 GB. Bội số chuẩn là 1024 (2^10), không phải 1000."
+          }
+        ]
+      },
+      {
+        "title": "2. Phần Mềm Máy Tính (Software)",
+        "items": [
+          {
+            "label": "Hệ điều hành (Hệ thống)",
+            "detail": "Chạy đầu tiên khi khởi động máy. Quản lý tài nguyên, phần cứng và tạo môi trường chạy ứng dụng (Windows, Linux, macOS, Android)."
+          },
+          {
+            "label": "Phần mềm ứng dụng",
+            "detail": "Phục vụ công việc cụ thể: Soạn thảo văn bản (Word), Bảng tính (Excel), Trình chiếu (PowerPoint), Trình duyệt Web (Chrome, Edge)."
+          },
+          {
+            "label": "Phân loại bản quyền",
+            "detail": "Thương mại (Commercial): Phải trả phí mua bản quyền. Dùng thử (Shareware): Giới hạn tính năng/thời gian. Miễn phí (Freeware). Mã nguồn mở (Open Source): Được xem và tùy biến mã nguồn (Linux)."
+          }
+        ]
+      },
+      {
+        "title": "3. Virus Tin Học & An Toàn Dữ Liệu",
+        "items": [
+          {
+            "label": "Bản chất Virus tin học",
+            "detail": "Là một đoạn chương trình máy tính có khả năng tự nhân bản và lây lan. (Lưu ý: câu 5 trong đề cương gốc chọn đáp án A; hãy ghi nhớ đáp án đề cương của trường)."
+          },
+          {
+            "label": "Con đường lây nhiễm",
+            "detail": "Qua USB, thẻ nhớ ngoài, sao chép file qua mạng nội bộ, tải tệp từ Internet, mở email đính kèm lạ. Virus không lây qua tiếp xúc không khí."
+          },
+          {
+            "label": "Biện pháp phòng chống",
+            "detail": "Cài phần mềm diệt virus có bản quyền, cập nhật thường xuyên; quét kiểm tra thiết bị ngoài trước khi sao chép; sao lưu (Backup) dữ liệu định kỳ."
+          },
+          {
+            "label": "Xử lý tệp đính kèm lạ",
+            "detail": "Khi nhận thư điện tử có tệp đính kèm lạ: Dùng phần mềm quét virus kiểm tra trước, không mở trực tiếp."
+          }
+        ]
+      },
+      {
+        "title": "4. Thao Tác Hệ Thống & Lưu Trữ",
+        "items": [
+          {
+            "label": "Tắt máy tính đúng cách",
+            "detail": "Nhấn nút Start ở góc màn hình -> Chọn Shutdown. Tuyệt đối không rút nguồn điện hoặc bấm nút Reset/Power đột ngột."
+          },
+          {
+            "label": "Chống phân mảnh đĩa (Defragment)",
+            "detail": "Sắp xếp lại các khối dữ liệu rời rạc nằm liền kề nhau trên đĩa cứng, giúp tốc độ truy xuất dữ liệu từ đĩa cứng nhanh hơn."
+          },
+          {
+            "label": "Định dạng đĩa (Format)",
+            "detail": "Khởi tạo hệ thống tập tin trên đĩa mới để đĩa có thể đọc và ghi nhận dữ liệu."
+          },
+          {
+            "label": "Ký tự cấm đặt tên tệp",
+            "detail": "Không được dùng các ký tự đặc biệt: . , ? \\ / ; : = < > [ ] * \" |"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "module-2",
+    "title": "Module 2: Hệ Điều Hành Windows 10",
+    "shortTitle": "M2: Windows 10",
+    "category": "Windows 10",
+    "count": 30,
+    "nodes": [
+      {
+        "title": "1. Giao Diện & Thành Phần Hệ Thống",
+        "items": [
+          {
+            "label": "Desktop & Taskbar",
+            "detail": "Desktop: Màn hình chính sau khi khởi động. Taskbar: Thanh tác vụ dưới cùng chứa nút Start, các ứng dụng đang chạy và System Tray (khay hệ thống góc phải)."
+          },
+          {
+            "label": "File Explorer",
+            "detail": "Trình quản lý tệp và thư mục. Phím tắt mở nhanh: Windows + E."
+          },
+          {
+            "label": "Task Manager",
+            "detail": "Quản lý tiến trình, theo dõi hiệu năng CPU, RAM và đóng ứng dụng bị treo (Not Responding). Phím tắt: Ctrl + Shift + Esc hoặc Ctrl + Alt + Delete."
+          },
+          {
+            "label": "Control Panel / Settings",
+            "detail": "Trung tâm cấu hình hệ thống: Gỡ ứng dụng (Programs and Features), cài máy in, chỉnh ngày giờ, mạng."
+          }
+        ]
+      },
+      {
+        "title": "2. Thao Tác Với Tệp & Thư Mục",
+        "items": [
+          {
+            "label": "Đổi tên (Rename)",
+            "detail": "Phím tắt F2. Tên tệp tối đa 255 ký tự, không nên có dấu tiếng Việt, không chứa ký tự cấm \\ / : * ? \" < > |."
+          },
+          {
+            "label": "Sao chép, Cắt, Dán",
+            "detail": "Sao chép (Copy): Ctrl + C | Cắt (Cut): Ctrl + X | Dán (Paste): Ctrl + V."
+          },
+          {
+            "label": "Chọn nhiều đối tượng",
+            "detail": "Chọn tất cả: Ctrl + A | Chọn các tệp LIÊN TIẾP: Giữ Shift | Chọn các tệp RỜI RẠC: Giữ Ctrl."
+          },
+          {
+            "label": "Xóa tệp & Thùng rác",
+            "detail": "Xóa vào Recycle Bin: Phím Delete. Xóa VĨNH VIỄN không qua Recycle Bin: Shift + Delete."
+          },
+          {
+            "label": "Tạo thư mục mới (New Folder)",
+            "detail": "Tổ hợp phím nhanh: Ctrl + Shift + N."
+          }
+        ]
+      },
+      {
+        "title": "3. Phím Tắt Hệ Thống Thường Gặp",
+        "items": [
+          {
+            "label": "Windows + D",
+            "detail": "Ẩn tất cả các cửa sổ để quay về màn hình Desktop ngay lập tức."
+          },
+          {
+            "label": "Windows + L",
+            "detail": "Khóa máy tính ngay lập tức (Lock screen) để bảo mật khi rời bàn."
+          },
+          {
+            "label": "Windows + R",
+            "detail": "Mở hộp thoại Run để gõ lệnh thực thi nhanh (cmd, regedit, calc...)."
+          },
+          {
+            "label": "Alt + Tab / Alt + F4",
+            "detail": "Alt + Tab: Chuyển đổi qua lại giữa các cửa sổ. Alt + F4: Đóng cửa sổ hiện hành hoặc tắt máy."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "module-3",
+    "title": "Module 3: Soạn Thảo Văn Bản MS Word 2013",
+    "shortTitle": "M3: MS Word 2013",
+    "category": "MS Word 2013",
+    "count": 60,
+    "nodes": [
+      {
+        "title": "1. Định Dạng Ký Tự (Font)",
+        "items": [
+          {
+            "label": "Hộp thoại Font",
+            "detail": "Phím tắt: Ctrl + D (hoặc Ctrl + Shift + F). Chỉnh font chữ, kiểu chữ, cỡ chữ, màu sắc, hiệu ứng."
+          },
+          {
+            "label": "In đậm, nghiêng, gạch chân",
+            "detail": "In đậm: Ctrl + B | In nghiêng: Ctrl + I | Gạch chân: Ctrl + U | Gạch đôi: Ctrl + Shift + D."
+          },
+          {
+            "label": "Chỉ số trên / Chỉ số dưới",
+            "detail": "Chỉ số dưới (H2O): Ctrl + = | Chỉ số trên (X^2): Ctrl + Shift + =."
+          },
+          {
+            "label": "Tăng / Giảm cỡ chữ",
+            "detail": "Tăng cỡ chữ: Ctrl + ] | Giảm cỡ chữ: Ctrl + [ (hoặc Ctrl + Shift + > / <)."
+          },
+          {
+            "label": "Đổi chữ hoa / thường",
+            "detail": "Shift + F3: Luân phiên chuyển đổi giữa chữ thường, CHỮ HOA và Viết Hoa Đầu Từ."
+          }
+        ]
+      },
+      {
+        "title": "2. Định Dạng Đoạn Văn (Paragraph)",
+        "items": [
+          {
+            "label": "4 kiểu căn lề đoạn văn",
+            "detail": "Căn trái: Ctrl + L | Căn giữa: Ctrl + E | Căn phải: Ctrl + R | Căn đều 2 bên: Ctrl + J."
+          },
+          {
+            "label": "Khoảng cách dòng (Line Spacing)",
+            "detail": "Dòng đơn (1.0): Ctrl + 1 | Dòng đôi (2.0): Ctrl + 2 | Dòng rưỡi (1.5): Ctrl + 5."
+          },
+          {
+            "label": "Ngắt trang & Ngắt dòng",
+            "detail": "Ngắt trang cứng sang trang mới: Ctrl + Enter | Xuống dòng trong cùng đoạn: Shift + Enter."
+          },
+          {
+            "label": "Drop Cap (Chữ lớn đầu đoạn)",
+            "detail": "Thẻ Insert -> Drop Cap: Tạo chữ cái to thụt đầu đoạn văn (Dropped / In margin)."
+          }
+        ]
+      },
+      {
+        "title": "3. Thao Tác Văn Bản & Nâng Cao",
+        "items": [
+          {
+            "label": "Quản lý tệp",
+            "detail": "Tạo mới: Ctrl + N | Mở tệp: Ctrl + O | Lưu: Ctrl + S | Lưu tên mới: F12 (Save As) | In ấn: Ctrl + P."
+          },
+          {
+            "label": "Tìm kiếm & Thay thế",
+            "detail": "Tìm kiếm: Ctrl + F | Tìm kiếm và Thay thế: Ctrl + H | Nhảy đến trang: Ctrl + G."
+          },
+          {
+            "label": "Header & Footer",
+            "detail": "Tiêu đề đầu và chân trang, tự động xuất hiện trên mọi trang tài liệu (đánh số trang Page Number)."
+          },
+          {
+            "label": "Bảng biểu (Table)",
+            "detail": "Gộp ô: Merge Cells | Tách ô: Split Cells. Phím Tab: Sang ô kế tiếp hoặc thêm dòng mới ở ô cuối. Shift + Tab: Lùi về ô trước."
+          },
+          {
+            "label": "Trộn thư (Mail Merge)",
+            "detail": "Thẻ Mailings: Tạo thư mời, phiếu lương hàng loạt tự động từ danh sách dữ liệu Excel."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "module-4",
+    "title": "Module 4: Bảng Tính MS Excel 2013",
+    "shortTitle": "M4: MS Excel 2013",
+    "category": "MS Excel 2013",
+    "count": 96,
+    "nodes": [
+      {
+        "title": "1. Cấu Trúc Bảng Tính & Địa Chỉ Ô",
+        "items": [
+          {
+            "label": "Cấu trúc cột & dòng",
+            "detail": "Cột (Column) ký hiệu bằng chữ A, B, C... tối đa 16,384 cột (đến XFD). Dòng (Row) ký hiệu bằng số 1, 2, 3... tối đa 1,048,576 dòng. Giao nhau là Ô (Cell)."
+          },
+          {
+            "label": "Căn lề mặc định",
+            "detail": "Dữ liệu KIỂU SỐ (Number, Date): Căn PHẢI | Dữ liệu KIỂU CHUỖI (Text): Căn TRÁI | Dữ liệu LOGIC (TRUE/FALSE): Căn GIỮA."
+          },
+          {
+            "label": "Địa chỉ tương đối vs tuyệt đối",
+            "detail": "Tương đối (A1): Tự đổi tọa độ khi sao chép công thức. Tuyệt đối ($A$1): Cố định cả cột và dòng khi sao chép. Hỗn hợp ($A1 cố định cột, A$1 cố định dòng)."
+          },
+          {
+            "label": "Phím F4 & F2",
+            "detail": "Phím F4: Chuyển đổi kiểu địa chỉ ($A$1 -> A$1 -> $A1 -> A1). Phím F2: Sửa nội dung ô tính."
+          }
+        ]
+      },
+      {
+        "title": "2. Nhóm Hàm Chuỗi (Text Functions)",
+        "items": [
+          {
+            "label": "LEFT(text, n)",
+            "detail": "Lấy n ký tự bên TRÁI chuỗi. Ví dụ: LEFT(\"TINHOC\", 3) -> \"TIN\". Mặc định n = 1."
+          },
+          {
+            "label": "RIGHT(text, n)",
+            "detail": "Lấy n ký tự bên PHẢI chuỗi. Ví dụ: RIGHT(\"TINHOC\", 3) -> \"HOC\"."
+          },
+          {
+            "label": "MID(text, start, n)",
+            "detail": "Lấy n ký tự từ vị trí start. Ví dụ: MID(\"ABCDEF\", 2, 3) -> \"BCD\"."
+          },
+          {
+            "label": "LEN(text)",
+            "detail": "Đếm tổng số ký tự của chuỗi (kể cả khoảng trắng). Ví dụ: LEN(\"Tin Học\") = 7."
+          },
+          {
+            "label": "VALUE(text)",
+            "detail": "Đổi chuỗi số thành giá trị số thực sự để tính toán. Ví dụ: VALUE(\"123\") -> 123."
+          },
+          {
+            "label": "LOWER / UPPER / PROPER",
+            "detail": "LOWER: chữ thường | UPPER: CHỮ HOA | PROPER: Viết Hoa Đầu Từ."
+          }
+        ]
+      },
+      {
+        "title": "3. Nhóm Hàm Toán Học & Thống Kê",
+        "items": [
+          {
+            "label": "ROUND(num, n)",
+            "detail": "Làm tròn số num tới n chữ số. n > 0: thập phân (ROUND(8.456, 2) = 8.46). n = 0: hàng đơn vị (ROUND(8.5, 0) = 9). n < 0: hàng chục/trăm (ROUND(145, -1) = 150)."
+          },
+          {
+            "label": "INT(num)",
+            "detail": "Lấy phần nguyên lớn nhất <= num. Ví dụ: INT(7.9) = 7, nhưng INT(-7.2) = -8!"
+          },
+          {
+            "label": "MOD(n, d)",
+            "detail": "Lấy phần DƯ của phép chia n cho d. Ví dụ: MOD(7, 3) = 1; MOD(10, 4) = 2."
+          },
+          {
+            "label": "SUM & SUMIF",
+            "detail": "SUM(range): Tính tổng các số. SUMIF(range, criteria, [sum_range]): Tính tổng theo một điều kiện."
+          },
+          {
+            "label": "COUNT vs COUNTA",
+            "detail": "COUNT(range): Chỉ đếm các ô chứa DỮ LIỆU SỐ. COUNTA(range): Đếm TẤT CẢ các ô có dữ liệu (kể cả chữ). COUNTBLANK: Đếm ô trống."
+          },
+          {
+            "label": "COUNTIF(range, criteria)",
+            "detail": "Đếm số lượng ô thỏa điều kiện criteria. Ví dụ: COUNTIF(C2:C10, \">=5\")."
+          },
+          {
+            "label": "AVERAGE, MAX, MIN",
+            "detail": "AVERAGE: Trung bình cộng. MAX / MIN: Giá trị lớn nhất / nhỏ nhất."
+          },
+          {
+            "label": "RANK(num, ref, [order])",
+            "detail": "Xếp hạng. order = 0 (mặc định): Giảm dần (số lớn nhất hạng 1). order = 1: Tăng dần (số nhỏ nhất hạng 1)."
+          }
+        ]
+      },
+      {
+        "title": "4. Nhóm Hàm Logic & Tra Cứu",
+        "items": [
+          {
+            "label": "IF(cond, val_true, val_false)",
+            "detail": "Kiểm tra điều kiện cond. Nếu đúng trả về val_true, nếu sai trả về val_false. Có thể lồng nhau."
+          },
+          {
+            "label": "AND(...) & OR(...)",
+            "detail": "AND: Đúng (TRUE) khi TẤT CẢ đều đúng. OR: Đúng (TRUE) khi có ÍT NHẤT 1 điều kiện đúng."
+          },
+          {
+            "label": "VLOOKUP(val, table, col, [type])",
+            "detail": "Dò tìm theo CỘT đầu tiên của bảng table. table nhớ bấm F4 để cố định. col: Thứ tự cột lấy kết quả. type: 0 (FALSE) = Dò tìm chính xác tuyệt đối; 1 (TRUE) = Dò tìm tương đối."
+          },
+          {
+            "label": "HLOOKUP(val, table, row, [type])",
+            "detail": "Dò tìm theo DÒNG đầu tiên của bảng table. row: Thứ tự dòng cần lấy kết quả."
+          }
+        ]
+      },
+      {
+        "title": "5. Bảng Mã Lỗi Kinh Điển Trong Excel",
+        "items": [
+          {
+            "label": "###",
+            "detail": "Độ rộng cột quá hẹp không đủ hiển thị số/ngày, hoặc dữ liệu thời gian/ngày tháng mang giá trị âm. Kéo rộng cột ra là hết."
+          },
+          {
+            "label": "#DIV/0!",
+            "detail": "Lỗi chia cho số 0 hoặc chia cho ô rỗng."
+          },
+          {
+            "label": "#VALUE!",
+            "detail": "Sai kiểu dữ liệu trong phép toán hoặc đối số (ví dụ: lấy chữ + số: = \"A\" + 5)."
+          },
+          {
+            "label": "#NAME?",
+            "detail": "Excel không nhận ra tên hàm (viết sai tên hàm) hoặc chuỗi văn bản không đặt trong cặp nháy kép \"\"."
+          },
+          {
+            "label": "#N/A",
+            "detail": "Không có giá trị tìm thấy (No value Available) - thường xảy ra khi VLOOKUP/HLOOKUP không tìm thấy giá trị tra cứu tương ứng."
+          },
+          {
+            "label": "#REF!",
+            "detail": "Tham chiếu ô không hợp lệ (do ô hoặc vùng dữ liệu bị xóa mất)."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "module-5",
+    "title": "Module 5: Trình Chiếu MS PowerPoint 2013",
+    "shortTitle": "M5: PowerPoint 2013",
+    "category": "MS PowerPoint 2013",
+    "count": 30,
+    "nodes": [
+      {
+        "title": "1. Cấu Trúc Slide & Slide Master",
+        "items": [
+          {
+            "label": "Presentation & Slide",
+            "detail": "Đuôi tệp mặc định là .pptx. Thêm Slide mới: Ctrl + M. Nhân đôi Slide: Ctrl + D."
+          },
+          {
+            "label": "Slide Layout",
+            "detail": "Bố cục định sẵn của một Slide (Title Slide, Title and Content, Two Content...)."
+          },
+          {
+            "label": "Slide Master",
+            "detail": "Thẻ View -> Slide Master: Slide chủ mẹ thiết lập nền, font, logo đồng bộ cho TOÀN BỘ slide trong bài."
+          }
+        ]
+      },
+      {
+        "title": "2. Hiệu Ứng (Transitions vs Animations)",
+        "items": [
+          {
+            "label": "Transition (Chuyển trang)",
+            "detail": "Thẻ Transitions: Hiệu ứng chuyển động GIỮA CÁC SLIDE (khi chuyển từ slide cũ sang slide mới)."
+          },
+          {
+            "label": "Animation (Hiệu ứng đối tượng)",
+            "detail": "Thẻ Animations: Hiệu ứng chuyển động cho TỪNG ĐỐI TƯỢNG (chữ, hình ảnh, bảng) TRÊN CÙNG MỘT SLIDE."
+          },
+          {
+            "label": "4 nhóm Animation",
+            "detail": "Entrance (Xuất hiện - xanh lá) | Emphasis (Nhấn mạnh - vàng) | Exit (Biến mất - đỏ) | Motion Paths (Chuyển động theo đường vẽ)."
+          }
+        ]
+      },
+      {
+        "title": "3. Phím Tắt Trình Chiếu Trọng Tâm",
+        "items": [
+          {
+            "label": "F5",
+            "detail": "Bắt đầu trình chiếu từ SLIDE ĐẦU TIÊN (Slide 1)."
+          },
+          {
+            "label": "Shift + F5",
+            "detail": "Bắt đầu trình chiếu từ SLIDE HIỆN TẠI (Current slide)."
+          },
+          {
+            "label": "Esc",
+            "detail": "Dừng và thoát khỏi chế độ trình chiếu."
+          },
+          {
+            "label": "Phím B & Phím W",
+            "detail": "Phím B (Black): Tạm làm ĐEN màn hình. Phím W (White): Tạm làm TRẮNG màn hình khi đang chiếu."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "module-6",
+    "title": "Module 6: Mạng Máy Tính & Internet",
+    "shortTitle": "M6: LAN & Internet",
+    "category": "LAN & Internet",
+    "count": 25,
+    "nodes": [
+      {
+        "title": "1. Phân Loại Mạng & Thiết Bị",
+        "items": [
+          {
+            "label": "Phân loại theo quy mô",
+            "detail": "LAN (Local Area Network): Mạng cục bộ phạm vi hẹp. MAN: Mạng đô thị. WAN (Wide Area Network): Mạng diện rộng (toàn cầu, Internet)."
+          },
+          {
+            "label": "Router & Modem",
+            "detail": "Router: Định tuyến và chuyển tiếp các gói tin. Modem: Điều chế giải điều chế tín hiệu từ nhà mạng ISP. Đèn Link không sáng = Mất đường truyền vật lý; Đèn Data không sáng = Không có dữ liệu lưu chuyển."
+          },
+          {
+            "label": "Biểu tượng mạng khay hệ thống",
+            "detail": "Dấu chéo đỏ (❌): Chưa cắm cáp mạng hoặc Card mạng bị Disabled. Dấu chấm than vàng (⚠️): Đã kết nối vật lý nhưng lỗi IP / No Internet Access."
+          }
+        ]
+      },
+      {
+        "title": "2. Địa Chỉ IP & Giao Thức Mạng",
+        "items": [
+          {
+            "label": "Địa chỉ IPv4",
+            "detail": "Độ dài 32 bit, gồm 4 cụm số thập phân từ 0 đến 255 cách nhau bởi dấu chấm (ví dụ: 192.168.1.1). IPv6: Độ dài 128 bit."
+          },
+          {
+            "label": "DNS (Domain Name System)",
+            "detail": "Hệ thống phân giải tên miền: Chuyển đổi tên miền dễ nhớ (google.com) thành địa chỉ IP máy chủ."
+          },
+          {
+            "label": "Giao thức Web & Mail",
+            "detail": "HTTP/HTTPS: Truyền tải siêu văn bản web. FTP: Truyền file. SMTP: Gửi email. POP3/IMAP: Nhận email."
+          }
+        ]
+      },
+      {
+        "title": "3. Trình Duyệt & Thư Điện Tử (Email)",
+        "items": [
+          {
+            "label": "Trình duyệt Web",
+            "detail": "Google Chrome, Firefox, Edge, Safari, Cốc Cốc. Phím F5 / Ctrl + R: Tải lại trang."
+          },
+          {
+            "label": "Thành phần người nhận Email",
+            "detail": "To: Người nhận chính. Cc (Carbon Copy): Nhận bản sao công khai. Bcc (Blind Carbon Copy): Nhận bản sao ẨN DANH (những người khác không thấy địa chỉ người này)."
+          }
+        ]
+      }
+    ]
+  }
+]

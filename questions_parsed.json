@@ -1,0 +1,4034 @@
+[
+  {
+    "id": 1,
+    "original_num": 1,
+    "module": "Kiến thức chung",
+    "question": "Để tắt máy tính đúng cách ta chọn",
+    "options": [
+      "Tắt nguồn điện",
+      "Bấm nút Power trên hộp máy",
+      "Bấm nút Reset trên hộp máy",
+      "Nhấn nút Start ở góc dưới bên trái màn hình nền và chọn mục Shutdown."
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 2,
+    "original_num": 2,
+    "module": "Kiến thức chung",
+    "question": "Để phòng chống Virus cách tốt nhất là?",
+    "options": [
+      "Thường xuyên kiểm tra đĩa, đặc biệt thận trọng khi sao chép dữ liệu",
+      "Sử dụng các chương trình cập nhật thường xuyên",
+      "Thường xuyên lưu dữ liệu",
+      "Sử dụng ứng dụng bảo vệổ đĩa"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 3,
+    "original_num": 3,
+    "module": "Kiến thức chung",
+    "question": "Khi đặt tên tệp hoặc thư mục trong DOS không được sử dụng các ký tự nào sau đây?",
+    "options": [
+      ". , ? \\ / ; : = < > [ ]",
+      "Các chữ số từ 1 đến 5",
+      "Các chữ cái từ A đến G",
+      "Các chữ và số đi cùng nhau"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 4,
+    "original_num": 4,
+    "module": "Kiến thức chung",
+    "question": "Chọn câu trả lời thích hợp nhất: “Tại sao phải định kì sử dụng công cụ chống phân mảnh đĩa cứng:",
+    "options": [
+      "Đểổ đĩa cứng máy tính lâu hỏng",
+      "Để tốc độ truy xuất dữ liệu từ đĩa cứng nhanh hơn",
+      "Để tạo ra nhiều không gian trống hơn trong đĩa cứng",
+      "Để nén dữ liệu trong đĩa cứng tốt hơn"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 5,
+    "original_num": 5,
+    "module": "Kiến thức chung",
+    "question": "Virus tin học thực chất là?",
+    "options": [
+      "Một loại vi sinh vật sống ký sinh trên các thiết bị vật lý của máy tính",
+      "Một kháng thể không tồn tại",
+      "Một đoạn chương trình có kích thước lớn",
+      "Tồn tại bên ngoài không khí"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 6,
+    "original_num": 6,
+    "module": "Kiến thức chung",
+    "question": "Bạn đã cài đặt một đĩa hoàn toàn mới và bạn muốn định dạng nó. Mục đích của công việc định dạng là gì?",
+    "options": [
+      "Phục hồi dữ liệu bị mất trong đĩa",
+      "Tạo một đĩa chỉ đọc",
+      "Tạo một đĩa để đọc và chấp nhận dữ liệu",
+      "Làm cho nhiều người sử dụng có thể truy nhập được đĩa"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 7,
+    "original_num": 7,
+    "module": "Kiến thức chung",
+    "question": "Các phát biểu sau, phát biểu nào đúng:",
+    "options": [
+      "Tên File không được chứa khoảng trắng",
+      "Tên File không nên có dấu tiếng Việt",
+      "Tên File được dài trên 255 kí tự",
+      "Tên File được chấp nhận kí tự #"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 8,
+    "original_num": 8,
+    "module": "Kiến thức chung",
+    "question": "Bạn nhận được một bức thư điện tử chứa tệp tin đính kèm mà bạn không nhận biết ra, bạn sẽ xử lý thế nào trong tình huống này để đảm bảo an toàn?",
+    "options": [
+      "Mở tệp tin này ra để kiểm tra loại tệp tin",
+      "Chuyển thư này cho ai đó mà bạn nghĩ rằng bạn có thể nhận biết được",
+      "Quét tập tin này bằng chương trình chống virus",
+      "Lưu bản sao tập tin này vào đĩa cứng và mở bản sao này"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 9,
+    "original_num": 9,
+    "module": "Kiến thức chung",
+    "question": "Câu nào dưới đây không đúng?",
+    "options": [
+      "Vi rút máy tính lây nhiễm qua khi dùng chung máy tính",
+      "Vi rút máy tính lây nhiễm khi sao chép qua đĩa mềm, đĩa CD",
+      "Vi rút máy tính lây nhiễm khi sao chép qua mạng",
+      "Vi rút máy tính lây nhiễm qua Internet"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 10,
+    "original_num": 10,
+    "module": "Kiến thức chung",
+    "question": "Ở tình huống nào dưới đây, máy tính thực thi công việc tốt hơn con người?",
+    "options": [
+      "Khi dịch một cuốn sách",
+      "Khi chẩn đoán bệnh",
+      "Khi phân tích tâm lý một con người",
+      "Khi thực hiện một phép toán phức tạp"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 11,
+    "original_num": 11,
+    "module": "Kiến thức chung",
+    "question": "Virus máy tính lây lan qua những con đường nào ?",
+    "options": [
+      "Qua thiết bị nhớ USB.",
+      "Từ các file",
+      "Từ cácứng dụng",
+      "Từ Ram."
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 12,
+    "original_num": 12,
+    "module": "Kiến thức chung",
+    "question": "Phát biểu nào về hệ điều hành sau đây là không đúng ?",
+    "options": [
+      "Hệ điều hành đảm bảo giao tiếp giữa người dùng và máy tính.",
+      "Chức năng chính của hệ điều hành là thực hiện tìm kiếm thông tin trên Internet.",
+      "Hệ điều hành cung cấp các phương tiện và dịch vụ để người sử dụng dễ dàng thực hiện chương trình, quản lí chặt chẽ, khai thác các tài nguyên của máy tính một cách tốiưu.",
+      "Hệ điều hành Windows là một hệ điều hành dùng cho máy tính cá nhân của hãng Microsoft."
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 13,
+    "original_num": 13,
+    "module": "Kiến thức chung",
+    "question": "Trong hệ điều hành Windows, để mở chương trình quản lý tác vụ (Task Manager) bạn dùng tổ hợp phím:",
+    "options": [
+      "Ctrl + S",
+      "Alt + F4",
+      "Ctrl + Alt + F4",
+      "Ctrl + Alt + Delete"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 14,
+    "original_num": 14,
+    "module": "Kiến thức chung",
+    "question": "Trong máy tính, thông tin tồn tại dưới các dạng tập tin nào ?",
+    "options": [
+      "Tập tin chương trình",
+      "Tập tin dữ liệu",
+      "Cả hai đều đúng",
+      "Cả hai đều sai"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 15,
+    "original_num": 15,
+    "module": "Kiến thức chung",
+    "question": "Khi khởi động máy tính, phần mềm nào được thực hiện trước ?",
+    "options": [
+      "Hệ điều hành",
+      "Phần mềm gõ tiếng Việt",
+      "Phần mềm diệt Virus máy tính",
+      "Phần mềm Word, Excel"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 16,
+    "original_num": 16,
+    "module": "Kiến thức chung",
+    "question": "Theo bạn phần mềm Windows, Linux có đặc điểm nào chung ?",
+    "options": [
+      "Cả hai đều là phần mềmứng dụng",
+      "Cả hai đều là thiết bị phần cứng",
+      "Cả hai đều là hệ điều hành",
+      "Cả hai đều là phần mềm hệ thống"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 17,
+    "original_num": 17,
+    "module": "Kiến thức chung",
+    "question": "Khi đang dùng máy tính, để khởi động lại hệ thống thì bạn dùng cách nào sau đây:",
+    "options": [
+      "Tại giao diện desktop => Alt + F4 => Restart",
+      "Kích Start menu => Shutdown",
+      "Bấm nút Restart trên hộp máy",
+      "Bấm Alt + F4."
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 18,
+    "original_num": 18,
+    "module": "Kiến thức chung",
+    "question": "Khi đang dùng máy tính, để tắt hệ thống đúng cách thì bạn dùng cách nào sau đây:",
+    "options": [
+      "Rút dây nguồn điện máy tính",
+      "Kích Start menu => Shutdown",
+      "Bấm nút Power trên hộp máy",
+      "Bấm nút Reset trên hộp máy"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 19,
+    "original_num": 19,
+    "module": "Kiến thức chung",
+    "question": "Trong hệ điều hành Windows, muốn khởi chạy một chương trình nào đó thì:",
+    "options": [
+      "Mở My Computer và kích đôi chuột trái vào tên chương trình",
+      "Mở và kích vào chương trình => bấm Enter",
+      "Mở và kích chuột phải vào chương trình => Open",
+      "Mở và kích đôi chuột trái vào tên chương trình"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 20,
+    "original_num": 20,
+    "module": "Kiến thức chung",
+    "question": "Trong hệ điều hành Windows, khi đang mở cửa sổ thư mục hiện hành bạn muốn trở về màn hình nền desktop thì:",
+    "options": [
+      "Bấm tổ hợp phím Windows + D",
+      "Kích chuột phải lên thanh Taskbar => Show the desktop",
+      "Cả hai cách trên đều đúng",
+      "Cả hai cách trên đều sai."
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 21,
+    "original_num": 21,
+    "module": "Kiến thức chung",
+    "question": "Trong hệ điều hành Windows, các tập tin được chọn và xoá bằng tổ hợp phím Shift + Delete thì:",
+    "options": [
+      "Có thể khôi phục bằng cách mở trong My Computer",
+      "Có thể khôi phục bằng cách mở trong My Documents",
+      "Có thể khôi phục bằng cách mở trong Recycle Bin",
+      "Không thể khôi phục lại được."
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 22,
+    "original_num": 22,
+    "module": "Kiến thức chung",
+    "question": "Trong hệ điều hành Windows, biểu tượng của thư mục thường có màu?",
+    "options": [
+      "Xanh",
+      "Đỏ",
+      "Tím",
+      "Vàng"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 23,
+    "original_num": 23,
+    "module": "Kiến thức chung",
+    "question": "Trong hệ điều hành Windows, thư mục thường được tổ chức dưới dạng:",
+    "options": [
+      "Chuỗi",
+      "Dây",
+      "Cây",
+      "Đồ thị"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 24,
+    "original_num": 24,
+    "module": "Kiến thức chung",
+    "question": "Trong hệ điều hành Windows, để mở chương trình quản lý tác vụ (Task Manager) thì bạn dùng tổ hợp phím nào:",
+    "options": [
+      "Ctrl + F1",
+      "Alt + F4",
+      "Ctrl + Alt + Delete",
+      "Ctrl + Shift + Delete"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 25,
+    "original_num": 25,
+    "module": "Kiến thức chung",
+    "question": "Trong My Computer của hệ điều hành Windows, để xoá một đối tượng tập tin hay thư mục thì bạn:",
+    "options": [
+      "Kích vào đối tượng đó và nhấn phím Delete",
+      "Kích chuột phải và chọn Delete",
+      "Kích và nhấn tổ hợp phím Ctrl + D",
+      "Kích chọn Delete"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 26,
+    "original_num": 26,
+    "module": "Kiến thức chung",
+    "question": "Định dạng tập tin có đuôi *.exe là:",
+    "options": [
+      "Tập tin chương trình",
+      "Tập tin dữ liệu",
+      "Cả hai đều đúng",
+      "Cả hai đều sai"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 27,
+    "original_num": 27,
+    "module": "Kiến thức chung",
+    "question": "Trong My Computer của hệ điều hành Windows, bạn phải nhấn giữ phím nào để chọn lần lượt từng đối tượng thư mục hoặc tập tin riêng lẻ ?",
+    "options": [
+      "Ctrl",
+      "Shift",
+      "Alt",
+      "Insert"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 28,
+    "original_num": 28,
+    "module": "Kiến thức chung",
+    "question": "Trong hệ điều hành Windows, chuỗi ký tự nào sau đây không phù hợp để đặt tên cho tập tin của bạn ?",
+    "options": [
+      "Thuchanhword.doc",
+      "Baibạnpnhom.docx",
+      "http://tttinhoc.duytan.edu.vn",
+      "Hinhanh.bmp"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 29,
+    "original_num": 29,
+    "module": "Kiến thức chung",
+    "question": "Theo bạn, virus máy tính gây ra tác hại nào đối với người dùng ?",
+    "options": [
+      "Tiêu tốn tài nguyên hệ thống.",
+      "Phá hủy thiết bị",
+      "Đánh cắp thiết bị",
+      "Phá hủy bộ nhớ"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 30,
+    "original_num": 30,
+    "module": "Kiến thức chung",
+    "question": "Chương trình nào sau đây không phải là chương trình diệt virus ?",
+    "options": [
+      "Kaspersky",
+      "Winrar",
+      "Avast Free Antivirus",
+      "BKA V"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 31,
+    "original_num": 31,
+    "module": "Kiến thức chung",
+    "question": "Hãy cho biết thiết bị nào sau đây là thiết bị nhập?",
+    "options": [
+      "Bàn phím, chuột, máy scan",
+      "Màn hình, bàn phím, chuột",
+      "Máy in",
+      "Máy scan"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 32,
+    "original_num": 32,
+    "module": "Kiến thức chung",
+    "question": "Máy tính là gì?",
+    "options": [
+      "Là công cụ phát hiện nói dối",
+      "Là công cụ cho phép xử lý thông tin một cách thủ công",
+      "Là công cụ không dùng để tính toán",
+      "Là công cụ cho phép xử lý thông tin một cách tự động"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 33,
+    "original_num": 33,
+    "module": "Kiến thức chung",
+    "question": "Đĩa CDRW có chức năng gì sau đây?",
+    "options": [
+      "Đọc/ghi",
+      "Đọc",
+      "Ghi",
+      "Lưu"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 34,
+    "original_num": 34,
+    "module": "Kiến thức chung",
+    "question": "RAM là viết tắt của",
+    "options": [
+      "Reliable Access Memory",
+      "Recordable Access Memory",
+      "Random Access Memory",
+      "Readable Access Memony"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 35,
+    "original_num": 35,
+    "module": "Kiến thức chung",
+    "question": "Cổng giao tiếp nào sau đây không sử dụng cho máy in?",
+    "options": [
+      "USB",
+      "Parallel",
+      "Network",
+      "PS/2"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 36,
+    "original_num": 36,
+    "module": "Kiến thức chung",
+    "question": "Ổ đĩa cứng là thiết bị thuộc loại",
+    "options": [
+      "Bộ nhớ trong",
+      "Bộ nhớ ngoài",
+      "Bộ nhớ cố định",
+      "Bộ nhớ truy cập ngẫu nhiên"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 37,
+    "original_num": 37,
+    "module": "Kiến thức chung",
+    "question": "Cách nào sau đây không thể mở Task Manager?",
+    "options": [
+      "Nhấn tổ hợp phím: Ctrl, Alt, Del",
+      "Nhấn tổ hợp phím: Ctrl, Shift, Esc",
+      "Click chuột phải vào thanh Taskbar chọn TaskManager",
+      "Chạy lệnh \"taskmanager\" trong hộp thoại Run"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 38,
+    "original_num": 38,
+    "module": "Kiến thức chung",
+    "question": "Tổ hợp phím nào sau đây có tác dụng đóng chương trình hiện hành",
+    "options": [
+      "Alt+F4",
+      "Alt+F5",
+      "Alt+F6",
+      "Alt+F7"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 39,
+    "original_num": 39,
+    "module": "Kiến thức chung",
+    "question": "Tổ hợp phím nào sau đây có tác dụng khởi động chươ ng trình Explorer",
+    "options": [
+      "Win+E",
+      "Win+R",
+      "Win+T",
+      "Win+Y"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 40,
+    "original_num": 40,
+    "module": "Kiến thức chung",
+    "question": "Để xem thuộc tính của file hay thư mục ta thực hiện thao tác nào",
+    "options": [
+      "Chọn file hoặc thư mục cần xem sau đó nhấn tổ hợp phím Alt+Enter",
+      "Click chuột phải chọn Properties",
+      "Nhấn tổ hợp phím Alt+Enter",
+      "Nhấn tổ hợp phím Ctrl+Enter"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 41,
+    "original_num": 41,
+    "module": "Kiến thức chung",
+    "question": "Muốn xem các chương trình đã cài đặt trong máy tính ta dùng chương trình nào sau đây trong Control Panel",
+    "options": [
+      "Programs and Features",
+      "Mouse",
+      "Personalization",
+      "Keyboard"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 42,
+    "original_num": 42,
+    "module": "Kiến thức chung",
+    "question": "Khi thao tác bảo trì máy tính người kỹ thuật viên cần phải mặc gì?",
+    "options": [
+      "Đồng phục bảo hộ lao động",
+      "Đồng phục thể thao",
+      "Đồng phục học thể dục",
+      "Không cần đồng phục"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 43,
+    "original_num": 43,
+    "module": "Kiến thức chung",
+    "question": "Người kỹ thuật viên cần tuân thủ nguyên tắc gì khi thao tác sửa chữa trực tiếp với máy tính",
+    "options": [
+      "Không đi chân trần khi tiếp xúc",
+      "Không mặcáo quá nóng",
+      "Không mặc quần dài",
+      "Không đội nón bảo hiểm"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 44,
+    "original_num": 44,
+    "module": "Kiến thức chung",
+    "question": "Trước khi thao tác trực tiếp với thiết bị người kỹ thuật viên cần làm gì đầu tiên?",
+    "options": [
+      "Dùng bút thử điện để kiểm tra trước khi thao tác",
+      "Mở thiết bị ra sửa ngay",
+      "Gọi điện cho khách hàng",
+      "Vào internet xem quy trình sửa chữa"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 45,
+    "original_num": 45,
+    "module": "Kiến thức chung",
+    "question": "Nguyên tắc nào sau đây có thể cải thiện tình trạng an toàn cho người kỹ thuật viên",
+    "options": [
+      "5S",
+      "4S",
+      "3S",
+      "2S"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 46,
+    "original_num": 46,
+    "module": "Kiến thức chung",
+    "question": "Khi thao tác sửa chữa thiết bị với độ cao trên 2m người kỹ thuật viên tuyệt đối phải làm gì?",
+    "options": [
+      "Đeo dây an toàn",
+      "Quan sát kỹ trước khi leo lên cao",
+      "Mang máy xuống thấp để thao tác",
+      "Không cần làm gì"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 47,
+    "original_num": 47,
+    "module": "Kiến thức chung",
+    "question": "Cần phải làm gì trước khi thao tác bảo trì dữ liệu",
+    "options": [
+      "Sao lưu dữ liệu",
+      "Xóa dữ liệu",
+      "Cắt dữ liệu",
+      "Không cần phải làm gì"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 48,
+    "original_num": 1,
+    "module": "Windows 10",
+    "question": "Muốn di chuyển một cửa sổ thì thao tác nào dưới đây là đúng:",
+    "options": [
+      "Nhắp chuột phải, chọn lệnh Move",
+      "Nhấn tổ hợp phím Ctrl + M",
+      "Chọn Menu Windows; Move",
+      "Trỏ chuột vào thanh tiêu đề (Title bar) và kéo đến vị trí mới"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 49,
+    "original_num": 2,
+    "module": "Windows 10",
+    "question": "Thiết lập hiển thị các folder có thuộc tính ẩnở đâu?",
+    "options": [
+      "Control Panel / Folder Option / General tab",
+      "Folder Properties / General tab",
+      "Control Panel / Folder Option / View tab",
+      "Folder Properties / Security tab"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 50,
+    "original_num": 3,
+    "module": "Windows 10",
+    "question": "Biểu tượng của các lối tắt (Shortcut) giúp bạn truy cập nhanh đến đối tượng nào dưới đây :",
+    "options": [
+      "Chương trình",
+      "Ổ đĩa",
+      "Tập tin tư liệu",
+      "Nhấn tổ hợp phím Ctrl +S"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 51,
+    "original_num": 4,
+    "module": "Windows 10",
+    "question": "Thiết bị vừa là thiết bị xuất vừa là thiết bị nhập của máy tính",
+    "options": [
+      "Máy in",
+      "Bàn phím",
+      "Màn hình",
+      "Đĩa cd-rw/dvd-rw"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 52,
+    "original_num": 5,
+    "module": "Windows 10",
+    "question": "Muốn khôi phục lại đối tượng đã xóa trong Recycle Bin, ta chọn đối tượng rồi thực hiện:",
+    "options": [
+      "File - Copy",
+      "File - Open",
+      "File - Restore",
+      "File - Move To Folder…"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 53,
+    "original_num": 6,
+    "module": "Windows 10",
+    "question": "Để thiết đặt lại hệ thống, ta chọn chức năng",
+    "options": [
+      "Control Panel",
+      "Control Windows",
+      "Control System",
+      "Control Desktop"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 54,
+    "original_num": 7,
+    "module": "Windows 10",
+    "question": "Chương trình dùng để quản lí các tệp và thư mục là",
+    "options": [
+      "Accessories",
+      "Windows Explorer",
+      "Internet Explorer",
+      "Control Panel"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 55,
+    "original_num": 8,
+    "module": "Windows 10",
+    "question": "Chương trình nào như một máy tính bỏ túi tích hợp trong Windows",
+    "options": [
+      "Notepad",
+      "Calculator",
+      "MS Word",
+      "MS Excel"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 56,
+    "original_num": 9,
+    "module": "Windows 10",
+    "question": "Muốn cài đặt máy in, ta thực hiện",
+    "options": [
+      "File - Printer and Faxes, rồi chọn mục Add a printer",
+      "Window - Printer and Faxes, rồi chọn mục Add a printer",
+      "Start - Printer and Faxes, rồi chọn mục Add a printer",
+      "Tools - Printer and Faxes, rồi chọn mục Add a printer"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 57,
+    "original_num": 10,
+    "module": "Windows 10",
+    "question": "Trong cửa sổ Explore, để chọn một lúc các file hoặc folder nằm không kề nhau trong một danh sách",
+    "options": [
+      "Giữ phím Ctrl và nháy chuột vào từng mục muốn chọn trong danh sách",
+      "Nháy chuột ở mục đầu, ấn và giữ Shift nháy chuột ở mục cuối",
+      "Giữ phím Alt và nháy chuột vào từng mục muốn chọn trong danh sách",
+      "Giữ phím Tab và nháy chuột vào từng mục muốn chọn trong danh sách"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 58,
+    "original_num": 11,
+    "module": "Windows 10",
+    "question": "Để thoát khỏi một chương trình trong ứng dụng của Windows, ta dùng tổ hợp phím",
+    "options": [
+      "Alt – F4",
+      "Ctrl – F5",
+      "Shift – F4",
+      "Alt – F5"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 59,
+    "original_num": 12,
+    "module": "Windows 10",
+    "question": "Kiến thức chung: Bộ nhớ RAM và ROM là bộ nhớ gì?",
+    "options": [
+      "Secondary memory",
+      "Receive memory",
+      "Primary memory",
+      "Random access memory"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 60,
+    "original_num": 13,
+    "module": "Windows 10",
+    "question": "Windows Explorer có các thành phần: Explorer bar, Explorer view, Tool bar, menu bar. Còn lại là gì?",
+    "options": [
+      "Status bar",
+      "Menu bar",
+      "Task bar",
+      "Control panel"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 61,
+    "original_num": 14,
+    "module": "Windows 10",
+    "question": "Chương trình cho phép định lại cấu hình hệ thống thay đổi môi trường làm việc cho phù hợp",
+    "options": [
+      "Display",
+      "Control panel",
+      "Sreen Saver",
+      "Task bar"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 62,
+    "original_num": 15,
+    "module": "Windows 10",
+    "question": "Trong Windows, khi xoá file hoặc folder thì nó được lưu trong Recycle Bin, muốn xoá hẳn file hoặc folder ta bấm tổ hợp phím nào:",
+    "options": [
+      "Shift_Del",
+      "Alt_Del",
+      "Ctrl_Del",
+      "Task bar"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 63,
+    "original_num": 16,
+    "module": "Windows 10",
+    "question": "Trong hệ điều hành Windows, thuộc tính nào dưới đây dùng đề hiển thị thanh công việc (Taskbar) trên các cửa sổ chương trình?",
+    "options": [
+      "Lock the Taskbar",
+      "Auto-Hide the Taskbar",
+      "Keep the Taskbar on top of other Windows",
+      "Show the clock"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 64,
+    "original_num": 17,
+    "module": "Windows 10",
+    "question": "Trong hệ điều hành Windows, để phục hồi tất cả các đối tượng trong Recycle Bin (thùng rác) ta nháy phải chuột tại Recycle Bin và chọn lệnh:",
+    "options": [
+      "Delete",
+      "Restore",
+      "Redo",
+      "Undo Delete"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 65,
+    "original_num": 18,
+    "module": "Windows 10",
+    "question": "Nhấn giữ phím nào khi muốn chọn nhiều đối tượng liên tiếp nhau?",
+    "options": [
+      "Ctrl",
+      "Alt",
+      "Tab",
+      "Shift"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 66,
+    "original_num": 19,
+    "module": "Windows 10",
+    "question": "Trong hệ điều hành Windows, để dán các tệp/thư mục sau khi đã thực hiện lệnh copy, ta mởổ đĩa, thư mục muốn chứa bản sao và:",
+    "options": [
+      "Vào bảng chọn Edit à chọn Paste.",
+      "Nhấn tổ hợp phím Ctrl + V .",
+      "Nháy phải chuột tại vùng trống bên trong ổ đĩa, thư mục chaà chọn Paste.",
+      "Cácý trên đều đúng"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 67,
+    "original_num": 20,
+    "module": "Windows 10",
+    "question": "Các thành phần: bộ nhớ chính, bộ xử lý trung ương, bộ phận nhập xuất, các loại hệ điều hành là:",
+    "options": [
+      "Control Panel",
+      "Phần mềm",
+      "Thiết bị lưu trữ",
+      "Ứng dụng"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 68,
+    "original_num": 21,
+    "module": "Windows 10",
+    "question": "Trên hệ điều hành Windows, để chuyển đổi cửa sổ chương trình cần làm việc ta:",
+    "options": [
+      "Nháy chọn biểu tượng chương trình tương ứng trên thanh công việc (Taskbar).",
+      "Nhấn giữ phím Alt + C.",
+      "Nháy vào một vị trí muốn kích hoạt.",
+      "Nháy vào một vị trí bất kỳ."
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 69,
+    "original_num": 22,
+    "module": "Windows 10",
+    "question": "Trong các phần mềm sau, phần mềm nào là phần mềmứng dụng?",
+    "options": [
+      "Windows XP",
+      "Microsoft Word",
+      "Linux",
+      "Unix"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 70,
+    "original_num": 23,
+    "module": "Windows 10",
+    "question": "muốn khôi phục đối tượng đã xóa, ta mở cửa sổ Recycle Bin, chọn đối tượng muốn khôi phục và",
+    "options": [
+      "Nhấp chọn Edit và Restore.",
+      "Nhấp chọn Edit và Delete.",
+      "Nhấp chọn File và Restore.",
+      "Nhấp chọn File và Delete."
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 71,
+    "original_num": 24,
+    "module": "Windows 10",
+    "question": "Muốn đổi tên cho thư mục/tệp tin trong hệ điều hành Windows, ta chọn thư mục/tệp tin cần đổi tên và thực hiện thao tác nào sau đây?",
+    "options": [
+      "Nhấp chọn File và chọn Rename và nhập tên mới và nhấn phím Enter.",
+      "Nhấn phím F2 và nhập tên mới và nhấn phím Enter.",
+      "Nhấp chọn chuột phải tại thư mục/tệp tin và nhập tên mới và nhấn phím Enter.",
+      "Cácý trên đều đúng."
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 72,
+    "original_num": 25,
+    "module": "Windows 10",
+    "question": "Để xoá các tệp/thư mục đang chọn ta thực hiện cách nào?",
+    "options": [
+      "Vào bảng chọn Edit và UnDelete và Yes.",
+      "Nhấn tổ hợp phím Ctrl + Delete và Yes.",
+      "Nhấn phím Delete và Yes.",
+      "Cácý trên đều đúng."
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 73,
+    "original_num": 26,
+    "module": "Windows 10",
+    "question": "Để dán các tệp/thư mục sau khi đã thực hiện lệnh copy, ta mởổ đĩa, thư mục muốn chứa bản sao và:",
+    "options": [
+      "Chọn Edit và chọn Paste.",
+      "Nhấn tổ hợp phím Ctrl + V .",
+      "Nháy phải chuột tại vùng trống bên trong ổ đĩa và chọn Paste.",
+      "Nháy phải chuột tại thư mục cha và chọn Paste."
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 74,
+    "original_num": 27,
+    "module": "Windows 10",
+    "question": "Trong hệ điều hành Windows, muốn đóng (thoát) cửa sổ chương trình ứng dụng đang làm việc ta:",
+    "options": [
+      "Nhấn tổ hợp phím Ctrl + F3",
+      "Nhấn phím F11",
+      "Nhấn tổ hợp phím Alt + F4.",
+      "Nhấn tổ hợp phím Alt + Q"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 75,
+    "original_num": 28,
+    "module": "Windows 10",
+    "question": "Để quản lý tệp, thư mục ta thường dùng chương trình nào sau đây:",
+    "options": [
+      "Internet Explorer",
+      "Windows Explorer.",
+      "Microsoft Word.",
+      "Microsoft Excel."
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 76,
+    "original_num": 29,
+    "module": "Windows 10",
+    "question": "Muốn thay đổi các thông số khu vực trong hệ điều hành Windows như múi giờ, đơn vị tiền tệ, cách viết số, ... ta sử dụng chương trình nào trong các chương trình sau",
+    "options": [
+      "Microsoft Paint",
+      "System Tools",
+      "Control Panel",
+      "Caculator"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 77,
+    "original_num": 30,
+    "module": "Windows 10",
+    "question": "Muốn chọn tất cả các đối tượng trong cửa sổ thư mục hiện tại, ta dùng phím (tổ hợp phím) nào sau đây",
+    "options": [
+      "Shift + F4",
+      "Ctrl +A",
+      "Alt + H",
+      "F11"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 78,
+    "original_num": 1,
+    "module": "MS Word 2013",
+    "question": "Tổ hợp phím Ctrl + O dùng để",
+    "options": [
+      "Mở một Document mới",
+      "Mở một Document đã có",
+      "Đóng Document đang mở",
+      "Đóng và lưu Document đang mở"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 79,
+    "original_num": 2,
+    "module": "MS Word 2013",
+    "question": "Tổ hợp phím nào cho phép chọn tất cả văn bản đang soạn thảo",
+    "options": [
+      "Ctrl + A",
+      "Ctrl + End",
+      "Alt + A",
+      "Alt + End"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 80,
+    "original_num": 3,
+    "module": "MS Word 2013",
+    "question": "Trong Bảng (Table), để tách mộtô thành nhiều ô, ta thực hiện:",
+    "options": [
+      "LayOut - Cells",
+      "Design - Cells",
+      "LayOut - Split Cells",
+      "Design - Split Cells"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 81,
+    "original_num": 4,
+    "module": "MS Word 2013",
+    "question": "Muốn định dạng các đoạn văn bản theo kiểu danh sách, ta thực hiện:",
+    "options": [
+      "Home - Bullets and Numbering",
+      "View - Bullets and Numbering",
+      "Insert - Bullets and Numbering",
+      "Review - Bullets and Numbering"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 82,
+    "original_num": 5,
+    "module": "MS Word 2013",
+    "question": "Để chèn tiêu đề trang (đầu trang và chân trang), ta thực hiện",
+    "options": [
+      "Insert - Header and Footer",
+      "View - Header and Footer",
+      "Home - Header and Footer",
+      "Review - Header and Footer"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 83,
+    "original_num": 6,
+    "module": "MS Word 2013",
+    "question": "Để soạn thảo một công thức toán học, ta thường dùng",
+    "options": [
+      "Insert - Word Art",
+      "Insert - Equation",
+      "Insert - Chart",
+      "Insert - Shapes"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 84,
+    "original_num": 7,
+    "module": "MS Word 2013",
+    "question": "Một đối tượng sử dụng loại Wraps text nào để văn bản lấp đầy các khoảng trong xung quanh nó.",
+    "options": [
+      "Spuare",
+      "Tight",
+      "Through",
+      "Top and Bottom"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 85,
+    "original_num": 8,
+    "module": "MS Word 2013",
+    "question": "Để định dạng lại trang giấy in, ta thực hiện",
+    "options": [
+      "File - Print",
+      "Page Layout - Page Setup",
+      "File - Page Setup",
+      "Page Layout - Print"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 86,
+    "original_num": 9,
+    "module": "MS Word 2013",
+    "question": "Để chuyển đổi giữa hai chế độ gõ : chế độ gõ chèn và chế độ gõ đè; ta bấm",
+    "options": [
+      "Tab",
+      "Shift + Del",
+      "Insert",
+      "Shift + Insert"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 87,
+    "original_num": 10,
+    "module": "MS Word 2013",
+    "question": "Trong Word, để tạo chỉ số trên (m2), bạn thực hiện gõ m2, bôi đen chỉ số 2 rồi thực hiện tiếp tổ hợp phím nào sau đây?",
+    "options": [
+      "Ctrl , Shift, =",
+      "Ctrl , =",
+      "Shift, =",
+      "Ctrl , Shift"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 88,
+    "original_num": 11,
+    "module": "MS Word 2013",
+    "question": "Trong Word, để tạo chỉ số dưới (H2), bạn thực hiện gõ H2, bôi đen chỉ số 2 rồi thực hiện tiếp tổ hợp phím nào sau đây?",
+    "options": [
+      "Ctrl , Shift, =",
+      "Ctrl , =",
+      "Shift, =",
+      "Ctrl , Shift"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 89,
+    "original_num": 12,
+    "module": "MS Word 2013",
+    "question": "Trong Word, khi đã bôi đen một đoạn văn bản in nhạt, muốn đoạn văn bản này đậm lên, bạn dùng tổ hợp phím nào sau đây?",
+    "options": [
+      "Ctrl + P",
+      "Ctrl + X",
+      "Ctrl + C",
+      "Ctrl + B"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 90,
+    "original_num": 13,
+    "module": "MS Word 2013",
+    "question": "Trong Word, bạn có một Bảng (Table) gồm 3 cột, 5 dòng. Con trỏ đang ởô cuối cùng trên dòng số 5, muốn thêm một dòng mớiở cuối bảng, bạn thực hiện cách nào sau đây?",
+    "options": [
+      "Tab",
+      "Kích chuột phải -> Insert",
+      "Kích chuột phải -> Insert Cells",
+      "Chọn Insert Rows Below"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 91,
+    "original_num": 14,
+    "module": "MS Word 2013",
+    "question": "Trong Word để dãn khoản cách giữa các dòng là 1,5 line, sau khi bôi đen các dòng văn bản ta thực hiện cách nào sau đây?",
+    "options": [
+      "Ctrl + Shift + 5",
+      "Paragraph/Line Spacing -> chọn 1,5 lines",
+      "Ctrl + Shift + F5",
+      "Ctrl + Shift + F6"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 92,
+    "original_num": 15,
+    "module": "MS Word 2013",
+    "question": "Trong Word để ngắt trang trong Word ta dùng tổ hợp phím nào sau đây?",
+    "options": [
+      "Alt + Enter",
+      "Alt + Shift",
+      "Shift + Enter",
+      "Ctrl + Enter"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 93,
+    "original_num": 16,
+    "module": "MS Word 2013",
+    "question": "Trong Word để chọn toàn bộ mộtô bất kỳ trong bảng, ta thực hiện theo cách nào sau đây?",
+    "options": [
+      "Bôi đen phần văn bản trên ô đó",
+      "Nhấn đúp chuột vàoô đó",
+      "Nhấn chuột vào phía trên ô đó",
+      "Nhấn chuột vào góc dưới bên trái ô đó."
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 94,
+    "original_num": 17,
+    "module": "MS Word 2013",
+    "question": "Trong Word, ta có thể tạo chữ in hoa bằng công cụ Drop Cap cho trường hợp nào sau đây?",
+    "options": [
+      "Chữ cái đầu của mỗi đoạn trong văn bản",
+      "Một số chữ cái đầu của đoạn đầu tiên trong văn bản",
+      "Chữ cái đầu dòng trên Table",
+      "Chữ cái đầu đoạn văn bảng trong Text box"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 95,
+    "original_num": 18,
+    "module": "MS Word 2013",
+    "question": "Trong Word, File BangdiemSV dùng làm dữ liệu để trộn thư in bảng điểm cá nhân cho sinh viên, File BangdiemSV không thể dùng được ở dạng nào sau đây?",
+    "options": [
+      "BangdiemSV .xls",
+      "BangdiemSV .txt",
+      "BangdiemSV .doc",
+      "BangdiemSV .pdf"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 96,
+    "original_num": 19,
+    "module": "MS Word 2013",
+    "question": "Trong Word, khi đã bôi đen một đoạn văn bản, muốn tăng kích cỡ của chữ bạn dùng tổ hợp phím nào sau đây?",
+    "options": [
+      "Ctrl + ]",
+      "Ctrl + }",
+      "Ctrl + {",
+      "Ctrl + ["
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 97,
+    "original_num": 20,
+    "module": "MS Word 2013",
+    "question": "Trong Word, khi đã bôi đen một đoạn văn bản, muốn giảm kích cỡ của chữ bạn dùng tổ hợp phím nào sau đây?",
+    "options": [
+      "Ctrl + ]",
+      "Ctrl + }",
+      "Ctrl + {",
+      "Ctrl + ["
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 98,
+    "original_num": 21,
+    "module": "MS Word 2013",
+    "question": "Trong Word, một đoạn văn bản có chỉ mục nếu bạn muốn xuống dòng mà không muốn dòng đó có chỉ mục thì bạn dùng tổ hợp phím nào sau đây?",
+    "options": [
+      "Alt + Enter",
+      "Shift + Enter",
+      "Ctrl + Enter",
+      "Alt + F4"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 99,
+    "original_num": 22,
+    "module": "MS Word 2013",
+    "question": "Trong Word, khi đã bôi đen một đoạn văn bản gõ chữ thường, muốn địnhk dạng thành chữ IN HOA bạn dùng tổ hợp phím nào sau đây?",
+    "options": [
+      "Shift + F1",
+      "Shift + F2",
+      "Shift + F3",
+      "Shift + F4"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 100,
+    "original_num": 23,
+    "module": "MS Word 2013",
+    "question": "Trong Word, khi đã bôi đen một đoạn văn bản gõ chữ IN HOA, muốn địnhk dạng thành chữ thường bạn dùng tổ hợp phím nào sau đây?",
+    "options": [
+      "Shift + F1",
+      "Shift + F2",
+      "Shift + F3",
+      "Shift + F4"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 101,
+    "original_num": 24,
+    "module": "MS Word 2013",
+    "question": "Trong Word, bôi đen một đoạn văn bản rồi lần lượt thực hiện thao tác : Nhấn tổ hợp phím Ctrl + B tiếp đến là Ctrl + I, cụm từ được bôi đen sẽ :",
+    "options": [
+      "In nghiêng",
+      "In đậm",
+      "Có gạch chân",
+      "In đậm và nghiêng"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 102,
+    "original_num": 25,
+    "module": "MS Word 2013",
+    "question": "Trong Word, để định dạng chữ cái lớn đầu đoạn văn bản ta thực hiện:",
+    "options": [
+      "Home/Drop Cap",
+      "Insert/Drop Cap",
+      "View/Drop Cap",
+      "Tool/Drop Cap"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 103,
+    "original_num": 26,
+    "module": "MS Word 2013",
+    "question": "Trong Word, để định dạng canh biên trái, biên phải, định dạng trang in ngang, dọc… ta thực hiện theo cách nào sau đây?:",
+    "options": [
+      "Page Layout/Page Setup",
+      "File/Print",
+      "View/Print Layout",
+      "File/Options"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 104,
+    "original_num": 27,
+    "module": "MS Word 2013",
+    "question": "Trong Word, để sửa lại nội dung một văn bản đã có và lưu nó với tên mới đồng thời tập tin cũ vẫn giữ nguyên, ta thực hiện cách nào sau đây?:",
+    "options": [
+      "File/Save As",
+      "File/Save",
+      "File/Page Setup",
+      "File/Save & Send"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 105,
+    "original_num": 28,
+    "module": "MS Word 2013",
+    "question": "Trong Word, để di chuyển đoạn văn bản đã được chọn, ta thực hiện cặp thao tác nào sau đây?",
+    "options": [
+      "Copy và Paste",
+      "Cut và Paste",
+      "Copy và Cut",
+      "Alt + M"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 106,
+    "original_num": 29,
+    "module": "MS Word 2013",
+    "question": "Trong Word, để sao chep đoạn văn bản đã được chọn, ta thực hiện cặp thao tác nào sau đây?",
+    "options": [
+      "Copy và Paste",
+      "Cut và Paste",
+      "Copy và Cut",
+      "Edit\\Options"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 107,
+    "original_num": 30,
+    "module": "MS Word 2013",
+    "question": "Trong Word, công cụ Format Painter có chức năng gì?",
+    "options": [
+      "Vẽ hình",
+      "Tô màu",
+      "Sao chép định dạng",
+      "Cắt văn bản"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 108,
+    "original_num": 1,
+    "module": "MS Word 2013",
+    "question": "Tổ hợp phím Ctrl + O dùng để",
+    "options": [
+      "Mở một Document mới",
+      "Mở một Document đã có",
+      "Đóng Document đang mở",
+      "Đóng và lưu Document đang mở"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 109,
+    "original_num": 2,
+    "module": "MS Word 2013",
+    "question": "Tổ hợp phím nào cho phép chọn tất cả văn bản đang soạn thảo",
+    "options": [
+      "Ctrl + A",
+      "Ctrl + End",
+      "Alt + A",
+      "Alt + End"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 110,
+    "original_num": 3,
+    "module": "MS Word 2013",
+    "question": "Trong Bảng (Table), để tách mộtô thành nhiều ô, ta thực hiện:",
+    "options": [
+      "LayOut - Cells",
+      "Design - Cells",
+      "LayOut - Split Cells",
+      "Design - Split Cells"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 111,
+    "original_num": 4,
+    "module": "MS Word 2013",
+    "question": "Muốn định dạng các đoạn văn bản theo kiểu danh sách, ta thực hiện:",
+    "options": [
+      "Home - Bullets and Numbering",
+      "View - Bullets and Numbering",
+      "Insert - Bullets and Numbering",
+      "Review - Bullets and Numbering"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 112,
+    "original_num": 5,
+    "module": "MS Word 2013",
+    "question": "Để chèn tiêu đề trang (đầu trang và chân trang), ta thực hiện",
+    "options": [
+      "Insert - Header and Footer",
+      "View - Header and Footer",
+      "Home - Header and Footer",
+      "Review - Header and Footer"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 113,
+    "original_num": 6,
+    "module": "MS Word 2013",
+    "question": "Để soạn thảo một công thức toán học, ta thường dùng",
+    "options": [
+      "Insert - Word Art",
+      "Insert - Equation",
+      "Insert - Chart",
+      "Insert - Shapes"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 114,
+    "original_num": 7,
+    "module": "MS Word 2013",
+    "question": "Một đối tượng sử dụng loại Wraps text nào để văn bản lấp đầy các khoảng trong xung quanh nó.",
+    "options": [
+      "Spuare",
+      "Tight",
+      "Through",
+      "Top and Bottom"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 115,
+    "original_num": 8,
+    "module": "MS Word 2013",
+    "question": "Để định dạng lại trang giấy in, ta thực hiện",
+    "options": [
+      "File - Print",
+      "Page Layout - Page Setup",
+      "File - Page Setup",
+      "Page Layout - Print"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 116,
+    "original_num": 9,
+    "module": "MS Word 2013",
+    "question": "Để chuyển đổi giữa hai chế độ gõ : chế độ gõ chèn và chế độ gõ đè; ta bấm",
+    "options": [
+      "Tab",
+      "Shift + Del",
+      "Insert",
+      "Shift + Insert"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 117,
+    "original_num": 10,
+    "module": "MS Word 2013",
+    "question": "Trong Word, để tạo chỉ số trên (m2), bạn thực hiện gõ m2, bôi đen chỉ số 2 rồi thực hiện tiếp tổ hợp phím nào sau đây?",
+    "options": [
+      "Ctrl , Shift, =",
+      "Ctrl , =",
+      "Shift, =",
+      "Ctrl , Shift"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 118,
+    "original_num": 11,
+    "module": "MS Word 2013",
+    "question": "Trong Word, để tạo chỉ số dưới (H2), bạn thực hiện gõ H2, bôi đen chỉ số 2 rồi thực hiện tiếp tổ hợp phím nào sau đây?",
+    "options": [
+      "Ctrl , Shift, =",
+      "Ctrl , =",
+      "Shift, =",
+      "Ctrl , Shift"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 119,
+    "original_num": 12,
+    "module": "MS Word 2013",
+    "question": "Trong Word, khi đã bôi đen một đoạn văn bản in nhạt, muốn đoạn văn bản này đậm lên, bạn dùng tổ hợp phím nào sau đây?",
+    "options": [
+      "Ctrl + P",
+      "Ctrl + X",
+      "Ctrl + C",
+      "Ctrl + B"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 120,
+    "original_num": 13,
+    "module": "MS Word 2013",
+    "question": "Trong Word, bạn có một Bảng (Table) gồm 3 cột, 5 dòng. Con trỏ đang ởô cuối cùng trên dòng số 5, muốn thêm một dòng mớiở cuối bảng, bạn thực hiện cách nào sau đây?",
+    "options": [
+      "Tab",
+      "Kích chuột phải -> Insert",
+      "Kích chuột phải -> Insert Cells",
+      "Chọn Insert Rows Below"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 121,
+    "original_num": 14,
+    "module": "MS Word 2013",
+    "question": "Trong Word để dãn khoản cách giữa các dòng là 1,5 line, sau khi bôi đen các dòng văn bản ta thực hiện cách nào sau đây?",
+    "options": [
+      "Ctrl + Shift + 5",
+      "Paragraph/Line Spacing -> chọn 1,5 lines",
+      "Ctrl + Shift + F5",
+      "Ctrl + Shift + F6"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 122,
+    "original_num": 15,
+    "module": "MS Word 2013",
+    "question": "Trong Word để ngắt trang trong Word ta dùng tổ hợp phím nào sau đây?",
+    "options": [
+      "Alt + Enter",
+      "Alt + Shift",
+      "Shift + Enter",
+      "Ctrl + Enter"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 123,
+    "original_num": 16,
+    "module": "MS Word 2013",
+    "question": "Trong Word để chọn toàn bộ mộtô bất kỳ trong bảng, ta thực hiện theo cách nào sau đây?",
+    "options": [
+      "Bôi đen phần văn bản trên ô đó",
+      "Nhấn đúp chuột vàoô đó",
+      "Nhấn chuột vào phía trên ô đó",
+      "Nhấn chuột vào góc dưới bên trái ô đó."
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 124,
+    "original_num": 17,
+    "module": "MS Word 2013",
+    "question": "Trong Word, ta có thể tạo chữ in hoa bằng công cụ Drop Cap cho trường hợp nào sau đây?",
+    "options": [
+      "Chữ cái đầu của mỗi đoạn trong văn bản",
+      "Một số chữ cái đầu của đoạn đầu tiên trong văn bản",
+      "Chữ cái đầu dòng trên Table",
+      "Chữ cái đầu đoạn văn bảng trong Text box"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 125,
+    "original_num": 18,
+    "module": "MS Word 2013",
+    "question": "Trong Word, File BangdiemSV dùng làm dữ liệu để trộn thư in bảng điểm cá nhân cho sinh viên, File BangdiemSV không thể dùng được ở dạng nào sau đây?",
+    "options": [
+      "BangdiemSV .xls",
+      "BangdiemSV .txt",
+      "BangdiemSV .doc",
+      "BangdiemSV .pdf"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 126,
+    "original_num": 19,
+    "module": "MS Word 2013",
+    "question": "Trong Word, khi đã bôi đen một đoạn văn bản, muốn tăng kích cỡ của chữ bạn dùng tổ hợp phím nào sau đây?",
+    "options": [
+      "Ctrl + ]",
+      "Ctrl + }",
+      "Ctrl + {",
+      "Ctrl + ["
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 127,
+    "original_num": 20,
+    "module": "MS Word 2013",
+    "question": "Trong Word, khi đã bôi đen một đoạn văn bản, muốn giảm kích cỡ của chữ bạn dùng tổ hợp phím nào sau đây?",
+    "options": [
+      "Ctrl + ]",
+      "Ctrl + }",
+      "Ctrl + {",
+      "Ctrl + ["
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 128,
+    "original_num": 21,
+    "module": "MS Word 2013",
+    "question": "Trong Word, một đoạn văn bản có chỉ mục nếu bạn muốn xuống dòng mà không muốn dòng đó có chỉ mục thì bạn dùng tổ hợp phím nào sau đây?",
+    "options": [
+      "Alt + Enter",
+      "Shift + Enter",
+      "Ctrl + Enter",
+      "Alt + F4"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 129,
+    "original_num": 22,
+    "module": "MS Word 2013",
+    "question": "Trong Word, khi đã bôi đen một đoạn văn bản gõ chữ thường, muốn địnhk dạng thành chữ IN HOA bạn dùng tổ hợp phím nào sau đây?",
+    "options": [
+      "Shift + F1",
+      "Shift + F2",
+      "Shift + F3",
+      "Shift + F4"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 130,
+    "original_num": 23,
+    "module": "MS Word 2013",
+    "question": "Trong Word, khi đã bôi đen một đoạn văn bản gõ chữ IN HOA, muốn địnhk dạng thành chữ thường bạn dùng tổ hợp phím nào sau đây?",
+    "options": [
+      "Shift + F1",
+      "Shift + F2",
+      "Shift + F3",
+      "Shift + F4"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 131,
+    "original_num": 24,
+    "module": "MS Word 2013",
+    "question": "Trong Word, bôi đen một đoạn văn bản rồi lần lượt thực hiện thao tác : Nhấn tổ hợp phím Ctrl + B tiếp đến là Ctrl + I, cụm từ được bôi đen sẽ :",
+    "options": [
+      "In nghiêng",
+      "In đậm",
+      "Có gạch chân",
+      "In đậm và nghiêng"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 132,
+    "original_num": 25,
+    "module": "MS Word 2013",
+    "question": "Trong Word, để định dạng chữ cái lớn đầu đoạn văn bản ta thực hiện:",
+    "options": [
+      "Home/Drop Cap",
+      "Insert/Drop Cap",
+      "View/Drop Cap",
+      "Tool/Drop Cap"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 133,
+    "original_num": 26,
+    "module": "MS Word 2013",
+    "question": "Trong Word, để định dạng canh biên trái, biên phải, định dạng trang in ngang, dọc… ta thực hiện theo cách nào sau đây?:",
+    "options": [
+      "Page Layout/Page Setup",
+      "File/Print",
+      "View/Print Layout",
+      "File/Options"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 134,
+    "original_num": 27,
+    "module": "MS Word 2013",
+    "question": "Trong Word, để sửa lại nội dung một văn bản đã có và lưu nó với tên mới đồng thời tập tin cũ vẫn giữ nguyên, ta thực hiện cách nào sau đây?:",
+    "options": [
+      "File/Save As",
+      "File/Save",
+      "File/Page Setup",
+      "File/Save & Send"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 135,
+    "original_num": 28,
+    "module": "MS Word 2013",
+    "question": "Trong Word, để di chuyển đoạn văn bản đã được chọn, ta thực hiện cặp thao tác nào sau đây?",
+    "options": [
+      "Copy và Paste",
+      "Cut và Paste",
+      "Copy và Cut",
+      "Alt + M"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 136,
+    "original_num": 29,
+    "module": "MS Word 2013",
+    "question": "Trong Word, để sao chep đoạn văn bản đã được chọn, ta thực hiện cặp thao tác nào sau đây?",
+    "options": [
+      "Copy và Paste",
+      "Cut và Paste",
+      "Copy và Cut",
+      "Edit\\Options"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 137,
+    "original_num": 30,
+    "module": "MS Word 2013",
+    "question": "Trong Word, công cụ Format Painter có chức năng gì?",
+    "options": [
+      "Vẽ hình",
+      "Tô màu",
+      "Sao chép định dạng",
+      "Cắt văn bản"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 138,
+    "original_num": 1,
+    "module": "MS Excel 2013",
+    "question": "Tổ hợp phím nào cho phép ngay lập tức đưa con trỏ vềô đầu tiên (ô A1) của bảng tính",
+    "options": [
+      "Ctrl+Home",
+      "Shift+Ctrl+Home",
+      "Alt + Home",
+      "Shift + Alt + Home"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 139,
+    "original_num": 3,
+    "module": "MS Excel 2013",
+    "question": "Tạiô A2 có sẵn giá trị số không (0); Tạiô B2 gõ vào công thức =5/A2 thì nhận được kết quả",
+    "options": [
+      "#N/A",
+      "#NAME?",
+      "#V ALUE!",
+      "#DIV/0!"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 140,
+    "original_num": 4,
+    "module": "MS Excel 2013",
+    "question": "Điều kiện logic trong hàm IF được phát biểu dưới dạng một phép so sánh. Khi cần so sánh khác nhau thì sử dụng kí hiệu nào?",
+    "options": [
+      "#",
+      "><",
+      "<>",
+      "~"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 141,
+    "original_num": 6,
+    "module": "MS Excel 2013",
+    "question": "Khi viết sai tên hàm trong tính toán, chương trình thông báo lỗi?",
+    "options": [
+      "#N/A",
+      "#NAME?",
+      "#V ALUE!",
+      "#DIV/0!"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 142,
+    "original_num": 7,
+    "module": "MS Excel 2013",
+    "question": "Để tham chiếu dữ liệu từ bảng khác ta dùng hàm",
+    "options": [
+      "Vlookup",
+      "Hlookup",
+      "Index",
+      "Cả 3 đều đúng"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 143,
+    "original_num": 8,
+    "module": "MS Excel 2013",
+    "question": "Khi dữ liệu cần tham chiếu nằm trên 1 hàng ở bảng tham chiếu, ta dùng hàm",
+    "options": [
+      "Vlookup",
+      "Hlookup",
+      "Index",
+      "Cả 3 đều đúng"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 144,
+    "original_num": 9,
+    "module": "MS Excel 2013",
+    "question": "Khi dữ liệu cần tham chiếu nằm trên 1 cộtở bảng tham chiếu, ta dùng hàm",
+    "options": [
+      "Vlookup",
+      "Hlookup",
+      "Index",
+      "Cả 3 đều đúng"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 145,
+    "original_num": 11,
+    "module": "MS Excel 2013",
+    "question": "Khi đang làm việc với Excel, tổ hợp phím nào cho phép ngay lập tức đưa con trỏ vềô đầu tiên (ô A1) của bảng tính ?",
+    "options": [
+      "Shift+Home",
+      "Alt+Home",
+      "Ctrl+Home",
+      "Shift+Ctrl+Home"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 146,
+    "original_num": 12,
+    "module": "MS Excel 2013",
+    "question": "Trong khi làm việc với Excel, để nhập vào công thức tính toán cho mộtô, trước hết ta phải gõ:",
+    "options": [
+      "Dấu chấm hỏi (?)",
+      "Dấu bằng (= )",
+      "Dấu hai chấm (: )",
+      "Dấu đô la ($)"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 147,
+    "original_num": 13,
+    "module": "MS Excel 2013",
+    "question": "Trong bảng tính Exce, nếu trong mộtô tính có các kí hiệu #####, điều đó có nghĩa là gì?",
+    "options": [
+      "Chương trình bảng tính bị nhiễm virus",
+      "Công thức nhập sai và Excel thông báo lỗi",
+      "Hàng chứa ô đó có độ cao quá thấp nên không hiển thị hết chữ số",
+      "Cột chứa ô đó có độ rộng quá hẹp nên không hiển thị hết chữ số"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 148,
+    "original_num": 15,
+    "module": "MS Excel 2013",
+    "question": "Câu nào sau đây sai? Khi nhập dữ liệu vào bảng tính Excel thì:",
+    "options": [
+      "Dữ liệu kiểu số sẽ mặc nhiên căn thẳng lề trái",
+      "Dữ liệu kiểu kí tự sẽ mặc nhiên căn thẳng lề trái",
+      "Dữ liệu kiểu thời gian sẽ mặc nhiên căn thẳng lề phải",
+      "Dữ liệu kiểu ngày tháng sẽ mặc nhiên căn thẳng lề phải"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 149,
+    "original_num": 23,
+    "module": "MS Excel 2013",
+    "question": "Trong bảng tính Excel, để sửa dữ liệu trong mộtô tính mà không cần nhập lại, ta thực hiện:",
+    "options": [
+      "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F2",
+      "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F4",
+      "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F10",
+      "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F12"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 150,
+    "original_num": 27,
+    "module": "MS Excel 2013",
+    "question": "Trong bảng tính Excel, để lọc dữ liệu tự động, sau khi chọn khối cần lọc, ta thực hiện:",
+    "options": [
+      "Format - Filter - AutoFilter",
+      "Insert - Filter - AutoFilter",
+      "Data - Filter - AutoFilter",
+      "View - Filter - AutoFilter"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 151,
+    "original_num": 28,
+    "module": "MS Excel 2013",
+    "question": "Khi đang làm việc với Excel, có thể di chuy ển từ sheet này sang sheet khác bằng cách sử dụng các phím hoặc các tổ hợp phím:",
+    "options": [
+      "Page Up ; Page Down",
+      "Ctrl - Page Up ; Ctrl - Page Down",
+      "Ctrl - Page - A",
+      "Shift - Page - F"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 152,
+    "original_num": 29,
+    "module": "MS Excel 2013",
+    "question": "Trong Excel, để xuống dòng trong mộtô, ta sử dụng tổ hợp phím:",
+    "options": [
+      "Alt + Enter",
+      "Spacebar + Enter",
+      "Shift + Enter",
+      "Ctrl + Enter"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 153,
+    "original_num": 30,
+    "module": "MS Excel 2013",
+    "question": "Các địa chỉ sau đây là địa chỉ gì: $A1, B$5, C6, $L9, $DS7",
+    "options": [
+      "Địa chỉ tương đối",
+      "Địa chỉ tuyệt đối",
+      "Địa chỉ hỗn hợp",
+      "Địa chỉ mặt định"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 154,
+    "original_num": 31,
+    "module": "MS Excel 2013",
+    "question": "Khi gõ công thức xong, rồi Enter, máy hiện ra #N/A có nghĩa là :",
+    "options": [
+      "Không tìm thấy tên hàm",
+      "Giá trị tham chiếu không tồn tại",
+      "Không tham chiếu đến được",
+      "Tập hợp rỗng"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 155,
+    "original_num": 32,
+    "module": "MS Excel 2013",
+    "question": "Khi gõ công thức xong, rồi Enter, máy hiện ra #REF! có nghĩa là :",
+    "options": [
+      "Không tìm thấy tên hàm",
+      "Giá trị tham chiếu không tồn tại",
+      "Không tham chiếu đến được",
+      "Tập hợp rỗng."
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 156,
+    "original_num": 36,
+    "module": "MS Excel 2013",
+    "question": "Trong MS Excel, hàm nào dùng để đếm cácô rỗng trong 1 danh sách:",
+    "options": [
+      "COUNTIF",
+      "COUNT",
+      "COUNTBLANK",
+      "COUNTA"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 157,
+    "original_num": 38,
+    "module": "MS Excel 2013",
+    "question": "Trong MS Excel, hàm tính tổng có nhiều điều kiện là hàm:",
+    "options": [
+      "SUMIFS",
+      "SUMIF",
+      "DSUM",
+      "SUM"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 158,
+    "original_num": 39,
+    "module": "MS Excel 2013",
+    "question": "Trong MS Excel, hàm đếm có nhiều điều kiện là hàm:",
+    "options": [
+      "COUNTIF",
+      "COUNTIFS",
+      "DCOUNT",
+      "COUNTA"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 159,
+    "original_num": 56,
+    "module": "MS Excel 2013",
+    "question": "Trong bảng tính Excel, hàm nào sau đây cho phép tính tổng các giá trị kiểu số thỏa mãn một điều kiện cho trước?",
+    "options": [
+      "SUM",
+      "COUNTIF",
+      "COUNT",
+      "SUMIF"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 160,
+    "original_num": 57,
+    "module": "MS Excel 2013",
+    "question": "Trong bảng tính Excel, để chèn thêm một cột vào trang tí nh, ta thực hiện:",
+    "options": [
+      "Table - Insert Columns.",
+      "Format - Cells - Insert Columns.",
+      "Table - Insert Cells.",
+      "Insert - Columns."
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 161,
+    "original_num": 58,
+    "module": "MS Excel 2013",
+    "question": "Khi đang làm việc với Excel, có thể di chuy ển từ sheet này sang sheet khác bằng cách sử dụng các phím hoặc các tổ hợp phím:",
+    "options": [
+      "Page Up;",
+      "Ctrl-Page Up ; Ctrl- Page Down.",
+      "Page Down.",
+      "Print Page Down."
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 162,
+    "original_num": 59,
+    "module": "MS Excel 2013",
+    "question": "Để thiết lập chế độ lưu tự động trên Excel dự phòng khi có sự cố xảy ra, ta cần?",
+    "options": [
+      "Vào Tool/Options, chọn thẻ Save, tích vàoô Save AutoRecover info every, sau đó điền số phút tự động lưu.",
+      "Vào File/Save để lưu.",
+      "Vào File/Save để lưu.",
+      "Nhấn tổ hợp phím Ctrl + S."
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 163,
+    "original_num": 60,
+    "module": "MS Excel 2013",
+    "question": "Để khởi động Excel ta chọn",
+    "options": [
+      "Nhấp đúp trỏ chuột lên biểu tượng lối tắt của Excel",
+      "Nhấp chọn Program",
+      "Từ màn hình Dos, gõ Excel",
+      "Nhấn chọn Start"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 164,
+    "original_num": 61,
+    "module": "MS Excel 2013",
+    "question": "Để thoát khỏi Excel ta chọn",
+    "options": [
+      "Nhấn tổ hợp phím Ctrl + F4.",
+      "Chọn Edit\\Close",
+      "Nhấn tổ hợp phím Alt + F4",
+      "Nhấn tổ hợp phím Alt + F5"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 165,
+    "original_num": 62,
+    "module": "MS Excel 2013",
+    "question": "Trong Excel muốn bật tắt thanh công cụ ta chọn",
+    "options": [
+      "Chọn Tool, Option, General",
+      "Chọn View, Formular Bar",
+      "Chọn View, Toolbars, đánh dấu chọn hoặc không chọn các thanh công cụ",
+      "Nhấn tổ hợp phím Ctrl + T."
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 166,
+    "original_num": 63,
+    "module": "MS Excel 2013",
+    "question": "Muốn xóa sheet, ta chọn sheet đó rồi",
+    "options": [
+      "Chọn Edit, Delete sheet",
+      "Nhấn tổ hợp phím Alt + E, L",
+      "Nhấp chuột phải trên tên sheet để mở menu tắt rồi chọn Delete",
+      "Nhấn tổ hợp phím Ctrl + D."
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 167,
+    "original_num": 64,
+    "module": "MS Excel 2013",
+    "question": "Trong Excel để mở tập tin có trong đĩa ta dùng",
+    "options": [
+      "Chọn File",
+      "Tổ hợp phím Ctrl + N",
+      "Tổ hợp phím Ctrl + O",
+      "Chọn Open"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 168,
+    "original_num": 65,
+    "module": "MS Excel 2013",
+    "question": "Trong Excel để lưu một tập tin vào đĩa ta dùng",
+    "options": [
+      "Tổ hợp phím Ctrl + S",
+      "Tổ hợp phím Alt + S",
+      "Tổ hợp phím Alt + Shift + S",
+      "Cả ba câu trên đều sai."
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 169,
+    "original_num": 66,
+    "module": "MS Excel 2013",
+    "question": "Nhấn phím F12 là để",
+    "options": [
+      "Thực hiện lệnh Open",
+      "Thực hiện lệnh Save As",
+      "Thực hiện lệnh Close",
+      "Thực hiện lệnh Print"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 170,
+    "original_num": 67,
+    "module": "MS Excel 2013",
+    "question": "Trong Excel để đóng một tập tin ta dùng",
+    "options": [
+      "Tổ hộp phím Alt + F",
+      "Chọn Tab Close",
+      "Tổ hợp phím Ctrl + W",
+      "Nhấn Alt + F7"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 171,
+    "original_num": 68,
+    "module": "MS Excel 2013",
+    "question": "Theo 7 định ký tự dạng chuỗi được",
+    "options": [
+      "Canh phải trong ô",
+      "Canh trái trong ô",
+      "Canh đều hai bên",
+      "Canh giữa trong ô"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 172,
+    "original_num": 69,
+    "module": "MS Excel 2013",
+    "question": "Theo mặt định ký tự dạng số được",
+    "options": [
+      "Canh phải trong ô",
+      "Canh trái trong ô",
+      "Canh đều hai bên",
+      "Canh giữa trong ô"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 173,
+    "original_num": 70,
+    "module": "MS Excel 2013",
+    "question": "Chèn dấu (‘) trước khi nhập liệu vàoô là để",
+    "options": [
+      "Canh chỉnh dữ liệu trong ô bên trái",
+      "Canh chỉnh dữ liệu trong ô bên phải",
+      "Canh giữa dữ liệu trong ô",
+      "Canh đều hai bên dữ liệu trong ô"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 174,
+    "original_num": 73,
+    "module": "MS Excel 2013",
+    "question": "Để chọn toàn bộ bảng tính ta",
+    "options": [
+      "Nhấn tổ hợp phím Ctrl + A",
+      "Nhấn tổ hợp phím Ctrl + Shift + A",
+      "Nhấn tổ hợp phím Shift + A",
+      "Nhấn tổ hợp phím Shift + F2"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 175,
+    "original_num": 74,
+    "module": "MS Excel 2013",
+    "question": "Trong Excel, để chèn hàng vào một bảng tính ta di chuy ển đếnô hiện hành đến vị trí hàng cần thêm rồi",
+    "options": [
+      "Chọn Format, Cells",
+      "Chọn Format, Column",
+      "Chọn Insert, Row",
+      "Chọn Insert, Columns"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 176,
+    "original_num": 75,
+    "module": "MS Excel 2013",
+    "question": "Để xóa dữ liệu trong mộtô hoặc khối ô trong bảng tính Excel ta chọn",
+    "options": [
+      "Chọn ô (hoặc khối ô) cần xóa, rồi nhấn phím Delete",
+      "Không cần chọn ô (hoặc khối ô), chỉ cần nhấn phím Delete",
+      "Chọn ô (hoặc khối ô) cần xóa, rồi nhấn phím Insert",
+      "Chọn ô (hoặc khối ô) cần xóa, rồi nhấn phím bất kỳ"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 177,
+    "original_num": 76,
+    "module": "MS Excel 2013",
+    "question": "Trong Excel để sắp xếp cơ sở dữ liệu ta chọn",
+    "options": [
+      "Tool, Sort.",
+      "Format, Sort",
+      "Table, Sort.",
+      "Data, Sort."
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 178,
+    "original_num": 77,
+    "module": "MS Excel 2013",
+    "question": "Các hàm sau đây hàm nào dùng để điếm giá trị",
+    "options": [
+      "Sum",
+      "Rank",
+      "Count",
+      "Int"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 179,
+    "original_num": 84,
+    "module": "MS Excel 2013",
+    "question": "Khi đang làm việc với Excel, tổ hợp phím nào cho phép ngay lập tức đưa con trỏ vềô đầu tiên (ô A1) của bảng tính ?",
+    "options": [
+      "Shift+Home",
+      "Alt+Home",
+      "Ctrl+Home",
+      "Ctrl + Shift + S."
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 180,
+    "original_num": 85,
+    "module": "MS Excel 2013",
+    "question": "Để sửa dữ liệu trong mộtô tính mà không cần nhập lại, ta thực hiện",
+    "options": [
+      "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F2",
+      "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F3",
+      "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F4",
+      "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F5"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 181,
+    "original_num": 105,
+    "module": "MS Excel 2013",
+    "question": "Để xuống dòng trên cùng một Ô trong Excel, ta nhấn tổ hợp phím nào?",
+    "options": [
+      "Alt + Enter",
+      "Shift + Enter",
+      "Ctrl + Enter",
+      "Alt + Shift"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 182,
+    "original_num": 144,
+    "module": "MS Excel 2013",
+    "question": "Nếu chưa định dạng, số 5 sẽ nằm bên nào củaô",
+    "options": [
+      "Phải",
+      "Trái",
+      "Giữa",
+      "Phụ thuộc vào định dạng"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 183,
+    "original_num": 145,
+    "module": "MS Excel 2013",
+    "question": "Nếu chưa định dạng, số 5.5 sẽ nằm bên nào củaô",
+    "options": [
+      "Phải",
+      "Trái",
+      "Giữa",
+      "Phụ thuộc vào định dạng"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 184,
+    "original_num": 146,
+    "module": "MS Excel 2013",
+    "question": "Nếu chưa định dạng chữ \"hello\" sẽ nằm bên nào củaô",
+    "options": [
+      "Trái",
+      "Phải",
+      "Giữa",
+      "Phụ thuộc vào định dạng"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 185,
+    "original_num": 147,
+    "module": "MS Excel 2013",
+    "question": "Nếu chưa định dạng, chữ \"2017 hello\" sẽ nằm bên nào củaô",
+    "options": [
+      "Trái",
+      "Phải",
+      "Giữa",
+      "Phụ thuộc vào định dạng"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 186,
+    "original_num": 1,
+    "module": "MS Excel 2013",
+    "question": "Tổ hợp phím nào cho phép ngay lập tức đưa con trỏ vềô đầu tiên (ô A1) của bảng tính",
+    "options": [
+      "Ctrl+Home",
+      "Shift+Ctrl+Home",
+      "Alt + Home",
+      "Shift + Alt + Home"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 187,
+    "original_num": 3,
+    "module": "MS Excel 2013",
+    "question": "Tạiô A2 có sẵn giá trị số không (0); Tạiô B2 gõ vào công thức =5/A2 thì nhận được kết quả",
+    "options": [
+      "#N/A",
+      "#NAME?",
+      "#V ALUE!",
+      "#DIV/0!"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 188,
+    "original_num": 4,
+    "module": "MS Excel 2013",
+    "question": "Điều kiện logic trong hàm IF được phát biểu dưới dạng một phép so sánh. Khi cần so sánh khác nhau thì sử dụng kí hiệu nào?",
+    "options": [
+      "#",
+      "><",
+      "<>",
+      "~"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 189,
+    "original_num": 6,
+    "module": "MS Excel 2013",
+    "question": "Khi viết sai tên hàm trong tính toán, chương trình thông báo lỗi?",
+    "options": [
+      "#N/A",
+      "#NAME?",
+      "#V ALUE!",
+      "#DIV/0!"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 190,
+    "original_num": 7,
+    "module": "MS Excel 2013",
+    "question": "Để tham chiếu dữ liệu từ bảng khác ta dùng hàm",
+    "options": [
+      "Vlookup",
+      "Hlookup",
+      "Index",
+      "Cả 3 đều đúng"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 191,
+    "original_num": 8,
+    "module": "MS Excel 2013",
+    "question": "Khi dữ liệu cần tham chiếu nằm trên 1 hàng ở bảng tham chiếu, ta dùng hàm",
+    "options": [
+      "Vlookup",
+      "Hlookup",
+      "Index",
+      "Cả 3 đều đúng"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 192,
+    "original_num": 9,
+    "module": "MS Excel 2013",
+    "question": "Khi dữ liệu cần tham chiếu nằm trên 1 cộtở bảng tham chiếu, ta dùng hàm",
+    "options": [
+      "Vlookup",
+      "Hlookup",
+      "Index",
+      "Cả 3 đều đúng"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 193,
+    "original_num": 11,
+    "module": "MS Excel 2013",
+    "question": "Khi đang làm việc với Excel, tổ hợp phím nào cho phép ngay lập tức đưa con trỏ vềô đầu tiên (ô A1) của bảng tính ?",
+    "options": [
+      "Shift+Home",
+      "Alt+Home",
+      "Ctrl+Home",
+      "Shift+Ctrl+Home"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 194,
+    "original_num": 12,
+    "module": "MS Excel 2013",
+    "question": "Trong khi làm việc với Excel, để nhập vào công thức tính toán cho mộtô, trước hết ta phải gõ:",
+    "options": [
+      "Dấu chấm hỏi (?)",
+      "Dấu bằng (= )",
+      "Dấu hai chấm (: )",
+      "Dấu đô la ($)"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 195,
+    "original_num": 13,
+    "module": "MS Excel 2013",
+    "question": "Trong bảng tính Exce, nếu trong mộtô tính có các kí hiệu #####, điều đó có nghĩa là gì?",
+    "options": [
+      "Chương trình bảng tính bị nhiễm virus",
+      "Công thức nhập sai và Excel thông báo lỗi",
+      "Hàng chứa ô đó có độ cao quá thấp nên không hiển thị hết chữ số",
+      "Cột chứa ô đó có độ rộng quá hẹp nên không hiển thị hết chữ số"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 196,
+    "original_num": 15,
+    "module": "MS Excel 2013",
+    "question": "Câu nào sau đây sai? Khi nhập dữ liệu vào bảng tính Excel thì:",
+    "options": [
+      "Dữ liệu kiểu số sẽ mặc nhiên căn thẳng lề trái",
+      "Dữ liệu kiểu kí tự sẽ mặc nhiên căn thẳng lề trái",
+      "Dữ liệu kiểu thời gian sẽ mặc nhiên căn thẳng lề phải",
+      "Dữ liệu kiểu ngày tháng sẽ mặc nhiên căn thẳng lề phải"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 197,
+    "original_num": 23,
+    "module": "MS Excel 2013",
+    "question": "Trong bảng tính Excel, để sửa dữ liệu trong mộtô tính mà không cần nhập lại, ta thực hiện:",
+    "options": [
+      "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F2",
+      "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F4",
+      "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F10",
+      "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F12"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 198,
+    "original_num": 27,
+    "module": "MS Excel 2013",
+    "question": "Trong bảng tính Excel, để lọc dữ liệu tự động, sau khi chọn khối cần lọc, ta thực hiện:",
+    "options": [
+      "Format - Filter - AutoFilter",
+      "Insert - Filter - AutoFilter",
+      "Data - Filter - AutoFilter",
+      "View - Filter - AutoFilter"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 199,
+    "original_num": 28,
+    "module": "MS Excel 2013",
+    "question": "Khi đang làm việc với Excel, có thể di chuy ển từ sheet này sang sheet khác bằng cách sử dụng các phím hoặc các tổ hợp phím:",
+    "options": [
+      "Page Up ; Page Down",
+      "Ctrl - Page Up ; Ctrl - Page Down",
+      "Ctrl - Page - A",
+      "Shift - Page - F"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 200,
+    "original_num": 29,
+    "module": "MS Excel 2013",
+    "question": "Trong Excel, để xuống dòng trong mộtô, ta sử dụng tổ hợp phím:",
+    "options": [
+      "Alt + Enter",
+      "Spacebar + Enter",
+      "Shift + Enter",
+      "Ctrl + Enter"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 201,
+    "original_num": 30,
+    "module": "MS Excel 2013",
+    "question": "Các địa chỉ sau đây là địa chỉ gì: $A1, B$5, C6, $L9, $DS7",
+    "options": [
+      "Địa chỉ tương đối",
+      "Địa chỉ tuyệt đối",
+      "Địa chỉ hỗn hợp",
+      "Địa chỉ mặt định"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 202,
+    "original_num": 31,
+    "module": "MS Excel 2013",
+    "question": "Khi gõ công thức xong, rồi Enter, máy hiện ra #N/A có nghĩa là :",
+    "options": [
+      "Không tìm thấy tên hàm",
+      "Giá trị tham chiếu không tồn tại",
+      "Không tham chiếu đến được",
+      "Tập hợp rỗng"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 203,
+    "original_num": 32,
+    "module": "MS Excel 2013",
+    "question": "Khi gõ công thức xong, rồi Enter, máy hiện ra #REF! có nghĩa là :",
+    "options": [
+      "Không tìm thấy tên hàm",
+      "Giá trị tham chiếu không tồn tại",
+      "Không tham chiếu đến được",
+      "Tập hợp rỗng."
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 204,
+    "original_num": 36,
+    "module": "MS Excel 2013",
+    "question": "Trong MS Excel, hàm nào dùng để đếm cácô rỗng trong 1 danh sách:",
+    "options": [
+      "COUNTIF",
+      "COUNT",
+      "COUNTBLANK",
+      "COUNTA"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 205,
+    "original_num": 38,
+    "module": "MS Excel 2013",
+    "question": "Trong MS Excel, hàm tính tổng có nhiều điều kiện là hàm:",
+    "options": [
+      "SUMIFS",
+      "SUMIF",
+      "DSUM",
+      "SUM"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 206,
+    "original_num": 39,
+    "module": "MS Excel 2013",
+    "question": "Trong MS Excel, hàm đếm có nhiều điều kiện là hàm:",
+    "options": [
+      "COUNTIF",
+      "COUNTIFS",
+      "DCOUNT",
+      "COUNTA"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 207,
+    "original_num": 56,
+    "module": "MS Excel 2013",
+    "question": "Trong bảng tính Excel, hàm nào sau đây cho phép tính tổng các giá trị kiểu số thỏa mãn một điều kiện cho trước?",
+    "options": [
+      "SUM",
+      "COUNTIF",
+      "COUNT",
+      "SUMIF"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 208,
+    "original_num": 57,
+    "module": "MS Excel 2013",
+    "question": "Trong bảng tính Excel, để chèn thêm một cột vào trang tính, ta thực hiện:",
+    "options": [
+      "Table - Insert Columns.",
+      "Format - Cells - Insert Columns.",
+      "Table - Insert Cells.",
+      "Insert - Columns."
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 209,
+    "original_num": 58,
+    "module": "MS Excel 2013",
+    "question": "Khi đang làm việc với Excel, có thể di chuy ển từ sheet này sang sheet khác bằng cách sử dụng các phím hoặc các tổ hợp phím:",
+    "options": [
+      "Page Up;",
+      "Ctrl-Page Up ; Ctrl- Page Down.",
+      "Page Down.",
+      "Print Page Down."
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 210,
+    "original_num": 59,
+    "module": "MS Excel 2013",
+    "question": "Để thiết lập chế độ lưu tự động trên Excel dự phòng khi có sự cố xảy ra, ta cần?",
+    "options": [
+      "Vào Tool/Options, chọn thẻ Save, tích vàoô Save AutoRecover info every, sau đó điền số phút tự động lưu.",
+      "Vào File/Save để lưu.",
+      "Vào File/Save để lưu.",
+      "Nhấn tổ hợp phím Ctrl + S."
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 211,
+    "original_num": 60,
+    "module": "MS Excel 2013",
+    "question": "Để khởi động Excel ta chọn",
+    "options": [
+      "Nhấp đúp trỏ chuột lên biểu tượng lối tắt của Excel",
+      "Nhấp chọn Program",
+      "Từ màn hình Dos, gõ Excel",
+      "Nhấn chọn Start"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 212,
+    "original_num": 61,
+    "module": "MS Excel 2013",
+    "question": "Để thoát khỏi Excel ta chọn",
+    "options": [
+      "Nhấn tổ hợp phím Ctrl + F4.",
+      "Chọn Edit\\Close",
+      "Nhấn tổ hợp phím Alt + F4",
+      "Nhấn tổ hợp phím Alt + F5"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 213,
+    "original_num": 62,
+    "module": "MS Excel 2013",
+    "question": "Trong Excel muốn bật tắt thanh công cụ ta chọn",
+    "options": [
+      "Chọn Tool, Option, General",
+      "Chọn View, Formular Bar",
+      "Chọn View, Toolbars, đánh dấu chọn hoặc không chọn các thanh công cụ",
+      "Nhấn tổ hợp phím Ctrl + T."
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 214,
+    "original_num": 63,
+    "module": "MS Excel 2013",
+    "question": "Muốn xóa sheet, ta chọn sheet đó rồi",
+    "options": [
+      "Chọn Edit, Delete sheet",
+      "Nhấn tổ hợp phím Alt + E, L",
+      "Nhấp chuột phải trên tên sheet để mở menu tắt rồi chọn Delete",
+      "Nhấn tổ hợp phím Ctrl + D."
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 215,
+    "original_num": 64,
+    "module": "MS Excel 2013",
+    "question": "Trong Excel để mở tập tin có trong đĩa ta dùng",
+    "options": [
+      "Chọn File",
+      "Tổ hợp phím Ctrl + N",
+      "Tổ hợp phím Ctrl + O",
+      "Chọn Open"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 216,
+    "original_num": 65,
+    "module": "MS Excel 2013",
+    "question": "Trong Excel để lưu một tập tin vào đĩa ta dùng",
+    "options": [
+      "Tổ hợp phím Ctrl + S",
+      "Tổ hợp phím Alt + S",
+      "Tổ hợp phím Alt + Shift + S",
+      "Cả ba câu trên đều sai."
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 217,
+    "original_num": 66,
+    "module": "MS Excel 2013",
+    "question": "Nhấn phím F12 là để",
+    "options": [
+      "Thực hiện lệnh Open",
+      "Thực hiện lệnh Save As",
+      "Thực hiện lệnh Close",
+      "Thực hiện lệnh Print"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 218,
+    "original_num": 67,
+    "module": "MS Excel 2013",
+    "question": "Trong Excel để đóng một tập tin ta dùng",
+    "options": [
+      "Tổ hộp phím Alt + F",
+      "Chọn Tab Close",
+      "Tổ hợp phím Ctrl + W",
+      "Nhấn Alt + F7"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 219,
+    "original_num": 68,
+    "module": "MS Excel 2013",
+    "question": "Theo 7 định ký tự dạng chuỗi được",
+    "options": [
+      "Canh phải trong ô",
+      "Canh trái trong ô",
+      "Canh đều hai bên",
+      "Canh giữa trong ô"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 220,
+    "original_num": 69,
+    "module": "MS Excel 2013",
+    "question": "Theo mặt định ký tự dạng số được",
+    "options": [
+      "Canh phải trong ô",
+      "Canh trái trong ô",
+      "Canh đều hai bên",
+      "Canh giữa trong ô"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 221,
+    "original_num": 70,
+    "module": "MS Excel 2013",
+    "question": "Chèn dấu (‘) trước khi nhập liệu vàoô là để",
+    "options": [
+      "Canh chỉnh dữ liệu trong ô bên trái",
+      "Canh chỉnh dữ liệu trong ô bên phải",
+      "Canh giữa dữ liệu trong ô",
+      "Canh đều hai bên dữ liệu trong ô"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 222,
+    "original_num": 73,
+    "module": "MS Excel 2013",
+    "question": "Để chọn toàn bộ bảng tính ta",
+    "options": [
+      "Nhấn tổ hợp phím Ctrl + A",
+      "Nhấn tổ hợp phím Ctrl + Shift + A",
+      "Nhấn tổ hợp phím Shift + A",
+      "Nhấn tổ hợp phím Shift + F2"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 223,
+    "original_num": 74,
+    "module": "MS Excel 2013",
+    "question": "Trong Excel, để chèn hàng vào một bảng tính ta di chuy ển đếnô hiện hành đến vị trí hàng cần thêm rồi",
+    "options": [
+      "Chọn Format, Cells",
+      "Chọn Format, Column",
+      "Chọn Insert, Row",
+      "Chọn Insert, Columns"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 224,
+    "original_num": 75,
+    "module": "MS Excel 2013",
+    "question": "Để xóa dữ liệu trong mộtô hoặc khối ô trong bảng tính Excel ta chọn",
+    "options": [
+      "Chọn ô (hoặc khối ô) cần xóa, rồi nhấn phím Delete",
+      "Không cần chọn ô (hoặc khối ô), chỉ cần nhấn phím Delete",
+      "Chọn ô (hoặc khối ô) cần xóa, rồi nhấn phím Insert",
+      "Chọn ô (hoặc khối ô) cần xóa, rồi nhấn phím bất kỳ"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 225,
+    "original_num": 76,
+    "module": "MS Excel 2013",
+    "question": "Trong Excel để sắp xếp cơ sở dữ liệu ta chọn",
+    "options": [
+      "Tool, Sort.",
+      "Format, Sort",
+      "Table, Sort.",
+      "Data, Sort."
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 226,
+    "original_num": 77,
+    "module": "MS Excel 2013",
+    "question": "Các hàm sau đây hàm nào dùng để điếm giá trị",
+    "options": [
+      "Sum",
+      "Rank",
+      "Count",
+      "Int"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 227,
+    "original_num": 84,
+    "module": "MS Excel 2013",
+    "question": "Khi đang làm việc với Excel, tổ hợp phím nào cho phép ngay lập tức đưa con trỏ vềô đầu tiên (ô A1) của bảng tính ?",
+    "options": [
+      "Shift+Home",
+      "Alt+Home",
+      "Ctrl+Home",
+      "Ctrl + Shift + S."
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 228,
+    "original_num": 85,
+    "module": "MS Excel 2013",
+    "question": "Để sửa dữ liệu trong mộtô tính mà không cần nhập lại, ta thực hiện",
+    "options": [
+      "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F2",
+      "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F3",
+      "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F4",
+      "Nháy chuột chọn ô tính cần sửa, rồi bấm phím F5"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 229,
+    "original_num": 105,
+    "module": "MS Excel 2013",
+    "question": "Để xuống dòng trên cùng một Ô trong Excel, ta nhấn tổ hợp phím nào?",
+    "options": [
+      "Alt + Enter",
+      "Shift + Enter",
+      "Ctrl + Enter",
+      "Alt + Shift"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 230,
+    "original_num": 144,
+    "module": "MS Excel 2013",
+    "question": "Nếu chưa định dạng, số 5 sẽ nằm bên nào củaô",
+    "options": [
+      "Phải",
+      "Trái",
+      "Giữa",
+      "Phụ thuộc vào định dạng"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 231,
+    "original_num": 145,
+    "module": "MS Excel 2013",
+    "question": "Nếu chưa định dạng, số 5.5 sẽ nằm bên nào củaô",
+    "options": [
+      "Phải",
+      "Trái",
+      "Giữa",
+      "Phụ thuộc vào định dạng"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 232,
+    "original_num": 146,
+    "module": "MS Excel 2013",
+    "question": "Nếu chưa định dạng chữ \"hello\" sẽ nằm bên nào củaô",
+    "options": [
+      "Trái",
+      "Phải",
+      "Giữa",
+      "Phụ thuộc vào định dạng"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 233,
+    "original_num": 147,
+    "module": "MS Excel 2013",
+    "question": "Nếu chưa định dạng, chữ \"2017 hello\" sẽ nằm bên nào củaô",
+    "options": [
+      "Trái",
+      "Phải",
+      "Giữa",
+      "Phụ thuộc vào định dạng"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 234,
+    "original_num": 1,
+    "module": "MS PowerPoint 2013",
+    "question": "Muốn trình diễn tài liệu được soạn thảo, ta thực hiện",
+    "options": [
+      "File - View Show",
+      "Window - View Show",
+      "Slide Show - View Show",
+      "Tools - View Show"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 235,
+    "original_num": 2,
+    "module": "MS PowerPoint 2013",
+    "question": "Để thêm một Slide mới vào, ta thực hiện:",
+    "options": [
+      "Home - New Slide",
+      "Design - New Slide",
+      "Slide Show - New Slide",
+      "Insert - New Slide"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 236,
+    "original_num": 3,
+    "module": "MS PowerPoint 2013",
+    "question": "Để thay đổi thiết kế của Slide, ta thực hiện",
+    "options": [
+      "Home - Themes",
+      "Design - Themes",
+      "Slide Show - Themes",
+      "Insert - Themes"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 237,
+    "original_num": 4,
+    "module": "MS PowerPoint 2013",
+    "question": "Để thiết lập hiệu ứng cho đối tượng trong 1 slide, ta thực hiện:",
+    "options": [
+      "Transition - chọn hiệu ứng",
+      "Design - chọn hiệu ứng",
+      "Slide Show - chọn hiệu ứng",
+      "Animations - chọn hiệu ứng"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 238,
+    "original_num": 5,
+    "module": "MS PowerPoint 2013",
+    "question": "Một đối tượng trong 1 slide có thể thiết lập bao nhiêu hiệu ứng",
+    "options": [
+      "1",
+      "Nhiều",
+      "3",
+      "2"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 239,
+    "original_num": 6,
+    "module": "MS PowerPoint 2013",
+    "question": "Muốn xóa bỏ hiệu ứng trình diễn, ta chọn đối tượng cần xóa bỏ hiệu ứng và thực hiện",
+    "options": [
+      "Animations, rồi chọn delete",
+      "Animations - Animation Pane, rồi chọn Remove",
+      "Animation Pane, rồi chọn delete",
+      "Animation Pane, rồi chọn Remove"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 240,
+    "original_num": 7,
+    "module": "MS PowerPoint 2013",
+    "question": "Để chạy Slide ta cần chọn",
+    "options": [
+      "Bấm F5",
+      "view/ slide show",
+      "cả hai đều đúng",
+      "Cả hai đều sai"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 241,
+    "original_num": 8,
+    "module": "MS PowerPoint 2013",
+    "question": "Để tạo hiệu ứng chuyển tiếp giữa các slide ta vào slide show chọn",
+    "options": [
+      "Slide transition",
+      "View show",
+      "Custom animation",
+      "Slide Master"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 242,
+    "original_num": 9,
+    "module": "MS PowerPoint 2013",
+    "question": "Để tạo slide mới",
+    "options": [
+      "Nhấn Ctrl + N",
+      "Nhấn F5",
+      "Slide Master",
+      "Nhấn Ctrl + S"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 243,
+    "original_num": 10,
+    "module": "MS PowerPoint 2013",
+    "question": "Để lưu các slide ta phải",
+    "options": [
+      "Nhấn Ctrl + S",
+      "file / save",
+      "cả hai đúng",
+      "cả hai sai"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 244,
+    "original_num": 11,
+    "module": "MS PowerPoint 2013",
+    "question": "Số lượng các slide của 1 bài",
+    "options": [
+      "Tùyý",
+      "Từ 1 đến 3 Slide",
+      "Từ 3 Slide trở lên",
+      "Số Slide không được vượt quá 100"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 245,
+    "original_num": 12,
+    "module": "MS PowerPoint 2013",
+    "question": "Tạo hiệu ứng hoạt hình cho slide ta vào slide show chọn",
+    "options": [
+      "custom animation",
+      "preset animation",
+      "custom show",
+      "cả 3 đều sai"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 246,
+    "original_num": 13,
+    "module": "MS PowerPoint 2013",
+    "question": "chọn kiểu slide",
+    "options": [
+      "format / slide layout",
+      "common tasks/ slide layout",
+      "cả hai đúng",
+      "cả hai sai"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 247,
+    "original_num": 14,
+    "module": "MS PowerPoint 2013",
+    "question": "Để sử dụng màu nền có sẵn từ các mẫu cho các slide ta vào format chọn",
+    "options": [
+      "apply design template",
+      "background",
+      "cả hai đúng",
+      "cả hai sai"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 248,
+    "original_num": 15,
+    "module": "MS PowerPoint 2013",
+    "question": "Để thực thi các slide :",
+    "options": [
+      "F5",
+      "Slide show",
+      "Ctrl + F5",
+      "Alt + F5"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 249,
+    "original_num": 16,
+    "module": "MS PowerPoint 2013",
+    "question": "Để tạo màu nền cho slide",
+    "options": [
+      "Format / background",
+      "Format / font",
+      "Font/Colors",
+      "Edit/Colors"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 250,
+    "original_num": 17,
+    "module": "MS PowerPoint 2013",
+    "question": "Trong trình soạn thảo trình chiếu MS Powerpoint, mục Design cho phép bạn:",
+    "options": [
+      "Chèn và định dạng Picture cho trang trình chiếu.",
+      "Chèn và định dạng Shape cho trang trình chiếu.",
+      "Thiết kế và định dạng Theme, Background, Style cho trang trình chiếu.",
+      "Thêm và định dạng Hiệu ứng của đối tượng trang trình chiếu."
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 251,
+    "original_num": 18,
+    "module": "MS PowerPoint 2013",
+    "question": "Trong trình soạn thảo trình chiếu MS Powerpoint, mục Transitions cho phép bạn:",
+    "options": [
+      "Thêm và định dạng Hiệu ứng lật trang cho trang trình chiếu.",
+      "Chèn và định dạng Shape cho trang trình chiếu.",
+      "Thiết kế và định dạng Theme, Background, Style cho trang trình chiếu",
+      "Thêm và định dạng Hiệu ứng các đối tượng trang trình chiếu"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 252,
+    "original_num": 19,
+    "module": "MS PowerPoint 2013",
+    "question": "Thêm và định dạng Hiệu ứng các đối tượng trang trình chiếu",
+    "options": [
+      "Chèn và định dạng Picture cho trang trình chiếu.",
+      "Thiết kế và định dạng Theme, Background, Style cho trang trình chiếu.",
+      "Thêm và định dạng Hiệu ứng lật trang cho trang trình chiếu.",
+      "Thêm và định dạng Hiệu ứng các đối tượng trang trình chiếu."
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 253,
+    "original_num": 20,
+    "module": "MS PowerPoint 2013",
+    "question": "Trong trình soạn thảo trình chiếu MS Powerpoint, với mỗi đối tượng bạn có thể thêm bao nhiêu Hiệu ứng cho đối tượng đó ?",
+    "options": [
+      "Một",
+      "Hai",
+      "Ba",
+      "Rất nhiều."
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 254,
+    "original_num": 21,
+    "module": "MS PowerPoint 2013",
+    "question": "Trong bảng quản lý các Hiệu ứng (Animation Pane), bạn có thể:",
+    "options": [
+      "Thay đổi thứ tự xuất hiện cho các hiệu ứng.",
+      "Thiết lập hiệu ứng.",
+      "Copy hiệu ứng.",
+      "Copy hiệu ứng cho Slide."
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 255,
+    "original_num": 22,
+    "module": "MS PowerPoint 2013",
+    "question": "Chuyên mục nào sau đây không nằm trong phần hiệu ứng Animations của soạn thảo trình chiếu MS Powerpoint ?",
+    "options": [
+      "Xuất hiện (Entrance)",
+      "Nội dung động (Dynamic Content)",
+      "Làm nổi bật (Emphasis)",
+      "Biến mất (Exit)"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 256,
+    "original_num": 23,
+    "module": "MS PowerPoint 2013",
+    "question": "Trong trình soạn thảo trình chiếu MS Powerpoint, để bắt đầu chạy trình chiếu thì bạn bấm:",
+    "options": [
+      "F5",
+      "Shift + F5",
+      "F12",
+      "F7"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 257,
+    "original_num": 24,
+    "module": "MS PowerPoint 2013",
+    "question": "Trong trình soạn thảo trình chiếu MS Powerpoint, để bắt đầu chạy trình chiếu từ Slide đang chọn thì bạn bấm:",
+    "options": [
+      "F5",
+      "Shift + F5",
+      "Ctrl + N",
+      "Ctrl + M"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 258,
+    "original_num": 25,
+    "module": "MS PowerPoint 2013",
+    "question": "Trong trình soạn thảo trình chiếu MS Powerpoint, để Copy Slide đang chọn xuống ngay phía dưới slide đó thì bạn bấm:",
+    "options": [
+      "Ctrl + W",
+      "Ctrl + M",
+      "Ctrl + D",
+      "Ctrl + S"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 259,
+    "original_num": 26,
+    "module": "MS PowerPoint 2013",
+    "question": "Trong trình soạn thảo trình chiếu MS Powerpoint, để thoát khỏi chế độ trình chiếu slide thì bạn bấm:",
+    "options": [
+      "F5",
+      "Shift + F5",
+      "Esc",
+      "F12"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 260,
+    "original_num": 27,
+    "module": "MS PowerPoint 2013",
+    "question": "Sau khi đã thiết kế xong bài trình diễn, cách làm nào sau đây không phải để trình chiếu ngay bài trình diễn đó?",
+    "options": [
+      "Chọn Slide Show -> Custom Show",
+      "Chọn Slide Show -> View Show",
+      "Chọn View -> Slide Show",
+      "Nhấn phím F5"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 261,
+    "original_num": 28,
+    "module": "MS PowerPoint 2013",
+    "question": "Thao tác chọn File -> Close dùng để",
+    "options": [
+      "lưu tập tin hiện tại",
+      "mở một tập tin nào đó",
+      "đóng tập tin hiện tại",
+      "Thoát khỏi Powerpoint"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 262,
+    "original_num": 29,
+    "module": "MS PowerPoint 2013",
+    "question": "Sau khi đã chọn một đoạn văn bản, cách nào sau đây không phải để làm mất đi đoạn văn bản đó?",
+    "options": [
+      "Chọn Edit -> Cut.",
+      "Nhấn tổ hợp phím Alt + X",
+      "Nhắp chuột trái vào nút lệnh Cut (biểu tượng là cái kéo) trên thanh công cụ.",
+      "Nhấn phím Delete."
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 263,
+    "original_num": 30,
+    "module": "MS PowerPoint 2013",
+    "question": "Đang trình chiếu một bài trình diễn, muốn dừng trình diễn ta nhấn phím",
+    "options": [
+      "Tab",
+      "Esc",
+      "Home",
+      "End"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 264,
+    "original_num": 1,
+    "module": "LAN & Internet",
+    "question": "Dạng mạng nào dưới đây là kết nối point to point?",
+    "options": [
+      "Star",
+      "Ring",
+      "Bus",
+      "Router"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 265,
+    "original_num": 3,
+    "module": "LAN & Internet",
+    "question": "Dạng mạng nào dưới đây các trạm phân chia chung một đường truyền chung?",
+    "options": [
+      "Star",
+      "Ring",
+      "Bus",
+      "Router"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 266,
+    "original_num": 4,
+    "module": "LAN & Internet",
+    "question": "Dạng mạng nào dưới đây tín hiệu được truy ền đi trên vòng theo một chiều duy nhất?",
+    "options": [
+      "Star",
+      "Ring",
+      "Bus",
+      "Router"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 267,
+    "original_num": 5,
+    "module": "LAN & Internet",
+    "question": "Dạng cáp nào dưới đây có tốc độ truyền tín hiệu cao nhất?",
+    "options": [
+      "Cáp đồng trục",
+      "Cáp xoắn đôi",
+      "Cáp quang",
+      "Cáp Router"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 268,
+    "original_num": 8,
+    "module": "LAN & Internet",
+    "question": "Khi sử dụng mạng máy tính ta sẽ được các lợiích gì?",
+    "options": [
+      "Chia sẻ tài nguyên ( ổ cứng, cơ sở dữ liệu, máy in… )",
+      "Quản lý không tập trung",
+      "Xử lý thông tin không chính xác",
+      "Quản lý hóa dữ liệu"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 269,
+    "original_num": 9,
+    "module": "LAN & Internet",
+    "question": "Mạng nối nhiều máy tính với nhau trong phạm vi một tòa nhà gọi là?",
+    "options": [
+      "LAN",
+      "WAN",
+      "MAN",
+      "INTERNET"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 270,
+    "original_num": 10,
+    "module": "LAN & Internet",
+    "question": "Mạng diện rộng, dùng để kết nối máy tính trong nội bộ các quốc gia hay giữa các quốc gia trong cùng một châu lục gọi là?",
+    "options": [
+      "LAN",
+      "WAN",
+      "MAN",
+      "INTERNET"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 271,
+    "original_num": 11,
+    "module": "LAN & Internet",
+    "question": "Đặc điểm mạng LAN?",
+    "options": [
+      "Mạng nối các máy tính trong phạm vi 1 tòa nhà",
+      "Tốc độ liệu cao",
+      "Tỷ lệ dữ liệu",
+      "Máy tính trong phạm vi cho phép"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 272,
+    "original_num": 12,
+    "module": "LAN & Internet",
+    "question": "Hệ điều hành nào dưới đây dành cho máy chủ?",
+    "options": [
+      "Windows XP",
+      "Windows 7",
+      "Windows Server 2008",
+      "Windows 8"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 273,
+    "original_num": 16,
+    "module": "LAN & Internet",
+    "question": "Đặc điểm của mạng hình sao?",
+    "options": [
+      "Tất cả các trạm chưa được kết nối thiết bị trung tâm",
+      "Dễ dàng bổ sung hay loại bỏ bớt máy tính",
+      "Dễ dàng giải quyết đường truyền",
+      "Tất cả các trạm chưa được kết"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 274,
+    "original_num": 25,
+    "module": "LAN & Internet",
+    "question": "Đặc điểm của mạng dạng đường thẳng",
+    "options": [
+      "Tất cả các nút mạng kết nối vào nút mạng trung tâm",
+      "Tất cả kết nối trên cùng một đường truyền vật lý",
+      "Tất cả các nút mạng đều kết nối trực tiếp với nhau",
+      "Mỗi nút mạng kết nối với 2 nút mạng còn lại"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 275,
+    "original_num": 28,
+    "module": "LAN & Internet",
+    "question": "Dịch vụ DHCP dùng để?",
+    "options": [
+      "Cấp địa chỉ IP cho máy trạm",
+      "Phân giải tên miền và địa chỉ IP",
+      "Truyền file qua mạng",
+      "Gửi thư điện tử"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 276,
+    "original_num": 29,
+    "module": "LAN & Internet",
+    "question": "Dịch vụ DNS dùng để?",
+    "options": [
+      "Cấp địa chỉ IP cho máy trạm",
+      "Phân giải tên miền và địa chỉ IP",
+      "Truyền file qua mạng",
+      "Gửi thư điện tử"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 277,
+    "original_num": 30,
+    "module": "LAN & Internet",
+    "question": "Khi soạn thảo Email muốn đính kèm tập tin chúng ta chọn?",
+    "options": [
+      "Send",
+      "Copy",
+      "Attachment",
+      "File/save"
+    ],
+    "answer": "C",
+    "ans_idx": 2
+  },
+  {
+    "id": 278,
+    "original_num": 37,
+    "module": "LAN & Internet",
+    "question": "Phần mềm nào dưới đây không phải là trình duyệt?",
+    "options": [
+      "Cốc Cốc",
+      "Firefox",
+      "Safari",
+      "VLC Player"
+    ],
+    "answer": "D",
+    "ans_idx": 3
+  },
+  {
+    "id": 279,
+    "original_num": 38,
+    "module": "LAN & Internet",
+    "question": "Nút BACK trên trình duyệt dùng để?",
+    "options": [
+      "Trở lại trang trước",
+      "Đi đến trang kế tiếp",
+      "Truy cập lịch sử duyệt web",
+      "Về trang chủ"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 280,
+    "original_num": 46,
+    "module": "LAN & Internet",
+    "question": "Để điều khiển máy tính từ xa trong mạng LAN, ta thường sử dụng phần mềm nào?",
+    "options": [
+      "Remote Desktop Connection",
+      "Team Viewer",
+      "Chrome",
+      "VLC Player"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 281,
+    "original_num": 60,
+    "module": "LAN & Internet",
+    "question": "WWW viết tắt của?",
+    "options": [
+      "Word Wide Web",
+      "World Wide Wed",
+      "Wed wide world",
+      "Win Word Wed"
+    ],
+    "answer": "B",
+    "ans_idx": 1
+  },
+  {
+    "id": 282,
+    "original_num": 61,
+    "module": "LAN & Internet",
+    "question": "Những phần mềm nào dùng để duyệt web?",
+    "options": [
+      "Chrome",
+      "Hệ điều hành",
+      "Ứng dụng văn phòng",
+      "Hệ thống mạng"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 283,
+    "original_num": 62,
+    "module": "LAN & Internet",
+    "question": "HTTP là gì?",
+    "options": [
+      "Giao thức truyền siêu văn bản",
+      "Ngôn ngữ soạn thảo web",
+      "Tên của trang web",
+      "Địa chỉ của trang web"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 284,
+    "original_num": 68,
+    "module": "LAN & Internet",
+    "question": "Đèn Link của Router ADSL không sáng. Lỗi này có thể là lỗi nào sau đây",
+    "options": [
+      "Hỏng dây điện thoại",
+      "Hỏng dây Cable",
+      "Hỏng đầu RJ45",
+      "Hỏng Switch"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 285,
+    "original_num": 69,
+    "module": "LAN & Internet",
+    "question": "Đèn Data của Router ADSL không sáng. Lỗi này có thể là lỗi nào sau đây",
+    "options": [
+      "Kết nối về ISP bị lỗi",
+      "Hỏng dây điện thoại",
+      "Hỏng đầu RJ45",
+      "Hỏng dây Cable"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 286,
+    "original_num": 70,
+    "module": "LAN & Internet",
+    "question": "Icon Lan (nằm dưới system bar) bị dấu chéo đỏ. Lỗi này có thể là lỗi nào sau đây",
+    "options": [
+      "Hỏng cable",
+      "Hỏng dây điện thoại",
+      "Kết nối về ISP bị lỗi",
+      "Hỏng Switch"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 287,
+    "original_num": 71,
+    "module": "LAN & Internet",
+    "question": "Icon Lan (nằm dưới system bar) bị dấu chấm thang vàng. Lỗi này có thể là lỗi nào sau đây",
+    "options": [
+      "Lỗi thiết lập địa chỉ IP",
+      "Hỏng cable",
+      "Hỏng dây điện thoại",
+      "Kết nối về ISP bị lỗi"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  },
+  {
+    "id": 288,
+    "original_num": 98,
+    "module": "LAN & Internet",
+    "question": "Laptop có thể vừa sử dụng card mạng có dây và không dây được hay không",
+    "options": [
+      "Được",
+      "Không",
+      "Được, nhưng phải của hãng LinkSys",
+      "Được, nhưng thiết bị phải do ISP cấp"
+    ],
+    "answer": "A",
+    "ans_idx": 0
+  }
+]
