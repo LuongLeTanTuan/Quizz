@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Khởi Sự Doanh Nghiệp (MGT 406) – Quizizz Ôn Tập Thi Giữa Kỳ & Cuối Kỳ</title>
+  <meta name="description" content="Hệ thống ôn tập trắc nghiệm, đúng/sai, tự luận ngắn và cẩm nang xử lý tình huống môn Khởi Sự Doanh Nghiệp (MGT 406 - Đại học Duy Tân). 124+ câu hỏi chuẩn đáp án, giải thích chi tiết và giao diện Quizizz đỉnh cao.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0a0a1a;
+      --bg-secondary: #12122a;
+      --bg-card: rgba(25, 25, 60, 0.65);
+      --bg-card-hover: rgba(35, 35, 80, 0.85);
+      --bg-glass: rgba(255, 255, 255, 0.04);
+      --accent-purple: #8b5cf6;
+      --accent-pink: #ec4899;
+      --accent-cyan: #06b6d4;
+      --accent-green: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-red: #ef4444;
+      --accent-blue: #3b82f6;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --border-subtle: rgba(139, 92, 246, 0.2);
+      --border-focus: rgba(6, 182, 212, 0.5);
+      --gradient-main: linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #06b6d4 100%);
+      --gradient-card: linear-gradient(135deg, rgba(139,92,246,0.12) 0%, rgba(236,72,153,0.06) 100%);
+      --gradient-gold: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      --shadow-glow: 0 0 35px rgba(139, 92, 246, 0.2);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    /* Ambient background */
+    .ambient-bg {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+    }
+    .ambient-bg .orb {
+      position: absolute; border-radius: 50%; filter: blur(130px); opacity: 0.28;
+      animation: orbFloat 22s ease-in-out infinite;
+    }
+    .ambient-bg .orb:nth-child(1) {
+      width: 520px; height: 520px; top: -12%; left: -6%;
+      background: var(--accent-purple);
+    }
+    .ambient-bg .orb:nth-child(2) {
+      width: 440px; height: 440px; bottom: -12%; right: -6%;
+      background: var(--accent-pink);
+      animation-delay: -8s; animation-duration: 26s;
+    }
+    .ambient-bg .orb:nth-child(3) {
+      width: 360px; height: 360px; top: 40%; left: 45%;
+      background: var(--accent-cyan); opacity: 0.16;
+      animation-delay: -14s; animation-duration: 30s;
+    }
+    @keyframes orbFloat {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(35px, -45px) scale(1.08); }
+      66% { transform: translate(-25px, 35px) scale(0.94); }
+    }
+
+    .app-container {
+      position: relative; z-index: 1;
+      max-width: 900px; margin: 0 auto;
+      padding: 16px 20px 60px;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .app-header {
+      text-align: center; padding: 30px 0 20px;
+    }
+    .app-header .header-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 16px; border-radius: 999px;
+      background: rgba(139, 92, 246, 0.15); border: 1px solid rgba(139, 92, 246, 0.35);
+      color: #c4b5fd; font-size: 13px; font-weight: 700; margin-bottom: 14px;
+      letter-spacing: 0.5px; text-transform: uppercase;
+    }
+    .app-header .logo-icon {
+      width: 64px; height: 64px; margin: 0 auto 14px;
+      background: var(--gradient-main);
+      border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 32px; box-shadow: var(--shadow-glow);
+      animation: logoPulse 3s ease-in-out infinite;
+    }
+    @keyframes logoPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+    }
+    .app-header h1 {
+      font-size: 28px; font-weight: 900;
+      background: var(--gradient-main);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin-bottom: 8px; line-height: 1.3;
+    }
+    .app-header .subtitle {
+      color: var(--text-secondary); font-size: 14px; max-width: 620px; margin: 0 auto 16px;
+    }
+    .app-nav-bar {
+      display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px;
+    }
+    .nav-link-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 14px; border-radius: 10px;
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-secondary); font-size: 13px; font-weight: 600; text-decoration: none;
+      transition: all 0.2s; cursor: pointer;
+    }
+    .nav-link-btn:hover {
+      background: rgba(139, 92, 246, 0.2); border-color: var(--accent-purple); color: #fff;
+    }
+
+    /* Screen management */
+    .screen { display: none; }
+    .screen.active { display: block; animation: fadeSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Mode cards grid */
+    .mode-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px; margin-bottom: 24px;
+    }
+    .mode-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 22px; cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative; overflow: hidden;
+      backdrop-filter: blur(16px);
+      display: flex; flex-direction: column;
+    }
+    .mode-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: var(--gradient-card); opacity: 0; transition: opacity 0.3s;
+    }
+    .mode-card:hover {
+      transform: translateY(-4px); border-color: var(--accent-purple);
+      box-shadow: 0 12px 30px rgba(139, 92, 246, 0.22);
+    }
+    .mode-card:hover::before { opacity: 1; }
+    .mode-card .card-head {
+      display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;
+      position: relative; z-index: 1;
+    }
+    .mode-card .card-icon {
+      width: 48px; height: 48px; border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+    }
+    .card-icon.purple { background: rgba(139,92,246,0.18); border: 1px solid rgba(139,92,246,0.3); }
+    .card-icon.cyan { background: rgba(6,182,212,0.18); border: 1px solid rgba(6,182,212,0.3); }
+    .card-icon.pink { background: rgba(236,72,153,0.18); border: 1px solid rgba(236,72,153,0.3); }
+    .card-icon.green { background: rgba(16,185,129,0.18); border: 1px solid rgba(16,185,129,0.3); }
+    .card-icon.amber { background: rgba(245,158,11,0.18); border: 1px solid rgba(245,158,11,0.3); }
+    .card-icon.blue { background: rgba(59,130,246,0.18); border: 1px solid rgba(59,130,246,0.3); }
+
+    .mode-card h3 {
+      font-size: 17px; font-weight: 700; margin-bottom: 6px;
+      position: relative; z-index: 1; color: var(--text-primary);
+    }
+    .mode-card p {
+      font-size: 13px; color: var(--text-secondary); line-height: 1.45;
+      position: relative; z-index: 1; margin-bottom: 12px; flex: 1;
+    }
+    .badge {
+      display: inline-flex; align-items: center;
+      padding: 4px 10px; border-radius: 999px;
+      font-size: 12px; font-weight: 700; width: fit-content;
+      position: relative; z-index: 1;
+    }
+    .badge.purple { background: rgba(139,92,246,0.2); color: #c4b5fd; border: 1px solid rgba(139,92,246,0.4); }
+    .badge.cyan { background: rgba(6,182,212,0.2); color: #67e8f9; border: 1px solid rgba(6,182,212,0.4); }
+    .badge.pink { background: rgba(236,72,153,0.2); color: #f472b6; border: 1px solid rgba(236,72,153,0.4); }
+    .badge.green { background: rgba(16,185,129,0.2); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.4); }
+    .badge.amber { background: rgba(245,158,11,0.2); color: #fcd34d; border: 1px solid rgba(245,158,11,0.4); }
+    .badge.blue { background: rgba(59,130,246,0.2); color: #93c5fd; border: 1px solid rgba(59,130,246,0.4); }
+
+    /* Settings Panel */
+    .settings-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 22px; backdrop-filter: blur(16px);
+      margin-bottom: 30px;
+    }
+    .settings-panel h3 {
+      font-size: 16px; font-weight: 700; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 8px; color: #e2e8f0;
+    }
+    .settings-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .setting-item label {
+      display: block; font-size: 12px; font-weight: 600;
+      color: var(--text-secondary); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .setting-item select {
+      width: 100%; padding: 10px 14px;
+      background: rgba(10, 10, 26, 0.7);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary); font-size: 14px; font-weight: 500;
+      outline: none; transition: border-color 0.2s;
+    }
+    .setting-item select:focus { border-color: var(--accent-cyan); }
+
+    /* ═══ QUIZ SCREEN ═══ */
+    .quiz-top-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px; flex-wrap: wrap; gap: 10px;
+    }
+    .back-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-secondary); padding: 8px 16px;
+      border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+      cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px;
+    }
+    .back-btn:hover {
+      background: rgba(255, 255, 255, 0.12); color: #fff;
+    }
+    .sound-toggle-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-secondary); padding: 8px 12px;
+      border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .sound-toggle-btn:hover { background: rgba(255, 255, 255, 0.12); color: #fff; }
+    .quiz-stats {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .quiz-stats .stat {
+      font-size: 13px; font-weight: 700; padding: 6px 12px;
+      border-radius: 999px;
+    }
+    .stat-correct { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .stat-wrong { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+    .stat-streak { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+
+    /* Progress & Timer */
+    .progress-container {
+      width: 100%; height: 6px; background: rgba(255, 255, 255, 0.06);
+      border-radius: 999px; overflow: hidden; margin-bottom: 12px;
+    }
+    .progress-bar {
+      height: 100%; background: var(--gradient-main);
+      width: 0%; transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .timer-bar {
+      width: 100%; height: 4px; background: rgba(255, 255, 255, 0.04);
+      border-radius: 999px; overflow: hidden; margin-bottom: 16px;
+    }
+    .timer-fill {
+      height: 100%; width: 100%;
+      background: var(--accent-cyan);
+      transition: width 0.1s linear, background 0.3s;
+    }
+    .timer-fill.warning { background: var(--accent-amber); }
+    .timer-fill.danger { background: var(--accent-red); }
+
+    /* Question card */
+    .question-header-row {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .question-counter {
+      font-size: 13px; font-weight: 700; color: var(--accent-cyan);
+      letter-spacing: 0.5px;
+    }
+    .question-cat-tag {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 6px;
+      background: rgba(139, 92, 246, 0.15); color: #c4b5fd; border: 1px solid rgba(139, 92, 246, 0.3);
+    }
+    .question-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 24px; margin-bottom: 20px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    }
+    .question-card h2 {
+      font-size: 19px; font-weight: 700; line-height: 1.5; color: #f1f5f9;
+    }
+
+    /* Option buttons */
+    .options-grid {
+      display: grid; grid-template-columns: 1fr;
+      gap: 12px; margin-bottom: 20px;
+    }
+    @media (min-width: 640px) {
+      .options-grid.two-cols { grid-template-columns: 1fr 1fr; }
+    }
+    .option-btn {
+      background: rgba(25, 25, 60, 0.5);
+      border: 1px solid rgba(139, 92, 246, 0.25);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      color: var(--text-primary);
+      font-size: 15px; font-weight: 500;
+      text-align: left; cursor: pointer;
+      display: flex; align-items: flex-start; gap: 14px;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative; overflow: hidden;
+      line-height: 1.45;
+    }
+    .option-btn:hover:not(.disabled) {
+      background: rgba(139, 92, 246, 0.18);
+      border-color: var(--accent-cyan);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(6, 182, 212, 0.15);
+    }
+    .option-letter {
+      width: 28px; height: 28px; border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px; font-weight: 700; color: #cbd5e1;
+      flex-shrink: 0; margin-top: -1px;
+    }
+    .option-btn.correct {
+      background: rgba(16, 185, 129, 0.22) !important;
+      border-color: #10b981 !important;
+      box-shadow: 0 0 25px rgba(16, 185, 129, 0.3) !important;
+    }
+    .option-btn.correct .option-letter {
+      background: #10b981; color: #fff;
+    }
+    .option-btn.wrong {
+      background: rgba(239, 68, 68, 0.22) !important;
+      border-color: #ef4444 !important;
+      box-shadow: 0 0 25px rgba(239, 68, 68, 0.3) !important;
+      animation: shake 0.4s ease-in-out;
+    }
+    .option-btn.wrong .option-letter {
+      background: #ef4444; color: #fff;
+    }
+    .option-btn.disabled {
+      opacity: 0.55; cursor: default;
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
+
+    /* Explanation tip box */
+    .explanation-box {
+      background: rgba(6, 182, 212, 0.1);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      border-radius: var(--radius-md);
+      padding: 14px 18px; margin-top: 14px;
+      font-size: 14px; color: #e2e8f0; line-height: 1.5;
+      display: none; animation: fadeSlideUp 0.3s ease;
+    }
+    .explanation-box .exp-head {
+      font-weight: 700; color: var(--accent-cyan); margin-bottom: 4px;
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    /* SA screen */
+    .sa-input-area {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 20px; margin-bottom: 20px;
+    }
+    .sa-textarea {
+      width: 100%; min-height: 120px;
+      background: rgba(10, 10, 26, 0.8);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: var(--radius-sm);
+      color: #fff; padding: 14px; font-size: 15px; font-family: inherit;
+      resize: vertical; outline: none; margin-bottom: 12px;
+    }
+    .sa-textarea:focus { border-color: var(--accent-cyan); }
+    .sa-answer-reveal {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      border-radius: var(--radius-md);
+      padding: 18px; margin-top: 16px;
+      line-height: 1.6;
+    }
+    .sa-answer-reveal .label {
+      font-weight: 700; color: #34d399; margin-bottom: 6px; font-size: 14px;
+    }
+    .self-assess-row {
+      display: flex; gap: 12px; margin-top: 16px;
+    }
+    .self-assess-btn {
+      flex: 1; padding: 12px; border-radius: var(--radius-sm);
+      font-size: 14px; font-weight: 700; cursor: pointer;
+      border: none; transition: transform 0.15s, opacity 0.15s;
+    }
+    .self-assess-btn:hover { transform: translateY(-2px); }
+    .self-assess-btn.knew { background: var(--accent-green); color: #fff; }
+    .self-assess-btn.didnt { background: rgba(239, 68, 68, 0.3); border: 1px solid #ef4444; color: #fca5a5; }
+
+    /* Action row */
+    .action-row {
+      display: flex; gap: 12px; justify-content: flex-end; margin-top: 16px; flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--gradient-main);
+      color: #fff; border: none; padding: 12px 24px;
+      border-radius: var(--radius-md); font-size: 14px; font-weight: 700;
+      cursor: pointer; transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px); box-shadow: 0 6px 22px rgba(139, 92, 246, 0.45);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #f1f5f9; border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 12px 24px; border-radius: var(--radius-md); font-size: 14px; font-weight: 700;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15); border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .keyboard-hints {
+      text-align: center; color: var(--text-muted);
+      font-size: 12px; margin-top: 14px;
+    }
+    kbd {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 4px; padding: 2px 6px;
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #cbd5e1;
+    }
+
+    /* ═══ RESULTS SCREEN ═══ */
+    .results-hero {
+      text-align: center; padding: 24px 0 30px;
+    }
+    .score-circle {
+      width: 150px; height: 150px; margin: 0 auto 20px;
+      position: relative; display: flex; align-items: center; justify-content: center;
+    }
+    .score-circle svg {
+      width: 100%; height: 100%; transform: rotate(-90deg);
+    }
+    .score-circle circle.track {
+      fill: none; stroke: rgba(255, 255, 255, 0.06); stroke-width: 10;
+    }
+    .score-circle circle.fill-ring {
+      fill: none; stroke-width: 10; stroke-linecap: round;
+      stroke-dasharray: 439.8; stroke-dashoffset: 439.8;
+      transition: stroke-dashoffset 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .score-value {
+      position: absolute; text-align: center;
+    }
+    .score-value .pct {
+      font-size: 34px; font-weight: 900; line-height: 1; display: block;
+    }
+    .score-value .label {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;
+      color: var(--text-secondary); margin-top: 4px; display: block;
+    }
+    .results-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 12px; margin-bottom: 24px;
+    }
+    .result-stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px; text-align: center;
+    }
+    .result-stat-card .val {
+      font-size: 26px; font-weight: 800; margin-bottom: 4px;
+    }
+    .result-stat-card .lbl {
+      font-size: 12px; color: var(--text-secondary); text-transform: uppercase;
+    }
+
+    /* Review section */
+    .review-section {
+      margin-top: 32px;
+    }
+    .review-section h3 {
+      font-size: 18px; font-weight: 700; margin-bottom: 14px;
+    }
+    .filter-tabs {
+      display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap;
+    }
+    .filter-tab {
+      padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 600;
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-secondary); cursor: pointer; transition: all 0.2s;
+    }
+    .filter-tab.active {
+      background: rgba(139, 92, 246, 0.25); border-color: var(--accent-purple); color: #fff;
+    }
+    .review-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px; margin-bottom: 12px;
+    }
+    .review-item.review-correct { border-left: 4px solid var(--accent-green); }
+    .review-item.review-wrong { border-left: 4px solid var(--accent-red); }
+    .review-item .rq {
+      font-size: 15px; font-weight: 600; margin-bottom: 8px; line-height: 1.45;
+    }
+    .review-item .ranswer {
+      font-size: 13px; color: var(--text-secondary); line-height: 1.5;
+    }
+    .your-ans { color: #f87171; font-weight: 600; }
+    .correct-ans { color: #34d399; font-weight: 600; }
+
+    /* ═══ DIRECTORY / SỔ TAY TRA CỨU ═══ */
+    .directory-search-bar {
+      margin-bottom: 20px;
+    }
+    .search-box {
+      width: 100%; padding: 14px 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      color: #fff; font-size: 15px; outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-box:focus { border-color: var(--accent-cyan); }
+    .dir-filter-bar {
+      display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap;
+    }
+    .dir-filter-btn {
+      padding: 6px 14px; border-radius: 999px; font-size: 12px; font-weight: 600;
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-secondary); cursor: pointer; transition: all 0.2s;
+    }
+    .dir-filter-btn.active {
+      background: rgba(6, 182, 212, 0.2); border-color: var(--accent-cyan); color: #fff;
+    }
+    .dir-item-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 18px; margin-bottom: 14px;
+      transition: border-color 0.2s;
+    }
+    .dir-item-card:hover { border-color: rgba(139, 92, 246, 0.45); }
+    .dir-item-head {
+      display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;
+    }
+    .dir-item-num {
+      font-size: 13px; font-weight: 700; color: var(--accent-cyan);
+    }
+    .dir-item-q {
+      font-size: 15px; font-weight: 600; margin-bottom: 10px; color: #f8fafc;
+    }
+    .dir-item-ans {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: 8px; padding: 10px 14px;
+      font-size: 13px; color: #6ee7b7; margin-bottom: 8px;
+    }
+    .dir-item-tip {
+      font-size: 12px; color: #94a3b8; line-height: 1.45;
+    }
+
+    /* ═══ CASE STUDY HANDBOOK (TÌNH HUỐNG THI) ═══ */
+    .handbook-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 24px; margin-bottom: 20px;
+      backdrop-filter: blur(16px);
+    }
+    .handbook-card h3 {
+      font-size: 18px; font-weight: 800; color: var(--accent-pink); margin-bottom: 12px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .handbook-card h4 {
+      font-size: 15px; font-weight: 700; color: var(--accent-cyan); margin: 16px 0 8px;
+    }
+    .handbook-card p, .handbook-card li {
+      font-size: 14px; color: #cbd5e1; line-height: 1.6;
+    }
+    .handbook-card ul, .handbook-card ol {
+      margin-left: 20px; margin-bottom: 12px;
+    }
+    .swot-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0;
+    }
+    .swot-box {
+      border-radius: var(--radius-md); padding: 14px;
+    }
+    .swot-box.s { background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.3); }
+    .swot-box.w { background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.3); }
+    .swot-box.o { background: rgba(6,182,212,0.12); border: 1px solid rgba(6,182,212,0.3); }
+    .swot-box.t { background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.3); }
+    .swot-box h5 { font-size: 14px; font-weight: 800; margin-bottom: 6px; }
+
+    /* Toast, Streak, Confetti */
+    .feedback-toast {
+      position: fixed; top: 24px; left: 50%; transform: translateX(-50%) translateY(-30px);
+      padding: 10px 20px; border-radius: 999px;
+      font-size: 14px; font-weight: 700; color: #fff;
+      opacity: 0; pointer-events: none; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 999; box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+    .feedback-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .feedback-toast.correct-toast { background: linear-gradient(135deg, #10b981, #06b6d4); }
+    .feedback-toast.wrong-toast { background: linear-gradient(135deg, #ef4444, #f59e0b); }
+
+    .streak-popup {
+      position: fixed; top: 75px; left: 50%; transform: translateX(-50%) scale(0.5);
+      padding: 8px 18px; border-radius: 999px;
+      background: var(--gradient-gold); color: #000;
+      font-size: 15px; font-weight: 900; opacity: 0; pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); z-index: 999;
+      box-shadow: 0 8px 30px rgba(245, 158, 11, 0.45);
+    }
+    .streak-popup.show { opacity: 1; transform: translateX(-50%) scale(1); }
+
+    .confetti-container {
+      position: fixed; inset: 0; pointer-events: none; z-index: 1000; overflow: hidden;
+    }
+    .confetti-piece {
+      position: absolute; top: -10px; animation: confettiFall linear forwards;
+    }
+    @keyframes confettiFall {
+      to { transform: translateY(105vh) rotate(720deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="ambient-bg">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-badge">🚀 MGT 406 · ĐẠI HỌC DUY TÂN · KHOA QUẢN TRỊ KINH DOANH</div>
+      <div class="logo-icon">💡</div>
+      <h1>Khởi Sự Doanh Nghiệp</h1>
+      <p class="subtitle">Ngân hàng 124+ câu hỏi ôn tập toàn diện: Trắc nghiệm 4 lựa chọn, Đúng/Sai, Tự luận ngắn và Cẩm nang xử lý tình huống thi kết thúc học phần.</p>
+      
+      <div class="app-nav-bar">
+        <button class="nav-link-btn" onclick="showDirectoryScreen('ALL')">📚 Sổ tay tra cứu 124 câu</button>
+        <button class="nav-link-btn" onclick="showHandbookScreen()">📋 Cẩm nang xử lý tình huống</button>
+        <a href="luat-kinh-te.html" class="nav-link-btn" style="color:var(--accent-purple); border-color:rgba(139,92,246,0.4);">⚖️ Ôn Luật Kinh Tế</a>
+        <a href="index.html" class="nav-link-btn" style="color:var(--accent-cyan); border-color:rgba(6,182,212,0.4);">💻 Ôn CNTT</a>
+      </div>
+    </header>
+
+    <!-- ═══ SCREEN 1: START SCREEN ═══ -->
+    <div id="startScreen" class="screen active">
+      <div class="mode-grid">
+        <!-- Mode: MCQ -->
+        <div class="mode-card" onclick="startQuiz('mcq')">
+          <div class="card-head">
+            <div class="card-icon purple">🧠</div>
+            <span class="badge purple" id="badgeMcq">49 câu</span>
+          </div>
+          <h3>Trắc nghiệm 4 lựa chọn</h3>
+          <p>Câu hỏi kiến thức tổng hợp: Luật DN 2020, hình thức khởi sự, đặt tên DN, sáng tạo sản phẩm, marketing mix.</p>
+        </div>
+
+        <!-- Mode: True / False -->
+        <div class="mode-card" onclick="startQuiz('tf')">
+          <div class="card-head">
+            <div class="card-icon cyan">⚖️</div>
+            <span class="badge cyan" id="badgeTf">50 câu</span>
+          </div>
+          <h3>Trắc nghiệm Đúng / Sai</h3>
+          <p>Bộ 50 câu Đúng/Sai thẩm định nhận thức chuyên sâu, mẹo bẫy pháp lý, thuế và quản trị nghiệp chủ.</p>
+        </div>
+
+        <!-- Mode: Short Answer -->
+        <div class="mode-card" onclick="startQuiz('sa')">
+          <div class="card-head">
+            <div class="card-icon pink">✍️</div>
+            <span class="badge pink" id="badgeSa">25 câu</span>
+          </div>
+          <h3>Trả lời ngắn & Tự luận</h3>
+          <p>Tự gõ câu trả lời, đối chiếu đáp án chuẩn theo khung giáo trình và tự đánh giá độ nhớ kiến thức.</p>
+        </div>
+
+        <!-- Mode: Comprehensive Mix -->
+        <div class="mode-card" onclick="startQuiz('mix')">
+          <div class="card-head">
+            <div class="card-icon amber">🎯</div>
+            <span class="badge amber" id="badgeMix">124 câu</span>
+          </div>
+          <h3>Thi thử Tổng hợp Toàn diện</h3>
+          <p>Trộn ngẫu nhiên toàn bộ câu hỏi trắc nghiệm, đúng/sai và tự luận thành một đề thi thử mô phỏng thực tế.</p>
+        </div>
+
+        <!-- Mode: Retry Wrong -->
+        <div class="mode-card" onclick="startQuiz('wrong')">
+          <div class="card-head">
+            <div class="card-icon green">🔄</div>
+            <span class="badge green" id="badgeWrong">0 câu sai</span>
+          </div>
+          <h3>Ôn lại các câu từng sai</h3>
+          <p>Tự động lưu lịch sử các câu bạn từng trả lời sai để rà soát lại trước khi bước vào phòng thi.</p>
+        </div>
+
+        <!-- Mode: Case Study Handbook -->
+        <div class="mode-card" onclick="showHandbookScreen()">
+          <div class="card-head">
+            <div class="card-icon blue">📝</div>
+            <span class="badge blue">Phần 3 (4.0đ)</span>
+          </div>
+          <h3>Cẩm nang Tình huống Thi</h3>
+          <p>Phương pháp lập ma trận SWOT, phân tích Marketing Mix 4P/8P và lập kế hoạch Promotion thâm nhập thị trường.</p>
+        </div>
+      </div>
+
+      <!-- Settings Panel -->
+      <div class="settings-panel">
+        <h3>⚙️ Cài đặt buổi ôn tập</h3>
+        <div class="settings-grid">
+          <div class="setting-item">
+            <label>Số lượng câu hỏi</label>
+            <select id="questionCountSelect">
+              <option value="10">10 câu (Khởi động nhanh)</option>
+              <option value="20">20 câu (Chuẩn kỳ thi)</option>
+              <option value="30">30 câu (Luyện tập sâu)</option>
+              <option value="50">50 câu (1 đề trọn vẹn)</option>
+              <option value="0" selected>Tất cả câu trong chế độ</option>
+            </select>
+          </div>
+          <div class="setting-item">
+            <label>Thứ tự hiển thị</label>
+            <select id="orderSelect">
+              <option value="sequential" selected>Theo thứ tự đề cương</option>
+              <option value="random">Trộn ngẫu nhiên</option>
+            </select>
+          </div>
+          <div class="setting-item">
+            <label>Thời gian mỗi câu</label>
+            <select id="timerSelect">
+              <option value="0">Không giới hạn (Ôn thong thả)</option>
+              <option value="15">15 giây (Phản xạ cực nhanh)</option>
+              <option value="30" selected>30 giây (Chuẩn Quizizz)</option>
+              <option value="60">60 giây (Tư duy & Đọc kỹ)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ SCREEN 2: QUIZ SCREEN ═══ -->
+    <div id="quizScreen" class="screen">
+      <div class="quiz-top-bar">
+        <button class="back-btn" onclick="goHome()">← Về trang chủ</button>
+        <button class="sound-toggle-btn" id="soundToggleBtn" onclick="toggleSound()">🔊 Âm thanh: Bật</button>
+        <div class="quiz-stats">
+          <span class="stat stat-correct" id="liveCorrect">✓ 0</span>
+          <span class="stat stat-wrong" id="liveWrong">✗ 0</span>
+          <span class="stat stat-streak" id="liveStreak">🔥 0</span>
+        </div>
+      </div>
+
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <div class="timer-bar" id="timerBarWrap" style="display:none;">
+        <div class="timer-fill" id="timerFill"></div>
+      </div>
+
+      <div class="question-header-row">
+        <div class="question-counter" id="questionCounter">CÂU 1 / 50</div>
+        <div class="question-cat-tag" id="questionCatTag">TỔNG QUAN</div>
+      </div>
+
+      <div class="question-card">
+        <h2 id="questionText">Nội dung câu hỏi đang tải...</h2>
+      </div>
+
+      <div id="optionsArea"></div>
+
+      <div class="explanation-box" id="explanationBox">
+        <div class="exp-head">💡 Căn cứ & Lời giải chi tiết:</div>
+        <div id="explanationText"></div>
+      </div>
+
+      <div class="action-row" id="actionRow" style="display:none;">
+        <button class="btn-primary" id="nextBtn" onclick="nextQuestion()">Câu tiếp theo →</button>
+      </div>
+
+      <div class="keyboard-hints" id="keyboardHints">
+        Phím tắt: <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd> chọn đáp án · <kbd>Enter</kbd> câu tiếp
+      </div>
+    </div>
+
+    <!-- ═══ SCREEN 3: RESULTS SCREEN ═══ -->
+    <div id="resultsScreen" class="screen">
+      <div class="results-hero">
+        <div class="score-circle">
+          <svg viewBox="0 0 160 160">
+            <defs>
+              <linearGradient id="greenGrad"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient>
+              <linearGradient id="amberGrad"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#ec4899"/></linearGradient>
+              <linearGradient id="redGrad"><stop offset="0%" stop-color="#ef4444"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient>
+            </defs>
+            <circle class="track" cx="80" cy="80" r="70"/>
+            <circle class="fill-ring" id="scoreRing" cx="80" cy="80" r="70"/>
+          </svg>
+          <div class="score-value">
+            <span class="pct" id="scorePct">0%</span>
+            <span class="label">Điểm số</span>
+          </div>
+        </div>
+        <h2 id="resultMessage" style="margin-bottom:6px;"></h2>
+        <p id="resultSub" style="color:var(--text-secondary);font-size:14px;"></p>
+      </div>
+
+      <div class="results-stats">
+        <div class="result-stat-card">
+          <div class="val stat-correct" id="resCorrect">0</div>
+          <div class="lbl">Đúng</div>
+        </div>
+        <div class="result-stat-card">
+          <div class="val stat-wrong" id="resWrong">0</div>
+          <div class="lbl">Sai</div>
+        </div>
+        <div class="result-stat-card">
+          <div class="val stat-streak" id="resStreak">0</div>
+          <div class="lbl">Streak cao nhất</div>
+        </div>
+      </div>
+
+      <div class="action-row" style="justify-content:center; margin-bottom:24px;">
+        <button class="btn-primary" onclick="goHome()">🏠 Trang chủ</button>
+        <button class="btn-secondary" onclick="retryWrong()">🔄 Ôn lại câu sai</button>
+      </div>
+
+      <div class="review-section">
+        <h3>📋 Bảng kiểm tra chi tiết câu hỏi</h3>
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-tab active" onclick="filterReview('all', this)">Tất cả</button>
+          <button class="filter-tab" onclick="filterReview('wrong', this)">❌ Làm sai</button>
+          <button class="filter-tab" onclick="filterReview('correct', this)">✅ Làm đúng</button>
+        </div>
+        <div id="reviewList"></div>
+      </div>
+    </div>
+
+    <!-- ═══ SCREEN 4: DIRECTORY / SỔ TAY TRA CỨU ═══ -->
+    <div id="directoryScreen" class="screen">
+      <div class="quiz-top-bar">
+        <button class="back-btn" onclick="goHome()">← Về trang chủ</button>
+        <span style="font-size:14px; font-weight:700; color:var(--accent-cyan);">📚 SỔ TAY TRA CỨU ĐỀ CƯƠNG 124 CÂU</span>
+      </div>
+
+      <div class="directory-search-bar">
+        <input type="text" class="search-box" id="dirSearchInput" placeholder="🔍 Tìm kiếm câu hỏi, luật DN 2020, mẹo khoanh, phương pháp sáng tạo..." oninput="onDirSearch(this.value)">
+        <div class="dir-filter-bar">
+          <button class="dir-filter-btn active" onclick="setDirFilter('ALL', this)">Tất cả (124)</button>
+          <button class="dir-filter-btn" onclick="setDirFilter('MCQ', this)">Trắc nghiệm 4 đáp án (49)</button>
+          <button class="dir-filter-btn" onclick="setDirFilter('TF', this)">Đúng / Sai (50)</button>
+          <button class="dir-filter-btn" onclick="setDirFilter('SA', this)">Tự luận ngắn (25)</button>
+        </div>
+      </div>
+
+      <div id="directoryListContainer"></div>
+    </div>
+
+    <!-- ═══ SCREEN 5: HANDBOOK CASE STUDY (TÌNH HUỐNG THI) ═══ -->
+    <div id="handbookScreen" class="screen">
+      <div class="quiz-top-bar">
+        <button class="back-btn" onclick="goHome()">← Về trang chủ</button>
+        <span style="font-size:14px; font-weight:700; color:var(--accent-pink);">📋 CẨM NANG XỬ LÝ TÌNH HUỐNG THI (4.0 ĐIỂM)</span>
+      </div>
+
+      <div class="handbook-card">
+        <h3>🎯 Cấu trúc phần thi Tình huống kết thúc học phần</h3>
+        <p>Phần 3 trong đề thi tự luận môn Khởi sự doanh nghiệp gồm 2 câu hỏi lớn với tổng điểm 4.0 điểm:</p>
+        <ul>
+          <li><strong>Yêu cầu 1 (2.0 điểm):</strong> Xác định điểm mạnh (S), điểm yếu (W), cơ hội (O) và đe dọa (T) của doanh nghiệp trong đề bài.</li>
+          <li><strong>Yêu cầu 2 (2.0 điểm):</strong> Đề xuất ý tưởng kinh doanh & lập kế hoạch giải pháp thực thi (Lập Marketing-Mix hoặc Kế hoạch Quảng bá xúc tiến).</li>
+        </ul>
+      </div>
+
+      <div class="handbook-card">
+        <h3>1️⃣ Hướng dẫn làm Yêu cầu 1: Phân tích SWOT (2.0 điểm)</h3>
+        <p><strong>Nguyên tắc vàng:</strong> Mỗi yếu tố bắt buộc phải nêu ít nhất <strong>3 ý cụ thể</strong> rút ra trực tiếp từ dữ kiện tình huống của doanh nghiệp trong đề bài, không viết chung chung.</p>
+        
+        <div class="swot-grid">
+          <div class="swot-box s">
+            <h5 style="color:#10b981;">💪 ĐIỂM MẠNH (STRENGTHS)</h5>
+            <p>Yếu tố nội bộ DN kiểm soát được:</p>
+            <ul>
+              <li>Uy tín thương hiệu, đội ngũ nhân sự giàu kinh nghiệm.</li>
+              <li>Công nghệ sản xuất hiện đại, chất lượng sản phẩm vượt trội.</li>
+              <li>Mạng lưới kênh phân phối sẵn có, nguồn vốn tài chính vững mạnh.</li>
+            </ul>
+          </div>
+          <div class="swot-box w">
+            <h5 style="color:#ef4444;">⚠️ ĐIỂM YẾU (WEAKNESSES)</h5>
+            <p>Hạn chế nội bộ cần khắc phục:</p>
+            <ul>
+              <li>Quy mô vốn còn khiêm tốn, chi phí vận hành còn cao.</li>
+              <li>Hệ thống marketing & bán hàng còn yếu, chưa phủ rộng.</li>
+              <li>Chưa đa dạng hóa mẫu mã sản phẩm, thương hiệu mới chưa quen thuộc.</li>
+            </ul>
+          </div>
+          <div class="swot-box o">
+            <h5 style="color:#06b6d4;">🚀 CƠ HỘI (OPPORTUNITIES)</h5>
+            <p>Yếu tố tích cực từ môi trường bên ngoài:</p>
+            <ul>
+              <li>Thị trường mục tiêu đang tăng trưởng cao, xu hướng tiêu dùng mới.</li>
+              <li>Chính sách nhà nước khuyến khích, ưu đãi thuế cho ngành.</li>
+              <li>Đối thủ cạnh tranh bộc lộ điểm yếu hoặc rút lui khỏi phân khúc.</li>
+            </ul>
+          </div>
+          <div class="swot-box t">
+            <h5 style="color:#f59e0b;">⚡ ĐE DỌA (THREATS)</h5>
+            <p>Rủi ro tiêu cực từ môi trường bên ngoài:</p>
+            <ul>
+              <li>Sự cạnh tranh gay gắt từ các thương hiệu lớn nước ngoài.</li>
+              <li>Biến động giá nguyên vật liệu đầu vào và lạm phát.</li>
+              <li>Sản phẩm thay thế liên tục ra đời, hành vi người tiêu dùng thay đổi nhanh.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="handbook-card">
+        <h3>2️⃣ Hướng dẫn làm Yêu cầu 2: Đề xuất Ý tưởng & Kế hoạch (2.0 điểm)</h3>
+        <p>Đề thi thường rơi vào một trong hai dạng trọng tâm sau:</p>
+
+        <h4>DẠNG A: LẬP KẾ HOẠCH MARKETING-MIX</h4>
+        <ul>
+          <li><strong>Sản phẩm hữu hình:</strong> Triển khai <strong>4P</strong> (Product - Price - Place - Promotion).</li>
+          <li><strong>Kinh doanh dịch vụ:</strong> Triển khai <strong>8P</strong> (4P truyền thống + People - Process - Physical Evidence - Partners).</li>
+          <li><strong>Các bước thực hiện chuẩn chỉ để ăn trọn 2.0 điểm:</strong>
+            <ol>
+              <li><em>Xác định mục tiêu kế hoạch:</em> Đạt doanh thu bao nhiêu? Thị phần bao nhiêu phần trăm trong 6-12 tháng đầu?</li>
+              <li><em>Lựa chọn khách hàng mục tiêu:</em> Phân tích rõ độ tuổi, nghề nghiệp, mức thu nhập, sở thích hành vi và <strong>giải thích lý do lựa chọn phân khúc này</strong>.</li>
+              <li><em>Triển khai chi tiết từng chữ P:</em>
+                <ul>
+                  <li><strong>Product:</strong> Tính năng độc đáo, bao bì, công dụng giải quyết nỗi đau của khách hàng.</li>
+                  <li><strong>Price:</strong> Chiến lược giá thâm nhập (giá mềm cạnh tranh) hoặc định giá hớt váng (skimming), chính sách chiết khấu.</li>
+                  <li><strong>Place:</strong> Kênh trực tiếp (cửa hàng, website) kết hợp đại lý bán lẻ, siêu thị, sàn TMĐT (Shopee, TikTok Shop).</li>
+                  <li><strong>Promotion:</strong> Kết hợp đa kênh truyền thông trực tuyến và bán hàng tại điểm bán.</li>
+                </ul>
+              </li>
+            </ol>
+          </li>
+        </ul>
+
+        <h4>DẠNG B: LẬP KẾ HOẠCH QUẢNG BÁ SẢN PHẨM (PROMOTION PLAN THÂM NHẬP THỊ TRƯỜNG VN)</h4>
+        <p>Khi đề bài yêu cầu lập kế hoạch quảng bá khi đưa sản phẩm mới vào thị trường Việt Nam:</p>
+        <ol>
+          <li><strong>Xác định mục tiêu kế hoạch (0.5 điểm):</strong>
+            <p>Mục tiêu nhận biết thương hiệu (Brand Awareness) đạt bao nhiêu % trong nhóm khách hàng mục tiêu sau 3 tháng? Thu hút bao nhiêu lượt trải nghiệm dùng thử sản phẩm?</p>
+          </li>
+          <li><strong>Lựa chọn công chúng mục tiêu (Target Audience):</strong>
+            <p><em>Lưu ý phân biệt:</em> Công chúng mục tiêu là nhóm đối tượng ta hướng thông tin tới để lan tỏa thông điệp (ví dụ: giới trẻ yêu công nghệ, các bà mẹ bỉm sữa, các reviewer/KOLs), có thể rộng hơn hoặc khác biệt với Khách hàng mục tiêu mua hàng trực tiếp.</p>
+          </li>
+          <li><strong>Xác định và giải thích công cụ quảng bá (5 công cụ chiêu thị):</strong>
+            <ul>
+              <li><em>1. Quảng cáo (Advertising):</em> Chạy quảng cáo số Facebook/TikTok/YouTube Ads, đặt billboard tại các ngã tư trung tâm.</li>
+              <li><em>2. Xúc tiến bán (Sales Promotion):</em> Tặng quà dùng thử (sample), mua 1 tặng 1, voucher giảm giá cho 100 khách hàng đầu tiên.</li>
+              <li><em>3. Quan hệ công chúng (PR):</em> Bài viết báo chí chuyên ngành (VnExpress, Dân Trí), tổ chức sự kiện họp báo ra mắt (launch event).</li>
+              <li><em>4. Bán hàng cá nhân (Personal Selling):</em> Nhân viên PG tư vấn trực tiếp tại gian hàng hoặc hội chợ triển lãm.</li>
+              <li><em>5. Marketing trực tiếp (Direct Marketing):</em> Gửi email marketing cá nhân hóa, tin nhắn Zalo ZNS chăm sóc khách hàng.</li>
+            </ul>
+          </li>
+          <li><strong>Lựa chọn phương tiện quảng bá phù hợp:</strong>
+            <p>Lựa chọn phương tiện truyền thông phải khớp với thói quen tiêu dùng thông tin của công chúng mục tiêu để tối ưu ngân sách và tỷ lệ chuyển đổi ROI.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast & Popups -->
+  <div class="feedback-toast" id="feedbackToast"></div>
+  <div class="streak-popup" id="streakPopup">🔥 5 STREAK!</div>
+  <div class="confetti-container" id="confettiContainer"></div>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       DATASET & APPLICATION LOGIC
+  ══════════════════════════════════════════════════════════════ -->
+  <script>
+    // Embedded Data Arrays
+    const rawMCQ = [{"id": "mcq_1", "category": "Tổng quan & Pháp lý", "q": "Theo Luật Doanh nghiệp 2020: “Doanh nghiệp là một tổ chức kinh tế có tên riêng, có tài sản, có trụ sở giao dịch ổn định, được đăng ký kinh doanh theo quy định của pháp luật nhằm mục đích…”", "opts": ["Tạo ra doanh thu", "Đáp ứng nhu cầu khách hàng", "Thu lợi nhuận", "Thực hiện các hoạt động kinh doanh"], "ans": 3, "tip": "Căn cứ Điều 4 Khoản 10 Luật DN 2020: Mục đích cốt lõi của doanh nghiệp khi đăng ký là 'thực hiện các hoạt động kinh doanh'."}, {"id": "mcq_2", "category": "Tổng quan & Pháp lý", "q": "Theo Luật Doanh nghiệp 2020: “Kinh doanh là việc thực hiện một, một số hoặc tất cả các công đoạn của quá trình đầu tư từ sản xuất đến tiêu thụ sản phẩm trên thị trường nhằm mục đích…”", "opts": ["Tạo ra thị phần", "Tạo ra doanh thu", "Thu lợi nhuận", "Đáp ứng nhu cầu khách hàng"], "ans": 2, "tip": "Căn cứ Điều 4 Khoản 21 Luật DN 2020: Mục đích tối hậu của hành vi kinh doanh là 'tìm kiếm / thu lợi nhuận'."}, {"id": "mcq_3", "category": "Loại hình doanh nghiệp", "q": "……là doanh nghiệp trong đó vốn điều lệ được chia thành nhiều phần bằng nhau do tổ chức hoặc cá nhân làm chủ sở hữu, số lượng thành viên sở hữu tối thiểu là 3.", "opts": ["Công ty TNHH nhiều thành viên", "Công ty hợp danh", "Hợp tác xã", "Công ty cổ phần"], "ans": 3, "tip": "Căn cứ Điều 111 Luật DN 2020: Vốn điều lệ chia thành các phần bằng nhau gọi là cổ phần, số lượng cổ đông tối thiểu là 03 và không hạn chế số lượng tối đa."}, {"id": "mcq_4", "category": "Hình thức khởi sự", "q": "Khởi sự bằng việc kinh doanh nhượng quyền có những lợi ích sau, NGOẠI TRỪ:", "opts": ["Thừa hưởng số lượng khách hàng từ hệ thống", "Được vay vốn ưu đãi, bảo lãnh vay vốn", "Có sẵn các yếu tố cơ bản để vận hành", "Cả (B) và (C) đều đúng"], "ans": 2, "tip": "'Có sẵn các yếu tố cơ bản để vận hành' là ưu điểm của hình thức MUA LẠI DOANH NGHIỆP, không phải của nhượng quyền kinh doanh."}, {"id": "mcq_5", "category": "Loại hình doanh nghiệp", "q": "Theo Luật Doanh nghiệp 2020, công ty TNHH một thành viên có đặc điểm nào sau đây?", "opts": ["Thu nhập của công ty cũng là thu nhập của cá nhân chủ sở hữu", "Không có tư cách pháp nhân", "Được quyền phát hành cổ phần", "Chủ sở hữu có quyền chuyển nhượng một phần hoặc toàn bộ vốn điều lệ cho tổ chức, cá nhân khác"], "ans": 3, "tip": "Căn cứ Điều 74, 75 Luật DN 2020: Chủ sở hữu có quyền chuyển nhượng vốn. Cty TNHH 1 TV có tư cách pháp nhân, tài sản tách biệt với chủ sở hữu và KHÔNG được phát hành cổ phần."}, {"id": "mcq_6", "category": "Phân loại doanh nghiệp", "q": "“Doanh nghiệp hoạt động trong lĩnh vực lưu thông hàng hoá, hướng vào việc khai thác các dịch vụ trong khâu phân phối hàng hoá đến tay người tiêu dùng” được gọi là:", "opts": ["Doanh nghiệp công nghiệp", "Doanh nghiệp nông nghiệp", "Doanh nghiệp dịch vụ", "Doanh nghiệp thương mại"], "ans": 3, "tip": "Lưu thông và phân phối hàng hóa đến tay người tiêu dùng là chức năng kinh tế đặc trưng của Doanh nghiệp thương mại."}, {"id": "mcq_7", "category": "Sáng tạo & Ý tưởng", "q": "Sản phẩm rất hữu ích cho những hành trình dài, những chuyến đi trekking, hiking địa hình phức tạp đồng thời hỗ trợ cho việc nghỉ ngơi khi mỏi chân. Gậy batoong có ghế ngồi là sản phẩm ra đời từ phương pháp sáng tạo nào?", "opts": ["Sáng tạo bằng cách giải quyết vấn đề", "Sáng tạo dựa vào kinh nghiệm", "Sáng tạo bằng việc thay đổi thiết kế", "Sáng tạo từ sự kết hợp"], "ans": 3, "tip": "Kết hợp gậy chống leo núi + ghế gấp ngồi nghỉ thành một sản phẩm đa năng -> Phương pháp sáng tạo từ sự kết hợp."}, {"id": "mcq_8", "category": "Sáng tạo & Ý tưởng", "q": "Tay của bạn sẽ được tự do trong lúc xem phim hay lướt web, tránh trường hợp ôm máy ngủ quên rồi máy rơi vào mặt. Gậy giữ laptop/điện thoại là sản phẩm ra đời từ phương pháp sáng tạo nào?", "opts": ["Sáng tạo dựa vào kinh nghiệm", "Sáng tạo bằng việc thay đổi thiết kế", "Sáng tạo bằng cách giải quyết vấn đề", "Sáng tạo từ sự kết hợp"], "ans": 2, "tip": "Giải quyết phiền toái khi mỏi tay và bị rơi máy vào mặt khi nằm xem -> Phương pháp sáng tạo bằng cách giải quyết vấn đề (problem solving)."}, {"id": "mcq_9", "category": "Sáng tạo & Ý tưởng", "q": "Tư duy sáng tạo có thể giúp cho các doanh nhân:", "opts": ["Khác biệt hoá sản phẩm, dịch vụ và chiến lược kinh doanh của doanh nghiệp", "Chứng minh được bản thân mình", "Luôn thành công trong kinh doanh", "Khởi nghiệp ngay tức thì"], "ans": 0, "tip": "Tư duy sáng tạo tạo ra giá trị khác biệt cốt lõi (differentiation) giúp sản phẩm/dịch vụ cạnh tranh vượt trội trên thị trường."}, {"id": "mcq_10", "category": "Sáng tạo & Ý tưởng", "q": "Ý tưởng kinh doanh tốt là ý tưởng kinh doanh phải:", "opts": ["Tạo được lợi thế cạnh tranh", "Có tính sáng tạo", "Khai thác được cơ hội kinh doanh", "Tất cả các đáp án trên đều đúng"], "ans": 3, "tip": "4 đặc điểm của ý tưởng tốt: Sáng tạo, Khả thi, Tạo lợi thế cạnh tranh, Khai thác cơ hội kinh doanh."}, {"id": "mcq_11", "category": "Sáng tạo & Ý tưởng", "q": "Sự sáng tạo có những đặc điểm kể ra sau đây, NGOẠI TRỪ:", "opts": ["Có tính mới mẻ", "Được sử dụng trong mọi lĩnh vực của thế giới vật chất và tinh thần", "Chỉ tập trung mang lại lợi ích cho doanh nghiệp", "Có tính hữu ích"], "ans": 2, "tip": "Sáng tạo mang tính phổ quát trong khoa học, nghệ thuật, đời sống xã hội; không phải 'chỉ tập trung mang lại lợi ích cho DN'."}, {"id": "mcq_12", "category": "Pháp lý & Đặt tên", "q": "Trường hợp nào sau đây KHÔNG vi phạm tính pháp lý trong đặt tên doanh nghiệp?", "opts": ["Tên viết tắt của doanh nghiệp trùng với tên viết tắt của doanh nghiệp đã đăng ký", "Tên đối nội của doanh nghiệp đọc giống tên doanh nghiệp đã đăng ký trước đó", "Tên doanh nghiệp trùng lắp với tên doanh nghiệp đã đăng ký trước đó nhưng doanh nghiệp này đã bị rút giấy phép kinh doanh / xóa sổ", "Tên đối ngoại của doanh nghiệp trùng lắp với tên đối ngoại của doanh nghiệp đã đăng ký trước đó"], "ans": 2, "tip": "Doanh nghiệp đã giải thể hoặc bị thu hồi giấy phép/xóa tên trên Cổng ĐKKD quốc gia thì tên đó không còn được bảo hộ trùng lặp."}, {"id": "mcq_13", "category": "Loại hình doanh nghiệp", "q": "Yếu tố nào ảnh hưởng đến việc lựa chọn loại hình doanh nghiệp khi khởi sự?", "opts": ["Khả năng bảo vệ vốn đầu tư", "Khả năng tổ chức và quản lý doanh nghiệp", "Khả năng rút vốn hay chuyển nhượng vốn đầu tư", "Tất cả các đáp trên đều đúng"], "ans": 3, "tip": "4 yếu tố cốt lõi: Quản lý tổ chức, bảo vệ tài sản/vốn, chuyển nhượng/rút vốn, và huy động/mở rộng vốn."}, {"id": "mcq_14", "category": "Pháp lý & Đặt tên", "q": "Apple là tập đoàn công nghệ đa quốc gia của Mỹ được thành lập năm 1976. Tên “Apple” được hình thành từ phương pháp đặt tên nào?", "opts": ["Phương pháp đặt tên gia đình (family names)", "Phương pháp đặt tên gợi mở (image names)", "Phương pháp đặt tên ghép (coined names)", "Phương pháp đặt tên mô tả (descriptive names)"], "ans": 1, "tip": "Tên quả táo 'Apple' gợi mở hình ảnh thân thiện, đơn giản, tươi mới (image names). Tương tự: Amazon, Oracle."}, {"id": "mcq_15", "category": "Pháp lý & ĐKKD", "q": "Hồ sơ đăng ký kinh doanh của doanh nghiệp tư nhân KHÔNG bao gồm:", "opts": ["Giấy đề nghị đăng ký kinh doanh theo mẫu", "Bản điều lệ công ty", "Bản sao hợp lệ 1 trong các loại giấy chứng thực cá nhân", "Bản sao chứng chỉ hành nghề (đối với ngành nghề theo quy định)"], "ans": 1, "tip": "Doanh nghiệp tư nhân KHÔNG có Điều lệ công ty (chỉ các loại hình công ty như TNHH, CP, Hợp danh mới có điều lệ)."}, {"id": "mcq_16", "category": "Pháp lý & ĐKKD", "q": "Theo luật Doanh nghiệp 2020, doanh nghiệp sẽ được cấp Giấy chứng nhận đăng ký doanh nghiệp sau bao nhiêu ngày làm việc kể từ ngày nộp hồ sơ đầy đủ và hợp lệ?", "opts": ["03 ngày làm việc", "05 ngày làm việc", "07 ngày làm việc", "15 ngày làm việc"], "ans": 0, "tip": "Căn cứ Điều 26 Khoản 5 Luật DN 2020: Cơ quan ĐKKD cấp Giấy chứng nhận trong thời hạn 03 ngày làm việc."}, {"id": "mcq_17", "category": "Pháp lý & ĐKKD", "q": "…….. là văn bản hoặc bản điện tử mà cơ quan đăng ký kinh doanh cấp cho doanh nghiệp ghi lại những thông tin về đăng ký kinh doanh và đăng ký thuế do doanh nghiệp đăng ký:", "opts": ["Bản điều lệ công ty", "Giấy chứng nhận đăng ký doanh nghiệp", "Giấy phép kinh doanh", "Giấy chứng nhận đăng ký kinh doanh"], "ans": 1, "tip": "Căn cứ Điều 4 Khoản 15 Luật DN 2020: Định nghĩa chuẩn xác là 'Giấy chứng nhận đăng ký doanh nghiệp' (tích hợp ĐKKD và đăng ký thuế)."}, {"id": "mcq_18", "category": "Kế hoạch kinh doanh", "q": "Văn bản viết mô tả về quá trình kinh doanh của doanh nghiệp trong một khoảng thời gian nào đó (từ 1 năm trở xuống) được gọi là:", "opts": ["Chiến lược kinh doanh", "Kế hoạch kinh doanh", "Bản mô tả công việc", "Cả (B) và (C) đều đúng"], "ans": 1, "tip": "Kế hoạch kinh doanh (Business Plan) mô tả các mục tiêu, hành động và nguồn lực triển khai trong một khung thời gian cụ thể."}, {"id": "mcq_19", "category": "Nghiên cứu thị trường", "q": "Bản kế hoạch nghiên cứu thị trường bao gồm những nội dung sau đây, NGOẠI TRỪ:", "opts": ["Nguồn dữ liệu", "Công cụ nghiên cứu", "Kết quả nghiên cứu", "Phương pháp nghiên cứu"], "ans": 2, "tip": "'Kết quả nghiên cứu' chỉ xuất hiện sau khi nghiên cứu và thuộc Báo cáo nghiên cứu thị trường, không nằm trong Bản kế hoạch ban đầu."}, {"id": "mcq_20", "category": "Marketing-Mix & Vòng đời", "q": "Khi sản phẩm nằm trong giai đoạn ra đời (giới thiệu), doanh nghiệp KHÔNG nên:", "opts": ["Phân phối độc quyền", "Định giá hớt váng", "Sử dụng phần lớn ngân sách chiêu thị cho công cụ xúc tiến bán", "Hiệu chỉnh tính năng thương mại của sản phẩm"], "ans": 2, "tip": "Giai đoạn giới thiệu ngân sách chiêu thị tập trung cho QUẢNG CÁO để khách hàng biết tới sản phẩm; xúc tiến bán (khuyến mãi lớn) dùng ở bão hòa."}, {"id": "mcq_21", "category": "Quản trị Marketing", "q": "Đối với những doanh nghiệp kinh doanh sản phẩm thụ động (unsought goods), quan điểm quản trị Marketing nào là phù hợp nhất?", "opts": ["Quan điểm trọng bán hàng", "Quan điểm trọng Marketing", "Quan điểm trọng sản phẩm", "Quan điểm trọng sản xuất"], "ans": 0, "tip": "Sản phẩm thụ động (bảo hiểm, dịch vụ tang lễ, hiến máu...) khách hàng không chủ động tìm mua -> cần nỗ lực bán hàng và xúc tiến mạnh mẽ (Quan điểm trọng bán hàng)."}, {"id": "mcq_22", "category": "Marketing-Mix & Phân phối", "q": "Doanh nghiệp thường sử dụng kênh phân phối dài trong những trường hợp sau, NGOẠI TRỪ:", "opts": ["Doanh nghiệp dồi dào về nguồn lực", "Doanh nghiệp kinh doanh sản phẩm tiêu dùng thông thường", "Khách hàng mục tiêu của doanh nghiệp là người tiêu dùng", "Các trung gian phân phối đáp ứng được tất cả các tiêu chuẩn của doanh nghiệp"], "ans": 0, "tip": "Khi doanh nghiệp dồi dào nguồn lực tài chính và nhân sự, họ có xu hướng tự lập kênh ngắn hoặc kênh trực tiếp để kiểm soát giá và thị trường."}, {"id": "mcq_23", "category": "Marketing-Mix & Giá", "q": "“Doanh nghiệp định ra nhiều mức giá bán khác nhau cho cùng một loại sản phẩm hay dịch vụ” được gọi là:", "opts": ["Chiến lược định giá phân biệt", "Chiến lược định giá thâm nhập", "Chiến lược định giá hiện trạng", "Chiến lược định giá hớt váng"], "ans": 0, "tip": "Định giá phân biệt (Price differentiation / Discriminatory pricing): định giá theo đối tượng, thời gian, địa điểm, phiên bản."}, {"id": "mcq_24", "category": "Quản trị nhân sự", "q": "Yếu tố nào sau đây KHÔNG ảnh hưởng đến thù lao của người lao động?", "opts": ["Mức thù lao trung bình của các doanh nghiệp trong cùng ngành", "Hiệu quả kinh doanh của doanh nghiệp", "Thâm niên công tác", "Tất cả các đáp trên đều sai"], "ans": 3, "tip": "Cả 3 yếu tố (thị trường/ngành, kết quả kinh doanh của DN, và thâm niên/năng lực nhân viên) đều ảnh hưởng đến thù lao -> 'Tất cả các đáp trên đều sai'."}, {"id": "mcq_25", "category": "Tài chính & Chi phí", "q": "Khi tăng chi phí bán hàng có thể làm:", "opts": ["Giảm ngân sách quảng cáo", "Tăng doanh số bán", "Tăng giá bán sản phẩm", "Cả (B) và (C) đều đúng"], "ans": 3, "tip": "Tăng chi phí bán hàng giúp tiếp cận khách hàng tốt hơn dẫn tới tăng doanh số (B), đồng thời làm tăng tổng chi phí nên DN có thể phải tăng giá bán để bảo toàn lợi nhuận (C)."}, {"id": "mcq_26", "category": "Sáng tạo & Ý tưởng", "q": "Nhờ có chiếc thớt này mà các bà nội trợ có thể vừa cắt nhỏ vừa gia giảm chính xác loại nguyên liệu sử dụng trong món ăn. Chiếc thớt có thể cân trọng lượng là sản phẩm ra đời từ phương pháp sáng tạo nào?", "opts": ["Sáng tạo dựa vào kinh nghiệm", "Sáng tạo từ sự kết hợp", "Sáng tạo bằng cách giải quyết vấn đề", "Sáng tạo bằng việc thay đổi thiết kế"], "ans": 1, "tip": "Thớt nhà bếp + Cân điện tử tiểu ly = Sáng tạo từ sự kết hợp giữa 2 công cụ làm bếp."}, {"id": "mcq_27", "category": "Sáng tạo & Ý tưởng", "q": "Với chiếc cốc đặc biệt có thiết kế đáy cong chữ V, bạn có thể dễ dàng tì chúng vào giữa hai đùi và giữ một cách chắc chắn khi không có bàn. Chiếc ly uống nước độc đáo này ra đời từ phương pháp:", "opts": ["Sáng tạo bằng cách giải quyết vấn đề", "Sáng tạo từ sự kết hợp", "Sáng tạo bằng việc thay đổi thiết kế", "Sáng tạo dựa vào kinh nghiệm"], "ans": 2, "tip": "Biến đổi kiểu dáng vật lý của chiếc cốc từ đáy phẳng tròn sang thiết kế rãnh chữ V ôm vừa vặn đùi -> Thay đổi thiết kế."}, {"id": "mcq_28", "category": "Tổng quan & Pháp lý", "q": "Theo Luật Doanh nghiệp 2020: Doanh nghiệp là một tổ chức kinh tế có tài sản, có… trụ sở giao dịch ổn định, được đăng ký kinh doanh theo quy định nhằm mục đích thực hiện các hoạt động kinh doanh.", "opts": ["Lao động", "Tên riêng", "Con dấu", "Sản phẩm dịch vụ"], "ans": 1, "tip": "Theo định nghĩa Luật DN 2020: Tổ chức kinh tế có 'tên riêng', có tài sản, có trụ sở giao dịch ổn định."}, {"id": "mcq_29", "category": "Tổng quan & Pháp lý", "q": "Theo Luật Doanh nghiệp 2020: Doanh nghiệp là một tổ chức kinh doanh có tên riêng, có tài sản, có….. được đăng ký kinh doanh theo quy định của pháp luật nhằm mục đích thực hiện các hoạt động kinh doanh.", "opts": ["Sản phẩm dịch vụ", "Con dấu", "Trụ sở giao dịch ổn định", "Lao động"], "ans": 2, "tip": "Thành tố pháp lý bắt buộc: 'Trụ sở giao dịch ổn định'."}, {"id": "mcq_30", "category": "Nghĩa vụ thuế", "q": "Loại hình tổ chức kinh doanh nào sau đây phải trực tiếp nộp thuế thu nhập cá nhân (TNCN) thay vì thuế thu nhập doanh nghiệp (TNDN)?", "opts": ["Doanh nghiệp tư nhân", "Công ty cổ phần", "Hộ kinh doanh cá thể", "Công ty trách nhiệm hữu hạn một thành viên"], "ans": 2, "tip": "Hộ kinh doanh cá thể không phải pháp nhân doanh nghiệp, thu nhập kinh doanh chịu thuế Thu nhập cá nhân (TNCN) theo quy định thuế khoán hoặc kê khai."}, {"id": "mcq_31", "category": "Văn hóa doanh nhân", "q": "Ngày nào trong số những ngày kể ra sau đây được chọn làm ngày Doanh nhân Việt Nam?", "opts": ["03/10", "10/03", "13/10", "23/10"], "ans": 2, "tip": "Ngày 13/10 hàng năm là Ngày Doanh nhân Việt Nam (theo Quyết định số 990/QĐ-TTg ký năm 2004 kỷ niệm bức thư Bác Hồ gửi giới công thương 13/10/1945)."}, {"id": "mcq_32", "category": "Vai trò doanh nghiệp", "q": "Doanh nghiệp có vai trò gì đối với nền kinh tế và xã hội?", "opts": ["Tạo ra thu nhập", "Tạo ra việc làm", "Tạo ra của cải vật chất", "Tất cả các đáp án trên đều đúng"], "ans": 3, "tip": "Doanh nghiệp là động lực phát triển kinh tế: tạo của cải vật chất, công ăn việc làm, thu nhập cho người lao động và nguồn thu ngân sách."}, {"id": "mcq_33", "category": "Hình thức khởi sự", "q": "Khởi sự bằng việc thừa hưởng doanh nghiệp có những đặc điểm sau, NGOẠI TRỪ:", "opts": ["Có sẵn các yếu tố cơ bản để vận hành", "Thừa hưởng được mối quan hệ cũ", "Hoạt động kinh doanh không bị gián đoạn", "Được vay vốn ưu đãi, bảo lãnh vay vốn"], "ans": 3, "tip": "'Được vay vốn ưu đãi, bảo lãnh vay vốn' là đặc điểm của Nhượng quyền kinh doanh, không phải của thừa hưởng DN gia đình."}, {"id": "mcq_34", "category": "Sáng tạo & Ý tưởng", "q": "Ý tưởng kinh doanh tốt là ý tưởng kinh doanh thỏa mãn:", "opts": ["Có tính khả thi", "Có tính sáng tạo", "Có tính dị biệt", "Cả A và B đều đúng"], "ans": 3, "tip": "Cốt lõi của ý tưởng kinh doanh là phải vừa Sáng tạo (mới mẻ, khác biệt) vừa Khả thi (thực hiện được)."}, {"id": "mcq_35", "category": "Sáng tạo & Ý tưởng", "q": "“Nhận biết những ý tưởng có thể trở thành cơ hội kinh doanh xuất phát từ khả năng thấy được những thứ mà người khác không thấy được” là phương pháp sáng tạo nào?", "opts": ["Tập kích não (Brainstorming)", "Tăng cường tư duy sáng tạo", "Dựa vào kinh nghiệm", "Điều tra khảo sát"], "ans": 2, "tip": "Chính kinh nghiệm và vốn sống chuyên sâu trong ngành giúp người khởi nghiệp nhận ra những 'nỗi đau ngầm' và cơ hội mà người ngoài ngành không thể thấy."}, {"id": "mcq_36", "category": "Sáng tạo & Ý tưởng", "q": "Đồng hồ Clocky có bánh xe khi đến giờ báo thức sẽ vừa kêu vừa chạy trốn khắp phòng, buộc bạn phải nhào ra khỏi giường để đuổi bắt. Sản phẩm này ra đời từ phương pháp sáng tạo nào?", "opts": ["Sáng tạo bằng việc thay đổi thiết kế", "Sáng tạo bằng cách giải quyết vấn đề", "Sáng tạo dựa vào kinh nghiệm", "Sáng tạo từ sự kết hợp"], "ans": 1, "tip": "Giải quyết dứt điểm thói quen tắt chuông rồi ngủ tiếp của người lười dậy sớm -> Giải quyết vấn đề (problem solving)."}, {"id": "mcq_37", "category": "Sáng tạo & Ý tưởng", "q": "Xe đẩy cho em bé tích hợp bàn trượt giúp phụ huynh trải nghiệm cảm giác lướt đi vi vút trên đường là sản phẩm ra đời từ phương pháp sáng tạo nào?", "opts": ["Sáng tạo bằng cách giải quyết vấn đề", "Sáng tạo bằng việc thay đổi thiết kế", "Sáng tạo dựa vào kinh nghiệm", "Sáng tạo từ sự kết hợp"], "ans": 3, "tip": "Kết hợp giữa Xe đẩy trẻ em (stroller) + Ván trượt patin (skateboard) -> Sáng tạo từ sự kết hợp."}, {"id": "mcq_38", "category": "Sáng tạo & Ý tưởng", "q": "Tiêu chuẩn nào sau đây KHÔNG sử dụng để đánh giá, lựa chọn ý tưởng kinh doanh?", "opts": ["Kinh nghiệm bản thân của nghiệp chủ", "Tính dị biệt của ý tưởng", "Kiến thức vốn có của nghiệp chủ", "Tất cả các đáp án trên đều sai"], "ans": 3, "tip": "5 tiêu chuẩn đánh giá ý tưởng: Kiến thức, Kinh nghiệm, Kỹ năng, Khả năng thâm nhập thị trường, Sự độc đáo (tính dị biệt). Cả A, B, C đều là tiêu chuẩn đúng."}, {"id": "mcq_39", "category": "Pháp lý & Đặt tên", "q": "Để lựa chọn tên cho doanh nghiệp, cần quan tâm đến những vấn đề sau, NGOẠI TRỪ:", "opts": ["Khả năng phát âm của tên gọi", "Độ dài của tên gọi", "Tên của các doanh nghiệp khác ngành", "Sự tương đồng giữa đọc và viết tên"], "ans": 2, "tip": "Doanh nghiệp chủ yếu cần tránh trùng lặp, gây nhầm lẫn với các đối thủ cùng phân khúc/cùng ngành; tên DN hoàn toàn khác ngành thường không ảnh hưởng."}, {"id": "mcq_40", "category": "Pháp lý & Đặt tên", "q": "Thành phần nào sau đây có tính chất KHÔNG bắt buộc trong cấu thành tên tiếng Việt của doanh nghiệp?", "opts": ["Loại hình doanh nghiệp", "Tên riêng doanh nghiệp", "Lĩnh vực hoạt động", "Tất cả các đáp án trên đều sai"], "ans": 2, "tip": "Căn cứ Điều 37 Luật DN 2020: Tên DN bắt buộc gồm 2 thành tố: 1. Loại hình DN; 2. Tên riêng. Ngành nghề/lĩnh vực hoạt động là thành phần bổ sung tùy chọn."}, {"id": "mcq_41", "category": "Pháp lý & Đặt tên", "q": "“Ford”, “Disney”, “Honda” là những tên thương hiệu được hình thành từ phương pháp đặt tên nào?", "opts": ["Tên ghép", "Tên gợi mở", "Tên mô tả", "Tên gia đình"], "ans": 3, "tip": "Lấy họ của người sáng lập (Henry Ford, Walt Disney, Soichiro Honda) -> Phương pháp đặt tên gia đình (family names)."}, {"id": "mcq_42", "category": "Pháp lý & ĐKKD", "q": "Loại văn bản cấp cho doanh nghiệp kinh doanh trong các ngành nghề có điều kiện (sau khi đã có GCN ĐKKD) được gọi là:", "opts": ["Giấy phép kinh doanh", "Giấy chứng nhận đăng ký kinh doanh", "Bản điều lệ công ty", "Giấy chứng nhận đăng ký doanh nghiệp"], "ans": 0, "tip": "Đối với ngành nghề kinh doanh có điều kiện, DN phải đáp ứng đủ điều kiện và được cơ quan quản lý chuyên ngành cấp 'Giấy phép kinh doanh' (Sub-license)."}, {"id": "mcq_43", "category": "Pháp lý & ĐKKD", "q": "Theo Luật Doanh nghiệp 2020, nội dung nào sau đây KHÔNG còn được ghi trên Giấy chứng nhận đăng ký doanh nghiệp?", "opts": ["Tên và mã số doanh nghiệp", "Ngành nghề kinh doanh", "Thông tin người đại diện theo pháp luật", "Địa chỉ trụ sở chính"], "ans": 1, "tip": "Căn cứ Điều 28 Luật DN 2020: 'Ngành nghề kinh doanh' đã được lược bỏ khỏi GCN ĐKDN để tạo điều kiện doanh nghiệp tự do kinh doanh những gì luật không cấm."}, {"id": "mcq_44", "category": "Pháp lý & ĐKKD", "q": "Hồ sơ đăng ký kinh doanh của tất cả các loại hình doanh nghiệp kể ra sau đây đều bắt buộc có Dự thảo Điều lệ công ty, NGOẠI TRỪ:", "opts": ["Công ty cổ phần", "Doanh nghiệp tư nhân", "Công ty trách nhiệm hữu hạn 2 thành viên trở lên", "Công ty hợp danh"], "ans": 1, "tip": "Doanh nghiệp tư nhân thuộc sở hữu của 1 cá nhân duy nhất, không phải công ty nên không có Điều lệ."}, {"id": "mcq_45", "category": "Kế hoạch kinh doanh", "q": "Kế hoạch kinh doanh có những vai trò kể ra sau đây, NGOẠI TRỪ:", "opts": ["Phản ánh các yêu cầu về nguồn lực và rủi ro", "Đảm bảo chắc chắn cho việc tìm được nguồn vốn đầu tư", "Giúp doanh nghiệp nhận diện được các vấn đề", "Cung cấp khuôn khổ và kế hoạch thời gian để thực hiện dự án"], "ans": 1, "tip": "Kế hoạch kinh doanh chỉ mang tính 'Hỗ trợ' tìm kiếm nguồn vốn, không thể 'Đảm bảo chắc chắn' sẽ gọi được vốn."}, {"id": "mcq_46", "category": "Môi trường kinh doanh", "q": "Yếu tố công nghệ thuộc môi trường vĩ mô tác động trực tiếp đến những vấn đề sau, NGOẠI TRỪ:", "opts": ["Công nghệ sản xuất của doanh nghiệp", "Tần suất xuất hiện sản phẩm thay thế", "Quy mô thị trường", "Chu kỳ sống của sản phẩm"], "ans": 2, "tip": "Quy mô thị trường phụ thuộc chủ yếu vào dân số, cơ cấu tuổi, mức thu nhập và yếu tố kinh tế - nhân khẩu học, không phải yếu tố công nghệ thuần túy."}, {"id": "mcq_47", "category": "Chiến lược tăng trưởng", "q": "Khi doanh nghiệp gia tăng quyền kiểm soát hoặc mua lại các đại lý, trung gian phân phối, nghĩa là doanh nghiệp đang thực hiện chiến lược:", "opts": ["Chiến lược hội nhập hàng ngang", "Chiến lược hội nhập phía trước (Forward Integration)", "Chiến lược đa dạng hóa hàng ngang", "Chiến lược hội nhập phía sau (Backward Integration)"], "ans": 1, "tip": "Hội nhập phía trước: tiến gần hơn tới người tiêu dùng bằng cách kiểm soát hệ thống kênh phân phối/bán lẻ. (Hội nhập phía sau là mua lại nhà cung cấp nguyên liệu)."}, {"id": "mcq_48", "category": "Marketing-Mix & Vòng đời", "q": "Khi sản phẩm bước vào giai đoạn phát triển (tăng trưởng), doanh nghiệp KHÔNG nên:", "opts": ["Thu hẹp danh mục sản phẩm", "Giảm chi phí đầu tư cho hoạt động chiêu thị so với doanh thu", "Sử dụng hình thức phân phối chọn lọc mở rộng", "Duy trì thang giá cạnh tranh"], "ans": 0, "tip": "Ở giai đoạn tăng trưởng nhu cầu thị trường bùng nổ, DN cần MỞ RỘNG chủng loại mẫu mã để bao phủ các phân khúc mới, tuyệt đối không thu hẹp danh mục."}, {"id": "mcq_49", "category": "Quản trị Marketing", "q": "Quan điểm quản trị Marketing nào lấy nhu cầu và mong muốn của khách hàng mục tiêu làm trọng tâm để tổ chức mọi hoạt động sản xuất kinh doanh?", "opts": ["Quan điểm trọng bán hàng", "Quan điểm trọng sản phẩm", "Quan điểm trọng sản xuất", "Quan điểm trọng Marketing"], "ans": 3, "tip": "Quan điểm trọng Marketing (Marketing Concept): Khách hàng là trung tâm, thỏa mãn nhu cầu người mua tốt hơn đối thủ cạnh tranh."}];
+    const rawTF = [{"id": "tf_1", "category": "Đúng / Sai - Pháp lý & Tổ chức", "q": "Doanh nghiệp tư nhân là một trong những loại hình doanh nghiệp dễ dàng nhất trong công tác tổ chức và quản lý.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Do 1 cá nhân toàn quyền quyết định, cơ cấu gọn nhẹ, không phải họp HĐQT hay chia sẻ quyền biểu quyết."}, {"id": "tf_2", "category": "Đúng / Sai - Thương hiệu & Đặt tên", "q": "Tên của doanh nghiệp càng dài thì càng tạo ra nhiều ấn tượng tốt và dễ nhớ cho khách hàng.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Tên doanh nghiệp cần ngắn gọn, cô đọng, dễ phát âm, dễ nhớ; tên quá dài gây rối rắm và khó nhận diện."}, {"id": "tf_3", "category": "Đúng / Sai - Pháp lý & Đặt tên", "q": "Nên tra cứu Google để kiểm tra xem tên doanh nghiệp có bị trùng lặp với các doanh nghiệp đã đăng ký trước đó hay không.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Google không có giá trị pháp lý. Bắt buộc phải tra cứu trên Hệ thống Thông tin Quốc gia về Đăng ký Doanh nghiệp (dangkykinhdoanh.gov.vn)."}, {"id": "tf_4", "category": "Đúng / Sai - Thuế & Nghĩa vụ", "q": "Nếu doanh nghiệp chưa đi vào hoạt động sản xuất kinh doanh, trong vòng 30 ngày kể từ ngày nhận Giấy chứng nhận ĐKDN, doanh nghiệp phải nộp tờ khai lệ phí môn bài.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Căn cứ quy định về quản lý lệ phí môn bài đối với người nộp thuế mới thành lập nhưng chưa hoạt động."}, {"id": "tf_5", "category": "Đúng / Sai - Pháp lý Doanh nghiệp", "q": "Theo Luật Doanh nghiệp 2020, cơ quan quản lý mẫu con dấu của doanh nghiệp là cơ quan đăng ký kinh doanh.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Luật DN 2020 bãi bỏ hoàn toàn thủ tục thông báo mẫu dấu. Doanh nghiệp tự khắc và tự quản lý con dấu."}, {"id": "tf_6", "category": "Đúng / Sai - Pháp lý & Thuế", "q": "Cục/chi cục Hải quan là đơn vị cấp mã số xuất nhập khẩu riêng cho các doanh nghiệp khi tham gia hoạt động ngoại thương.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Mã số doanh nghiệp đồng thời là mã số thuế và mã số xuất nhập khẩu; Hải quan không cấp mã riêng."}, {"id": "tf_7", "category": "Đúng / Sai - Kế hoạch kinh doanh", "q": "Kế hoạch tài chính là nội dung quan trọng nhất của bản kế hoạch kinh doanh.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Kế hoạch tài chính định lượng hóa toàn bộ dự án, phản ánh doanh thu, chi phí, điểm hòa vốn và khả năng sinh lời."}, {"id": "tf_8", "category": "Đúng / Sai - Quản trị nhân sự", "q": "Chi phí tuyển dụng nguồn nhân lực là chi phí hoạt động thường xuyên của doanh nghiệp.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Chi phí tuyển dụng phát sinh theo đợt khi có nhu cầu bổ sung nhân sự, không phải chi phí vận hành định kỳ cố định."}, {"id": "tf_9", "category": "Đúng / Sai - Chiến lược kinh doanh", "q": "Chiến lược thâm nhập thị trường là việc doanh nghiệp tiến hành kinh doanh sản phẩm hiện có trên thị trường mới.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. SP hiện có + TT mới là chiến lược 'Phát triển thị trường'. Thâm nhập thị trường là SP hiện có + TT hiện có."}, {"id": "tf_10", "category": "Đúng / Sai - Marketing phân phối", "q": "Phân phối làm tăng giá trị của sản phẩm.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Phân phối đưa sản phẩm tới đúng địa điểm (place utility) và thời điểm (time utility) người mua cần."}, {"id": "tf_11", "category": "Đúng / Sai - Quản trị nhân sự", "q": "Quảng cáo tuyển dụng là cách tốt nhất để thu hút ứng viên nộp hồ sơ xin việc trong mọi trường hợp.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Tùy cấp bậc mà referral (giới thiệu nội bộ), headhunter hay thực tập sinh sẽ hiệu quả hơn nhiều so với quảng cáo đại trà."}, {"id": "tf_12", "category": "Đúng / Sai - Kế toán & Tài sản", "q": "Tài sản cố định không có hình thái vật chất (TSCĐ vô hình) chỉ bị hao mòn vô hình.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Do không có hình thái vật chất nên không bị ma sát hay hao mòn vật lý; chỉ hao mòn vô hình do tiến bộ công nghệ hoặc hết hạn quyền."}, {"id": "tf_13", "category": "Đúng / Sai - Chiến lược kinh doanh", "q": "Hoạch định chiến lược không đòi hỏi kỹ năng về phân tích và trực giác tốt.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Hoạch định chiến lược đòi hỏi tư duy phân tích dữ liệu khắt khe kết hợp trực giác nhạy bén của nhà lãnh đạo."}, {"id": "tf_14", "category": "Đúng / Sai - Loại hình doanh nghiệp", "q": "Doanh nghiệp tư nhân là tổ chức kinh tế do một cá nhân hoặc một tổ chức làm chủ sở hữu.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Căn cứ Điều 188 Luật DN 2020: DNTN CHỈ do một CÁ NHÂN làm chủ, tổ chức không được thành lập DNTN."}, {"id": "tf_15", "category": "Đúng / Sai - Loại hình doanh nghiệp", "q": "Công ty hợp danh phải có ít nhất 3 thành viên là chủ sở hữu chung.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Căn cứ Điều 177 Luật DN 2020: Phải có ít nhất 02 thành viên hợp danh là chủ sở hữu chung."}, {"id": "tf_16", "category": "Đúng / Sai - Năng lực doanh nhân", "q": "Năng lực nghiệp chủ là do bẩm sinh, không phải do rèn luyện mà có.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Tinh thần doanh nhân và kỹ năng quản trị hoàn toàn có thể đào tạo, rèn luyện và trau dồi qua thực tiễn."}, {"id": "tf_17", "category": "Đúng / Sai - Hình thức khởi sự", "q": "Khi tham gia nhượng quyền kinh doanh, bên nhận quyền có thể được vay vốn ưu đãi.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Bên nhượng quyền thường có đối tác tài chính hoặc bảo lãnh vay vốn ngân hàng cho đối tác nhận quyền."}, {"id": "tf_18", "category": "Đúng / Sai - Lịch sử kinh tế", "q": "Giới doanh nhân bắt đầu xuất hiện ở Việt Nam từ sau năm 1990.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Với sự ra đời của Luật Công ty và Luật Doanh nghiệp tư nhân năm 1990, kinh tế tư nhân được luật hóa và tầng lớp doanh nhân hiện đại chính thức hình thành."}, {"id": "tf_19", "category": "Đúng / Sai - Khởi nghiệp Startup", "q": "Start-up có 2 đặc trưng căn bản là tính đột phá (innovation) và sự tăng trưởng cao (scalability).", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Startup khác biệt với kinh doanh nhỏ truyền thống ở tính đột phá về công nghệ/mô hình và khả năng mở rộng quy mô thần tốc."}, {"id": "tf_20", "category": "Đúng / Sai - Sáng tạo & Ý tưởng", "q": "Tìm kiếm ý tưởng hay là bước đầu tiên trong quá trình chuyển khả năng sáng tạo của doanh nhân thành một cơ hội.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Chu trình: Sáng tạo -> Tìm kiếm & sàng lọc ý tưởng -> Thẩm định tính khả thi -> Hiện thực hóa thành cơ hội kinh doanh."}, {"id": "tf_21", "category": "Đúng / Sai - Sáng tạo & Ý tưởng", "q": "Ý tưởng kinh doanh tốt là ý tưởng kinh doanh phải có tính sáng tạo, tạo được lợi thế cạnh tranh và giúp doanh nghiệp khai thác được cơ hội kinh doanh.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Đây là định nghĩa chuẩn mực về một ý tưởng kinh doanh có tiềm năng thành công."}, {"id": "tf_22", "category": "Đúng / Sai - Phương pháp sáng tạo", "q": "Phương pháp sáng tạo bằng sự kết hợp là phương pháp tối ưu nhất để hình thành ý tưởng kinh doanh.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Không có phương pháp nào là duy nhất hoặc 'tối ưu nhất'. Tùy bối cảnh sản phẩm để chọn kết hợp, giải quyết vấn đề, hay đổi thiết kế."}, {"id": "tf_23", "category": "Đúng / Sai - Triển khai ý tưởng", "q": "Khi lựa chọn được ý tưởng kinh doanh, nghiệp chủ cần tiến hành sản xuất hàng loạt và thực hiện thương mại hoá sản phẩm ngay.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Cần thử nghiệm thị trường (làm MVP, mẫu thử, thăm dò phản hồi) trước khi rót vốn sản xuất hàng loạt để giảm rủi ro."}, {"id": "tf_24", "category": "Đúng / Sai - Đánh giá ý tưởng", "q": "Tính độc đáo là một trong những chỉ tiêu được sử dụng để lựa chọn ý tưởng kinh doanh.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Sự độc đáo (tính khác biệt) giúp sản phẩm nổi bật giữa thị trường bão hòa."}, {"id": "tf_25", "category": "Đúng / Sai - Sản phẩm sáng tạo", "q": "Smart phone là sản phẩm được ra đời từ phương pháp sáng tạo từ sự kết hợp.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Smartphone kết hợp điện thoại di động + máy ảnh kỹ thuật số + máy tính bỏ túi + thiết bị nghe nhạc đa phương tiện."}, {"id": "tf_26", "category": "Đúng / Sai - Phương pháp đặt tên", "q": "Tên ghép là phương pháp đặt tên dựa vào việc ghép hai hay nhiều từ khác nhau để hình thành ra tên gọi mới cho doanh nghiệp.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Ví dụ: CocaCola, Microsoft (Microcomputer + Software), FedEx."}, {"id": "tf_27", "category": "Đúng / Sai - Phương pháp đặt tên", "q": "Lĩnh vực, ngành hoạt động được xem là một trong những yếu tố cần xem xét khi tìm kiếm ý tưởng cho tên doanh nghiệp.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Ngành nghề gợi ý từ khóa, cảm xúc và thông điệp thích hợp để đặt tên."}, {"id": "tf_28", "category": "Đúng / Sai - Thương hiệu & Định vị", "q": "Tên doanh nghiệp có khả năng gia tăng sự cảm nhận về sản phẩm chất lượng trong tâm trí của khách hàng.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Một cái tên sang trọng, chuyên nghiệp nâng cao giá trị cảm nhận thương hiệu (Brand Equity)."}, {"id": "tf_29", "category": "Đúng / Sai - Pháp lý con dấu", "q": "Theo luật Doanh nghiệp 2020, cơ quan quản lý mẫu dấu của doanh nghiệp là Bộ Công an.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Doanh nghiệp tự khắc dấu và tự chịu trách nhiệm, Bộ Công an không còn quản lý mẫu dấu doanh nghiệp thương mại."}, {"id": "tf_30", "category": "Đúng / Sai - Hóa đơn & Thuế", "q": "Cục/chi cục thuế là cơ quan phát hành và trực tiếp quản lý hoá đơn tài chính.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Cơ quan thuế quản lý việc phát hành và sử dụng hóa đơn điện tử của người nộp thuế."}, {"id": "tf_31", "category": "Đúng / Sai - Đăng ký thuế", "q": "Khi chuyển địa điểm kinh doanh giữa các tỉnh/thành phố, doanh nghiệp phải làm thủ tục xin cấp lại/thay đổi Giấy chứng nhận đăng ký thuế.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Chuyển địa bàn tỉnh khác quản lý thuế đòi hỏi quyết toán thuế nơi đi và đăng ký chuyển cơ quan thuế quản lý nơi đến."}, {"id": "tf_32", "category": "Đúng / Sai - Kế hoạch kinh doanh", "q": "Nội dung bản kế hoạch kinh doanh của tất cả các doanh nghiệp đều hoàn toàn giống nhau.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Mỗi quy mô, ngành nghề (sản xuất, dịch vụ, bán lẻ) và mục tiêu gọi vốn có cấu trúc kế hoạch kinh doanh linh hoạt khác nhau."}, {"id": "tf_33", "category": "Đúng / Sai - Chiến lược thị trường", "q": "Chiến lược mở rộng toàn bộ thị trường chỉ được áp dụng cho những thị trường chưa bão hoà.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Thị trường chưa bão hòa còn nhiều dung lượng trống; thị trường bão hòa cạnh tranh khốc liệt chỉ hợp thâm nhập ngách."}, {"id": "tf_34", "category": "Đúng / Sai - Chiến lược giá", "q": "Doanh nghiệp không bao giờ được bán sản phẩm/dịch vụ với mức giá bán thấp hơn giá thành.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Trong nhiều chiến lược (như định giá lỗ câu khách - Loss Leader, xả hàng tồn thu hồi vốn, hoặc trợ giá giành thị phần), DN vẫn bán dưới giá thành."}, {"id": "tf_35", "category": "Đúng / Sai - Kế toán & Chi phí", "q": "Tiền lương trả cho nhân viên văn phòng, hành chính sẽ được hạch toán trực tiếp vào giá vốn hàng bán.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Lương nhân viên văn phòng hạch toán vào Chi phí quản lý doanh nghiệp (TK 642), không vào giá vốn (TK 632)."}, {"id": "tf_36", "category": "Đúng / Sai - Khởi nghiệp", "q": "Khi có quá ít vốn thì không nên cố triển khai kinh doanh.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Có thể khởi nghiệp tinh gọn (Lean Startup), kinh doanh dịch vụ môi giới, thương mại điện tử dropshipping hoặc bootstrapping."}, {"id": "tf_37", "category": "Đúng / Sai - Thực thi chiến lược", "q": "Trong thực thi chiến lược cần có sự hợp tác và nỗ lực thực hiện của cả tập thể doanh nghiệp.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Chiến lược chỉ thành công khi có sự đồng lòng, cam kết và phối hợp giữa mọi phòng ban."}, {"id": "tf_38", "category": "Đúng / Sai - Quản trị nhân sự", "q": "Chi phí đào tạo nguồn nhân lực là chi phí hoạt động thường xuyên.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Chi phí đào tạo mang tính chất đầu tư phát triển dài hạn, phát sinh theo chương trình, không phải chi phí vận hành thường xuyên hàng ngày."}, {"id": "tf_39", "category": "Đúng / Sai - Loại hình doanh nghiệp", "q": "Công ty TNHH 2 thành viên trở lên là tổ chức kinh tế do một cá nhân hoặc một tổ chức làm chủ sở hữu.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. TNHH 2 thành viên trở lên phải có từ 02 đến tối đa 50 thành viên góp vốn sở hữu."}, {"id": "tf_40", "category": "Đúng / Sai - Huy động vốn", "q": "Công ty trách nhiệm hữu hạn 1 thành viên không được phép huy động thêm vốn đầu tư từ các cá nhân hoặc tổ chức khác.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Công ty TNHH 1 TV có thể huy động vốn bằng cách vay, phát hành trái phiếu, hoặc tiếp nhận vốn góp mới (khi đó chuyển đổi thành Cty TNHH 2 TV trở lên hoặc Cty Cổ phần)."}, {"id": "tf_41", "category": "Đúng / Sai - Pháp lý Hộ kinh doanh", "q": "Để mở chi nhánh và văn phòng đại diện, hộ kinh doanh cá thể có thể tiến hành đăng ký tại phòng đăng ký kinh doanh cấp tỉnh hoặc cấp huyện.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Căn cứ Nghị định 01/2021/NĐ-CP: Hộ kinh doanh KHÔNG ĐƯỢC PHÉP mở chi nhánh, văn phòng đại diện."}, {"id": "tf_42", "category": "Đúng / Sai - Năng lực khởi nghiệp", "q": "Bất cứ người nào cũng có thể khởi sự kinh doanh miễn là có ý tưởng và cơ hội để kinh doanh.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Cần năng lực pháp luật dân sự (không thuộc diện cấm), năng lực quản trị, kiến thức ngành và nguồn lực tối thiểu."}, {"id": "tf_43", "category": "Đúng / Sai - Mua lại doanh nghiệp", "q": "Khi mua lại doanh nghiệp, chủ doanh nghiệp cần tiến hành tái cấu trúc doanh nghiệp để điều chỉnh lại cơ cấu tổ chức và quy trình hoạt động.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Tái cấu trúc giúp hòa nhập văn hóa doanh nghiệp mới và tối ưu hóa hiệu quả hoạt động sau sáp nhập."}, {"id": "tf_44", "category": "Đúng / Sai - Khái niệm Startup", "q": "Start-up dịch ra tiếng Việt có thể hiểu là doanh nghiệp khởi nghiệp đổi mới sáng tạo.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Thuật ngữ Startup chuẩn trong các văn bản pháp luật VN là 'Doanh nghiệp khởi nghiệp sáng tạo'."}, {"id": "tf_45", "category": "Đúng / Sai - Sáng tạo", "q": "Sáng tạo là quá trình hoạt động của con người nhằm tạo ra những giá trị vật chất, tinh thần mới.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Định nghĩa kinh điển về sự sáng tạo của con người."}, {"id": "tf_46", "category": "Đúng / Sai - Sáng tạo & Ý tưởng", "q": "Ý tưởng kinh doanh tốt là ý tưởng khai thác được cơ hội kinh doanh trên thị trường.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Ý tưởng chỉ có giá trị thương mại khi nó khớp nối và khai thác được một khoảng trống cơ hội thị trường."}, {"id": "tf_47", "category": "Đúng / Sai - Phương pháp sáng tạo", "q": "Phương pháp sáng tạo bằng cách giải quyết vấn đề là phương pháp tối ưu nhất để hình thành ý tưởng kinh doanh.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Không có phương pháp sáng tạo nào là 'tối ưu nhất' cho mọi hoàn cảnh."}, {"id": "tf_48", "category": "Đúng / Sai - Thẩm định ý tưởng", "q": "Đưa ý tưởng kinh doanh cho các nhà đầu tư mạo hiểm khi chưa đăng ký bảo hộ là phương pháp thẩm định ý tưởng kinh doanh chứa đựng nhiều rủi ro.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Rất dễ bị lộ bí mật kinh doanh, sao chép hoặc chiếm đoạt ý tưởng trước khi kịp triển khai."}, {"id": "tf_49", "category": "Đúng / Sai - Sản phẩm sáng tạo", "q": "Smart watch (đồng hồ thông minh) là sản phẩm được ra đời từ phương pháp sáng tạo từ sự kết hợp.", "opts": ["Đúng", "Sai"], "ans": 0, "tip": "Đúng. Kết hợp đồng hồ đeo tay truyền thống + bộ vi xử lý máy tính/cảm biến đo sức khỏe."}, {"id": "tf_50", "category": "Đúng / Sai - Đánh giá ý tưởng", "q": "Tính độc đáo là tiêu chí quan trọng nhất để lựa chọn ý tưởng kinh doanh.", "opts": ["Đúng", "Sai"], "ans": 1, "tip": "Sai. Tính khả thi, khả năng sinh lời và năng lực thực thi của đội ngũ mới là những tiêu chí quyết định sống còn."}];
+    const rawSA = [{"q": "1. Kinh doanh là gì?", "a": "Kinh doanh là việc thực hiện một, một số hoặc tất cả các công đoạn của quá trình đầu tư từ sản xuất đến tiêu thụ sản phẩm (hàng hóa, dịch vụ) trên thị trường nhằm mục đích thu lợi nhuận."}, {"q": "2. Doanh nghiệp là gì?", "a": "Doanh nghiệp là một tổ chức kinh tế có tên riêng, có tài sản, có trụ sở giao dịch ổn định, được đăng ký kinh doanh theo quy định của pháp luật nhằm mục đích thực hiện các hoạt động kinh doanh."}, {"q": "3. Kinh doanh nhỏ (Small Business) là gì?", "a": "Kinh doanh nhỏ là hoạt động của một cá nhân hay tổ chức được thành lập ra với mục đích tìm kiếm lợi nhuận càng sớm càng tốt (có thể ngay ngày đầu tiên kinh doanh). Không đòi hỏi nhiều chi phí đầu tư ban đầu, rủi ro thấp, nhưng cơ hội tạo ra sự đột phá quy mô lớn thường rất thấp."}, {"q": "4. Start-up (Khởi nghiệp sáng tạo) là gì?", "a": "Start-up là một định chế/tổ chức con người được thiết kế nhằm mục đích tạo ra những sản phẩm và dịch vụ mới trong các điều kiện cực kỳ không chắc chắn (theo Eric Ries). Đặc trưng cốt lõi của Start-up là tính đột phá (innovation) và khả năng tăng trưởng quy mô thần tốc (scalability)."}, {"q": "5. Nêu các hình thức khởi sự doanh nghiệp?", "a": "Có 4 hình thức khởi sự doanh nghiệp cơ bản:\n1. Thừa hưởng doanh nghiệp (gia đình/người thân)\n2. Mua lại doanh nghiệp đang hoạt động\n3. Nhượng quyền kinh doanh (Franchising)\n4. Thành lập doanh nghiệp mới hoàn toàn"}, {"q": "6. Nêu ưu điểm và nhược điểm của từng hình thức khởi sự doanh nghiệp?", "a": "1. Thừa hưởng doanh nghiệp:\n- Ưu điểm: Học hỏi kinh nghiệm người đi trước; thừa hưởng quan hệ cũ và nhân sự có sẵn; HĐKD không bị gián đoạn.\n- Nhược điểm: Dễ đi theo lối mòn; khó thay đổi phong cách quản lý.\n\n2. Mua lại doanh nghiệp:\n- Ưu điểm: Ít tốn kém hơn so với tự xây mới; giảm bớt bất trắc; tránh tạo lập quan hệ mới từ đầu; có sẵn các yếu tố cơ bản để vận hành.\n- Nhược điểm: Khó khăn trong việc định giá DN; áp lực và rủi ro khi tái cấu trúc DN.\n\n3. Nhượng quyền kinh doanh:\n- Ưu điểm: Tận dụng uy tín thương hiệu có sẵn; có quyền phân phối sản phẩm chuẩn; thừa hưởng tệp khách hàng từ hệ thống; được hỗ trợ đào tạo/vận hành; được vay vốn ưu đãi, bảo lãnh vay vốn.\n- Nhược điểm: Mất quyền tự chủ/kiểm soát; hợp đồng ràng buộc khắt khe; tính bị động; rủi ro dây chuyền từ uy tín của bên nhượng quyền.\n\n4. Thành lập doanh nghiệp mới:\n- Ưu điểm: Nghiệp chủ có tính độc lập cao nhất, toàn quyền tự quyết định mô hình và đường hướng kinh doanh.\n- Nhược điểm: Tốn kém chi phí nhất, mất nhiều thời gian gây dựng và rủi ro thất bại cao nhất."}, {"q": "7. Thế nào là ý tưởng kinh doanh?", "a": "Ý tưởng kinh doanh là những suy nghĩ, tính toán, cân nhắc kỹ lưỡng về sản phẩm hoặc dịch vụ mà bản thân nghiệp chủ có thể cung cấp ra thị trường nhằm đáp ứng một nhu cầu cụ thể và tạo ra lợi nhuận."}, {"q": "8. Nêu các đặc điểm của một ý tưởng kinh doanh tốt?", "a": "Một ý tưởng kinh doanh tốt cần thỏa mãn 4 đặc điểm cốt lõi:\n1. Có tính sáng tạo (mới mẻ, khác biệt)\n2. Có tính khả thi (thực hiện được trong điều kiện nguồn lực)\n3. Tạo được lợi thế cạnh tranh bền vững\n4. Khai thác được cơ hội kinh doanh thực tế trên thị trường"}, {"q": "9. Nêu 5 tiêu chuẩn được sử dụng để đánh giá ý tưởng kinh doanh?", "a": "5 tiêu chuẩn đánh giá ý tưởng kinh doanh:\n1. Kiến thức bản thân của nghiệp chủ\n2. Kinh nghiệm bản thân của nghiệp chủ\n3. Kỹ năng bản thân của nghiệp chủ\n4. Khả năng thâm nhập thị trường của ý tưởng\n5. Sự độc đáo (tính dị biệt) của ý tưởng"}, {"q": "10. Nêu các phương pháp để thử nghiệm ý tưởng kinh doanh?", "a": "Có 4 phương pháp thử nghiệm ý tưởng kinh doanh:\n1. Đưa ý tưởng trình bày cho nhà đầu tư mạo hiểm để lấy phản biện\n2. Tạo sản phẩm mẫu (MVP/prototype) và gửi cho nhà bán lẻ/khách hàng trải nghiệm\n3. Điều tra, khảo sát ý kiến khách hàng mục tiêu\n4. Thử đăng ký bảo hộ sở hữu trí tuệ cho ý tưởng/sản phẩm"}, {"q": "11. Nêu các tiêu chí ảnh hưởng đến việc lựa chọn mô hình tổ chức kinh doanh?", "a": "4 tiêu chí cốt lõi:\n1. Khả năng tổ chức và quản lý doanh nghiệp (độ phức tạp của bộ máy)\n2. Khả năng bảo vệ tài sản và nguồn vốn của chủ đầu tư (trách nhiệm vô hạn hay hữu hạn)\n3. Khả năng rút vốn hay chuyển nhượng vốn đầu tư\n4. Khả năng mở rộng quy mô hoặc huy động vốn đầu tư mới"}, {"q": "12. Nêu các yêu cầu khi đặt tên doanh nghiệp?", "a": "3 yêu cầu cơ bản khi đặt tên doanh nghiệp:\n1. Tính khoa học: Dễ phát âm, ngắn gọn, dễ nhớ, dễ viết, không gây hiểu lầm.\n2. Tính nghệ thuật: Độc đáo, tạo cảm xúc tích cực, gợi mở giá trị thương hiệu.\n3. Tính pháp lý: Không trùng lặp hoặc gây nhầm lẫn với tên DN đã đăng ký, đúng cấu trúc luật định, không dùng từ ngữ xúc phạm văn hóa/lịch sử."}, {"q": "13. Nêu các phương pháp đặt tên doanh nghiệp?", "a": "5 phương pháp đặt tên doanh nghiệp phổ biến:\n1. Tên mô tả (Descriptive names): Ví dụ News Corp, British Airways, Vietnam Airlines.\n2. Tên gia đình/sáng lập (Family names): Ví dụ Disney, Ford, Honda, Toyota.\n3. Tên gợi mở (Image names): Ví dụ Apple, Amazon, Oracle, Sun.\n4. Tên ghép (Coined names): Ví dụ Coca-Cola, Microsoft, FedEx, PetroVietnam.\n5. Tên viết tắt (Acronym names): Ví dụ IBM, BMW, KFC, Vingroup."}, {"q": "14. Hồ sơ đăng ký kinh doanh bao gồm những gì?", "a": "Hồ sơ đăng ký doanh nghiệp bao gồm:\n1. Giấy đề nghị đăng ký doanh nghiệp (theo mẫu)\n2. Điều lệ công ty (áp dụng với công ty TNHH, CTCP, CTHD; không áp dụng với DNTN)\n3. Danh sách thành viên (với TNHH, Hợp danh) hoặc danh sách cổ đông sáng lập (với CTCP)\n4. Bản sao giấy tờ pháp lý của cá nhân/tổ chức (CCCD/Hộ chiếu/Quyết định thành lập)\n5. Văn bản xác nhận vốn pháp định hoặc chứng chỉ hành nghề (đối với các ngành nghề luật định yêu cầu)."}, {"q": "15. Nêu các điều kiện để được cấp Giấy chứng nhận đăng ký kinh doanh?", "a": "4 điều kiện luật định:\n1. Ngành, nghề đăng ký kinh doanh không thuộc danh mục ngành nghề cấm đầu tư kinh doanh.\n2. Tên doanh nghiệp được đặt đúng theo quy định của pháp luật (không trùng, không gây nhầm lẫn).\n3. Có hồ sơ đăng ký doanh nghiệp hợp lệ theo quy định.\n4. Nộp đủ lệ phí đăng ký doanh nghiệp theo quy định của pháp luật."}, {"q": "16. Nêu các trường hợp phải xin cấp lại/thay đổi Giấy chứng nhận đăng ký thuế?", "a": "Các trường hợp bao gồm:\n1. Doanh nghiệp phát sinh hoạt động xuất nhập khẩu hàng hóa\n2. Thay đổi tên cơ sở kinh doanh / tên doanh nghiệp\n3. Chuyển địa điểm kinh doanh, trụ sở chính sang tỉnh/thành phố khác\n4. Tái cấu trúc doanh nghiệp: Chuyển đổi loại hình DN, chia, tách, sáp nhập, hợp nhất."}, {"q": "17. Thế nào là kế hoạch kinh doanh?", "a": "Kế hoạch kinh doanh (Business Plan) là một bản tường thuật dưới dạng viết (thường dài từ 25 - 35 trang) mô tả chi tiết dự án kinh doanh mới hoặc định hướng hoạt động của doanh nghiệp trong một khoảng thời gian xác định, phân tích thị trường, cách thức vận hành và tính toán khả năng tài chính để đạt được mục tiêu."}, {"q": "18. Nêu vai trò của kế hoạch kinh doanh?", "a": "4 vai trò trọng yếu:\n1. Giúp doanh nghiệp nhận diện rõ các vấn đề, cơ hội và thách thức trước khi bắt tay thực hiện.\n2. Phản ánh chi tiết các yêu cầu về nguồn lực và dự liệu các rủi ro có thể phát sinh.\n3. Cung cấp khuôn khổ chỉ đạo và kế hoạch thời gian (timeline/milestones) để thực hiện dự án.\n4. Hỗ trợ đắc lực cho việc tiếp cận và tìm kiếm nguồn vốn đầu tư từ ngân hàng hoặc quỹ mạo hiểm."}, {"q": "19. Liệt kê những nội dung cơ bản của một bản kế hoạch kinh doanh?", "a": "7 nội dung cốt lõi của bản kế hoạch kinh doanh:\n1. Tóm tắt thực thi (Executive Summary)\n2. Tóm tắt kinh doanh & giới thiệu doanh nghiệp\n3. Mô tả sản phẩm và dịch vụ\n4. Phân tích thị trường & đối thủ cạnh tranh\n5. Kế hoạch Marketing và bán hàng\n6. Công tác tổ chức và quản trị nhân sự\n7. Kế hoạch tài chính (dự toán thu chi, dòng tiền, P&L, hòa vốn)."}, {"q": "20. Môi trường kinh doanh là gì?", "a": "Môi trường kinh doanh là tập hợp tất cả các yếu tố, lực lượng và điều kiện bên ngoài cũng như bên trong có tác động trực tiếp hoặc gián tiếp đến hoạt động sản xuất kinh doanh và khả năng ra quyết định của doanh nghiệp."}, {"q": "21. Nêu 5 bước của tiến trình nghiên cứu Marketing?", "a": "5 bước chuẩn của tiến trình nghiên cứu Marketing:\n- Bước 1: Xác định vấn đề và mục tiêu nghiên cứu của doanh nghiệp\n- Bước 2: Xây dựng kế hoạch nghiên cứu (nguồn dữ liệu, phương pháp, công cụ)\n- Bước 3: Thu thập dữ liệu (dữ liệu thứ cấp và dữ liệu sơ cấp)\n- Bước 4: Xử lý và phân tích dữ liệu\n- Bước 5: Trình bày kết quả nghiên cứu và đưa ra khuyến nghị."}, {"q": "22. Nêu các thành phần cấu tạo nên thù lao của người lao động?", "a": "Thù lao của người lao động được cấu thành từ 3 phần chính:\n1. Thù lao cơ bản (Lương cơ bản cố định)\n2. Các khoản khuyến khích (Tiền thưởng, hoa hồng bán hàng, chia sẻ lợi nhuận theo năng suất KPI)\n3. Phúc lợi (Bảo hiểm xã hội, y tế, nghỉ phép có lương, trợ cấp ăn trưa, du lịch, khám sức khỏe)."}, {"q": "23. Thế nào là chiến lược phát triển sản phẩm?", "a": "Chiến lược phát triển sản phẩm (Product Development Strategy) là việc doanh nghiệp tiến hành kinh doanh các sản phẩm mới hoặc cải tiến hoàn toàn tính năng sản phẩm trên thị trường hiện có của doanh nghiệp."}, {"q": "24. Trình bày chiến lược Marketing-Mix được áp dụng trong giai đoạn ra đời (giới thiệu) của chu kỳ sống sản phẩm?", "a": "Chiến lược Marketing-Mix (4P) trong giai đoạn Giới thiệu:\n1. Product (Sản phẩm): Chưa vội cải tiến mẫu mã phức tạp, tập trung hiệu chỉnh và hoàn thiện các tính năng thương mại cơ bản của sản phẩm.\n2. Price (Giá cả): Thường áp dụng chiến lược định giá hớt váng (Skimming) để thu hồi vốn nhanh, hoặc định giá thâm nhập nếu muốn giành thị phần.\n3. Place (Phân phối): Áp dụng phân phối độc quyền hoặc chọn lọc tại các điểm bán trọng điểm.\n4. Promotion (Chiêu thị): Sử dụng ngân sách lớn tập trung cho QUẢNG CÁO và PR nhằm mục tiêu thông báo, giới thiệu sản phẩm mới đến người tiêu dùng."}, {"q": "25. Nêu các yếu tố ảnh hưởng đến việc thiết kế kênh phân phối?", "a": "6 yếu tố ảnh hưởng đến việc thiết kế kênh phân phối:\n1. Đặc điểm của sản phẩm (tính dễ hỏng, kích thước, giá trị đơn vị, độ phức tạp kỹ thuật)\n2. Đặc điểm của khách hàng mục tiêu (số lượng, vị trí địa lý, tần suất mua)\n3. Đặc điểm của bản thân doanh nghiệp (quy mô, nguồn lực tài chính, kinh nghiệm quản trị)\n4. Đặc điểm của đối thủ cạnh tranh (kênh họ đang sử dụng, sự phong tỏa điểm bán)\n5. Đặc điểm của các nhà trung gian (khả năng đáp ứng tiêu chuẩn, uy tín, chi phí hoa hồng)\n6. Đặc điểm của môi trường thị trường (kinh tế, luật pháp, hạ tầng giao thông logistics)."}];
+
+    // Format all for universal quiz engine
+    const allQuizQuestions = [
+      ...rawMCQ.map((q, i) => ({ ...q, type: 'mcq', id: 'mcq_' + i })),
+      ...rawTF.map((q, i) => ({ ...q, type: 'mcq', id: 'tf_' + i })), // TF as 2-option MCQ
+      ...rawSA.map((q, i) => ({ ...q, type: 'sa', id: 'sa_' + i, category: 'Tự luận ngắn' }))
+    ];
+
+    const STORAGE_KEY = 'mgt406_quiz_wrong_history';
+    let wrongHistory = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+    let currentQuiz = [];
+    let currentIdx = 0;
+    let correctCount = 0;
+    let wrongCount = 0;
+    let streak = 0;
+    let maxStreak = 0;
+    let answered = false;
+    let results = [];
+    let timerInterval = null;
+    let timerSeconds = 30;
+    let timerRemaining = 0;
+    let soundEnabled = true;
+
+    // Web Audio Synthesizer (Works offline, no audio files needed)
+    const AudioEngine = {
+      ctx: null,
+      init() {
+        if (!this.ctx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          if (AudioContext) this.ctx = new AudioContext();
+        }
+      },
+      play(freq, type, duration, delay = 0) {
+        if (!soundEnabled) return;
+        try {
+          this.init();
+          if (!this.ctx) return;
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = type;
+          osc.frequency.setValueAtTime(freq, this.ctx.currentTime + delay);
+          gain.gain.setValueAtTime(0.12, this.ctx.currentTime + delay);
+          gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + delay + duration);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start(this.ctx.currentTime + delay);
+          osc.stop(this.ctx.currentTime + delay + duration);
+        } catch (e) {}
+      },
+      correct() {
+        this.play(523.25, 'sine', 0.12, 0);     // C5
+        this.play(659.25, 'sine', 0.18, 0.08);  // E5
+        this.play(783.99, 'sine', 0.25, 0.16);  // G5
+      },
+      wrong() {
+        this.play(311.13, 'sawtooth', 0.18, 0);    // Eb4
+        this.play(261.63, 'sawtooth', 0.28, 0.12); // C4
+      },
+      streak() {
+        this.play(523.25, 'triangle', 0.1, 0);
+        this.play(659.25, 'triangle', 0.1, 0.08);
+        this.play(783.99, 'triangle', 0.1, 0.16);
+        this.play(1046.50, 'triangle', 0.25, 0.24); // C6
+      }
+    };
+
+    function toggleSound() {
+      soundEnabled = !soundEnabled;
+      const btn = document.getElementById('soundToggleBtn');
+      btn.textContent = soundEnabled ? '🔊 Âm thanh: Bật' : '🔇 Âm thanh: Tắt';
+    }
+
+    // Init badges
+    function updateBadges() {
+      document.getElementById('badgeMcq').textContent = rawMCQ.length + ' câu';
+      document.getElementById('badgeTf').textContent = rawTF.length + ' câu';
+      document.getElementById('badgeSa').textContent = rawSA.length + ' câu';
+      document.getElementById('badgeMix').textContent = allQuizQuestions.length + ' câu';
+      document.getElementById('badgeWrong').textContent = wrongHistory.length + ' câu sai';
+    }
+    updateBadges();
+
+    function shuffle(arr) {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    function showScreen(id) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      const sc = document.getElementById(id);
+      if (sc) sc.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function goHome() {
+      clearTimer();
+      updateBadges();
+      showScreen('startScreen');
+    }
+
+    function startQuiz(mode) {
+      const countSel = parseInt(document.getElementById('questionCountSelect').value);
+      const order = document.getElementById('orderSelect').value;
+      timerSeconds = parseInt(document.getElementById('timerSelect').value);
+
+      let pool = [];
+      if (mode === 'mcq') {
+        pool = rawMCQ.map((q, i) => ({ ...q, type: 'mcq', id: 'mcq_' + i }));
+      } else if (mode === 'tf') {
+        pool = rawTF.map((q, i) => ({ ...q, type: 'mcq', id: 'tf_' + i }));
+      } else if (mode === 'sa') {
+        pool = rawSA.map((q, i) => ({ ...q, type: 'sa', id: 'sa_' + i, category: 'Tự luận ngắn' }));
+      } else if (mode === 'mix') {
+        pool = [...allQuizQuestions];
+      } else if (mode === 'wrong') {
+        if (wrongHistory.length === 0) {
+          alert('Tuyệt vời! Bạn chưa có câu nào làm sai trong lịch sử.');
+          return;
+        }
+        pool = wrongHistory.map(id => {
+          return allQuizQuestions.find(q => q.id === id);
+        }).filter(Boolean);
+      }
+
+      if (order === 'random') pool = shuffle(pool);
+      if (countSel > 0 && pool.length > countSel) pool = pool.slice(0, countSel);
+
+      currentQuiz = pool;
+      currentIdx = 0;
+      correctCount = 0;
+      wrongCount = 0;
+      streak = 0;
+      maxStreak = 0;
+      results = [];
+      answered = false;
+
+      showScreen('quizScreen');
+      renderQuestion();
+    }
+
+    function renderQuestion() {
+      if (currentIdx >= currentQuiz.length) { showResults(); return; }
+      answered = false;
+      const q = currentQuiz[currentIdx];
+      const total = currentQuiz.length;
+      const pct = (currentIdx / total) * 100;
+
+      document.getElementById('progressBar').style.width = pct + '%';
+      document.getElementById('questionCounter').textContent = `CÂU ${currentIdx + 1} / ${total}`;
+      document.getElementById('questionCatTag').textContent = q.category || 'KHỞI SỰ DN';
+      document.getElementById('questionText').textContent = q.q;
+      document.getElementById('actionRow').style.display = 'none';
+      document.getElementById('explanationBox').style.display = 'none';
+      document.getElementById('liveCorrect').textContent = '✓ ' + correctCount;
+      document.getElementById('liveWrong').textContent = '✗ ' + wrongCount;
+      document.getElementById('liveStreak').textContent = '🔥 ' + streak;
+
+      const optArea = document.getElementById('optionsArea');
+      optArea.innerHTML = '';
+
+      if (q.type === 'mcq') {
+        document.getElementById('keyboardHints').style.display = '';
+        const grid = document.createElement('div');
+        grid.className = 'options-grid' + (q.opts.length === 2 ? ' two-cols' : '');
+        const letters = ['A','B','C','D'];
+        q.opts.forEach((opt, i) => {
+          const btn = document.createElement('button');
+          btn.className = 'option-btn';
+          btn.innerHTML = `<span class="option-letter">${letters[i] || (i+1)}</span><span>${opt}</span>`;
+          btn.onclick = () => selectMCQ(i);
+          btn.dataset.idx = i;
+          grid.appendChild(btn);
+        });
+        optArea.appendChild(grid);
+      } else {
+        document.getElementById('keyboardHints').style.display = 'none';
+        optArea.innerHTML = `
+          <div class="sa-input-area">
+            <textarea class="sa-textarea" placeholder="Nhập câu trả lời hoặc các ý chính của bạn tại đây để đối chiếu..." id="saInput"></textarea>
+            <div class="action-row" style="margin-top:4px;">
+              <button class="btn-primary" onclick="revealSA()">Đối chiếu đáp án chuẩn →</button>
+            </div>
+            <div id="saReveal"></div>
+          </div>
+        `;
+        setTimeout(() => { const ta = document.getElementById('saInput'); if (ta) ta.focus(); }, 120);
+      }
+      startTimer();
+    }
+
+    function selectMCQ(idx) {
+      if (answered) return;
+      answered = true;
+      clearTimer();
+      const q = currentQuiz[currentIdx];
+      const btns = document.querySelectorAll('.option-btn');
+      const isCorrect = (idx === q.ans);
+
+      btns.forEach((btn, i) => {
+        if (i === q.ans) btn.classList.add('correct');
+        if (i === idx && !isCorrect) btn.classList.add('wrong');
+        if (i !== idx && i !== q.ans) btn.classList.add('disabled');
+      });
+
+      if (isCorrect) {
+        AudioEngine.correct();
+        correctCount++; streak++;
+        if (streak > maxStreak) maxStreak = streak;
+        showToast('correct', '🎉 Chính xác!');
+        wrongHistory = wrongHistory.filter(id => id !== q.id);
+        if (streak > 0 && streak % 5 === 0) {
+          AudioEngine.streak();
+          showStreakPopup(streak);
+        }
+      } else {
+        AudioEngine.wrong();
+        wrongCount++; streak = 0;
+        showToast('wrong', '❌ Sai rồi!');
+        if (!wrongHistory.includes(q.id)) wrongHistory.push(q.id);
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(wrongHistory));
+
+      results.push({
+        q: q.q, type: 'mcq', category: q.category,
+        correct: isCorrect, yourAns: q.opts[idx], correctAns: q.opts[q.ans],
+        tip: q.tip
+      });
+
+      // Show explanation tip
+      if (q.tip) {
+        document.getElementById('explanationText').textContent = q.tip;
+        document.getElementById('explanationBox').style.display = 'block';
+      }
+
+      document.getElementById('liveCorrect').textContent = '✓ ' + correctCount;
+      document.getElementById('liveWrong').textContent = '✗ ' + wrongCount;
+      document.getElementById('liveStreak').textContent = '🔥 ' + streak;
+      document.getElementById('actionRow').style.display = 'flex';
+      document.getElementById('nextBtn').focus();
+    }
+
+    function revealSA() {
+      if (answered) return;
+      answered = true;
+      clearTimer();
+      const q = currentQuiz[currentIdx];
+      const reveal = document.getElementById('saReveal');
+      reveal.innerHTML = `
+        <div class="sa-answer-reveal">
+          <div class="label">✅ ĐÁP ÁN CHUẨN ĐỀ CƯƠNG:</div>
+          <p>${q.a.replace(/\n/g, '<br>')}</p>
+        </div>
+        <div class="self-assess-row">
+          <button class="self-assess-btn knew" onclick="selfAssess(true)">👍 Tôi đã nắm rõ ý này (+1)</button>
+          <button class="self-assess-btn didnt" onclick="selfAssess(false)">👎 Chưa nắm vững (Cần ôn lại)</button>
+        </div>
+      `;
+    }
+
+    function selfAssess(knew) {
+      const q = currentQuiz[currentIdx];
+      if (knew) {
+        AudioEngine.correct();
+        correctCount++; streak++;
+        if (streak > maxStreak) maxStreak = streak;
+        wrongHistory = wrongHistory.filter(id => id !== q.id);
+      } else {
+        AudioEngine.wrong();
+        wrongCount++; streak = 0;
+        if (!wrongHistory.includes(q.id)) wrongHistory.push(q.id);
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(wrongHistory));
+      const userInput = document.getElementById('saInput')?.value || '(Không nhập)';
+      results.push({
+        q: q.q, type: 'sa', category: 'Tự luận ngắn',
+        correct: knew, yourAns: userInput, correctAns: q.a, tip: ''
+      });
+      nextQuestion();
+    }
+
+    function nextQuestion() {
+      currentIdx++;
+      if (currentIdx >= currentQuiz.length) {
+        showResults();
+      } else {
+        const card = document.querySelector('.question-card');
+        card.style.animation = 'none'; card.offsetHeight;
+        card.style.animation = 'fadeSlideUp 0.35s ease';
+        renderQuestion();
+      }
+    }
+
+    function startTimer() {
+      clearTimer();
+      if (timerSeconds <= 0) { document.getElementById('timerBarWrap').style.display = 'none'; return; }
+      document.getElementById('timerBarWrap').style.display = '';
+      timerRemaining = timerSeconds * 10;
+      const total = timerRemaining;
+      const fill = document.getElementById('timerFill');
+      fill.style.width = '100%';
+      fill.className = 'timer-fill';
+
+      timerInterval = setInterval(() => {
+        timerRemaining--;
+        const pct = (timerRemaining / total) * 100;
+        fill.style.width = pct + '%';
+        if (pct < 20) fill.className = 'timer-fill danger';
+        else if (pct < 50) fill.className = 'timer-fill warning';
+
+        if (timerRemaining <= 0) {
+          clearTimer();
+          if (!answered) {
+            const q = currentQuiz[currentIdx];
+            if (q.type === 'mcq') {
+              answered = true; wrongCount++; streak = 0;
+              AudioEngine.wrong();
+              if (!wrongHistory.includes(q.id)) wrongHistory.push(q.id);
+              localStorage.setItem(STORAGE_KEY, JSON.stringify(wrongHistory));
+              results.push({
+                q: q.q, type: 'mcq', category: q.category,
+                correct: false, yourAns: 'Hết giờ làm bài', correctAns: q.opts[q.ans],
+                tip: q.tip
+              });
+              const btns = document.querySelectorAll('.option-btn');
+              btns.forEach((btn, i) => {
+                if (i === q.ans) btn.classList.add('correct');
+                else btn.classList.add('disabled');
+              });
+              if (q.tip) {
+                document.getElementById('explanationText').textContent = q.tip;
+                document.getElementById('explanationBox').style.display = 'block';
+              }
+              showToast('wrong', '⏰ Hết giờ!');
+              document.getElementById('liveWrong').textContent = '✗ ' + wrongCount;
+              document.getElementById('liveStreak').textContent = '🔥 ' + streak;
+              document.getElementById('actionRow').style.display = 'flex';
+            } else {
+              revealSA();
+            }
+          }
+        }
+      }, 100);
+    }
+
+    function clearTimer() { if (timerInterval) { clearInterval(timerInterval); timerInterval = null; } }
+
+    function showToast(type, msg) {
+      const t = document.getElementById('feedbackToast');
+      t.textContent = msg;
+      t.className = 'feedback-toast ' + (type === 'correct' ? 'correct-toast' : 'wrong-toast') + ' show';
+      setTimeout(() => t.classList.remove('show'), 1500);
+    }
+
+    function showStreakPopup(n) {
+      const p = document.getElementById('streakPopup');
+      p.textContent = '🔥 ' + n + ' STREAK!';
+      p.className = 'streak-popup show';
+      setTimeout(() => p.className = 'streak-popup', 1100);
+    }
+
+    function showResults() {
+      clearTimer();
+      showScreen('resultsScreen');
+      const total = results.length;
+      const pct = total > 0 ? Math.round((correctCount / total) * 100) : 0;
+
+      document.getElementById('scorePct').textContent = pct + '%';
+      document.getElementById('resCorrect').textContent = correctCount;
+      document.getElementById('resWrong').textContent = wrongCount;
+      document.getElementById('resStreak').textContent = maxStreak;
+
+      const ring = document.getElementById('scoreRing');
+      const circumference = 2 * Math.PI * 70;
+      ring.style.strokeDasharray = circumference;
+      const offset = circumference - (pct / 100) * circumference;
+      setTimeout(() => { ring.style.strokeDashoffset = offset; }, 100);
+
+      if (pct >= 80) {
+        ring.style.stroke = 'url(#greenGrad)';
+        document.getElementById('resultMessage').textContent = '🏆 Xuất sắc!';
+        document.getElementById('resultSub').textContent = 'Bạn đã nắm rất vững kiến thức Khởi Sự Doanh Nghiệp!';
+        launchConfetti();
+      } else if (pct >= 60) {
+        ring.style.stroke = 'url(#amberGrad)';
+        document.getElementById('resultMessage').textContent = '👍 Khá tốt!';
+        document.getElementById('resultSub').textContent = 'Cần rà soát thêm một số câu hỏi và điều luật trọng tâm.';
+      } else {
+        ring.style.stroke = 'url(#redGrad)';
+        document.getElementById('resultMessage').textContent = '📖 Cần cố gắng hơn!';
+        document.getElementById('resultSub').textContent = 'Hãy dùng tính năng Ôn câu sai và Sổ tay tra cứu để khắc phục lỗ hổng nhé.';
+      }
+      renderReview('all');
+    }
+
+    function renderReview(filter) {
+      const list = document.getElementById('reviewList');
+      list.innerHTML = '';
+      const filtered = filter === 'all' ? results :
+        filter === 'wrong' ? results.filter(r => !r.correct) :
+        results.filter(r => r.correct);
+
+      filtered.forEach((r) => {
+        const div = document.createElement('div');
+        div.className = 'review-item ' + (r.correct ? 'review-correct' : 'review-wrong');
+        div.innerHTML = `
+          <div class="rq">${r.correct ? '✅' : '❌'} ${r.q}</div>
+          <div class="ranswer">
+            ${r.type === 'mcq' ? `
+              ${!r.correct ? `<div>Bạn chọn: <span class="your-ans">${r.yourAns}</span></div>` : ''}
+              <div>Đáp án đúng: <span class="correct-ans">${r.correctAns}</span></div>
+              ${r.tip ? `<div style="margin-top:4px;color:#94a3b8;font-size:12px;">💡 ${r.tip}</div>` : ''}
+            ` : `
+              ${r.yourAns ? `<div>Bạn viết: <span class="your-ans">${r.yourAns}</span></div>` : ''}
+              <div>Đáp án chuẩn: <span class="correct-ans">${r.correctAns.replace(/\n/g, '<br>')}</span></div>
+            `}
+          </div>
+        `;
+        list.appendChild(div);
+      });
+
+      if (filtered.length === 0) {
+        list.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:24px;">Không có câu nào trong danh mục này.</p>';
+      }
+    }
+
+    function filterReview(f, btn) {
+      document.querySelectorAll('#filterTabs .filter-tab').forEach(t => t.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderReview(f);
+    }
+
+    function retryWrong() { startQuiz('wrong'); }
+
+    function launchConfetti() {
+      const container = document.getElementById('confettiContainer');
+      container.innerHTML = '';
+      const colors = ['#8b5cf6','#ec4899','#06b6d4','#10b981','#f59e0b','#ef4444','#fbbf24'];
+      for (let i = 0; i < 70; i++) {
+        const piece = document.createElement('div');
+        piece.className = 'confetti-piece';
+        piece.style.left = Math.random() * 100 + '%';
+        piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+        piece.style.width = (Math.random() * 8 + 5) + 'px';
+        piece.style.height = (Math.random() * 8 + 5) + 'px';
+        piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+        piece.style.animationDuration = (Math.random() * 2 + 1.6) + 's';
+        piece.style.animationDelay = (Math.random() * 1.2) + 's';
+        container.appendChild(piece);
+      }
+      setTimeout(() => container.innerHTML = '', 4000);
+    }
+
+    // ═══ DIRECTORY / SỔ TAY TRA CỨU ═══
+    let currentDirFilter = 'ALL';
+    let currentDirKeyword = '';
+
+    function showDirectoryScreen(filter = 'ALL') {
+      currentDirFilter = filter;
+      showScreen('directoryScreen');
+      renderDirectory();
+    }
+
+    function showHandbookScreen() {
+      showScreen('handbookScreen');
+    }
+
+    function setDirFilter(f, btn) {
+      currentDirFilter = f;
+      document.querySelectorAll('.dir-filter-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderDirectory();
+    }
+
+    function onDirSearch(val) {
+      currentDirKeyword = val.trim().toLowerCase();
+      renderDirectory();
+    }
+
+    function renderDirectory() {
+      const container = document.getElementById('directoryListContainer');
+      container.innerHTML = '';
+
+      let list = [];
+      if (currentDirFilter === 'ALL') {
+        list = allQuizQuestions;
+      } else if (currentDirFilter === 'MCQ') {
+        list = rawMCQ;
+      } else if (currentDirFilter === 'TF') {
+        list = rawTF;
+      } else if (currentDirFilter === 'SA') {
+        list = rawSA.map(q => ({ ...q, type: 'sa' }));
+      }
+
+      if (currentDirKeyword) {
+        list = list.filter(item => {
+          const qText = (item.q || '').toLowerCase();
+          const ansText = item.type === 'sa' ? (item.a || '').toLowerCase() : (item.opts ? item.opts.join(' ').toLowerCase() : '');
+          const tipText = (item.tip || '').toLowerCase();
+          return qText.includes(currentDirKeyword) || ansText.includes(currentDirKeyword) || tipText.includes(currentDirKeyword);
+        });
+      }
+
+      if (list.length === 0) {
+        container.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:40px;">Không tìm thấy câu hỏi phù hợp với từ khóa.</p>';
+        return;
+      }
+
+      list.forEach((item, idx) => {
+        const card = document.createElement('div');
+        card.className = 'dir-item-card';
+
+        let ansHtml = '';
+        if (item.type === 'sa' || item.a) {
+          ansHtml = `<div class="dir-item-ans"><strong>Đáp án chuẩn:</strong><br>${(item.a || '').replace(/\n/g, '<br>')}</div>`;
+        } else {
+          const letters = ['A','B','C','D'];
+          const correctOpt = item.opts ? item.opts[item.ans] : '';
+          ansHtml = `<div class="dir-item-ans"><strong>Đáp án: ${letters[item.ans]}.</strong> ${correctOpt}</div>`;
+        }
+
+        card.innerHTML = `
+          <div class="dir-item-head">
+            <span class="dir-item-num">#${idx + 1} · ${item.category || (item.type === 'sa' ? 'TỰ LUẬN' : 'TRẮC NGHIỆM')}</span>
+          </div>
+          <div class="dir-item-q">${item.q}</div>
+          ${ansHtml}
+          ${item.tip ? `<div class="dir-item-tip">💡 <em>${item.tip}</em></div>` : ''}
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // Keyboard Shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (document.getElementById('quizScreen').classList.contains('active')) {
+        const q = currentQuiz[currentIdx];
+        if (q && q.type === 'mcq' && !answered) {
+          if (e.key === '1') selectMCQ(0);
+          else if (e.key === '2') selectMCQ(1);
+          else if (e.key === '3' && q.opts.length > 2) selectMCQ(2);
+          else if (e.key === '4' && q.opts.length > 3) selectMCQ(3);
+        }
+        if (e.key === 'Enter' && answered && q && q.type === 'mcq') {
+          nextQuestion();
+        }
+      }
+    });
+  </script>
+</body>
+</html>
